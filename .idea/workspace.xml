@@ -25,66 +25,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="single.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/pashmina/single.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="720">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="content-single.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/pashmina/template-parts/content-single.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.5" vertical-offset="0" max-vertical-offset="765">
-              <caret line="34" column="23" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="post-template.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-includes/post-template.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="44.333332" vertical-offset="4844" max-vertical-offset="27375">
-              <caret line="259" column="9" selection-start-line="259" selection-start-column="9" selection-end-line="259" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bootstrap.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/pashmina/css/bootstrap.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="32025">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="custom-editor-style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/pashmina/css/custom-editor-style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="content.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/pashmina/template-parts/content.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="705">
-              <caret line="11" column="61" selection-start-line="11" selection-start-column="61" selection-end-line="11" selection-end-column="61" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="content-none.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/pashmina/template-parts/content-none.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -95,21 +35,41 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="page.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/pashmina/page.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-1.8367347" vertical-offset="45" max-vertical-offset="795">
+              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="content-page.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/pashmina/template-parts/content-page.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="615">
+            <state vertical-scroll-proportion="-1.2244898" vertical-offset="15" max-vertical-offset="615">
               <caret line="11" column="61" selection-start-line="11" selection-start-column="61" selection-end-line="11" selection-end-column="61" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="related-posts.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="related-posts.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/pashmina/template-parts/related-posts.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.17699115" vertical-offset="0" max-vertical-offset="825">
+            <state vertical-scroll-proportion="-2.4489796" vertical-offset="0" max-vertical-offset="825">
               <caret line="10" column="47" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="archive.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/pashmina/archive.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.9795918" vertical-offset="0" max-vertical-offset="1515">
+              <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -118,10 +78,73 @@
       <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/pashmina/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.54902" vertical-offset="233" max-vertical-offset="4725">
-              <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="52" />
+            <state vertical-scroll-proportion="-5.0408163" vertical-offset="2243" max-vertical-offset="4725">
+              <caret line="166" column="50" selection-start-line="166" selection-start-column="41" selection-end-line="166" selection-end-column="50" />
               <folding>
                 <element signature="e#6#151#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="author.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/pashmina/author.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6891271" vertical-offset="0" max-vertical-offset="1800">
+              <caret line="36" column="42" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="42" />
+              <folding>
+                <marker date="1528723270000" expanded="true" signature="1305:1412" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="readme.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/plugins/custom-user-profile-photo/readme.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.181818" vertical-offset="150" max-vertical-offset="2670">
+              <caret line="40" column="45" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="link-template.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-includes/link-template.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.7368422" vertical-offset="59447" max-vertical-offset="62820">
+              <caret line="3982" column="37" selection-start-line="3982" selection-start-column="27" selection-end-line="3982" selection-end-column="37" />
+              <folding>
+                <marker date="1525212568000" expanded="true" signature="54179:54227" placeholder="SELECT p.ID ..." />
+                <marker date="1525212568000" expanded="true" signature="83160:83247" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="general-template.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-includes/general-template.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.7959185" vertical-offset="21523" max-vertical-offset="63930">
+              <caret line="1449" column="9" selection-start-line="1449" selection-start-column="9" selection-end-line="1449" selection-end-column="9" />
+              <folding>
+                <marker date="1528721461000" expanded="true" signature="28736:28749" placeholder="..." />
+                <marker date="1528721461000" expanded="true" signature="56343:56525" placeholder="SELECT YEAR(..." />
+                <marker date="1528721461000" expanded="true" signature="57417:57552" placeholder="SELECT YEAR(..." />
+                <marker date="1528721461000" expanded="true" signature="58317:58561" placeholder="SELECT YEAR(..." />
+                <marker date="1528721461000" expanded="true" signature="59532:59770" placeholder="SELECT DISTI..." />
+                <marker date="1528721461000" expanded="true" signature="61174:61232" placeholder="SELECT * FRO..." />
+                <marker date="1528721461000" expanded="true" signature="63537:63632" placeholder="SELECT 1 as ..." />
+                <marker date="1528721461000" expanded="true" signature="64870:65084" placeholder="SELECT MONTH..." />
+                <marker date="1528721461000" expanded="true" signature="65113:65344" placeholder="SELECT MONTH..." />
+                <marker date="1528721461000" expanded="true" signature="65520:65661" placeholder="..." />
+                <marker date="1528721461000" expanded="true" signature="65655:65661" placeholder="..." />
+                <marker date="1528721461000" expanded="true" signature="66106:66112" placeholder="..." />
+                <marker date="1528721461000" expanded="true" signature="66915:66921" placeholder="..." />
+                <marker date="1528721461000" expanded="true" signature="67014:67249" placeholder="SELECT DISTI..." />
               </folding>
             </state>
           </provider>
@@ -142,7 +165,6 @@
         <option value="$PROJECT_DIR$/wp-content/themes/pashmina/footer.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/pashmina/index.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/pashmina/home.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/pashmina/page.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/pashmina/css/custom-editor-style.css" />
         <option value="$PROJECT_DIR$/wp-content/themes/pashmina/template-parts/content-search.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/pashmina/template-parts/content-page.php" />
@@ -155,6 +177,10 @@
         <option value="$PROJECT_DIR$/wp-content/themes/pashmina/template-parts/content-single.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/pashmina/template-parts/related-posts.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/pashmina/template-parts/content.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/pashmina/archive.php" />
+        <option value="$PROJECT_DIR$/wp-includes/general-template.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/pashmina/page.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/pashmina/author.php" />
       </list>
     </option>
   </component>
@@ -275,41 +301,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pashmina" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="template-parts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="deideo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="deideo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pashmina" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
+              <option name="myItemId" value="plugins" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -328,6 +320,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="custom-user-profile-photo" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -363,6 +359,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/wp-content/themes/pashmina" />
       <recent name="$PROJECT_DIR$/wp-content/themes/simple-perle" />
     </key>
   </component>
@@ -527,29 +524,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-includes/general-template.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="70.583336" vertical-offset="2984" max-vertical-offset="63930">
-          <caret line="91" column="9" selection-start-line="91" selection-start-column="9" selection-end-line="91" selection-end-column="9" />
-          <folding>
-            <marker date="1522751740000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1522751740000" expanded="true" signature="-1:-1" placeholder="SELECT YEAR(..." />
-            <marker date="1522751740000" expanded="true" signature="-1:-1" placeholder="SELECT YEAR(..." />
-            <marker date="1522751740000" expanded="true" signature="-1:-1" placeholder="SELECT YEAR(..." />
-            <marker date="1522751740000" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..." />
-            <marker date="1522751740000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
-            <marker date="1522751740000" expanded="true" signature="-1:-1" placeholder="SELECT 1 as ..." />
-            <marker date="1522751740000" expanded="true" signature="-1:-1" placeholder="SELECT MONTH..." />
-            <marker date="1522751740000" expanded="true" signature="-1:-1" placeholder="SELECT MONTH..." />
-            <marker date="1522751740000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1522751740000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1522751740000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1522751740000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1522751740000" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/twentysixteen/page.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-15.625" vertical-offset="0" max-vertical-offset="555">
@@ -650,14 +624,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/pashmina/page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.125" vertical-offset="45" max-vertical-offset="795">
-          <caret line="27" column="31" selection-start-line="20" selection-start-column="26" selection-end-line="27" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/pashmina/css/font-awesome.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="30480">
@@ -714,16 +680,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/pashmina/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.54902" vertical-offset="233" max-vertical-offset="4725">
-          <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="52" />
-          <folding>
-            <element signature="e#6#151#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/pashmina/single.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="720">
@@ -772,6 +728,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/pashmina/template-parts/related-posts.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.4489796" vertical-offset="0" max-vertical-offset="825">
+          <caret line="10" column="47" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/pashmina/archive.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.9795918" vertical-offset="0" max-vertical-offset="1515">
+          <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/pashmina/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.0408163" vertical-offset="2243" max-vertical-offset="4725">
+          <caret line="166" column="50" selection-start-line="166" selection-start-column="41" selection-end-line="166" selection-end-column="50" />
+          <folding>
+            <element signature="e#6#151#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/pashmina/template-parts/content-page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.2244898" vertical-offset="15" max-vertical-offset="615">
+          <caret line="11" column="61" selection-start-line="11" selection-start-column="61" selection-end-line="11" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/pashmina/template-parts/content-none.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="702">
@@ -780,19 +770,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/pashmina/template-parts/content-page.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/pashmina/page.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="615">
-          <caret line="11" column="61" selection-start-line="11" selection-start-column="61" selection-end-line="11" selection-end-column="61" />
+        <state vertical-scroll-proportion="-1.8367347" vertical-offset="45" max-vertical-offset="795">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/pashmina/template-parts/related-posts.php">
+    <entry file="file://$PROJECT_DIR$/wp-includes/general-template.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17699115" vertical-offset="0" max-vertical-offset="825">
-          <caret line="10" column="47" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
+        <state vertical-scroll-proportion="-2.7959185" vertical-offset="21523" max-vertical-offset="63930">
+          <caret line="1449" column="9" selection-start-line="1449" selection-start-column="9" selection-end-line="1449" selection-end-column="9" />
+          <folding>
+            <marker date="1528721461000" expanded="true" signature="28736:28749" placeholder="..." />
+            <marker date="1528721461000" expanded="true" signature="56343:56525" placeholder="SELECT YEAR(..." />
+            <marker date="1528721461000" expanded="true" signature="57417:57552" placeholder="SELECT YEAR(..." />
+            <marker date="1528721461000" expanded="true" signature="58317:58561" placeholder="SELECT YEAR(..." />
+            <marker date="1528721461000" expanded="true" signature="59532:59770" placeholder="SELECT DISTI..." />
+            <marker date="1528721461000" expanded="true" signature="61174:61232" placeholder="SELECT * FRO..." />
+            <marker date="1528721461000" expanded="true" signature="63537:63632" placeholder="SELECT 1 as ..." />
+            <marker date="1528721461000" expanded="true" signature="64870:65084" placeholder="SELECT MONTH..." />
+            <marker date="1528721461000" expanded="true" signature="65113:65344" placeholder="SELECT MONTH..." />
+            <marker date="1528721461000" expanded="true" signature="65520:65661" placeholder="..." />
+            <marker date="1528721461000" expanded="true" signature="65655:65661" placeholder="..." />
+            <marker date="1528721461000" expanded="true" signature="66106:66112" placeholder="..." />
+            <marker date="1528721461000" expanded="true" signature="66915:66921" placeholder="..." />
+            <marker date="1528721461000" expanded="true" signature="67014:67249" placeholder="SELECT DISTI..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-includes/link-template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.7368422" vertical-offset="59447" max-vertical-offset="62820">
+          <caret line="3982" column="37" selection-start-line="3982" selection-start-column="27" selection-end-line="3982" selection-end-column="37" />
+          <folding>
+            <marker date="1525212568000" expanded="true" signature="54179:54227" placeholder="SELECT p.ID ..." />
+            <marker date="1525212568000" expanded="true" signature="83160:83247" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/custom-user-profile-photo/readme.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.181818" vertical-offset="150" max-vertical-offset="2670">
+          <caret line="40" column="45" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="45" />
           <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/pashmina/author.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6891271" vertical-offset="0" max-vertical-offset="1800">
+          <caret line="36" column="42" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="42" />
+          <folding>
+            <marker date="1528723270000" expanded="true" signature="1305:1412" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
