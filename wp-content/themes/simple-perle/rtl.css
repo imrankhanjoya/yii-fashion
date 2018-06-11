@@ -1,0 +1,311 @@
+/*
+Theme Name: Simple Perle
+
+Adding support for language written in a Right To Left (RTL) direction is easy -
+it's just a matter of overwriting all the horizontal positioning attributes
+of your CSS stylesheet in a separate stylesheet file named rtl.css.
+
+https://codex.wordpress.org/Right_to_Left_Language_Support
+
+*/
+
+
+body {
+	direction: rtl;
+	unicode-bidi: embed;
+}
+
+/*
+ * Menu
+ */
+ @media screen and (min-width: 920px) {
+	.top-menu-wrap {
+		float: left;
+	 }
+}
+
+.social-navigation {
+	border-left: none ;
+	border-right: 1px solid #DCE7E9;
+}
+
+.main-navigation ul {
+	padding-right: 0;
+}
+
+.main-navigation a {
+	padding-right: 1em;
+}
+
+.main-navigation li.menu-item-has-children:before,
+.main-navigation li.page_item_has_children:before {
+	content: "\f0d7";
+	color: #222;
+	cursor: pointer;
+	font-family: "FontAwesome";
+	padding: 1em;
+	position: absolute;
+	top: -6px;
+	left: 0;
+}
+
+.main-navigation li.menu-item-has-children:after,
+.main-navigation li.page_item_has_children:after {
+	content: "";
+}
+
+@media screen and (min-width: 920px) {
+
+	.main-navigation ul .sub-menu, 
+	.main-navigation ul .children {
+		padding-right: 0;
+		transition: none;
+		width: 200px;
+	}
+
+	.main-navigation ul li:hover > ul,
+	.main-navigation ul li.focus > ul {
+		right: 0;
+		left: inherit;
+	}
+
+	.main-navigation li.menu-item-has-children:before,
+	.main-navigation li.page_item_has_children:before {
+		top: -12px;
+		left: -10px;
+	}
+
+	.main-navigation ul ul {
+		float: right;
+		right: -999em;
+		left: 0;
+	}
+
+	.social-navigation {
+		float: left;
+	}
+
+	.social-navigation ul {
+		float: left;
+	}
+
+	.main-navigation li {
+		float: right;
+	}
+}
+
+.dropdown-toggle {
+	left: 0;
+}
+
+
+@media screen and (min-width: 920px) {
+	.site-branding {
+		float: right;
+		text-align: right;
+	}
+}
+
+.edit-link {
+	float: right;
+}
+
+.nav-links .nav-next a span {
+	margin-left: -1.75em;
+}
+
+.nav-links .nav-next a span::after {
+	content: " ";
+	margin-left: 0;
+}
+
+.nav-links .nav-next a span::before {
+	content: "\f341";
+}
+
+.nav-links .nav-previous a span {
+	text-indent: -3em;
+}
+
+.nav-links .nav-previous a span::after {
+	content: "\f345";
+	font-family: "dashicons" !important;
+	margin-left: 1em;
+	vertical-align: middle;
+}
+
+.nav-links .nav-previous a span::before {
+	content: "";
+}
+
+@media screen and (min-width: 660px) {
+	.comment-navigation .nav-previous, 
+	.posts-navigation .nav-previous, 
+	.post-navigation .nav-previous {
+		float: right;
+		text-align: right;
+	}
+
+	.comment-navigation .nav-next, 
+	.posts-navigation .nav-next, 
+	.post-navigation .nav-next {
+		float: left;
+		text-align: left;
+	}
+}
+
+
+/*
+ * Homepage
+ */
+.featured-content .attachment-simple-perle-featured-post-thumb {
+	float: left;
+}
+
+.featured-content .entry-content {
+	float: right;
+	left: inherit;
+	right: 0;
+	text-align: right;
+}
+
+.featured-content .entry-content,
+.blog-title {
+	text-align: right;
+}
+
+.post-type-archive-jetpack-portfolio .content-area, 
+.post-type-archive-jetpack-portfolio .site-main {
+	margin-left: 0;
+	padding: 0;
+}
+
+@media screen and (min-width: 1023px) {
+	.site-main {
+		margin: 0 0 0 25%;
+	}
+
+	.no-sidebar .site-main {
+		margin: 0;
+	}
+
+	.content-area {
+		float: right;
+		margin: 0 0 0 -30%;
+		padding-left: 10%;
+		padding-right: 0;
+	}
+
+	.widget-area-sidebar {
+		float: left;
+	}
+
+	.no-sidebar .content-area {
+		padding-left: 0;
+	}
+}
+
+/*
+ * Single page
+ */
+
+ @media screen and (min-width: 1023px) {
+	.single .entry-header .entry-header-content, 
+	.page:not(article) .entry-header .entry-header-content,
+	.single .page-content .post-meta, 
+	.single .entry-content .post-meta, 
+	.page:not(article) .page-content .post-meta, 
+	.page:not(article) .entry-content .post-meta {
+		float: right;
+	}
+
+	.single .page-content .post-meta, 
+	.single .entry-content .post-meta, 
+	.page:not(article) .page-content .post-meta, 
+	.page:not(article) .entry-content .post-meta {
+		padding-right: 0;
+		padding-left: 1em;
+		text-align: right;
+	}
+
+	.single .entry-header .entry-header-content, 
+	.page:not(article) .entry-header .entry-header-content {
+		right: 0;
+		text-align: right;
+	}
+
+	.single .attachment-simple-perle-featured-post-thumb, 
+	.page:not(article) .attachment-simple-perle-featured-post-thumb,
+	.single .page-content .post-meta.right, 
+	.single .entry-content .post-meta.right, 
+	.page:not(article) .page-content .post-meta.right, 
+	.page:not(article) .entry-content .post-meta.right {
+		float: left;
+	}
+
+	.single .page-content .post-meta.right, 
+	.single .entry-content .post-meta.right, 
+	.page:not(article) .page-content .post-meta.right, 
+	.page:not(article) .entry-content .post-meta.right {
+		padding-left: 0;
+		padding-right: 5em;
+		text-align: right;
+	}
+}
+
+.comment-list .comment-body .reply {
+	left: 0;
+	right: inherit;
+}
+
+/* Portfolio */
+.portfolio-wrap .jetpack-portfolio .attachment-simple-perle-portfolio-post-thumb {
+	display: block;
+	width: 100%;
+}
+
+.portfolio-wrap .jetpack-portfolio .entry-content {
+	position: static;
+}
+
+
+@media screen and (min-width: 660px) and (max-width: 1023px) {
+	.portfolio-wrap .jetpack-portfolio .attachment-simple-perle-portfolio-post-thumb {
+		float: left;
+		width: 49%;
+	}
+
+	.portfolio-wrap .jetpack-portfolio .entry-content {
+		margin-top: 0;
+		max-width: 50%;
+		float: right;
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translateY(-50%);
+		width: 50%;
+	}
+}
+
+@media screen and (min-width: 660px){
+
+	.widget-area-sidebar .widget {
+		float: right;
+	}
+}
+
+.search-form button[type="submit"] {
+	left: 0;
+	right: inherit;
+}
+
+/* Jetpack Infinite Scroll */
+
+.site-main #infinite-handle span:before {
+	content:"";
+}
+
+.site-main #infinite-handle button {
+	background-color: transparent;
+	border: none;
+}

@@ -1,0 +1,770 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: Blogging\n"
+"POT-Creation-Date: 2018-04-21 09:41-0700\n"
+"PO-Revision-Date: 2017-08-02 19:07-0700\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.6\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: 404.php:16
+msgid "Page Not Found"
+msgstr ""
+
+#: 404.php:17
+msgid ""
+"Oops! The page you were looking for was not found. Perhaps searching can "
+"help."
+msgstr ""
+
+#: 404.php:22
+msgid "404"
+msgstr ""
+
+#: archive.php:40 index.php:39 search.php:26
+msgid "Previous"
+msgstr ""
+
+#: archive.php:41 index.php:40 search.php:27
+msgid "Next"
+msgstr ""
+
+#: archive.php:42 index.php:41 search.php:28 template-parts/content.php:53
+msgid "Page"
+msgstr ""
+
+#: author-bio.php:20
+msgid "Published by "
+msgstr ""
+
+#: author-bio.php:25
+#, php-format
+msgid "View all posts by %s"
+msgstr ""
+
+#. translators: %s: post title
+#: comments.php:26
+#, php-format
+msgctxt "comments title"
+msgid "One Comment to &ldquo;%s&rdquo;"
+msgstr ""
+
+#: comments.php:31
+#, php-format
+msgctxt "comments title"
+msgid "%1$s Comment to &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s Comments to &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:69 comments.php:70
+msgid "*Name"
+msgstr ""
+
+#: comments.php:72
+msgid "Email"
+msgstr ""
+
+#: comments.php:72
+msgid "*Email"
+msgstr ""
+
+#: comments.php:74
+msgid "Website"
+msgstr ""
+
+#: comments.php:76
+msgctxt "noun"
+msgid "*Comment *"
+msgstr ""
+
+#: comments.php:76
+msgid "*Comment"
+msgstr ""
+
+#: comments.php:88
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr ""
+
+#: footer.php:48
+msgid "Copyright &copy;"
+msgstr ""
+
+#: footer.php:49
+msgid "Y"
+msgstr ""
+
+#: footer.php:50
+msgid "All rights reserved."
+msgstr ""
+
+#: functions.php:55
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:56
+msgid "Social Menu"
+msgstr ""
+
+#: functions.php:57
+msgid "Top Social Menu"
+msgstr ""
+
+#: functions.php:58
+msgid "Footer Menu"
+msgstr ""
+
+#: functions.php:150
+msgctxt "Playfair Display font: on or off"
+msgid "on"
+msgstr ""
+
+#: header.php:51
+msgid "Skip to content"
+msgstr ""
+
+#: header.php:72 header.php:76
+msgid "Menu"
+msgstr ""
+
+#: inc/back-compat.php:39 inc/back-compat.php:51 inc/back-compat.php:66
+#, php-format
+msgid ""
+"Start Blogging requires at least WordPress version 4.7. You are running "
+"version %s. Please upgrade and try again."
+msgstr ""
+
+#: inc/customizer.php:60
+msgid "Upgrade to Pro"
+msgstr ""
+
+#: inc/customizer.php:66
+msgid "Basic Settings"
+msgstr ""
+
+#: inc/customizer.php:76
+msgid "Get The Pro Version:"
+msgstr ""
+
+#: inc/customizer.php:79
+msgid ""
+"\n"
+"\t\t<h1>Start Blogging Pro</h1>\n"
+"\t\t<p>Upgrade to the pro version of Start Blogging and enjoy many "
+"additional features that will add more options. Here is what you can expect:"
+"</p>\n"
+"\t\t<p style=\"font-weight: 700;\">Pro Features:\n"
+"\t\t<ul>\n"
+"\t\t\t<li>&bull; 6 Blog Styles</li>\n"
+"\t\t\t<li>&bull; 22+ Sidebars</li>\n"
+"\t\t\t<li>&bull; 5 Page Templates</li>\n"
+"\t\t\t<li>&bull; Blog Thumbnail Creation</li>\n"
+"\t\t\t<li>&bull; Boxed Layouts</li>\n"
+"\t\t\t<li>&bull; Front Page Template</li>\n"
+"\t\t\t<li>&bull; Page Builder Ready</li>\n"
+"\t\t\t<li>&bull; Built-in Slider</li>\n"
+"\t\t</ul>\n"
+"\t\t</p>\n"
+"\t\t<p><a class=\"button\" href=\"https://www.bloggingthemestyles.com/"
+"wordpress-themes/start-blogging-pro/\" target=\"_blank\">Get the Pro!</a></p>"
+msgstr ""
+
+#: inc/customizer.php:104
+msgid "Use Excerpts"
+msgstr ""
+
+#: inc/customizer.php:105
+msgid ""
+"Use excerpts for your blog post summaries or uncheck the box to use the "
+"standard Read More tag."
+msgstr ""
+
+#: inc/customizer.php:117
+msgid "Excerpt Size"
+msgstr ""
+
+#: inc/customizer.php:118
+msgid ""
+"You can change the size of your blog summary excerpts with increments of 5 "
+"words."
+msgstr ""
+
+#: inc/customizer.php:133
+msgid "Your Copyright Name"
+msgstr ""
+
+#: inc/customizer.php:158
+msgid "Color Scheme"
+msgstr ""
+
+#: inc/customizer.php:160
+msgid "Default"
+msgstr ""
+
+#: inc/customizer.php:161
+msgid "Custom"
+msgstr ""
+
+#: inc/sidebars.php:11
+msgid "Blog Right Sidebar"
+msgstr ""
+
+#: inc/sidebars.php:13
+msgid "Right sidebar for the blog"
+msgstr ""
+
+#: inc/sidebars.php:20
+msgid "Blog Left Sidebar"
+msgstr ""
+
+#: inc/sidebars.php:22
+msgid "Left sidebar for the blog"
+msgstr ""
+
+#: inc/sidebars.php:29
+msgid "Page Right Sidebar"
+msgstr ""
+
+#: inc/sidebars.php:31
+msgid "Right sidebar for pages"
+msgstr ""
+
+#: inc/sidebars.php:38
+msgid "Page Left Sidebar"
+msgstr ""
+
+#: inc/sidebars.php:40
+msgid "Left sidebar for pages"
+msgstr ""
+
+#: inc/sidebars.php:48
+msgid "Banner"
+msgstr ""
+
+#: inc/sidebars.php:50
+msgid "For Images and Sliders."
+msgstr ""
+
+#: inc/sidebars.php:58
+msgid "Announcement"
+msgstr ""
+
+#: inc/sidebars.php:60
+msgid "For adding announcements just below the banner area."
+msgstr ""
+
+#: inc/sidebars.php:67
+msgid "Breadcrumbs"
+msgstr ""
+
+#: inc/sidebars.php:69
+msgid ""
+"For adding breadcrumb navigation if using a plugin, or you can add content "
+"here."
+msgstr ""
+
+#: inc/sidebars.php:77
+msgid "Content Top 1"
+msgstr ""
+
+#: inc/sidebars.php:79
+msgid "Content Top 1 position"
+msgstr ""
+
+#: inc/sidebars.php:86
+msgid "Content Top 2"
+msgstr ""
+
+#: inc/sidebars.php:88
+msgid "Content Top 2 position"
+msgstr ""
+
+#: inc/sidebars.php:95
+msgid "Content Top 3"
+msgstr ""
+
+#: inc/sidebars.php:97
+msgid "Content Top 3 position"
+msgstr ""
+
+#: inc/sidebars.php:104
+msgid "Content Top 4"
+msgstr ""
+
+#: inc/sidebars.php:106
+msgid "Content Top 4 position"
+msgstr ""
+
+#: inc/sidebars.php:114
+msgid "Content Bottom 1"
+msgstr ""
+
+#: inc/sidebars.php:116
+msgid "Content Bottom 1 position"
+msgstr ""
+
+#: inc/sidebars.php:123
+msgid "Content Bottom 2"
+msgstr ""
+
+#: inc/sidebars.php:125
+msgid "Content Bottom 2 position"
+msgstr ""
+
+#: inc/sidebars.php:132
+msgid "Content Bottom 3"
+msgstr ""
+
+#: inc/sidebars.php:134
+msgid "Content Bottom 3 position"
+msgstr ""
+
+#: inc/sidebars.php:141
+msgid "Content Bottom 4"
+msgstr ""
+
+#: inc/sidebars.php:143
+msgid "Content Bottom 4 position"
+msgstr ""
+
+#: inc/sidebars.php:151
+msgid "Bottom 1"
+msgstr ""
+
+#: inc/sidebars.php:153
+msgid "Bottom 1 position"
+msgstr ""
+
+#: inc/sidebars.php:160
+msgid "Bottom 2"
+msgstr ""
+
+#: inc/sidebars.php:162
+msgid "Bottom 2 position"
+msgstr ""
+
+#: inc/sidebars.php:169
+msgid "Bottom 3"
+msgstr ""
+
+#: inc/sidebars.php:171
+msgid "Bottom 3 position"
+msgstr ""
+
+#: inc/sidebars.php:178
+msgid "Bottom 4"
+msgstr ""
+
+#: inc/sidebars.php:180
+msgid "Bottom 4 position"
+msgstr ""
+
+#: inc/sidebars.php:188
+msgid "Footer"
+msgstr ""
+
+#: inc/sidebars.php:190
+msgid ""
+"This is a sidebar position that sits above the footer menu and copyright"
+msgstr ""
+
+#: inc/template-tags.php:27
+msgid "Comment navigation"
+msgstr ""
+
+#: inc/template-tags.php:30
+msgid "Older Comments"
+msgstr ""
+
+#: inc/template-tags.php:34
+msgid "Newer Comments"
+msgstr ""
+
+#: inc/template-tags.php:57
+#, php-format
+msgctxt "post author"
+msgid "by %s"
+msgstr ""
+
+#: inc/template-tags.php:65
+msgid "No Comments"
+msgstr ""
+
+#: inc/template-tags.php:67
+msgid " Comments"
+msgstr ""
+
+#: inc/template-tags.php:69
+msgid "1 Comment"
+msgstr ""
+
+#: inc/template-tags.php:104
+msgctxt "Used before publish date."
+msgid "Posted on"
+msgstr ""
+
+#: inc/template-tags.php:113
+msgctxt "Used before post author name."
+msgid "by"
+msgstr ""
+
+#: inc/template-tags.php:119 inc/template-tags.php:127
+msgctxt "Used between list items, there is a space after the comma."
+msgid ", "
+msgstr ""
+
+#: inc/template-tags.php:122
+msgctxt "Used before category names."
+msgid "in"
+msgstr ""
+
+#: inc/template-tags.php:130
+msgctxt "Used before tag names."
+msgid "Tags"
+msgstr ""
+
+#: inc/theme-info/start-blogging-info-class-about.php:169
+msgid "Dismiss this notice."
+msgstr ""
+
+#: inc/theme-info/start-blogging-info-class-about.php:511
+msgid "Action failed. Please refresh the page and retry."
+msgstr ""
+
+#: inc/theme-info/start-blogging-info-class-about.php:514
+msgid "You do not have the necessary permission to perform this action."
+msgstr ""
+
+#: inc/theme-info/start-blogging-info.php:27
+#: inc/theme-info/start-blogging-info.php:29
+#, php-format
+msgid "About %1$s"
+msgstr ""
+
+#: inc/theme-info/start-blogging-info.php:31
+#, php-format
+msgid "Welcome to %1$s - v"
+msgstr ""
+
+#: inc/theme-info/start-blogging-info.php:33
+#, php-format
+msgid ""
+"%1$s is a theme that gives you an exceptional style that was created with "
+"what I call Real World design; even I'm using it for my own website! With "
+"clean lines and amazing features like Unlimited Colours, you can personalize "
+"this theme by utilizing the powerful built-in customizer with live previews "
+"as you make changes....and then there is the pro version!"
+msgstr ""
+
+#: inc/theme-info/start-blogging-info.php:42
+msgid "Get the Pro for $49 ($10 off)"
+msgstr ""
+
+#: inc/theme-info/start-blogging-info.php:43
+msgid ""
+"Save $10 off the Start Blogging Pro $59 membership. Offer EXPIRES March 31, "
+"2018. Use this coupon at checkout."
+msgstr ""
+
+#: inc/theme-info/start-blogging-info.php:45
+msgid "Upgrade Now"
+msgstr ""
+
+#: inc/theme-info/start-blogging-info.php:48
+msgid "Getting Started"
+msgstr ""
+
+#: inc/theme-info/start-blogging-info.php:49
+#: inc/theme-info/start-blogging-info.php:216
+msgid "Support"
+msgstr ""
+
+#: inc/theme-info/start-blogging-info.php:50
+#: inc/theme-info/start-blogging-info.php:88
+msgid "Changelog"
+msgstr ""
+
+#: inc/theme-info/start-blogging-info.php:51
+msgid "Free VS PRO"
+msgstr ""
+
+#: inc/theme-info/start-blogging-info.php:56
+msgid "Setup Documentation"
+msgstr ""
+
+#: inc/theme-info/start-blogging-info.php:57
+msgid ""
+"To help you get started with the initial setup of this theme and to learn "
+"about the various features, you can check out detailed setup documentation."
+msgstr ""
+
+#: inc/theme-info/start-blogging-info.php:58
+#, php-format
+msgid "View %1$s Tutorials"
+msgstr ""
+
+#: inc/theme-info/start-blogging-info.php:65
+#: inc/theme-info/start-blogging-info.php:67
+msgid "Go to Customizer"
+msgstr ""
+
+#: inc/theme-info/start-blogging-info.php:66
+msgid ""
+"Using the WordPress Customizer you can easily customize every aspect of the "
+"theme."
+msgstr ""
+
+#: inc/theme-info/start-blogging-info.php:75
+msgid "Using a Child Theme"
+msgstr ""
+
+#: inc/theme-info/start-blogging-info.php:76
+msgid ""
+"If you plan to customize this theme, I recommend looking into using a child "
+"theme. To learn more about child themes and why it's important to use one, "
+"check out the WordPress documentation."
+msgstr ""
+
+#: inc/theme-info/start-blogging-info.php:77
+msgid "Child Themes"
+msgstr ""
+
+#: inc/theme-info/start-blogging-info.php:89
+msgid ""
+"I generally recommend you always read the CHANGELOG before updating so that "
+"you can see what was fixed, changed, deleted, or added to the theme."
+msgstr ""
+
+#: inc/theme-info/start-blogging-info.php:99
+msgid "Free Support"
+msgstr ""
+
+#: inc/theme-info/start-blogging-info.php:101
+msgid ""
+"Get free support by visiting the theme support forum and I will do my very "
+"best to answer your questions should you find yourself in need of help."
+msgstr ""
+
+#: inc/theme-info/start-blogging-info.php:102
+msgid "Get Free Support"
+msgstr ""
+
+#: inc/theme-info/start-blogging-info.php:108
+msgid "Common Problems"
+msgstr ""
+
+#: inc/theme-info/start-blogging-info.php:110
+msgid ""
+"For quick answers to the most common problems, you can check out the "
+"tutorials which can provide instant solutions and answers."
+msgstr ""
+
+#: inc/theme-info/start-blogging-info.php:111
+msgid "Get Answers"
+msgstr ""
+
+#: inc/theme-info/start-blogging-info.php:123
+#, php-format
+msgid "Get %s Now!"
+msgstr ""
+
+#: inc/theme-info/start-blogging-info.php:126
+msgid "Mobile Friendly"
+msgstr ""
+
+#: inc/theme-info/start-blogging-info.php:135
+msgid "Responsive Typography"
+msgstr ""
+
+#: inc/theme-info/start-blogging-info.php:144
+msgid "Unlimited Colours"
+msgstr ""
+
+#: inc/theme-info/start-blogging-info.php:153
+msgid "Background Image"
+msgstr ""
+
+#: inc/theme-info/start-blogging-info.php:162
+msgid "Built-In Social Buttons"
+msgstr ""
+
+#: inc/theme-info/start-blogging-info.php:171
+msgid "Custom Error Page"
+msgstr ""
+
+#: inc/theme-info/start-blogging-info.php:180
+msgid "Blog Styles"
+msgstr ""
+
+#: inc/theme-info/start-blogging-info.php:189
+msgid "Sidebar Positions"
+msgstr ""
+
+#: inc/theme-info/start-blogging-info.php:198
+msgid "Page Templates"
+msgstr ""
+
+#: inc/theme-info/start-blogging-info.php:207
+msgid "Theme Options"
+msgstr ""
+
+#: inc/theme-info/start-blogging-info.php:225
+msgid "Post Formats"
+msgstr ""
+
+#: inc/theme-info/start-blogging-info.php:234
+msgid "Blog Thumbnail Creation"
+msgstr ""
+
+#: inc/theme-info/start-blogging-info.php:243
+msgid "Boxed Layouts"
+msgstr ""
+
+#: inc/theme-info/start-blogging-info.php:252
+msgid "Front Page Template"
+msgstr ""
+
+#: inc/theme-info/start-blogging-info.php:261
+msgid "Page Builder Ready"
+msgstr ""
+
+#: inc/theme-info/start-blogging-info.php:270
+msgid "Google Font Setting"
+msgstr ""
+
+#: inc/theme-info/start-blogging-info.php:279
+msgid "Built-in Slider"
+msgstr ""
+
+#: inc/theme-info/start-blogging-info.php:288
+msgid "Show or Hide Elements"
+msgstr ""
+
+#: inc/theme-info/start-blogging-info.php:297
+msgid "Customized Archive Titles"
+msgstr ""
+
+#: inc/theme-info/start-blogging-info.php:306
+msgid "WooCommerce Ready"
+msgstr ""
+
+#: inc/theme-info/start-blogging-info.php:315
+msgid "Developer Friendly with Custom Hooks"
+msgstr ""
+
+#: search.php:18
+#, php-format
+msgid "Search Results for %s"
+msgstr ""
+
+#: searchform.php:12
+msgctxt "Search form label"
+msgid "Search"
+msgstr ""
+
+#: searchform.php:13
+msgctxt "Search field placeholder"
+msgid "Search"
+msgstr ""
+
+#: searchform.php:15
+msgid "Search"
+msgstr ""
+
+#: single.php:31
+msgid "Next Post - "
+msgstr ""
+
+#: single.php:32
+msgid "Next post:"
+msgstr ""
+
+#: single.php:34
+msgid "Previous Post - "
+msgstr ""
+
+#: single.php:35
+msgid "Previous post:"
+msgstr ""
+
+#: template-parts/content-page.php:22 template-parts/content.php:49
+msgid "Pages:"
+msgstr ""
+
+#: template-parts/content-search.php:18 template-parts/content-single.php:14
+#: template-parts/content.php:26
+msgid "Edit This Post"
+msgstr ""
+
+#: template-parts/content-search.php:22 template-parts/content.php:30
+msgid "Featured"
+msgstr ""
+
+#: template-parts/content.php:44
+#, php-format
+msgid "Continue Reading %s ..."
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Start Blogging"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid ""
+"https://www.bloggingthemestyles.com/free-wordpress-themes/start-blogging"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Start Blogging offers you an exceptional style that is designed for personal "
+"and business blogging websites. With clean lines, open space, and features "
+"like Unlimited Colours, you can easily personalize your website using the "
+"powerful built-in theme customizer that let's you see live results as you "
+"make changes. This theme focuses more on simplicity to ensure you can "
+"maximize what is important....creating content for your blog! To list a few "
+"of many key features, you get mobile responsive viewing that includes "
+"Responsive Font Sizing, a layout that takes advantage of the ever popular "
+"Bootstrap grid, 20 sidebar positions with dynamic sizing, a theme that is "
+"Page Builder ready, Font Awesome icons, a Banner sidebar for images or "
+"Sliders, an information page in the Admin to give you access to setup "
+"tutorials and support, plus much more...."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Andre"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://www.bloggingthemestyles.com"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Page Builder"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Left &amp; Right Column"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Left Column"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Right Column"
+msgstr ""

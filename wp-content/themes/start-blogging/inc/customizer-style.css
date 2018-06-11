@@ -1,0 +1,12 @@
+/* Customizer styling */
+
+#accordion-section-start_blogging_upgrade .accordion-section-title{background-color:#008ec2; color:#fff}
+#accordion-section-start_blogging_upgrade .customize-control-description a{color:#6f26ac; text-decoration:underline;}
+#customize-theme-controls #accordion-section-start_blogging_upgrade .accordion-section-title:after {
+    color: #fff;
+}
+#customize-theme-controls #accordion-section-start_blogging_upgrade:focus .accordion-section-title:after, 
+#customize-theme-controls #accordion-section-start_blogging_upgrade:hover .accordion-section-title:after{
+    color: #0073aa;
+}
+

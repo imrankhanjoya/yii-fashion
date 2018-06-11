@@ -1,0 +1,376 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: ClubHair\n"
+"POT-Creation-Date: 2018-04-07 15:39+0200\n"
+"PO-Revision-Date: 2018-04-07 15:39+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: 404.php:15
+msgid "The Page You Are Looking For Doesn&rsquo;t Exist."
+msgstr ""
+
+#: 404.php:17
+msgid "We are very sorry for the inconvenience."
+msgstr ""
+
+#: 404.php:18
+msgid "Perhaps, Try using the search box below."
+msgstr ""
+
+#: attachment.php:53 page.php:29 single.php:43
+msgid "Edit"
+msgstr ""
+
+#: category.php:15
+msgid "Latest Posts Under:"
+msgstr ""
+
+#: comments.php:15
+msgid "No Comments"
+msgstr ""
+
+#: comments.php:15 inc/post-meta.php:20
+msgid "1 Comment"
+msgstr ""
+
+#: comments.php:15 inc/post-meta.php:20
+msgid "% Comments"
+msgstr ""
+
+#: comments.php:18 comments.php:28
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:19 comments.php:29
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: comments.php:20 comments.php:30
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: comments.php:36
+msgid "Comments are closed."
+msgstr ""
+
+#: footer.php:16
+msgid "Theme by"
+msgstr ""
+
+#. Author URI of the plugin/theme
+#: footer.php:16
+msgid "https://www.thewpclub.com"
+msgstr ""
+
+#: footer.php:16
+msgid "https://wordpress.org/"
+msgstr ""
+
+#: footer.php:16
+#, php-format
+msgid "Proudly powered by %s"
+msgstr ""
+
+#: functions.php:60
+msgid "Default Color "
+msgstr ""
+
+#: functions.php:80
+msgid "Widget Images"
+msgstr ""
+
+#: functions.php:81
+msgid "Set background images for certain widgets."
+msgstr ""
+
+#: functions.php:85
+msgid "Information Background"
+msgstr ""
+
+#: functions.php:91
+msgid "Contact Background"
+msgstr ""
+
+#: functions.php:111
+msgid "Add Information Background Here, the width should be approx 1500px"
+msgstr ""
+
+#: functions.php:117
+msgid "Add Contact Background Here, the width should be approx 1500px"
+msgstr ""
+
+#: functions.php:123
+msgid "Social Links"
+msgstr ""
+
+#: functions.php:124
+msgid "Add Your Social Links Here."
+msgstr ""
+
+#: functions.php:133
+msgid "Facebook URL"
+msgstr ""
+
+#: functions.php:141
+msgid "Twitter URL"
+msgstr ""
+
+#: functions.php:149
+msgid "Pinterest URL"
+msgstr ""
+
+#: functions.php:157
+msgid "Instagram URL"
+msgstr ""
+
+#: functions.php:165
+msgid "LinkedIn URL"
+msgstr ""
+
+#: functions.php:173
+msgid "Google+ URL"
+msgstr ""
+
+#: functions.php:181
+msgid "YouTube URL"
+msgstr ""
+
+#: functions.php:189
+msgid "Vimeo URL"
+msgstr ""
+
+#: functions.php:197
+msgid "Tumblr URL"
+msgstr ""
+
+#: functions.php:205
+msgid "Flickr URL"
+msgstr ""
+
+#: functions.php:247
+msgid "Top Primary Menu"
+msgstr ""
+
+#: functions.php:284 functions.php:304 header.php:59
+msgid "View your shopping cart"
+msgstr ""
+
+#: functions.php:468
+msgid "Primary Sidebar"
+msgstr ""
+
+#: functions.php:477
+msgid "Header"
+msgstr ""
+
+#: functions.php:486
+msgid "Front page: Services Title"
+msgstr ""
+
+#: functions.php:495
+msgid "Front page: Service 1"
+msgstr ""
+
+#: functions.php:504
+msgid "Front page: Service 2"
+msgstr ""
+
+#: functions.php:513
+msgid "Front page: Service 3"
+msgstr ""
+
+#: functions.php:522
+msgid "Front page: Service 4"
+msgstr ""
+
+#: functions.php:531
+msgid "Front page: Blog Title"
+msgstr ""
+
+#: functions.php:540
+msgid "Front page: Contact"
+msgstr ""
+
+#: functions.php:549
+msgid "Front page: Prices Title"
+msgstr ""
+
+#: functions.php:558
+msgid "Front page: Prices 1"
+msgstr ""
+
+#: functions.php:567
+msgid "Front page: Prices 2"
+msgstr ""
+
+#: functions.php:576
+msgid "Front page: Prices 3"
+msgstr ""
+
+#: functions.php:585
+msgid "Front page: Stats Title"
+msgstr ""
+
+#: functions.php:594
+msgid "Front page: Stats 1"
+msgstr ""
+
+#: functions.php:603
+msgid "Front page: Stats 2"
+msgstr ""
+
+#: functions.php:612
+msgid "Front page: Stats 3"
+msgstr ""
+
+#: functions.php:621
+msgid "Front page: Stats 4"
+msgstr ""
+
+#: functions.php:630
+msgid "Front page: Information"
+msgstr ""
+
+#: functions.php:653
+#, php-format
+msgid ""
+"<span class=\"btn-text\">Continue reading</span> <span class=\"btn-icon\"><i "
+"class=\"fa fa-angle-right\" aria-hidden=\"true\"></i></span> <span class="
+"\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: functions.php:697
+msgid "Name"
+msgstr ""
+
+#: functions.php:698
+msgid "Email"
+msgstr ""
+
+#: functions.php:699
+msgid "Website"
+msgstr ""
+
+#: functions.php:711
+msgid "Comment"
+msgstr ""
+
+#: header.php:71
+msgid "Sidebar"
+msgstr ""
+
+#: header.php:114
+msgid "Scroll down"
+msgstr ""
+
+#: inc/class-clubhair-wp-bootstrap-navwalker.php:216
+msgid "Add a menu"
+msgstr ""
+
+#: inc/post-meta.php:16
+#, php-format
+msgid "View all posts by %s"
+msgstr ""
+
+#: inc/post-meta.php:20
+msgid "0 Comments"
+msgstr ""
+
+#: inc/social.php:14
+msgid "Facebook"
+msgstr ""
+
+#: inc/social.php:17
+msgid "Twitter"
+msgstr ""
+
+#: inc/social.php:20
+msgid "Pinterest"
+msgstr ""
+
+#: inc/social.php:23
+msgid "Instagram"
+msgstr ""
+
+#: inc/social.php:26
+msgid "Linkedin"
+msgstr ""
+
+#: inc/social.php:29
+msgid "Google+"
+msgstr ""
+
+#: inc/social.php:32
+msgid "YouTube"
+msgstr ""
+
+#: inc/social.php:35
+msgid "Vimeo"
+msgstr ""
+
+#: inc/social.php:38
+msgid "Tumblr"
+msgstr ""
+
+#: inc/social.php:41
+msgid "Flickr"
+msgstr ""
+
+#: no-results.php:11
+msgid "Oops..! No Results Found."
+msgstr ""
+
+#: no-results.php:13
+msgid "Perhaps, Try searching with different keywords."
+msgstr ""
+
+#: page.php:23 single.php:37
+msgid "Pages:"
+msgstr ""
+
+#: search.php:15
+msgid "Search Results For:"
+msgstr ""
+
+#: searchform.php:13 searchform.php:16
+msgid "Search"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "ClubHair"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "https://www.thewpclub.com/clubhair-wordpress-theme/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"A Free WordPress Blog / Magazine / Personal / Writers / Webshop. ClubHair is "
+"a clean minimal and responsive WooCommerce WordPress theme well suited for "
+"fashion, writers, travel, health, sports, fitness, business, finance, "
+"portfolio, design, art, photography, personal or any other creative "
+"websites, blogs and webshops. Developed with bootstrap framework that makes "
+"it mobile and tablet friendly. ClubHair has the option to add your social "
+"media links. ClubHair is ready for WooCommerce. Get free support at https://"
+"ask.thewpclub.com/"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "The WP Club"
+msgstr ""

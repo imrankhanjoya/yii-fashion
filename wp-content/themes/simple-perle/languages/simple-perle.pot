@@ -1,0 +1,394 @@
+# Copyright (C) 2015 Automattic
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Perle theme\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
+"POT-Creation-Date: 2017-05-02 18:36-0500\n"
+"PO-Revision-Date: 2017-05-02 18:36-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: _e;__;_x;esc_attr_e;esc_html__;esc_html_x\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:51
+msgid "Try looking in the monthly archives."
+msgstr ""
+
+#: comments.php:43 comments.php:66
+msgid "Older Comments"
+msgstr ""
+
+#: comments.php:44 comments.php:67
+msgid "Newer Comments"
+msgstr ""
+
+#: footer.php:27
+msgid "https://wordpress.org/"
+msgstr ""
+
+#: footer.php:27
+#, php-format
+msgid "Proudly powered by %s"
+msgstr ""
+
+#: footer.php:29
+#, php-format
+msgid "Theme: %1$s by %2$s."
+msgstr ""
+
+#: functions.php:49
+msgid "Primary"
+msgstr ""
+
+#: functions.php:50
+msgid "Social Media"
+msgstr ""
+
+#: functions.php:109
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:119
+msgid "Footer Widgets"
+msgstr ""
+
+#: functions.php:149
+msgid "expand child menu"
+msgstr ""
+
+#: functions.php:150
+msgid "collapse child menu"
+msgstr ""
+
+#: functions.php:221 functions.php:223
+msgid "on"
+msgstr ""
+
+#: inc/about-me-widget.php:27
+#, php-format
+msgid "%s About Me Widget"
+msgstr ""
+
+#: inc/about-me-widget.php:30
+msgid "Display an About Me widget in your sidebar"
+msgstr ""
+
+#: inc/about-me-widget.php:153
+msgid "Widget title:"
+msgstr ""
+
+#: inc/about-me-widget.php:157
+msgid "Image URL:"
+msgstr ""
+
+#: inc/about-me-widget.php:158
+msgid "Image should be at least 135x135 px"
+msgstr ""
+
+#: inc/about-me-widget.php:165
+msgid "square"
+msgstr ""
+
+#: inc/about-me-widget.php:168
+msgid "circle"
+msgstr ""
+
+#: inc/about-me-widget.php:174
+msgid "Text:"
+msgstr ""
+
+#: inc/about-me-widget.php:178
+msgid "Read more text:"
+msgstr ""
+
+#: inc/about-me-widget.php:182
+msgid "Link URL (when the image or read more is clicked):"
+msgstr ""
+
+#: inc/admin/start-page/start-page.php:31
+msgid "Theme Start Page"
+msgstr ""
+
+#: inc/admin/start-page/start-page.php:43
+#, php-format
+msgid "Welcome to %1s %2s"
+msgstr ""
+
+#: inc/admin/start-page/start-page.php:44
+#, php-format
+msgid "Thanks for downloading %s!"
+msgstr ""
+
+#: inc/admin/start-page/start-page.php:48
+#, php-format
+msgid "Getting Started with %s"
+msgstr ""
+
+#: inc/admin/start-page/start-page.php:58
+msgid "Documentation"
+msgstr ""
+
+#: inc/admin/start-page/start-page.php:59
+msgid ""
+"Need help setting up Simple Perle? Take a look at the documentation for help "
+"on getting setup."
+msgstr ""
+
+#: inc/admin/start-page/start-page.php:60
+msgid "Go to the Documentation"
+msgstr ""
+
+#: inc/admin/start-page/start-page.php:66
+#: inc/admin/start-page/start-page.php:67
+#: inc/admin/start-page/start-page.php:99
+msgid "Upgrade to Perle"
+msgstr ""
+
+#: inc/admin/start-page/start-page.php:67
+msgid ""
+"Upgrading to <a href=\"https://nudgethemes.com/wordpress-themes/Perle-theme/"
+"\" target=\"_blank\">Perle</a> allows you to customize your site's colors, "
+"upload a custom logo and set featured content using <a href=\"http://jetpack."
+"me/\" target=\"_blank\"> Jetpack</a>, as well as several other features "
+"which will help you make your site your very own."
+msgstr ""
+
+#: inc/admin/start-page/start-page.php:74
+msgid "Featured Posts"
+msgstr ""
+
+#: inc/admin/start-page/start-page.php:75
+msgid ""
+"Highlight your four best posts, pages or portfolio items with Jetpack's "
+"Featured Content. The subtle animation will add a touch of charm to your "
+"page."
+msgstr ""
+
+#: inc/admin/start-page/start-page.php:81
+msgid "WooCommerce Support"
+msgstr ""
+
+#: inc/admin/start-page/start-page.php:82
+msgid ""
+"Sell anything with the free WooCommerce plugin which powers almost "
+"30&percnt; of all online shops. Perle lets you set up shop with a flawless "
+"integrated design."
+msgstr ""
+
+#: inc/admin/start-page/start-page.php:88
+msgid "Custom Colors & CSS"
+msgstr ""
+
+#: inc/admin/start-page/start-page.php:89
+msgid ""
+"Perle lets you easily customize your site's colors. If you know a bit of "
+"CSS, you can take it a little further using the Custom CSS area."
+msgstr ""
+
+#: inc/admin/start-page/start-page.php:95
+msgid "Special Styles"
+msgstr ""
+
+#: inc/admin/start-page/start-page.php:96
+msgid ""
+"Give your content a little extra style with over hanging images, drop caps "
+"and sub-headings. Take a look at <a href=\"https://nudgethemes.com/"
+"documentation/perle-documentation/\" target=\"_blank\">Perle's "
+"documentation</a> for how easily you can create these. "
+msgstr ""
+
+#: inc/customizer.php:21
+msgid "Theme Options"
+msgstr ""
+
+#: inc/customizer.php:38
+msgid "Hide Portfolio from blog page?"
+msgstr ""
+
+#: inc/customizer.php:39
+msgid "Check box to hide Portfolio items from blog page."
+msgstr ""
+
+#: inc/customizer.php:59
+msgid "Portfolio Section Title"
+msgstr ""
+
+#: inc/customizer.php:60 inc/customizer.php:80
+msgid "The title will appear on the Blog Page."
+msgstr ""
+
+#: inc/customizer.php:79
+msgid "Latest Posts Section Title"
+msgstr ""
+
+#: inc/customizer.php:98
+msgid "Display coloured block if no featured thumbnail is set?"
+msgstr ""
+
+#: inc/customizer.php:102 inc/customizer.php:133
+msgid "Yes"
+msgstr ""
+
+#: inc/customizer.php:103 inc/customizer.php:134
+msgid "No"
+msgstr ""
+
+#: inc/nudge-upgrade-theme/add-customize-section.php:42
+msgid "Perle Theme"
+msgstr ""
+
+#: inc/nudge-upgrade-theme/add-customize-section.php:43
+msgid "Upgrade"
+msgstr ""
+
+#: inc/plugin-enhancements.php:82
+#, php-format
+msgid ""
+"The %1$s is necessary to use some of this theme&rsquo;s features, including: "
+msgstr ""
+
+#: inc/plugin-enhancements.php:83
+msgid "Jetpack plugin"
+msgstr ""
+
+#: inc/plugin-enhancements.php:106
+msgid "Site Logo"
+msgstr ""
+
+#: inc/plugin-enhancements.php:115
+msgid "Featured Content"
+msgstr ""
+
+#: inc/plugin-enhancements.php:124
+msgid "Social Menu"
+msgstr ""
+
+#: inc/plugin-enhancements.php:133
+msgid "Menus"
+msgstr ""
+
+#: inc/plugin-enhancements.php:142
+msgid "Comics"
+msgstr ""
+
+#: inc/plugin-enhancements.php:151
+msgid "Testimonials"
+msgstr ""
+
+#: inc/plugin-enhancements.php:160
+msgid "Portfolios"
+msgstr ""
+
+#: inc/plugin-enhancements.php:178
+msgid "no specific module needed"
+msgstr ""
+
+#: inc/plugin-enhancements.php:179
+msgid "Custom Content Types module"
+msgstr ""
+
+#: inc/plugin-enhancements.php:256
+#, php-format
+msgid " Please activate %1$s. %2$s"
+msgstr ""
+
+#: inc/plugin-enhancements.php:258
+msgid "Activate"
+msgstr ""
+
+#: inc/plugin-enhancements.php:266
+#, php-format
+msgid " Please install %1$s. %2$s"
+msgstr ""
+
+#: inc/plugin-enhancements.php:268
+msgid "Install"
+msgstr ""
+
+#: inc/plugin-enhancements.php:293
+#, php-format
+msgid "To use %1$s, please activate the Jetpack plugin&rsquo;s %2$s."
+msgstr ""
+
+#: inc/plugin-enhancements.php:390
+msgid "Your request failed permission check."
+msgstr ""
+
+#: inc/plugin-enhancements.php:397
+msgid "Your request was processed. See ya!"
+msgstr ""
+
+#: inc/template-tags.php:28
+#, php-format
+msgid "%s"
+msgstr ""
+
+#: inc/template-tags.php:45 inc/template-tags.php:96
+msgid ", "
+msgstr ""
+
+#: inc/template-tags.php:47 inc/template-tags.php:98
+#, php-format
+msgid "%1$s"
+msgstr ""
+
+#: inc/template-tags.php:53
+msgid "No Comments"
+msgstr ""
+
+#: inc/template-tags.php:53
+msgid "1 Comment"
+msgstr ""
+
+#: inc/template-tags.php:53
+msgid "% Comments"
+msgstr ""
+
+#: inc/template-tags.php:60 inc/template-tags.php:78
+#: template-parts/content-page.php:33
+#, php-format
+msgid "Edit %s"
+msgstr ""
+
+#: inc/template-tags.php:142
+msgid "by "
+msgstr ""
+
+#: inc/template-tags.php:185
+msgid "<span class=\"meta-nav\">Previous article</span> %title "
+msgstr ""
+
+#: inc/template-tags.php:186
+msgid "<span class=\"meta-nav\">Next article</span> %title "
+msgstr ""
+
+#: search.php:19
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: searchform.php:9
+msgid "Search for:"
+msgstr ""
+
+#: template-parts/content-none.php:21
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/content-page.php:61
+msgid "Pages:"
+msgstr ""
+
+#: template-parts/content-portfolio-single.php:43
+msgid "Tagged: "
+msgstr ""

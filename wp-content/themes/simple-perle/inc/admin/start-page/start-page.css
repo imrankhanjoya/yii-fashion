@@ -1,0 +1,136 @@
+.nudge-themes-start-page .postbox.my-form-wrap {
+	padding: 1.75em;
+}
+
+.nudge-themes-start-page#poststuff .postbox.my-form-wrap h3 {
+	padding: 0;
+}
+
+@media screen and (min-width: 700px) {
+	.nudge-themes-start-page .theme-screenshot {
+		float: left;
+		margin-right: 3em;
+		width: 30%;
+	}
+}
+
+.nudge-themes-start-page a:hover.small{
+	background-color: #e84e3e;
+}
+
+.nudge-themes-start-page.about-wrap h1 {
+	margin: 0.2em 0 0;
+}
+
+.nudge-themes-start-page .postbox {
+	border-width: 0 1px 1px;
+	margin-top: 5em;
+	padding: 1.5em;
+}
+
+.nudge-themes-start-page .inside {
+	padding-left: 0;
+}
+
+.nudge-themes-start-page#poststuff h3 {
+	font-size: 18px;
+}
+
+.nudge-themes-start-page.about-wrap .feature-section.two-col h3 {
+	margin-top: inherit;
+}
+
+.nudge-themes-start-page .ui-tabs-nav {
+	clear: both;
+	padding-top: 3em;
+	margin-bottom: 0;
+}
+
+.nudge-themes-start-page .ui-tabs-nav li {
+	background-color: #e4e4e4;
+	border: 1px solid #e5e5e5;
+	border-width: 1px 1px 0;
+	display: inline-block;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 0;
+	padding: 0.5em 0.75em;
+}
+
+.nudge-themes-start-page .ui-tabs-nav .ui-state-active {
+	background: #fff;
+}
+
+.nudge-themes-start-page .ui-tabs-nav li a {
+	color: #222;
+	text-decoration: none;
+}
+
+.nudge-themes-start-page .sub-heading {
+	font-size: 16px;
+	padding-bottom: 1.75em;
+}
+
+.nudge-themes-start-page .box-title {
+	font-size: 1.35em;
+	text-align: center;
+}
+
+/* License activation style */
+.nudge-themes-start-page .message-active {
+	background-color: #dff0d8;
+	color: #3c763d;
+	padding: 2px 4px;
+}
+
+.nudge-themes-start-page .message-active:before {
+	content: '\2713\00a0';
+}
+
+.wp-core-ui input.button-secondary[value="Activate License"] {
+	background: #6ea43f;
+	border-color: #557f31;
+	box-shadow: 0 1px 0 rgba(144, 195, 100, 0.5) inset, 0 1px 0 rgba(0, 0, 0, 0.15);
+	color: #fff;
+}
+
+.wp-core-ui input:hover.button-secondary[value="Activate License"] {
+	background: #66983a;
+}
+
+.nudge-themes-start-page .nt-theme-upgrade {
+	padding: 3em 0;
+	text-align: center;
+}
+
+.nudge-themes-start-page .nt-theme-upgrade .button-primary {
+	font-size:  1.125em;
+	font-weight: normal;
+	height: inherit;
+	line-height: 1.7;
+	padding: .5em 1em;
+	text-shadow: none;
+}
+
+.nudge-themes-start-page .button-upgrade {
+	background-color: #EC6A5C;
+	border: none;
+	border-radius: 2px;
+	box-shadow: none;
+	color: #fff;
+	display: inline-block;
+	font-weight: bold;
+	font-size: 13px;
+	height: 28px;
+	line-height: 27px;
+	margin: 1em auto;
+	padding: 0 10px 1px;
+	text-align: center;
+	transition: all ease .5s;
+	text-decoration: none;
+	text-shadow: none;
+}
+
+.wp-core-ui .nudge-themes-start-page .button-upgrade.button-primary:hover {
+	background-color: #e84e3e;
+}

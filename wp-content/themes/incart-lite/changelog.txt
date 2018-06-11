@@ -1,0 +1,31 @@
+= 1.0.7 =
+* WP 4.7 compatible.
+* Updated Font Awesome v4.7.
+* Compatible with latest Woocommerce version.
+* Removed Recommended Plugins.
+* Registered WooCommerce sidebar.
+
+= 1.0.6 =
+* WP 4.6 compatible.
+
+= 1.0.5 =
+* Removed composer file.
+* Fixed untranslatable text.
+
+= 1.0.4 =
+* Added .pot file.
+
+= 1.0.3 =
+* Added escaped values.
+* Added .po file.
+* Added sketchthemes image License.
+
+= 1.0.2 =
+* Remove unnecessary files.
+
+= 1.0.1 =
+* Fixed responsive issue.
+* Fixed images alignment issue.
+
+= 1.0.0 =
+* Initial release

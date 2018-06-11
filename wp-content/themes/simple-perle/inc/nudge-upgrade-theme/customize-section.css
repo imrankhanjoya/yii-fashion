@@ -1,0 +1,24 @@
+#customize-controls .control-section-nudge-upgrade-theme .accordion-section-title:hover,
+#customize-controls .control-section-nudge-upgrade-theme .accordion-section-title:focus {
+	background-color: #fff;
+}
+
+.control-section-nudge-upgrade-theme .accordion-section-title .button {
+	background-color: #EC6A5C;
+	border-color: #EC6A5C;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	color: #fff;
+	font-weight: 400;
+	margin-left: 8px;
+	margin-top:  -4px;
+}
+.control-section-nudge-upgrade-theme .accordion-section-title .button:hover{ 
+	background-color: #e84e3e;
+	border-color: #e84e3e;
+}
+
+.rtl .control-section-nudge-upgrade-theme .accordion-section-title .button {
+	margin-left:  0;
+	margin-right: 8px;
+}
