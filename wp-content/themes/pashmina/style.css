@@ -93,11 +93,10 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 	border: 1px solid rgba(39,48,57,.2);
-	border-radius: 3px;
-	background: rgba(39,48,57,.05);
-	color: rgba(39,48,57,.85);
+	border-radius: 0px;
+	background:#000;
+	color:#fff;
 	line-height: 1;
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
 	padding: 11px 15px;
 	font-size: 1em;
 }
@@ -131,11 +130,11 @@ input[type="search"],
 textarea,
 select {
 	color: rgba(39,48,57,.85);
-	border-radius: 3px;
+	border-radius:0px;
 	border: 1px solid rgba(39,48,57,.25);
 	min-width: 60%;
 	max-width: 100%;
-	padding: 5px 10px;
+	padding:6px 0px 7px 10px;
 }
 
 input[type="text"]:focus,
@@ -1146,7 +1145,43 @@ td {
 	color: #e83f6f;
 	border-color: #e83f6f;
 }
+.front-henna-sub{
+    padding-top:10px;
+}
+.front-henna-card{
+    text-align: right;
+    padding:5%;
 
+}
+.front-henna-card p{
+    font-family:'Pathway Gothic One', sans-serif;
+    text-align: justify;
+    font-weight:300;
+    font-size:18px;
+}
+.btn-knowmore{
+    background-color: #000 !important;
+    color: #fff !important;
+    border: none;
+    border-radius: 0px !important;
+    font-family: 'Raleway Dots', cursive;
+}
+.btn-getfree{
+    background: #000 !important;
+    color: #fff !important;
+    border:1px solid;
+    border-radius: 0px !important;
+    font-family: 'Raleway Dots', cursive;
+    font-size:1.6em !important;
+}
+.front-henna-card .fa {
+    color: #f2be7d;
+}
+.front-henna-card h2{
+    font-family:'Pinyon Script', cursive;
+    font-size:35px;
+    font-weight: 400;
+}
 /*--------------------------------------------------------------
 # Popular posts
 --------------------------------------------------------------*/

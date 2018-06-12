@@ -11,8 +11,8 @@
  *
  * @package Pashmina
  */
-get_header();
-?>
+
+get_header(); ?>
 
 
 
@@ -31,78 +31,78 @@ get_header();
 
 
 
-<?php if ( get_theme_mod( 'featured_posts' ) != '' ) : ?>
+    <?php if ( get_theme_mod( 'featured_posts' ) != '' ) : ?>
 
-<div class="container">
-    <div class="row">
-        <div class="col-lg-12">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
 
-            <div class="dt-featured-post-slider">
-                <div class="swiper-wrapper">
+                <div class="dt-featured-post-slider">
+                    <div class="swiper-wrapper">
 
-                    <?php
-                    $dt_featured_posts      = esc_html( get_theme_mod( 'featured_posts_select' ) );
-                    $featured_posts_count   = esc_html( get_theme_mod( 'featured_posts_count' ) );
+                        <?php
+                        $dt_featured_posts      = esc_html( get_theme_mod( 'featured_posts_select' ) );
+                        $featured_posts_count   = esc_html( get_theme_mod( 'featured_posts_count' ) );
 
-                    if ( $dt_featured_posts == '' ) {
-                        $dt_featured_posts = '';
-                    }
+                        if ( $dt_featured_posts == '' ) {
+                            $dt_featured_posts = '';
+                        }
 
-                    $args = array(
-                        'post_type'		 => 'post',
-                        'posts_per_page' => $featured_posts_count,
-                        'orderby' 		 => 'ASC',
-                        'category__in'   => $dt_featured_posts
-                    );
+                        $args = array(
+                            'post_type'		 => 'post',
+                            'posts_per_page' => $featured_posts_count,
+                            'orderby' 		 => 'ASC',
+                            'category__in'   => $dt_featured_posts
+                        );
 
-                    $dt_featured_posts = new WP_Query($args);
+                        $dt_featured_posts = new WP_Query($args);
 
-                    while ( $dt_featured_posts->have_posts() ) : $dt_featured_posts->the_post(); ?>
+                        while ( $dt_featured_posts->have_posts() ) : $dt_featured_posts->the_post(); ?>
 
-                        <div class="swiper-slide">
-                            <div class="dt-featured-post">
-                                <figure>
+                            <div class="swiper-slide">
+                                <div class="dt-featured-post">
+                                    <figure>
 
-                                    <?php
+                                        <?php
 
-                                    if ( has_post_thumbnail() ) :
+                                        if ( has_post_thumbnail() ) :
 
-                                        the_post_thumbnail( 'pashmina-thum-featured-post-img' );
+                                            the_post_thumbnail( 'pashmina-thum-featured-post-img' );
 
-                                    else : ?>
-                                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/blank.png" alt="<?php _e( 'no image found', 'pashmina' )?>"/>
-                                    <?php endif; ?>
+                                        else : ?>
+                                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/blank.png" alt="<?php _e( 'no image found', 'pashmina' )?>"/>
+                                        <?php endif; ?>
 
-                                    <span class="transition5"><a href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title_attribute(); ?>"><i class="fa fa-mail-forward transition5"></i></a> </span>
-                                </figure>
+                                        <span class="transition5"><a href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title_attribute(); ?>"><i class="fa fa-mail-forward transition5"></i></a> </span>
+                                    </figure>
 
-                                <div class="entry-footer">
-                                    <h3><a href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+                                    <div class="entry-footer">
+                                        <h3><a href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 
-                                    <span><?php esc_attr( the_date() ); ?></span>
-                                </div>
-                            </div><!-- .dt-featured-post -->
-                        </div><!-- .swiper-slide -->
+                                        <span><?php esc_attr( the_date() ); ?></span>
+                                    </div>
+                                </div><!-- .dt-featured-post -->
+                            </div><!-- .swiper-slide -->
 
-                    <?php endwhile; ?>
+                        <?php endwhile; ?>
 
-                    <?php wp_reset_postdata(); ?>
+                        <?php wp_reset_postdata(); ?>
 
-                    <div class="clearfix"></div>
-                </div><!-- .swiper-wrapper -->
+                        <div class="clearfix"></div>
+                    </div><!-- .swiper-wrapper -->
 
-                <!-- Add Pagination -->
-                <div class="swiper-pagination"></div>
-            </div><!-- .dt-featured-post-slider -->
-        </div><!-- .col-lg-12 -->
-    </div><!-- .row -->
-</div><!-- .container -->
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div><!-- .dt-featured-post-slider -->
+			</div><!-- .col-lg-12 -->
+		</div><!-- .row -->
+	</div><!-- .container -->
 
-<?php else : ?>
+    <?php else : ?>
 
-<div class="dt-slider-separator"></div>
+    <div class="dt-slider-separator"></div>
 
-<?php endif; ?>
+    <?php endif; ?>
 
 
 
@@ -131,15 +131,18 @@ get_header();
 
 
             <div class="col-lg-4">
-                <div class="card front-henna-sub" >
-                    <img src="http://localhost:8080/p/deideo/wp-content/uploads/2018/06/01-07-18-MakeupBlog-JanesWinterPicks-1080x1080-600x460.jpg" >
-                    <div style=" padding:0% 2%; text-align: center; background-color: #fff">
-                        <h3>Subscribe for Henna kit for hair in just $10 monthly</h3>
-
-                        <input class="btn btn-knowmore" type="button" value="Subscribe">
+                <div class="card front-henna-card" style="background:url('https://d26h2j717chvn2.cloudfront.net/assets/first-tote-12c3cc22fd9faa1866d536d52a693f73.jpg'); background-repeat:no-repeat">
+                    <div style="background:rgba(255,255,255, 0.8); padding:0% 2%; text-align: center">
+                        <h2>Henna is all you need for your beauty</h2>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
 
 
                     </div>
+                    <input class="btn btn-knowmore" type="button" value="Know More">
                 </div>
             </div>
         </div>
@@ -147,28 +150,14 @@ get_header();
 
 
 
-<div  class="container" >
-<div class="row">
-            <div class="col-lg-9" >
 
-                    <div style=" padding:2%; text-align: center; background-color: #E8D7AB">
-                        <h3>Join the Movement</h3>
-                        <h3>Subscribe for Henna kit for hair in just $10 monthly</h3>
-
-                        <input class="btn btn-getfree" type="button" value="Get it free">
-
-
-                    </div>
-            </div>
-        </div>
-    </div>
 
 
 
 
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 col-md-12">
+            <div class="col-lg-8 col-md-8">
 
                 <?php if ( have_posts() ) :
 
