@@ -27,7 +27,7 @@ $header_image = get_header_image();
 ?>
 
 
-	<header class="dt-header" <?php if ( ! empty( $header_image ) ) { ?>style="background-image: url('<?php header_image(); ?>');"<?php } ?> >
+	<header class="dt-header" <?php if ( ! empty( $header_image ) ) { ?>style="background-image: url('<?php header_image(); ?>'); background-position: center; background-repeat: no-repeat;"<?php } ?> >
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
