@@ -24,11 +24,14 @@
 
 <?php
 $header_image = get_header_image();
+
+$showHeader = true;
+
 ?>
 
 
 	<header class="dt-header" <?php if ( ! empty( $header_image ) ) { ?>style="background-image: url('<?php header_image(); ?>'); background-position: center; background-repeat: no-repeat;"<?php } ?> >
-		<div class="container">
+		<div class="container hidden-xs">
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="dt-logo">
@@ -63,7 +66,7 @@ $header_image = get_header_image();
                 <div class="row">
                     <div class="col-lg-12 col-md-12">
                         <div class="dt-menu-md">
-                            <?php _e( 'Menu', 'pashmina' ); ?>
+                            <img src="http://localhost:8080/p/deideo/wp-content/uploads/2018/06/deideo_min-1.png">
                             <span><i class="fa fa-bars"></i> </span>
                         </div>
 
@@ -76,7 +79,7 @@ $header_image = get_header_image();
 
         <?php endif; ?>
 
-        <?php if( ! is_front_page() && ! is_home() ) : ?>
+        <?php if( (! is_front_page() && ! is_home()) && showheader()) : ?>
             <div class="dt-breadcrumbs">
                 <div class="container">
                     <div class="row">

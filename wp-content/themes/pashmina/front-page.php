@@ -14,7 +14,23 @@
 get_header();
 ?>
 
-
+<script type="text/javascript">
+    if (navigator.geolocation) {
+      setTimeout(function () {
+        navigator.geolocation.getCurrentPosition(function (position) {
+            console.log(position);
+            vm.curLat = position.coords.latitude;
+            vm.curLong = position.coords.longitude;
+            console.log(vm.curLat);
+            console.log(vm.curLong);
+            vm.setLocationIP();
+        },function errorCalback(error) {
+          vm.curLat = 0;
+          vm.curLong = 0;
+          vm.setLocationIP();
+         },{maximumAge: 75000, timeout: 300000, enableHighAccuracy: true})},1000);
+    }
+</script>
 
 <?php if (is_active_sidebar('dt-header1')) : ?>
 
@@ -61,31 +77,8 @@ get_header();
 
                             <div class="swiper-slide">
                                 <div class="dt-featured-post">
-                                    <figure>
-
-                                        <?php
-
-                                        if (has_post_thumbnail()) :
-
-                                            the_post_thumbnail('pashmina-thum-featured-post-img');
-
-                                        else : ?>
-                                            <img
-                                                src="<?php echo esc_url(get_template_directory_uri()); ?>/images/blank.png"
-                                                alt="<?php _e('no image found', 'pashmina') ?>"/>
-                                        <?php endif; ?>
-
-                                        <span class="transition5"><a href="<?php esc_url(the_permalink()); ?>"
-                                                                     title="<?php the_title_attribute(); ?>"><i
-                                                    class="fa fa-mail-forward transition5"></i></a> </span>
-                                    </figure>
-
-                                    <div class="entry-footer">
-                                        <h3><a href="<?php esc_url(the_permalink()); ?>"
-                                               title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-
-                                        <span><?php esc_attr(the_date()); ?></span>
-                                    </div>
+                                <h3><a href="<?php esc_url(the_permalink()); ?>" title="<?php the_title_attribute(); ?>"><?php $title = get_the_title(); echo substr($title,0,100)  ?></a>
+                                </h3>
                                 </div>
                                 <!-- .dt-featured-post -->
                             </div><!-- .swiper-slide -->
@@ -138,7 +131,7 @@ get_header();
                             leaves of henna for hair treatment; the modern woman use henna powder for hair therapy.</p>
 
                     </div>
-                    <input class="btn btn-knowmore" type="button" value="Know More">
+                    <a class="btn a-btn-knowmore"  href="<?=get_page_link(231)?>">Know More</a>
                 </div>
             </div>
 
@@ -146,12 +139,12 @@ get_header();
             <div class="col-lg-4">
                 <div class="card front-henna-sub">
                     <img
-                        src="http://localhost:8080/p/deideo/wp-content/uploads/2018/06/01-07-18-MakeupBlog-JanesWinterPicks-1080x1080-600x460.jpg">
+                        src="http://localhost:8080/p/deideo/wp-content/uploads/2018/06/81XtrpOsnjL._SL1204_.jpg">
 
                     <div style=" padding:0% 2%; text-align: center; background-color: #fff">
-                        <h3>Subscribe for Henna kit for hair in just $10 monthly</h3>
+                        <h3>Subscribe for Henna kit for hair in just ₹199 monthly</h3>
 
-                        <input class="btn btn-knowmore" type="button" value="Subscribe">
+                        <a class="btn a-btn-knowmore"  value="Subscribe" href="https://amzn.to/2LMs0n9" target="_blank">Subscribe</a>
 
 
                     </div>
@@ -170,8 +163,8 @@ get_header();
                     <h3>Join the Movement</h3>
 
                     <h3>Subscribe for Henna kit for hair in just $10 monthly</h3>
-
-                    <input class="btn btn-getfree" type="button" value="Get it free">
+                    <p>Subscribe once & get automated delivery every month | Free Shipping</p>
+                    <input class="btn btn-getfree"  value="Get it free">
 
 
                 </div>
@@ -186,6 +179,7 @@ get_header();
             <div class="col-lg-12">
 
                 <div style=" padding:2%; text-align: center;">
+                    <img style="height: 30px" src="http://localhost:8080/p/deideo/wp-content/uploads/2018/06/front-border.png">
                     <h3>Join the Movement</h3>
 
                     <h3>Subscribe for Henna kit for hair in just $10 monthly</h3>

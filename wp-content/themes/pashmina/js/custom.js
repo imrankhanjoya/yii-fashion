@@ -82,4 +82,9 @@ jQuery(document).ready(function() {
             }, 600);
         });
     }
+
+    jQuery(".img-check").click(function(){
+        jQuery(this).toggleClass("check");
+        });
+
 });

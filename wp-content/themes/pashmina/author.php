@@ -8,34 +8,63 @@
  */
 
 get_header(); ?>
+<?PHP
+$userid = $_GET['author'];
+$size = 'thumbnail';
+
+$all_meta_for_user = get_user_meta( $userid );
+$imgURL = $all_meta_for_user['cupp_upload_meta'][0];
+
+//print_r($all_meta_for_user);
+$name = $all_meta_for_user['nickname'][0];
+$eye = $all_meta_for_user['eye'][0];
+if($eye!=""){
+    $eye = $eye." eyes with ";
+}
+$skin = $all_meta_for_user['skin'][0];
+if($skin!=""){
+    $skin = " skin color ".$skin;
+}
+$brands = $all_meta_for_user['brands'];
+if(!empty($brands)){
+    $brands = "Fan of ".implode(", ",$brands);
+}
+$dress = $all_meta_for_user['dress'][0];
+if(!empty($dress)){
+    $dress = ", Love size ".$dress;
+}
+$top = $all_meta_for_user['top'][0];
+if(!empty($top)){
+    $top = " with top ".$top." size";
+}
+
+?>
+
 
 	<div class="container">
 		<div class="row">
             <header class="page-header">
-            <div class="row">
-                <div class="col-md-2">
-                    <header>
-                    <?PHP
-                    $userid = get_the_author_meta( 'ID' );
-                    $size = 'thumbnail';
-                    $imgURL = get_cupp_meta($user_id, $size);
-                    ?>
-                <img src="<?=$imgURL?>" class="img-responsive" >
-                        </header>
+            <div class="row" style="padding:10px">
+                <div class="col-md-2 col-xs-4 col-md-offset-2 ">
+                    <header style="padding-top:30px">
+                    <img src="<?=$imgURL?>" class="img-responsive" style="width:100px" >
+                    </header>
                 </div>
-                <div class="col-md-10">
+                <div class="col-md-8 col-xs-6">
 
                         <?php
-
-
-                        the_archive_title( '<h1 class="page-title">', '</h1>' );
-                        the_archive_description( '<div class="taxonomy-description">', '</div>' );
+                        echo '<h1>'.$name.'</h1>';
+                        echo $eye.$skin.$dress.$top;
+                        echo "<br>";
+                        echo $brands;
+                        //the_archive_title( '<h1 class="page-title">', '</h1>' );
+                        //the_archive_description( '<div class="taxonomy-description">', '</div>' );
                         ?>
 
                 </div>
             </div>
             </header><!-- .page-header -->
-			<div class="col-lg-8 col-md-8">
+			<div class="col-lg-12 col-md-12">
 
 			<?php if ( have_posts() ) : ?>
 
@@ -108,11 +137,7 @@ get_header(); ?>
 
 			</div>
 
-			<aside class="col-lg-4 col-md-4">
-				<div class="dt-sidebar">
-					<?php get_sidebar(); ?>
-				</div><!-- dt-sidebar -->
-			</aside><!-- .col-lg-4 -->
+
 		</div>
 	</div>
 

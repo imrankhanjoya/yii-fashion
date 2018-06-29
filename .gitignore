@@ -1,0 +1,37 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen### WordPress template
+*.log
+wp-config.php
+wp-content/advanced-cache.php
+wp-content/backup-db/
+wp-content/backups/
+wp-content/blogs.dir/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/uploads/
+wp-content/wp-cache-config.php
+wp-content/plugins/hello.php
+
+/.htaccess
+/license.txt
+/readme.html
+/sitemap.xml
+/sitemap.xml.gz
+.gitignore
+wp-content/plugins/custom-user-profile-photo/
+wp-content/themes/incart-lite/includes/plugins/
+wp-content/uploads/2018/06/deideo-2-150x81.png
+wp-content/uploads/2018/06/deideo-2-96x81.png
+wp-content/uploads/2018/06/deideo-2.png
+wp-content/uploads/2018/06/deideo1-150x38.png
+wp-content/uploads/2018/06/deideo1-96x38.png
+wp-content/uploads/2018/06/deideo1.png
+wp-content/uploads/2018/06/fav-1.png
+wp-content/uploads/2018/06/fav.png

@@ -263,6 +263,19 @@ textarea:focus {
 }
 
 /*--------------------------------------------------------------
+## Discuss
+--------------------------------------------------------------*/
+.discussion-page{
+	margin-top: 10px;
+}
+.discuss{
+	border: 1px solid #ccc;
+	padding: 10px;
+}
+.comments-link{
+	margin-right:10px;
+}
+/*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
 .comment-content a {
@@ -1159,6 +1172,15 @@ td {
     font-weight:300;
     font-size:18px;
 }
+.a-btn-knowmore{
+	background-color: #000 !important;
+    color: #fff !important;
+    border: none;
+    border-radius: 0px !important;
+    font-family: 'Raleway Dots', cursive;
+    padding: 10px;
+}
+
 .btn-knowmore{
     background-color: #000 !important;
     color: #fff !important;
@@ -1173,6 +1195,9 @@ td {
     border-radius: 0px !important;
     font-family: 'Raleway Dots', cursive;
     font-size:1.6em !important;
+}
+.btn-active{
+    background-color: #8a6d3b !important;
 }
 .front-henna-card .fa {
     color: #f2be7d;
@@ -1860,4 +1885,15 @@ td {
     font-weight: bold;
     text-transform: uppercase;
 
+}
+button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover{
+	background-color:#000;
+}
+.site-form{
+	padding:50px;
+	border:1px solid #f4f4f4;
+}
+img.check{
+    opacity: 0.5;
+    background-color: #000;
 }

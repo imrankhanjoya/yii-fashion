@@ -9,6 +9,8 @@
 
 ?>
 
+Single
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <figure>
 
@@ -18,9 +20,7 @@
 
             the_post_thumbnail( 'pashmina-front-post-img' );
 
-        else : ?>
-            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/blank.png" alt="<?php _e( 'no image found', 'pashmina' )?>"/>
-        <?php endif; ?>
+         endif; ?>
 
     </figure>
 	<header class="entry-header">
@@ -42,10 +42,8 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php pashmina_entry_footer(); ?>
+		<?php //pashmina_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 
-	<?php if ( get_theme_mod( 'pashmina_related_posts_setting', 0 ) == 1 ) : ?>
-		<?php get_template_part( 'template-parts/related-posts' );?>
-	<?php endif; ?>
+	
 </article><!-- #post-## -->
