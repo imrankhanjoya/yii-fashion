@@ -8,12 +8,17 @@
  */
 
 get_header(); ?>
-
+ARCHIVE
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-8 col-md-8">
-
-			<?php if ( have_posts() ) : ?>
+				 <?php 
+            //$custom_query = new WP_Query('post_type="product"'); // exclude category 9
+            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+$args = array( 'post_type' => 'product', 'posts_per_page' =>40, 'paged' => $paged );
+$custom_query = new WP_Query($args);
+            ?>
+			<?php if ( $custom_query->have_posts() ) : ?>
 
 				<header class="page-header">
 					<?php
@@ -22,7 +27,7 @@ get_header(); ?>
 					?>
 				</header><!-- .page-header -->
 
-				<?php while ( have_posts() ) : the_post(); ?>
+				<?php while ( $custom_query->have_posts() ) : $custom_query->the_post(); ?>
 
 				<section class="dt-front-posts-wrap">
 					<div class="dt-front-post">

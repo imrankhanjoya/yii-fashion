@@ -27,14 +27,23 @@ get_header();
     <div class="container discussion-page">
         <div class="row">
             
-            <?php $custom_query = new WP_Query('post_type="product"'); // exclude category 9
-            while($custom_query->have_posts()) : $custom_query->the_post(); ?>
+            <?php 
+            //$custom_query = new WP_Query('post_type="product"'); // exclude category 9
+            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+$args = array( 'post_type' => 'product', 'posts_per_page' =>40, 'paged' => $paged );
+$custom_query = new WP_Query($args);
+            ?>
+            <?PHP while($custom_query->have_posts()) : $custom_query->the_post(); ?>
 
                 <?PHP  get_template_part('template-parts/content-product','page'); ?>
 
             <?php endwhile; ?>
+
+            <?php next_posts_link( '&larr; Older posts', $custom_query->max_num_pages); ?>
+<?php previous_posts_link( 'Newer posts &rarr;' ); ?>
+
             <?php wp_reset_postdata(); // reset the query ?>
-            
+
             
         </div>
     </div>
