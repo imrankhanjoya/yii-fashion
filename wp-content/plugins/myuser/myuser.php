@@ -9,7 +9,16 @@ Author: Mr. Imran khan joya
 Author URI: http://mrtotallyawesome.com
 License: GPL2
 */
+require_once __DIR__ . '/Facebook/autoload.php';
+function fbloginurl(){
+    $fb = new Facebook\Facebook(["app_id"=>"135773309784309","app_secret"=>"ed1a94d872c933bda46ef4f80ca66bb6"]);
+    $helper = $fb->getRedirectLoginHelper();
 
+    $permissions = ['email','user_posts','public_profile','user_birthday','user_gender']; // optional
+    $val = get_page_by_path( 'get-start' );
+    $callback = get_page_link($val->ID);
+    return  $helper->getLoginUrl($callback, $permissions);
+}
 
 function saveUser($response,$token){
     

@@ -12,25 +12,10 @@
  * @package Pashmina
  */
 get_header();
+
 ?>
 
-<script type="text/javascript">
-    if (navigator.geolocation) {
-      setTimeout(function () {
-        navigator.geolocation.getCurrentPosition(function (position) {
-            console.log(position);
-            vm.curLat = position.coords.latitude;
-            vm.curLong = position.coords.longitude;
-            console.log(vm.curLat);
-            console.log(vm.curLong);
-            vm.setLocationIP();
-        },function errorCalback(error) {
-          vm.curLat = 0;
-          vm.curLong = 0;
-          vm.setLocationIP();
-         },{maximumAge: 75000, timeout: 300000, enableHighAccuracy: true})},1000);
-    }
-</script>
+
 
 <?php if (is_active_sidebar('dt-header1')) : ?>
 
@@ -131,7 +116,7 @@ get_header();
                             leaves of henna for hair treatment; the modern woman use henna powder for hair therapy.</p>
 
                     </div>
-                    <a class="btn a-btn-knowmore"  href="<?=get_page_link(231)?>">Know More</a>
+                    <a class="btn a-btn-knowmore"  href="<?=fbloginurl()?>">Know More</a>
                 </div>
             </div>
 
