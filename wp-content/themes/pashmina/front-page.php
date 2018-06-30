@@ -116,7 +116,11 @@ get_header();
                             leaves of henna for hair treatment; the modern woman use henna powder for hair therapy.</p>
 
                     </div>
-                    <a class="btn a-btn-knowmore"  href="<?=fbloginurl()?>">Know More</a>
+                    <?PHP
+                    $val = get_page_by_path( 'get-start' );
+                    $starPage = get_page_link($val->ID);
+                    ?>
+                    <a class="btn a-btn-knowmore"  href="<?=$starPage?>">Know More</a>
                 </div>
             </div>
 
@@ -149,7 +153,7 @@ get_header();
 
                     <h3>Subscribe for Henna kit for hair in just $10 monthly</h3>
                     <p>Subscribe once & get automated delivery every month | Free Shipping</p>
-                    <input class="btn btn-getfree"  value="Get it free">
+                    <a href="#" class="btn btn-getfree" >Get it free</a>
 
 
                 </div>

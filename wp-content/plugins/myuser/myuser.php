@@ -33,6 +33,9 @@ function saveUser($response,$token){
         add_user_meta($UserId,'picture',$userData['picture'],false); 
         add_user_meta($UserId,'cupp_upload_meta',$userData['picture'],false);
         loginUser($UserId);
+        $val = get_page_by_path( 'get-start' );
+        $url = add_query_arg(array('show' =>'skin'),get_page_link($val->ID));
+        wp_redirect($url);
     }
 }
 

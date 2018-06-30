@@ -15,11 +15,18 @@ if(!session_id()) {
  *
  * @package Pashmina
  */
+?>
+
+<?PHP
+
 $user = wp_get_current_user();
+
 if($user->ID==0){
+
     require_once __DIR__ . '/Facebook/autoload.php';
 
     if(isset($_REQUEST['code'])){
+
         $fb = new Facebook\Facebook(["app_id"=>"135773309784309","app_secret"=>"ed1a94d872c933bda46ef4f80ca66bb6","accessToken"=>$accessToken]);
         $helper = $fb->getRedirectLoginHelper();
         try {
@@ -37,17 +44,14 @@ if($user->ID==0){
         $aToken = $accessToken->getValue();
 
         $response = $fb->get('/me?fields=id,email,name,gender,picture,first_name',$aToken);
+
         saveUser($response,$aToken);
     }
 
 
-    $fb = new Facebook\Facebook(["app_id"=>"135773309784309","app_secret"=>"ed1a94d872c933bda46ef4f80ca66bb6"]);
-    $helper = $fb->getRedirectLoginHelper();
-
-    $permissions = ['email','user_posts','public_profile','user_birthday','user_gender']; // optional
-    $callback = 'http://localhost:8080/p/deideo/?page_id=231';
-    $loginUrl = $helper->getLoginUrl($callback, $permissions);
+    
 }else{
+
     $show = 'skin';
     if(isset($_POST['brands'])) {
         delete_user_meta($user->ID,'brands');
@@ -56,16 +60,16 @@ if($user->ID==0){
         }
 
         $url = add_query_arg(array('show' => $show),get_page_link(231));
-        //wp_redirect($url);
+        wp_redirect($url);
     }elseif(isset($_GET['key']) && isset($_GET['val'])){
         $show = sotreUserMeta($_GET['key'],$_GET['val']);
-        $url = add_query_arg(array('show' => $show),get_page_link(231));
+        $val = get_page_by_path( 'get-start' );
+        $url = add_query_arg(array('show' => $show),get_page_link($val->ID));
         wp_redirect($url);
     }elseif(isset($_GET['show'])){
         $show = $_GET['show'];
 
     }
-
     $attrib = get_user_meta($user->ID,$show);
     $UserSkin = get_user_meta($user->ID,'skin');
 
@@ -92,7 +96,7 @@ get_header();
             
                 <div class="form-group col-md-12 site-form  ">
                     <h1>Hi, Join the movement!</h1>
-                    <a class="btn a-btn-knowmore" href="<?=$loginUrl?>">Join In</a>
+                    <a class="btn a-btn-knowmore" href="<?=fbloginurl()?>">Join In</a>
                 </div>
             </div>
             <div class="clear"></div>
