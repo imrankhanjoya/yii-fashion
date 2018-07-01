@@ -101,7 +101,7 @@ get_header();
         <div class="row">
             <div class="col-lg-8">
                 <div class="card front-henna-card"
-                     style="background:url('http://localhost:8080/p/deideo/wp-content/uploads/2018/06/henna_retouched.jpg'); background-repeat:no-repeat">
+                     style="background:url('http://gloat.me/wp-content/uploads/2018/07/henna_retouched.jpg'); background-repeat:no-repeat">
                     <div style="background:rgba(255,255,255, 0.8); padding:0% 2%; text-align: center">
                         <h2>Henna is all you need for your beauty</h2>
                         <span class="fa fa-star"></span>
@@ -128,7 +128,7 @@ get_header();
             <div class="col-lg-4">
                 <div class="card front-henna-sub">
                     <img
-                        src="http://localhost:8080/p/deideo/wp-content/uploads/2018/06/81XtrpOsnjL._SL1204_.jpg">
+                        src="http://gloat.me/wp-content/uploads/2018/07/81XtrpOsnjL._SL1204_.jpg">
 
                     <div style=" padding:0% 2%; text-align: center; background-color: #fff">
                         <h3>Subscribe for Henna kit for hair in just ₹199 monthly</h3>
@@ -168,7 +168,7 @@ get_header();
             <div class="col-lg-12">
 
                 <div style=" padding:2%; text-align: center;">
-                    <img style="height: 30px" src="http://localhost:8080/p/deideo/wp-content/uploads/2018/06/front-border.png">
+                    <img style="height: 30px" src="http://gloat.me/wp-content/uploads/2018/07/front-border.png">
                     <h3>Join the Movement</h3>
 
                     <h3>Subscribe for Henna kit for hair in just $10 monthly</h3>

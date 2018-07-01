@@ -66,7 +66,7 @@ $showHeader = true;
                 <div class="row">
                     <div class="col-lg-12 col-md-12">
                         <div class="dt-menu-md">
-                            <img src="http://localhost:8080/p/deideo/wp-content/uploads/2018/06/deideo_min-1.png">
+                            <img src="http://gloat.me/wp-content/uploads/2018/07/Gloat.me_.png">
                             <span><i class="fa fa-bars"></i> </span>
                         </div>
 
