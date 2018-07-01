@@ -9,6 +9,7 @@
 
 get_header(); ?>
 <?PHP
+
 $userid = $_GET['author'];
 $size = 'thumbnail';
 

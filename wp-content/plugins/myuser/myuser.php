@@ -10,6 +10,10 @@ Author URI: http://mrtotallyawesome.com
 License: GPL2
 */
 require_once __DIR__ . '/Facebook/autoload.php';
+function getLoginPage(){
+    $val = get_page_by_path( 'get-start');
+    return $callback = get_page_link($val->ID);;
+}
 function fbloginurl(){
     $fb = new Facebook\Facebook(["app_id"=>"135773309784309","app_secret"=>"ed1a94d872c933bda46ef4f80ca66bb6"]);
     $helper = $fb->getRedirectLoginHelper();
@@ -21,8 +25,19 @@ function fbloginurl(){
 }
 
 function saveUser($response,$token){
-    
     $userData = parseUserInfo($response);
+    global $wpdb;
+    $query =  "select user_id, meta_key from $wpdb->usermeta where meta_key ='fbid' and meta_value = '".$userData['fbid']."' order by user_id desc limit 1 ";
+    $results = $wpdb->get_results($query, ARRAY_A );
+    if(!empty($results)){
+        
+        loginUser($results[0]['user_id']);
+        $val = get_page_by_path( 'get-start' );
+        $url = add_query_arg(array('show' =>'skin'),get_page_link($val->ID));
+        wp_redirect($url);
+    }
+
+    
     $UserId = wp_create_user($userData['username'],base64_encode(rand(100,3000)),$userData['email']);
     if($UserId){
         add_user_meta($UserId,'gender',$userData['gender'],false); 

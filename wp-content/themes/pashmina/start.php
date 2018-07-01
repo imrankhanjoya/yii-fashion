@@ -19,9 +19,10 @@ if(!session_id()) {
 
 <?PHP
 
+
+
 $user = wp_get_current_user();
 
-if($user->ID==0){
 
     require_once __DIR__ . '/Facebook/autoload.php';
 
@@ -46,11 +47,8 @@ if($user->ID==0){
         $response = $fb->get('/me?fields=id,email,name,gender,picture,first_name',$aToken);
 
         saveUser($response,$aToken);
-    }
 
-
-    
-}else{
+    }elseif($user->ID){
 
     $show = 'skin';
     if(isset($_POST['brands'])) {
@@ -74,6 +72,7 @@ if($user->ID==0){
     $UserSkin = get_user_meta($user->ID,'skin');
 
 }
+
 
 
 
