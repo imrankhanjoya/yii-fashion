@@ -13,7 +13,7 @@ License: GPL2
 <?PHP 
 
 function custom_rewrite_basic() {
-  $val = add_rewrite_rule('^top-in-([a-z A-Z]+)/?', 'index.php?page_id=11&cat=$matches[1]', 'top');
+  $val = add_rewrite_rule('^top-in-([a-z A-Z]+)/?', 'index.php?page_id=55&cat=$matches[1]', 'top');
    flush_rewrite_rules();
 }
 add_action('init', 'custom_rewrite_basic');
