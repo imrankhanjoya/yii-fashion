@@ -1979,3 +1979,50 @@ height: 100px;
 	height: 50px;
 }
 
+/*farukh css*/
+/**TOP PAGE**/
+.top-banners:hover {
+	text-decoration: none;
+	box-shadow: inset 0 0 250px 0 rgba(0,0,0,0.8);
+}
+.top-banners {
+	background: #f7f7f7;
+	margin-bottom: 30px;
+	height: 235px;
+	text-align: center;
+	padding: 30px;
+	background-size: cover;
+	background-position: center center;
+	display: block;
+	overflow: hidden;
+	position: relative;
+	border-radius: 4px;
+}
+.top-banners .top-blck-bacgrnd {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #000;
+	opacity: 0.3;
+}
+.top-banners p {
+	color: #FFFFFF;
+	font-size: 20px;
+	letter-spacing: 1px;
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+.top-ttl-heddng h1{
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 2em;
+	}	
+.top-ttl:hover .top-ttl-heddng{
+	color: red;
+}
+/****/
