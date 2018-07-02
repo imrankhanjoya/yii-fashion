@@ -104,6 +104,7 @@ add_action( 'after_setup_theme', 'pashmina_content_width', 0 );
 function pashmina_scripts() {
 	// Enqueue Bootstrap Grid
 	wp_enqueue_style( 'bootstrap','//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
+	//wp_enqueue_style( 'bootstrap_lo',get_template_directory_uri() .'/css/bootstrap.css','1.1.1');
 
 	// Enqueue Google fonts
     /*

@@ -26,16 +26,21 @@ get_header();
 global $query_string;
 $cat = $GLOBALS['wp_query']->query['cat'];
 ?>
+<div class="col-md-12" style="background-color:#FFDFCA">
+<h1>GloatMe's Pick</h1>
+<p>Here are the best products that will make you look & feel good!</p>
+</div>
     <div class="container">
         <div class="row">
+            
             <?php 
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-$args = array( 'post_type' => 'product','cat'=>4, 'posts_per_page' =>40, 'paged' => $paged );
+$args = array( 'post_type' => 'top_items', 'posts_per_page' =>40, 'paged' => $paged );
 $custom_query = new WP_Query($args);
             ?>
             <?PHP while($custom_query->have_posts()) : $custom_query->the_post(); ?>
 
-                <?PHP  get_template_part('template-parts/content-product','page'); ?>
+                <?PHP  get_template_part('template-parts/content-top_item','page'); ?>
 
             <?php endwhile; ?>
 
