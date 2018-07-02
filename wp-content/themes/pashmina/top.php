@@ -49,38 +49,49 @@ $cat = $GLOBALS['wp_query']->query['cat'];
     <h1 class="hidden-xs"><b>Editor's Pick</b></h1>
     <h3>Here are the best products that will make you look & feel good!</h3>
 </div>
+<?php
+            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+$args = array( 'post_type' => 'top_items', 'posts_per_page' =>40, 'paged' => $paged );
+$custom_query = new WP_Query($args);
+            ?>
+            <?PHP while($custom_query->have_posts()) : $custom_query->the_post(); ?>
+
+
+
+
 <div class="col-md-6">
-    <a class="top-banners" style="background-image: url(http://d1acy2vp0zxghs.cloudfront.net/featured_categories/images/000/000/110/original/26-min.jpg?1487305456);" href="">
+    <a class="top-banners"  style="background-image: url(<?= get_the_post_thumbnail_url(get_the_ID())?>);" href="<?php esc_url( the_permalink() ); ?>">
        <div class="top-blck-bacgrnd"></div>
-        <p>Brown shades will never look out of style</p>
+        <p><?php the_title(); ?></p>
     </a>
 </div>
+ <?php endwhile; ?>
 <div class="col-md-6">
-   <a class="top-banners" style="background-image: url(http://d1acy2vp0zxghs.cloudfront.net/featured_categories/images/000/000/109/original/w58.jpg?1486540459);">
+   <a href="" class="top-banners" style="background-image: url(http://d1acy2vp0zxghs.cloudfront.net/featured_categories/images/000/000/109/original/w58.jpg?1486540459);">
       <div class="top-blck-bacgrnd"></div>
       <p>Brown shades will never look out of style</p>
   </a>
  </div>
  <div class="col-md-6">
-   <a class="top-banners" style="background-image: url(http://d1acy2vp0zxghs.cloudfront.net/featured_categories/images/000/000/109/original/w58.jpg?1486540459);">
+   <a href="" class="top-banners" style="background-image: url(http://d1acy2vp0zxghs.cloudfront.net/featured_categories/images/000/000/109/original/w58.jpg?1486540459);">
       <div class="top-blck-bacgrnd"></div>
       <p>Brown shades will never look out of style</p>
   </a>
  </div>
  <div class="col-md-6">
-   <a class="top-banners" style="background-image: url(http://d1acy2vp0zxghs.cloudfront.net/featured_categories/images/000/000/109/original/w58.jpg?1486540459);">
+   <a href="" class="top-banners" style="background-image: url(http://d1acy2vp0zxghs.cloudfront.net/featured_categories/images/000/000/109/original/w58.jpg?1486540459);">
       <div class="top-blck-bacgrnd"></div>
       <p>Brown shades will never look out of style</p>
   </a>
  </div>
  <div class="col-md-6">
-   <a class="top-banners" style="background-image: url(http://d1acy2vp0zxghs.cloudfront.net/featured_categories/images/000/000/109/original/w58.jpg?1486540459);">
+   <a href="" class="top-banners" style="background-image: url(http://d1acy2vp0zxghs.cloudfront.net/featured_categories/images/000/000/109/original/w58.jpg?1486540459);">
       <div class="top-blck-bacgrnd"></div>
       <p>Brown shades will never look out of style</p>
   </a>
  </div>
  <div class="col-md-6">
-   <a class="top-banners" style="background-image: url(http://d1acy2vp0zxghs.cloudfront.net/featured_categories/images/000/000/109/original/w58.jpg?1486540459);">
+   <a href="" class="top-banners" style="background-image: url(http://d1acy2vp0zxghs.cloudfront.net/featured_categories/images/000/000/109/original/w58.jpg?1486540459);">
       <div class="top-blck-bacgrnd"></div>
       <p>Brown shades will never look out of style</p>
   </a>
@@ -105,11 +116,7 @@ $cat = $GLOBALS['wp_query']->query['cat'];
 
 
             
-            <?php
-            //$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-//$args = array( 'post_type' => 'top_items', 'posts_per_page' =>40, 'paged' => $paged );
-//$custom_query = new WP_Query($args);
-            ?>
+            
             <?PHP //while($custom_query->have_posts()) : $custom_query->the_post(); ?>
 
                 <?PHP // get_template_part('template-parts/content-top_item','page'); ?>
