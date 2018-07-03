@@ -666,14 +666,14 @@ td {
 }
 
 .dt-menu-wrap {
-	background:#E8D7AB;
+	background:#a66453;
 }
 
 .dt-menu-wrap ul {
 	margin: 0;
 	padding: 0;
 	text-align: center;
-	background: #E8D7AB;
+	background: #a66453;
 }
 
 .dt-menu-wrap .menu > ul {
@@ -696,7 +696,7 @@ td {
 
 .dt-menu-wrap li:hover > a,
 .dt-menu-wrap .current-menu-item a {
-	color: rgba(39,48,57,1) !important;
+	color: rgb(210, 210, 210) !important;
 }
 
 .dt-menu-wrap li ul {
@@ -2025,13 +2025,14 @@ height: 100px;
 .top-ttl:hover .top-ttl-heddng{
 	color: red;
 }
-/****/
+/**should prodect**/
 .should-banner{
     background: transparent;
     background-size: cover;
     background-position: center center;
     position: relative;
     display: block;
+    background-image: url(http://d1acy2vp0zxghs.cloudfront.net/featured_categories/images/000/000/110/original/26-min.jpg?1487305456);
 }
 .should-ttl {
 	padding: 1px 20px;
@@ -2044,6 +2045,7 @@ height: 100px;
     font-weight: 900;
     font-size: 56px;
     color: #fff;
+    text-shadow: 3px 2px black;
 }
 @media screen and (max-width: 700px){
 .should-ttl h1 {
@@ -2055,24 +2057,25 @@ height: 100px;
     letter-spacing: 2px;
     opacity: 0.8;
     color: #fff;
+    text-shadow: 2px 1px black;
 }
 	.should-black-card {
 	background: #1F2021;
-	color: #FFFFFF;
-	color: rgba(255,255,255,0.8);
+	color: #e6e6e6;
 	letter-spacing: 1px;
 	font-size: 14px;
-	padding: 30px 0 80px;
-	margin-bottom: -45px;
+	padding: 34px 0px;
 	text-align: center;
 }
 .top-item {
     background: #FFFFFF;
     position: relative;
-    padding: 25px;
+    padding: 20px;
     border-radius: 4px;
     box-shadow: 0 1px 4px 0 rgba(0,0,0,0.3);
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    font-size: 14px;
 }
 .icon-product {
     margin: 2px 0;
@@ -2124,7 +2127,7 @@ height: 100px;
 .social-icon-top a:hover{
 	background-color: red;
 	color: #fff;
-	border: 2px solid #fff;
+	border: 2px solid red;
 }
 .social-ttl-list{
 	font-weight: 500;
@@ -2132,11 +2135,42 @@ height: 100px;
 	font-size: 14px;
 	margin-bottom: 10px;
 }
-.social-ttl-list h6{
+	.social-ttl-list h6{
 	line-height: 20px;
 	display: block;
 	font-size: 12px;
 	padding: 11px 0;
 	color: #868686;
 	border-top: 1px solid #E0E0E0;
+	}
+	.buy-bttn-prodct{
+	color: #FFFFFF;
+	border-radius: 4px;
+	box-shadow: 0 1px 4px 0 rgba(0,0,0,0.3);
+	padding: 6px 20px;
+	}
+	.prodct-crd-img:hover{
+	transform: scale(1.1);
+	}
+	.prodct-crd-img{
+	display: inline !important;
+	max-width: 100%;
+	transition: transform .3s ease;
+	}
+	/*should prodect end*/
+	.chat-banner-img{
+	height: 350px;
+	background-size: cover;
+	background-position: center;
+	background-image: url(https://d3g527wfeloree.cloudfront.net/assets/497640715.jpg);
+	}
+.user-images-commt {
+     width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-size: cover;
+    margin-right: -20px;
+    overflow: hidden;
+    display: inline-block;
+    border: 2px solid #6e6e68;
 }
