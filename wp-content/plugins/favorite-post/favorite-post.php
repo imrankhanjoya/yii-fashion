@@ -200,12 +200,12 @@ class WeDevs_Favorite_Posts {
 
             $this->insert_favorite( $post_id, $user_id );
 
-            wp_send_json_success( '<span class="wpf-favorite">&nbsp;</span> ' . __( 'Remove from favorite', 'wfp' ) );
+            wp_send_json_success( '<span class="fa fa-heart f-selct">&nbsp;</span> ' . __( 'Remove from favorite', 'wfp' ) );
         } else {
 
             $this->delete_favorite( $post_id, $user_id );
 
-            wp_send_json_success( '<span class="wpf-not-favorite">&nbsp;</span> ' . __( 'Add to favorite', 'wfp' ) );
+            wp_send_json_success( '<span class="fa fa-heart fnot">&nbsp;</span> ' . __( 'Add to favorite', 'wfp' ) );
         }
     }
 
@@ -304,9 +304,9 @@ class WeDevs_Favorite_Posts {
 
         <a class="wpf-favorite-link" href="#" data-id="<?php echo $post_id; ?>">
             <?php if ( $status ) { ?>
-                <span class="wpf-favorite">&nbsp;</span> <?php _e( 'Remove favorite', 'wfp' ); ?>
+                <span class="fa fa-heart f-selct">&nbsp;</span> <?php _e( 'Remove favorite', 'wfp' ); ?>
             <?php } else { ?>
-                <span class="wpf-not-favorite">&nbsp;</span> <?php _e( 'Favorite', 'wfp' ); ?>
+                <span class="fa fa-heart fnot">&nbsp;</span> <?php _e( 'Favorite', 'wfp' ); ?>
             <?php } ?>
         </a>
 

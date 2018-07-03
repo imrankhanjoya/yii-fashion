@@ -45,7 +45,7 @@ $custom_query = new WP_Query($args);
             <div class="row">
                <div class="col-lg-3 col-sm-3 col-xs-12 text-center ">
                   <h1 class=""><b>TOP #<?=$i?></b></h1>
-                  <img class="img-responsive visible-xs-inline visible-md-inline visible-lg-inline visible-sm-inline" src="<?=$val['LargeImage'][0]?>">
+                  <img class="img-responsive prodct-crd-img visible-xs-inline visible-md-inline visible-lg-inline visible-sm-inline" src="<?=$val['LargeImage'][0]?>">
                </div>
                <div class="col-lg-9 col-sm-9 col-md-9">
                   <div class="row">
@@ -54,11 +54,11 @@ $custom_query = new WP_Query($args);
                         <h5><?=$val['Brand'][0]?></h5>
                         <div class="btn-should-card">
                            <?php if ( function_exists( 'wfp_button' ) ) wfp_button(); ?>
-                           <button class="" data-toggle="" data-target="">
-                           <i class="fa fa-heart-o"></i> 
-                           <span class="fav-text">Fav this</span>
-                           </button>
-                           <span class="fav-count">9</span> Favs
+                       <!--     <button class="" data-toggle="" data-target=""> -->
+                        <!--    <i class="fa fa-heart-o"></i>  -->
+                           <!-- <span class="fav-text">Fav this</span>
+                           </button> -->
+                           <span class="fav-count"> 9</span> Favs
                            &nbsp;&nbsp;&nbsp;
                            <i class="fa fa-comment"></i> <?=get_comments_number(get_the_ID())?> Reviews
                         </div>
@@ -79,7 +79,7 @@ $custom_query = new WP_Query($args);
                         <button type="button" class="btn btn-link">READ REVIEWS</button>
                         </a>
                         <a  target="_blank" href="<?=$val['DetailPageURL'][0]?>">
-                        <button type="button" class="btn btn-dark">BUY</button>
+                        <button type="button" class="btn btn-danger buy-bttn-prodct">BUY</button>
                         </a>
                      </div>
                   </div>
@@ -87,7 +87,10 @@ $custom_query = new WP_Query($args);
             </div>
          </div>
 
-
+         <div class="col-lg-12 text-center">
+            <div class="" style="border:1px solid #d0d0d0"></div>
+            <div class="text-center" style="border:1px solid #a0a0a0;width: 70%;margin-top: 10px;margin-left: 15%;"></div>
+         </div>
 
          
 
@@ -124,7 +127,9 @@ $custom_query = new WP_Query($args);
          </a>
          </div>
       </div>
+
    </div>
+
 </div>
 <?php
 get_footer();
