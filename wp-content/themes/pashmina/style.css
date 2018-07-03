@@ -666,14 +666,14 @@ td {
 }
 
 .dt-menu-wrap {
-	background:#a66453;
+	background:#000;
 }
 
 .dt-menu-wrap ul {
 	margin: 0;
 	padding: 0;
 	text-align: center;
-	background: #a66453;
+	background: #000;
 }
 
 .dt-menu-wrap .menu > ul {
@@ -686,12 +686,19 @@ td {
 
 	display: inline-block;
 }
-
+.dt-menu-wrap li a.active{
+	color:#e83f6f;
+}
+.dt-menu-wrap li a:hover{
+	color:#e83f6f;
+}
 .dt-menu-wrap li a {
 	display: block;
-
+	text-transform: uppercase;
 	padding: 14px 20px;
 	color: #fff;
+	font-weight:300;
+	font-size: 14px;
 }
 
 .dt-menu-wrap li:hover > a,

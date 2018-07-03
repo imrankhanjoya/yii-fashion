@@ -21,9 +21,13 @@ $user = wp_get_current_user();
 get_header(); 
 
 ?>
-<div class="col-md-12" style="background-color: #ccc; height:100px; padding-bottom:50px">
-                &nbsp;
+<div class="col-lg-12" style="padding: 0px;">
+<div class="chat-banner-img"></div>
+
 </div>
+<br>
+&nbsp;
+
     <div class="container discussion-page">
         <div class="row">
             

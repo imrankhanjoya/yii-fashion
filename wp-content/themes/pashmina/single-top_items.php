@@ -116,58 +116,6 @@ $custom_query = new WP_Query($args);
       </div>
    </div>
 </div>
-<div class="container">
-  <div class="profile-cards">
-    <h4 class="text-center">Awesome you are all set!</h4>
-     <h4 class="text-center">Now just make sure you provide the right contact to get noticed for giveaways & more love </h4>
-     <div class="row">
-       <div class="col-lg-4 text-center">
-         <img src="http://d1acy2vp0zxghs.cloudfront.net/users/avatars/000/011/458/original/JVSE6554.JPEG?1529931163" style="width: 50px;">
-         <h5>Change avatar</h5>
-       </div>
-       <div class="col-lg-8">
-         <table cellspacing="0" cellpadding="0">
-                <tbody><tr>
-                  <td class="profile-dtl">Name:</td>
-                  <td>
-                    <input class="profile-input" required="" type="text" value="rani viktoriya" name="" id="">
-                    <div class="form-note">Type to change your username</div>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="profile-dtl">Email:</td>
-                  <td>
-                      <input class="profile-input" type="email" value="raniviktoriya@gmail.com" name="" id="">
-                  </td>
-                </tr>
-                <tr>
-                  <td class="profile-dtl">Beauty Statement:</td>
-                  <td>
-                    <input class="profile-input" placeholder="Your professional title" type="text" name="" id="">
-                  </td>
-                </tr>
-                <tr>
-                  <td class="profile-dtl">Skin Type:</td>
-                  <td>oily</td>
-                </tr>
-                <tr>
-                  <td class="profile-dtl">Skin Color:</td>
-                  <td>tan</td>
-                </tr>
-                <tr>
-                  <td class="profile-dtl">Birthday:</td>
-                  <td>12 / 12 / 2001</td>
-                </tr>
-              </tbody></table>
-       </div>
-       <div class="col-lg-6">
-         <button type="button" class="btn-outline-dark btn-lg btn-block">Success</button>
-       </div>
-       <div class="col-lg-6">
-         <button type="button" class="btn btn-success btn-lg btn-block">Success</button>
-       </div>
-     </div>
-  </div>
-</div>
+
 <?php
 get_footer();
