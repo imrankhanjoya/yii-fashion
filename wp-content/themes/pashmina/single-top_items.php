@@ -24,17 +24,12 @@ $post = get_post();
 </div>
 <div class="container">
    <div class="row">
-
-
-
       <?php 
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 $args = array( 'post_type' => 'product', 'posts_per_page' =>10, 'paged' => $paged );
 $custom_query = new WP_Query($args);
             ?>
 
-      
-      
       <div class="col-lg-9 col-md-9 col-xs-12 col-sm-9">
          <?PHP $i=1; while($custom_query->have_posts()) : $custom_query->the_post(); 
          $val = get_post_meta(get_the_ID()); 
@@ -91,17 +86,9 @@ $custom_query = new WP_Query($args);
             <div class="" style="border:1px solid #d0d0d0"></div>
             <div class="text-center" style="border:1px solid #a0a0a0;width: 70%;margin-top: 10px;margin-left: 15%;"></div>
          </div>
-
-         
-
                <?php $i++; endwhile; ?>
                <?php wp_reset_postdata(); // reset the query ?>
-
-
       </div>
-
-
-
 
       <div class="col-lg-3 col-md-3 col-xs-12 col-sm-3 " style="margin-top: 60px;">
          <div class="social-icon-top">
@@ -127,9 +114,60 @@ $custom_query = new WP_Query($args);
          </a>
          </div>
       </div>
-
    </div>
-
+</div>
+<div class="container">
+  <div class="profile-cards">
+    <h4 class="text-center">Awesome you are all set!</h4>
+     <h4 class="text-center">Now just make sure you provide the right contact to get noticed for giveaways & more love </h4>
+     <div class="row">
+       <div class="col-lg-4 text-center">
+         <img src="http://d1acy2vp0zxghs.cloudfront.net/users/avatars/000/011/458/original/JVSE6554.JPEG?1529931163" style="width: 50px;">
+         <h5>Change avatar</h5>
+       </div>
+       <div class="col-lg-8">
+         <table cellspacing="0" cellpadding="0">
+                <tbody><tr>
+                  <td class="profile-dtl">Name:</td>
+                  <td>
+                    <input class="profile-input" required="" type="text" value="rani viktoriya" name="" id="">
+                    <div class="form-note">Type to change your username</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="profile-dtl">Email:</td>
+                  <td>
+                      <input class="profile-input" type="email" value="raniviktoriya@gmail.com" name="" id="">
+                  </td>
+                </tr>
+                <tr>
+                  <td class="profile-dtl">Beauty Statement:</td>
+                  <td>
+                    <input class="profile-input" placeholder="Your professional title" type="text" name="" id="">
+                  </td>
+                </tr>
+                <tr>
+                  <td class="profile-dtl">Skin Type:</td>
+                  <td>oily</td>
+                </tr>
+                <tr>
+                  <td class="profile-dtl">Skin Color:</td>
+                  <td>tan</td>
+                </tr>
+                <tr>
+                  <td class="profile-dtl">Birthday:</td>
+                  <td>12 / 12 / 2001</td>
+                </tr>
+              </tbody></table>
+       </div>
+       <div class="col-lg-6">
+         <button type="button" class="btn-outline-dark btn-lg btn-block">Success</button>
+       </div>
+       <div class="col-lg-6">
+         <button type="button" class="btn btn-success btn-lg btn-block">Success</button>
+       </div>
+     </div>
+  </div>
 </div>
 <?php
 get_footer();

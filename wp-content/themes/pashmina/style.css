@@ -2190,3 +2190,48 @@ height: 100px;
 a.wpf-favorite-link span{
 	background-image: none !important;
 }
+/*profile*/
+.profile-cards{
+	 box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    position: relative;
+    padding: 20px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    font-size: 14px;
+    width: 60%;
+    margin-left: 20%;
+}
+@media screen and (max-width: 500px){
+.profile-cards{
+	width: 100%;
+	margin-left: 0px;
+} }
+.profile-cards td{
+	border:none;
+	text-align: left;
+	vertical-align: text-bottom;
+}
+.profile-cards table{
+	border:none;
+}
+.profile-dtl {
+    padding-top: 3px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: left;
+    border:none;
+}
+.profile-input {
+	text-align: left !important;
+    margin-bottom: 4px !important;
+    padding: 0 0 2px !important;
+    border: none !important;
+    border-bottom: 1px solid #E0E0E0 !important;
+}
+.form-note{
+	text-align: left;
+	font-size: 13px;
+	color: #999;
+	margin-bottom: 5px;
+}
