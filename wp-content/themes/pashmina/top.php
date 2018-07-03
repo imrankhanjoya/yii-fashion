@@ -66,36 +66,7 @@ $custom_query = new WP_Query($args);
     </a>
 </div>
  <?php endwhile; ?>
-<div class="col-md-6">
-   <a href="" class="top-banners" style="background-image: url(http://d1acy2vp0zxghs.cloudfront.net/featured_categories/images/000/000/109/original/w58.jpg?1486540459);">
-      <div class="top-blck-bacgrnd"></div>
-      <p>Brown shades will never look out of style</p>
-  </a>
- </div>
- <div class="col-md-6">
-   <a href="" class="top-banners" style="background-image: url(http://d1acy2vp0zxghs.cloudfront.net/featured_categories/images/000/000/109/original/w58.jpg?1486540459);">
-      <div class="top-blck-bacgrnd"></div>
-      <p>Brown shades will never look out of style</p>
-  </a>
- </div>
- <div class="col-md-6">
-   <a href="" class="top-banners" style="background-image: url(http://d1acy2vp0zxghs.cloudfront.net/featured_categories/images/000/000/109/original/w58.jpg?1486540459);">
-      <div class="top-blck-bacgrnd"></div>
-      <p>Brown shades will never look out of style</p>
-  </a>
- </div>
- <div class="col-md-6">
-   <a href="" class="top-banners" style="background-image: url(http://d1acy2vp0zxghs.cloudfront.net/featured_categories/images/000/000/109/original/w58.jpg?1486540459);">
-      <div class="top-blck-bacgrnd"></div>
-      <p>Brown shades will never look out of style</p>
-  </a>
- </div>
- <div class="col-md-6">
-   <a href="" class="top-banners" style="background-image: url(http://d1acy2vp0zxghs.cloudfront.net/featured_categories/images/000/000/109/original/w58.jpg?1486540459);">
-      <div class="top-blck-bacgrnd"></div>
-      <p>Brown shades will never look out of style</p>
-  </a>
- </div>
+
  <div class="col-lg-12">
   <nav aria-label="Page navigation example">
   <ul class="pagination justify-content-center">

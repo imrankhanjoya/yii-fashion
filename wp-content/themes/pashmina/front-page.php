@@ -50,7 +50,7 @@ get_header();
                         }
 
                         $args = array(
-                            'post_type' => 'post',
+                            'post_type' => 'product',
                             'posts_per_page' => $featured_posts_count,
                             'orderby' => 'ASC',
                             'category__in' => $dt_featured_posts
@@ -60,11 +60,8 @@ get_header();
 
                         while ($dt_featured_posts->have_posts()) : $dt_featured_posts->the_post(); ?>
 
-                            <div class="swiper-slide">
-                                <div class="dt-featured-post">
-                                <h3><a href="<?php esc_url(the_permalink()); ?>" title="<?php the_title_attribute(); ?>"><?php $title = get_the_title(); echo substr($title,0,100)  ?></a>
-                                </h3>
-                                </div>
+                            <div class="swiper-slide" >
+                                <?PHP  get_template_part('template-parts/content-product-min','page'); ?>
                                 <!-- .dt-featured-post -->
                             </div><!-- .swiper-slide -->
 
