@@ -332,9 +332,7 @@ textarea:focus {
 	min-width: 90px;
 }
 
-.form-submit {
-	margin-left: 94px;
-}
+
 
 @media screen and (max-width: 480px) {
 	.form-submit {
