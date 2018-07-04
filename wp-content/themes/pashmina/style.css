@@ -803,6 +803,18 @@ td {
 .dt-header-image img {
 	width: 100%;
 }
+/*--------------------------------------------------------------
+# Get Start
+--------------------------------------------------------------*/
+.chociebox {
+	background-color: #000;
+	text-align: center;
+}
+.chociebox a{
+	font-size: 50px;
+	color:#fff;
+	font-family: 'Raleway Dots', cursive;
+}
 
 /*--------------------------------------------------------------
 # Home Page Featured Posts
