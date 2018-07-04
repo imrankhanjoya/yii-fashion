@@ -30,4 +30,35 @@ $showHeader = true;
 ?>
 
 
-	
+	<header class="dt-header" <?php if ( ! empty( $header_image ) ) { ?>style="background-image: url('<?php header_image(); ?>'); background-position: center; background-repeat: no-repeat;"<?php } ?> >
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="dt-logo">
+
+                        <?php
+
+                        if ( function_exists( 'get_custom_logo' ) && has_custom_logo() ) {
+                            the_custom_logo();
+                        } else {
+                           echo  '<h1 class="transition35 site-title"><a href="' . esc_url( home_url( '/' ) ) . '" rel="home">' . esc_attr( get_bloginfo( 'name' ) ) . '</a></h1>';
+                        }
+
+                        ?>
+
+                        <?php
+                        $description = get_bloginfo( 'description', 'display' );
+                        if ( $description || is_customize_preview() ) : ?>
+                            <p class="site-description"><?php echo $description; ?></p>
+                        <?php endif; ?>
+
+					</div><!-- .dt-logo -->
+				</div><!-- .col-lg-12 -->
+			</div><!-- .row -->
+		</div><!-- .container -->
+
+
+
+        
+
+    </header>
