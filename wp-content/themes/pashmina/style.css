@@ -2242,3 +2242,56 @@ a.wpf-favorite-link span{
 	color: #999;
 	margin-bottom: 5px;
 }
+/* author its */
+.author-its-tab > .nav-tabs {
+  border: none;
+  margin: 0px;
+}
+.author-its-tab > .nav-tabs > li {
+  margin-right: 3px;
+}
+.author-its-tab > .nav-tabs > li > a {
+  border: 0;
+  margin-right: 0;
+  color: #737373;
+}
+.author-its-tab > .nav-tabs > li.open, .author-its-tab > .nav-tabs > li:hover {
+  border-bottom: 3px solid #ED145B;
+}
+.author-its-tab > .nav-tabs > li.open > a, .author-its-tab > .nav-tabs > li:hover > a {
+  border: 0;
+  background: none !important;
+  color: #333333;
+}
+.author-its-tab > .nav-tabs > li.active {
+  border-bottom: 3px solid #ED145B;
+  position: relative;
+}
+.author-its-tab > .nav-tabs > li.active > a {
+	border: 0;
+	color: #333333;
+}
+.author-tab-div {
+	padding: 24px;
+	background: #f7f7f7;
+}
+.authore-table{
+	border:none;
+	padding: 5px 0;
+	font-size: 13px;
+}
+.authore-table td{
+	border:none;
+	padding:8px 0px !important;
+}
+/*cards*/
+.author-crd-heiht{
+	height: 350px;
+}
+.author-img-heiht{
+	height: 155px;
+}
+.author-img-heiht img{
+	max-height: 140px;
+}
+/*card end*/
