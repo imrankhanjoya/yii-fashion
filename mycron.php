@@ -21,8 +21,8 @@ ignore_user_abort(true);
 
 
 /**
- * Tell WordPress we are doing the CRON task.
- *
+ * php mycron.php "all" "luxery Beauty"
+ * php mycron.php "all" "Beauty"
  * @var bool
  */
 define('DOING_CRON', true);
@@ -51,6 +51,8 @@ function amazonProduct($brand,$i,$cats){
             "ResponseGroup" => "Images,ItemAttributes,Offers,Reviews,SalesRank",
         );
 
+        sleep(5);
+
             $url = aws_signed_request($region, $params, $public_key, $private_key, $associate_tag);
             $ch = curl_init();
             curl_setopt($ch, CURLOPT_URL, $url);
@@ -71,10 +73,12 @@ function amazonProduct($brand,$i,$cats){
                }
                
                
-            if($amazondata[0]->Items->TotalPages>$i && $i<10){
-                amazonProduct($brand,$i,$cats);
+                if($amazondata[0]->Items->TotalPages>$i && $i<10){
+                    amazonProduct($brand,$i,$cats);
+                }
+            }else{
+                echo $xml;
             }
-        }
     }
 
      function aws_signed_request($region, $params, $public_key, $private_key, $associate_tag=NULL, $version='2017-08-01'){
