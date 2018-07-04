@@ -18,8 +18,7 @@
 
 ignore_user_abort(true);
 
-if ( !empty($_POST) || defined('DOING_AJAX') || defined('DOING_CRON') )
-	die();
+
 
 /**
  * Tell WordPress we are doing the CRON task.
@@ -189,6 +188,9 @@ function savePost($item,$brand){
 	wp_set_post_tags($post_ID,$tags);
 
 }
-amazonProduct("aloe vera",1,"Beauty");
-amazonProduct("oily skin",1,"Beauty");
+
+$key = $argv[1];
+$cat = $argv[2];
+amazonProduct($key,1,$cat);
+//amazonProduct("oily skin",1,"Beauty");
 die();
