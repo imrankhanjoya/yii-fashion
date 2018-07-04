@@ -7,15 +7,24 @@
  * @package Pashmina
  */
 
-get_header(); ?>
-ARCHIVE
+get_header(); 
+ $queried_object = get_queried_object();
+ if($queried_object->taxonomy=='category'){
+ 	$findIn = "category_name";
+ }else{
+ 	$findIn = "tag_name";
+ }
+
+$cat = single_cat_title(null,false);
+?>
+
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-8 col-md-8">
 				 <?php 
             //$custom_query = new WP_Query('post_type="product"'); // exclude category 9
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-$args = array( 'post_type' => 'product', 'posts_per_page' =>40, 'paged' => $paged );
+$args = array( 'post_type' => 'product',$findIn=>$queried_object->slug, 'posts_per_page' =>40, 'paged' => $paged );
 $custom_query = new WP_Query($args);
             ?>
 			<?php if ( $custom_query->have_posts() ) : ?>
@@ -88,7 +97,7 @@ $custom_query = new WP_Query($args);
 
 			<?php else : ?>
 
-				<p><?php _e( 'Sorry, no posts matched your criteria.', 'pashmina' ); ?></p>
+				<p><?php _e( 'Sorry :(, no posts matched your criteria.', 'pashmina' ); ?></p>
 
 			<?php endif; ?>
 
