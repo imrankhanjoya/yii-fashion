@@ -22,7 +22,7 @@ if(!session_id()) {
 
 
 $user = wp_get_current_user();
-
+$meta = get_user_meta($user->ID);
 
     require_once __DIR__ . '/Facebook/autoload.php';
 
@@ -78,7 +78,7 @@ $user = wp_get_current_user();
 
 
 $skinType = array("Normal","Dry","Oily","Acne-prone","Sensitive","Combination");
-$skinColor = array("Extremely fair"=>array("img"=>"http://gloat.me/wp-content/uploads/2018/07/ex-fail.png"),"Fair"=>array("img"=>"http://gloat.me/wp-content/uploads/2018/07/ex-fail.png"),"Tan"=>array("img"=>"http://gloat.me/wp-content/uploads/2018/07/ex-fail.png"),"Medium Brown"=>array("img"=>"http://gloat.me/wp-content/uploads/2018/07/ex-fail.png"),"Dark"=>array("img"=>"http://gloat.me/wp-content/uploads/2018/07/ex-fail.png"),"Deep Dark"=>array("img"=>"http://gloat.me/wp-content/uploads/2018/07/ex-fail.png"),"Light"=>array("img"=>"http://gloat.me/wp-content/uploads/2018/07/ex-fail.png"));
+$skinColor = array("Extremely fair"=>array("img"=>"http://gloat.me/wp-content/uploads/2018/07/face-phd0.png"),"Fair"=>array("img"=>"http://gloat.me/wp-content/uploads/2018/07/face-phd1.png"),"Tan"=>array("img"=>"http://gloat.me/wp-content/uploads/2018/07/face-phd2.png"),"Medium Brown"=>array("img"=>"http://gloat.me/wp-content/uploads/2018/07/face-phd3.png"),"Dark"=>array("img"=>"http://gloat.me/wp-content/uploads/2018/07/face-phd4.png"),"Deep Dark"=>array("img"=>"http://gloat.me/wp-content/uploads/2018/07/face-phd5.png"),"Light"=>array("img"=>"http://gloat.me/wp-content/uploads/2018/07/face-phd6.png"));
 $hairColor = array("White","Dark","Orange");
 $brands = array("Clinique","BCBGMAXAZRIA","Levi's","Torrid","Benefit Cosmetics","Calvin Klein","La Roche-Posay","Laura Geller","Alex and Ani","Ella Moss","Milly","stila","Perricone MD","Mario Badescu");
 $eyeColor = array("White","Dark","Orange");
@@ -109,9 +109,9 @@ get_header('nomenu');
                 </div>
                 <?php foreach($skinColor as $key=>$color):?>
                     <?PHP $class = $key == $attrib[0]?"btn-active":"" ?>
-                <div class="form-group col-md-3 col-xs-4 site-form" style="background-image:url(<?=$color['img']?>)">
+                <div class="form-group col-md-3 col-xs-4 site-form" style="background-image:url(<?=$color['img']?>); background-position:center; background-size: cover;">
                     
-                    <?php $url = add_query_arg(array('key' => 'skin','val' =>$color),get_page_link(231));?>
+                    <?php $url = add_query_arg(array('key' => 'skin','val' =>$key),get_page_link(231));?>
                      <a class="btn a-btn-knowmore <?=$class?>" href="<?=$url?>"><?=$key?></a>
 
                 </div>
@@ -220,7 +220,7 @@ get_header('nomenu');
      <h4 class="text-center">Now just make sure you provide the right contact to get noticed for giveaways & more love </h4>
      <div class="row">
        <div class="col-lg-4 text-center">
-         <img src="http://d1acy2vp0zxghs.cloudfront.net/users/avatars/000/011/458/original/JVSE6554.JPEG?1529931163" style="width: 50px;">
+         <img src="<?=$meta['cupp_upload_meta'][0]?>" style="width: 50px;">
          <h5>Change avatar</h5>
        </div>
        <div class="col-lg-8">
@@ -228,29 +228,41 @@ get_header('nomenu');
                 <tbody><tr>
                   <td class="profile-dtl">Name:</td>
                   <td>
-                    <input class="profile-input" required="" type="text" value="rani viktoriya" name="" id="">
+                    <input class="profile-input" required="" type="text" value="<?=$meta['nickname'][0]?>" name="" id="">
                     <div class="form-note">Type to change your username</div>
                   </td>
                 </tr>
                 <tr>
                   <td class="profile-dtl">Email:</td>
                   <td>
-                      <input class="profile-input" type="email" value="raniviktoriya@gmail.com" name="" id="">
+                      <input class="profile-input" type="email" value="<?=$user->user_email?>" name="" id="">
                   </td>
                 </tr>
                 <tr>
-                  <td class="profile-dtl">Beauty Statement:</td>
+                  <td class="profile-dtl">About you:</td>
                   <td>
-                    <input class="profile-input" placeholder="Your professional title" type="text" name="" id="">
+                    <input class="profile-input" value="<?=$meta['description'][0]?>" placeholder="Your professional title" type="text" name="" id="">
                   </td>
                 </tr>
                 <tr>
                   <td class="profile-dtl">Skin Type:</td>
-                  <td>oily</td>
+                  <td><?=$meta['skinType'][0]?></td>
                 </tr>
                 <tr>
                   <td class="profile-dtl">Skin Color:</td>
-                  <td>tan</td>
+                  <td><?=$meta['skin'][0]?></td>
+                </tr>
+                <tr>
+                  <td class="profile-dtl">Eye:</td>
+                  <td><?=$meta['eye'][0]?></td>
+                </tr>
+                <tr>
+                  <td class="profile-dtl">Dress Size:</td>
+                  <td><?=$meta['dress'][0]?></td>
+                </tr>
+                <tr>
+                  <td class="profile-dtl">Top Size:</td>
+                  <td><?=$meta['top'][0]?></td>
                 </tr>
                 <tr>
                   <td class="profile-dtl">Birthday:</td>
@@ -267,7 +279,7 @@ get_header('nomenu');
      </div>
   </div>
 </div>
-            
+
             <?PHP endif;?>
             
 

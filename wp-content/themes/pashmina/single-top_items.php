@@ -10,6 +10,8 @@
    get_header(); 
    
 $post = get_post();
+$url = get_permalink();
+$title = get_the_title();
 ?>
 <div class="col-md-12" style="padding: 0px;">
    <div class="should-banner" style="background-image: url(<?= get_the_post_thumbnail_url(get_the_ID())?>);">
@@ -25,10 +27,10 @@ $post = get_post();
 <div class="container">
    <div class="row">
       <?php 
-            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-$args = array( 'post_type' => 'product', 'posts_per_page' =>10, 'paged' => $paged );
-$custom_query = new WP_Query($args);
-            ?>
+      $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+      $args = array( 'post_type' => 'product', 'posts_per_page' =>10, 'paged' => $paged );
+      $custom_query = new WP_Query($args);
+      ?>
 
       <div class="col-lg-9 col-md-9 col-xs-12 col-sm-9">
          <?PHP $i=1; while($custom_query->have_posts()) : $custom_query->the_post(); 
@@ -93,9 +95,16 @@ $custom_query = new WP_Query($args);
       <div class="col-lg-3 col-md-3 col-xs-12 col-sm-3 " style="margin-top: 60px;">
          <div class="social-icon-top">
             <h5>SHARE THIS LIST</h5>
-            <a class="fb-share fa fa-facebook" href=""></a>
-            <a class="fa fa-twitter" href=""></a>
-            <a class="fa fa-pinterest-p" href=""></a>
+            
+            <a href="https://www.facebook.com/sharer/sharer.php?u=<?=urlencode($url)?>&t=<?=urlencode($title)?>"
+   onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
+   target="_blank" title="Share on Facebook" class="fb-share fa fa-facebook" href=""></a>
+            <a href="https://twitter.com/share?url=<?=urlencode($url)?>&via=gloatme&text=<?=urlencode($title)?>"
+   onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
+   target="_blank" title="Share on Twitter" class="fa fa-twitter" href=""></a>
+            <a href="https://plus.google.com/share?url=<?=urlencode($url)?>"
+   onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=350,width=480');return false;"
+   target="_blank" title="Share on Google+" class="fa fa-google-plus" href=""></a>
             <a class="fa fa-envelope-o" href=""></a>
          </div>
          <div class="social-ttl-list">
