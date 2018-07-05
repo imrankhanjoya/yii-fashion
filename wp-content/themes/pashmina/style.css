@@ -2304,4 +2304,10 @@ a.wpf-favorite-link span{
 .author-img-heiht img{
 	max-height: 140px;
 }
+.product-dtl-list .nav>li>a:hover{ 
+background-color: unset;
+}
+.product-dtl-list li{ 
+font-size: 14px;
+}
 /*card end*/

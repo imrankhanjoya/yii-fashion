@@ -8,7 +8,8 @@
  */
 
 ?>
-<div class="col-md-12 discuss">
+<div class="col-md-12 ">
+	989898
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <figure>
         <?php
