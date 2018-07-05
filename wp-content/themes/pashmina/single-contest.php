@@ -27,7 +27,7 @@ $post = get_post();
 
 						</div><!-- .entry-content -->
 						
-						
+						<a href="getStart">Get Start</a>
 					</main><!-- #main -->
 				</div><!-- #primary -->
 			</div><!-- .col-lg-8 -->

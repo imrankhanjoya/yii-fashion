@@ -147,6 +147,12 @@ textarea:focus {
 	outline: none;
 	border-color: rgba(39,48,57,.5);
 }
+.logged-in-as{
+	display: none;
+}
+.attachmentRules{
+	display: none;
+}
 
 /*--------------------------------------------------------------
 # Accessibility
