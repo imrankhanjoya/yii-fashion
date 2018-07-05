@@ -817,11 +817,7 @@ td {
 /*--------------------------------------------------------------
 # Home Page Featured Posts
 --------------------------------------------------------------*/
-.dt-featured-post-slider {
-	margin-top: 40px;
-	padding: 10px 0 60px;
-	overflow: hidden;
-}
+
 
 .dt-featured-post {
 	text-align: center;
@@ -1640,9 +1636,7 @@ td {
 		font-size: 14px;
 	}
 
-	.dt-featured-post-slider {
-		margin-top: 30px;
-	}
+	
 
 	#secondary {
 		padding-left: 0;
@@ -1743,9 +1737,6 @@ td {
 		border-bottom: 0;
 	}
 
-	.dt-featured-post-slider {
-		margin-top: 30px;
-	}
 
 	#primary {
 		margin-bottom: 40px;
