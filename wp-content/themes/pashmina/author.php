@@ -15,10 +15,10 @@
       <div class="col-lg-3 col-xs-12 col-md-3 col-sm-12 panel-body">
          <div class="row">
          <div class="col-lg-12 col-sm-4 col-md-12 text-center author-img-heiht">
-            <img class="img-responsive prodct-crd-img" alt="ramniwas" title="ramniwas" src="https://alchetron.com/cdn/ramkumar-ganesan-f629ae4a-593d-4b0c-ad9d-19e2fa64639-resize-750.jpg">
+            <img class="img-responsive prodct-crd-img" alt="anjali sharma" title="anjali sharma" src="https://i.pinimg.com/originals/fb/4e/eb/fb4eeb22cd9bf6d06d7a09bcec4eb531.jpg">
          </div>
          <div class="col-lg-12 col-sm-8 col-md-12">
-         <span><b>ramniwas jajda</b></span>
+         <span><b>Rnjali Sharma</b></span>
          <a class="pull-right" href="/users/current/steps/skin-type"><i class="fa fa-edit"></i> Edit</a>
          <h5 class=""><a href="">Update your beauty statement!</a></h5>
          <h6 class=""><b>Skin Type:</b> oily</h6>
@@ -289,13 +289,13 @@
                                  <label class="form-label">
                                     <h6 class="media-heading">Recipient name:*</h6>
                                  </label>
-                                 <input type="text" name="r" id="" value="ramniwas" class="form-control">
+                                 <input type="text" name="r" id="" value="anjali sharma" class="form-control">
                               </div>
                               <div class="col col-sm-6 media">
                                  <label class="form-label">
                                     <h6 class="media-heading">Recipient email:*</h6>
                                  </label>
-                                 <input type="email" name="recipient_email" id="recipient_email" value="kkk@yahoo.com" class="form-control">
+                                 <input type="email" name="recipient_email" id="recipient_email" value="anjalisharma@gmail.com" class="form-control">
                               </div>
                               <div class="col col-sm-6 media">
                                  <label class="form-label">

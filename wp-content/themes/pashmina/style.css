@@ -2308,6 +2308,83 @@ a.wpf-favorite-link span{
 background-color: unset;
 }
 .product-dtl-list li{ 
-font-size: 14px;
+    font-size: 14px;
+    color: #000;
+    display: inline-block;
+    letter-spacing: 2px;
+     font-family: 'Roboto Condensed', sans-serif;
+}
+.all-div-padding0{
+	padding: 0px !important;
+}
+.comments-area{
+	padding: 0px;
+}
+#div-comment-3{
+	padding-left: 20px !important;
 }
 /*card end*/
+.prouct-silder-img {
+    background: #f7f7f7;
+    margin-bottom: 30px;
+    height: 150px;
+    text-align: center;
+    padding: 4px;
+    background-size: cover;
+    background-position: center center;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    border-radius: 4px;
+}
+.prouct-silder-img p {
+  color: #ffffff;
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 3px black;
+      position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+/*prodect- hover cards*/
+.card-brder-hovr{
+	border:1px solid #ddd;
+	padding: 5px;
+	height: 70px;
+}
+.card-brder-hovr:hover{
+	border:1px solid red;
+}
+.card-brder-hovr img{
+	max-height: 50px;
+	padding: 0px !important;
+	position: relative;
+	float: left !important;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.prodt-like-cnt h6{
+margin-bottom: 0;
+}
+.discount-tag {
+    background: #ED145B;
+    color: #FFFFFF;
+    font-size: 11px;
+    padding: 2px;
+    position: relative;
+    line-height: 12px;
+    margin-right: 6px;
+    font-size: 10px;
+}
+.discount-tag:after {
+    content: "";
+    position: absolute;
+    border-top: 8px solid transparent;
+    border-left: 4px solid #ED145B;
+    border-bottom: 8px solid transparent;
+    right: -4px;
+    top: 0;
