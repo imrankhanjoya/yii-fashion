@@ -60,6 +60,10 @@ function sotreUserMeta($key,$val,$flag=true){
     if($key=="skin"){
         delete_user_meta($user->ID,'skin');
         add_user_meta($user->ID,'skin',$val,true);
+        return "skinType";
+    }if($key=="skinType"){
+        delete_user_meta($user->ID,'skinType');
+        add_user_meta($user->ID,'skinType',$val,true);
         return "eye";
     }elseif($key=="eye"){
         delete_user_meta($user->ID,'eye');        
@@ -79,6 +83,18 @@ function sotreUserMeta($key,$val,$flag=true){
         return "brands";
     }elseif($key=="brands"){
         add_user_meta($user->ID,'brands',$val,$flag);
+        return "profile";
+    }elseif($key=="nickname"){
+        delete_user_meta($user->ID,'nickname');
+        add_user_meta($user->ID,'nickname',$val,false); 
+        return "profile";
+    }elseif($key=="description"){
+        delete_user_meta($user->ID,'description');
+        add_user_meta($user->ID,'description',$val,false); 
+        return "profile";
+    }elseif($key=="email"){
+        delete_user_meta($user->ID,'email');
+        add_user_meta($user->ID,'email',$val,false); 
         return "profile";
     }
 }

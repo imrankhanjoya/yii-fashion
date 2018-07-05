@@ -13,6 +13,10 @@
  */
 get_header();
 
+$val = get_page_by_path( 'get-start' );
+$starPage = get_page_link($val->ID);
+
+
 ?>
 
 
@@ -113,10 +117,7 @@ get_header();
                             leaves of henna for hair treatment; the modern woman use henna powder for hair therapy.</p>
 
                     </div>
-                    <?PHP
-                    $val = get_page_by_path( 'get-start' );
-                    $starPage = get_page_link($val->ID);
-                    ?>
+                    
                     <a class="btn a-btn-knowmore"  href="<?=$starPage?>">Know More</a>
                 </div>
             </div>
@@ -146,11 +147,9 @@ get_header();
             <div class="col-lg-9">
 
                 <div style=" padding:2%; text-align: center; background-color: #E8D7AB">
-                    <h3>Join the Movement</h3>
-
-                    <h3>Subscribe for Henna kit for hair in just $10 monthly</h3>
-                    <p>Subscribe once & get automated delivery every month | Free Shipping</p>
-                    <a href="#" class="btn btn-getfree" >Get it free</a>
+                    <h3>Gloat Me Join the Movement</h3>
+                    <p>We assembled Favful with the goal that together we could give straightforwardness and strengthening in excellence for each other. Here your experiences and commitments on magnificence items will mean the world to another person's next buy.</p>
+                    <a href="<?=$starPage?>" class="btn btn-getfree" >Get it free</a>
 
 
                 </div>

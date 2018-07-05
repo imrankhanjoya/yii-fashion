@@ -17,7 +17,7 @@ function wpb_load_widget() {
 }
 add_action( 'widgets_init', 'wpb_load_widget' );
 
-// Creating the widget
+
 class wpb_deideo extends WP_Widget {
 
     function __construct() {
@@ -26,7 +26,6 @@ class wpb_deideo extends WP_Widget {
         );
     }
 
-// Creating widget front-end
 
     public function widget( $args, $instance ) {
         $title = apply_filters( 'widget_title', $instance['title'] );
@@ -57,11 +56,10 @@ class wpb_deideo extends WP_Widget {
     <?php
     }
 
-// Updating widget replacing old instances with new
     public function update( $new_instance, $old_instance ) {
         $instance = array();
         $instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
         $instance['bg'] = ( ! empty( $new_instance['bg'] ) ) ? strip_tags( $new_instance['bg'] ) : '';
         return $instance;
     }
-} // Class wpb_widget ends here
+} 

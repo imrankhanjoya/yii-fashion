@@ -51,7 +51,25 @@ $meta = get_user_meta($user->ID);
     }elseif($user->ID){
 
     $show = 'skin';
-    if(isset($_POST['brands'])) {
+    if(isset($_POST['profile'])) {
+        
+        
+        if(isset($_POST['nickname'])){
+            $show = sotreUserMeta("nickname",$_POST['nickname']);
+        }
+        if(isset($_POST['email'])){
+            $user->user_email = $_POST['email'];
+            wp_update_user($user);
+            print_r($user);
+        }
+        if(isset($_POST['description'])){
+            
+            $show = sotreUserMeta("description",$_POST['description']);
+        }
+
+        $url = add_query_arg(array('show' =>'profile'),get_page_link(231));
+        wp_redirect($url);
+    }elseif(isset($_POST['brands'])) {
         delete_user_meta($user->ID,'brands');
         foreach($_POST['brands'] as $val){
             $show = sotreUserMeta('brands',$val,false);
@@ -93,63 +111,64 @@ get_header('nomenu');
             
             <?php if($user->ID==0):?>
             <div class="col-lg-12 col-md-12">
-            
-                <div class="form-group col-md-12 site-form  ">
-                    <h1>Hi, Join the movement!</h1>
-                    <a class="btn a-btn-knowmore" href="<?=fbloginurl()?>">Join In</a>
-                </div>
+
+            <div class="form-group col-md-12 site-form  ">
+            <h1>Hi, Join the movement!</h1>
+            <a class="btn a-btn-knowmore" href="<?=fbloginurl()?>">Join In</a>
+            </div>
             </div>
             <div class="clear"></div>
             <?PHP endif;?>
 
             <?PHP if($show=='skin'):?>
-                <div class="col-md-12 text-center ">
-                <h1>Whats your skin color!</h1>
-                <p>you can change this anytime in your profile.</p>
-                </div>
-                <?php foreach($skinColor as $key=>$color):?>
-                    <?PHP $class = $key == $attrib[0]?"btn-active":"" ?>
-                <div class="form-group col-md-3 col-xs-4 site-form" style="background-image:url(<?=$color['img']?>); background-position:center; background-size: cover;">
-                    
-                    <?php $url = add_query_arg(array('key' => 'skin','val' =>$key),get_page_link(231));?>
-                     <a class="btn a-btn-knowmore <?=$class?>" href="<?=$url?>"><?=$key?></a>
+            <div class="col-md-12 text-center ">
+            <h1>Whats your skin color!</h1>
+            <p>you can change this anytime in your profile.</p>
+            </div>
+            <?php foreach($skinColor as $key=>$color):?>
+            <?PHP $class = $key == $attrib[0]?"btn-active":"" ?>
+            <div class="form-group col-md-3 col-xs-4 site-form" style="background-image:url(<?=$color['img']?>); background-position:center; background-size: cover;">
 
-                </div>
-                <?PHP endforeach;?>
-                <div class="clear"></div>
+            <?php $url = add_query_arg(array('key' => 'skin','val' =>$key),get_page_link(231));?>
+            <a class="btn a-btn-knowmore <?=$class?>" href="<?=$url?>"><?=$key?></a>
+
+            </div>
+            <?PHP endforeach;?>
+            <div class="clear"></div>
             <?PHP endif;?>
                          
-            <?PHP if($show=='hair'):?>                
-                <div class="col-md-12 text-center ">
-            <h1>Whats your hair color!</h1>
+            
+
+            <?PHP if($show=='skinType'):?>  
+            <div class="col-md-12 text-center ">
+            <h1>Whats your skin Type!</h1>
             <p>you can change this anytime in your profile.</p>
-        </div>
-            <form class="form-inline" name="myForm" method="POST" action="../process.php">
-                <?php foreach($hairColor as $color):?>
-                    <?PHP $class = $color == $attrib[0]?"btn-active":"" ?>
-                <div class="form-group col-md-3 col-xs-6 site-form">
-                    <?php $url = add_query_arg(array('key' => 'hair','val' =>$color),get_page_link(231));?>
-                     <a class="btn a-btn-knowmore <?=$class?>" href="<?=$url?>"><?=$color?></a>
-                </div>
-                <?PHP endforeach;?>
-                <div class="clear"></div>
-            </form>
+            </div>
+            <?php foreach($skinType as $type):?>
+            <?PHP $class = $type == $attrib[0]?"btn-active":"" ?>
+            <div class="form-group col-md-3 col-xs-6 site-form">
+            <?php $url = add_query_arg(array('key' => 'skinType','val' =>$type),get_page_link(231));?>
+            <a class="btn a-btn-knowmore <?=$class?>" href="<?=$url?>"><?=$type?></a>
+            </div>
+            <?PHP endforeach;?>
+            <div class="clear"></div>
             <?PHP endif;?>
 
+
             <?PHP if($show=='eye'):?>  
-                <div class="col-md-12 text-center ">
+            <div class="col-md-12 text-center ">
             <h1>Whats your eye color!</h1>
             <p>you can change this anytime in your profile.</p>
-        </div>
+            </div>
             <form class="form-inline" name="myForm" method="POST" action="../process.php">
-                <?php foreach($eyeColor as $color):?>
-                    <?PHP $class = $color == $attrib[0]?"btn-active":"" ?>
-                <div class="form-group col-md-3 col-xs-6 site-form">
-                    <?php $url = add_query_arg(array('key' => 'eye','val' =>$color),get_page_link(231));?>
-                     <a class="btn a-btn-knowmore <?=$class?>" href="<?=$url?>"><?=$color?></a>
-                </div>
-                <?PHP endforeach;?>
-                <div class="clear"></div>
+            <?php foreach($eyeColor as $color):?>
+            <?PHP $class = $color == $attrib[0]?"btn-active":"" ?>
+            <div class="form-group col-md-3 col-xs-6 site-form">
+            <?php $url = add_query_arg(array('key' => 'eye','val' =>$color),get_page_link(231));?>
+            <a class="btn a-btn-knowmore <?=$class?>" href="<?=$url?>"><?=$color?></a>
+            </div>
+            <?PHP endforeach;?>
+            <div class="clear"></div>
             </form>
             <?PHP endif;?>
 
@@ -160,9 +179,9 @@ get_header('nomenu');
                 </div>
                 <?php foreach($DressSize as $dress):?>
                 <?PHP $class = $dress == $attrib[0]?"btn-active":"" ?>
-                <div class="col-md-3 col-xs-4 site-form">
+                <div class="col-md-3 col-xs-4 site-form text-center <?=$class?> chociebox" >
                 <?php $url = add_query_arg(array('key' => 'dress','val' =>$dress),get_page_link(231));?>
-                 <a class="btn a-btn-knowmore <?=$class?>" href="<?=$url?>"><?=$dress?></a>
+                 <a   href="<?=$url?>"><?=$dress?></a>
                 </div>
                 <?PHP endforeach;?>
                 <div class="clear"></div>
@@ -176,9 +195,9 @@ get_header('nomenu');
                 </div>
                 <?php foreach($topSize as $top):?>
                     <?PHP $class = $top == $attrib[0]?"btn-active":"" ?>
-                    <div class="col-md-3 col-xs-4 site-form">
+                    <div class="col-md-3 col-xs-4 site-form chociebox <?=$class?>">
                     <?php $url = add_query_arg(array('key' => 'top','val' =>$top),get_page_link(231));?>
-                    <a class="btn a-btn-knowmore <?=$class?>" href="<?=$url?>"><?=$top?></a>
+                    <a  href="<?=$url?>"><?=$top?></a>
                     </div>
                 <?PHP endforeach;?>
             <div class="clear"></div>
@@ -214,71 +233,75 @@ get_header('nomenu');
 
             <?PHP if($show=='profile'):?>  
             
-<div class="container">
-  <div class="profile-cards">
-    <h4 class="text-center">Awesome you are all set!</h4>
-     <h4 class="text-center">Now just make sure you provide the right contact to get noticed for giveaways & more love </h4>
-     <div class="row">
-       <div class="col-lg-4 text-center">
-         <img src="<?=$meta['cupp_upload_meta'][0]?>" style="width: 50px;">
-         <h5>Change avatar</h5>
-       </div>
-       <div class="col-lg-8">
-         <table cellspacing="0" cellpadding="0">
-                <tbody><tr>
-                  <td class="profile-dtl">Name:</td>
-                  <td>
-                    <input class="profile-input" required="" type="text" value="<?=$meta['nickname'][0]?>" name="" id="">
-                    <div class="form-note">Type to change your username</div>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="profile-dtl">Email:</td>
-                  <td>
-                      <input class="profile-input" type="email" value="<?=$user->user_email?>" name="" id="">
-                  </td>
-                </tr>
-                <tr>
-                  <td class="profile-dtl">About you:</td>
-                  <td>
-                    <input class="profile-input" value="<?=$meta['description'][0]?>" placeholder="Your professional title" type="text" name="" id="">
-                  </td>
-                </tr>
-                <tr>
-                  <td class="profile-dtl">Skin Type:</td>
-                  <td><?=$meta['skinType'][0]?></td>
-                </tr>
-                <tr>
-                  <td class="profile-dtl">Skin Color:</td>
-                  <td><?=$meta['skin'][0]?></td>
-                </tr>
-                <tr>
-                  <td class="profile-dtl">Eye:</td>
-                  <td><?=$meta['eye'][0]?></td>
-                </tr>
-                <tr>
-                  <td class="profile-dtl">Dress Size:</td>
-                  <td><?=$meta['dress'][0]?></td>
-                </tr>
-                <tr>
-                  <td class="profile-dtl">Top Size:</td>
-                  <td><?=$meta['top'][0]?></td>
-                </tr>
-                <tr>
-                  <td class="profile-dtl">Birthday:</td>
-                  <td>12 / 12 / 2001</td>
-                </tr>
-              </tbody></table>
-       </div>
-       <div class="col-lg-6">
-         <button type="button" class="btn-outline-dark btn-lg btn-block">Success</button>
-       </div>
-       <div class="col-lg-6">
-         <button type="button" class="btn btn-success btn-lg btn-block">Success</button>
-       </div>
-     </div>
-  </div>
-</div>
+            <div class="container">
+              <div class="profile-cards">
+                <h4 class="text-center">Awesome you are all set!</h4>
+                 <h4 class="text-center">Now just make sure you provide the right contact to get noticed for giveaways & more love </h4>
+                 <div class="row">
+                    <form class="form-inline" name="myForm" method="POST" action="" >
+                        <input class="profile-input" required=true type="text" value="profile" name="profile" id="profile">
+                        <div class="col-lg-4 text-center">
+                        <img src="<?=$meta['cupp_upload_meta'][0]?>" style="width: 50px;">
+                        <h5>Change avatar</h5>
+                        </div>
+
+                        <div class="col-lg-8">
+                        <table cellspacing="0" cellpadding="0">
+                        <tbody><tr>
+                        <td class="profile-dtl">Name:</td>
+                        <td>
+                        <input class="profile-input" required=true type="text" value="<?=$meta['nickname'][0]?>" name="nickname" id="nickname">
+                        <div class="form-note">Type to change your Name</div>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td class="profile-dtl">Email:</td>
+                        <td>
+                        <input class="profile-input" type="email" value="<?=$user->user_email?>" name="email" id="email">
+                        </td>
+                        </tr>
+                        <tr>
+                        <td class="profile-dtl">About you:</td>
+                        <td>
+                        <input class="profile-input" value="<?=$meta['description'][0]?>" placeholder="Your professional title" type="text" name="description" id="description">
+                        </td>
+                        </tr>
+                        <tr>
+                        <td class="profile-dtl">Skin Type:</td>
+                        <td><?=$meta['skinType'][0]?></td>
+                        </tr>
+                        <tr>
+                        <td class="profile-dtl">Skin Color:</td>
+                        <td><?=$meta['skin'][0]?></td>
+                        </tr>
+                        <tr>
+                        <td class="profile-dtl">Eye:</td>
+                        <td><?=$meta['eye'][0]?></td>
+                        </tr>
+                        <tr>
+                        <td class="profile-dtl">Dress Size:</td>
+                        <td><?=$meta['dress'][0]?></td>
+                        </tr>
+                        <tr>
+                        <td class="profile-dtl">Top Size:</td>
+                        <td><?=$meta['top'][0]?></td>
+                        </tr>
+                        <tr>
+                        <td class="profile-dtl">Birthday:</td>
+                        <td>12 / 12 / 2001</td>
+                        </tr>
+                        </tbody></table>
+                        </div>
+                    <div class="col-lg-6">
+                    <input type="submit" class="btn-outline-dark btn-lg btn-block" value="Update"/>
+                    </div>
+                    <div class="col-lg-6">
+                        <input type="submit" class="btn btn-success btn-lg btn-block" value="Update"/>
+                    </div>
+               </form>
+                 </div>
+              </div>
+            </div>
 
             <?PHP endif;?>
             

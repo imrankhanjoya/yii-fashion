@@ -18,12 +18,11 @@
 
 ignore_user_abort(true);
 
-if ( !empty($_POST) || defined('DOING_AJAX') || defined('DOING_CRON') )
-	die();
+
 
 /**
- * Tell WordPress we are doing the CRON task.
- *
+ * php mycron.php "all" "luxery Beauty"
+ * php mycron.php "all" "Beauty"
  * @var bool
  */
 define('DOING_CRON', true);
@@ -52,6 +51,8 @@ function amazonProduct($brand,$i,$cats){
             "ResponseGroup" => "Images,ItemAttributes,Offers,Reviews,SalesRank",
         );
 
+        sleep(5);
+
             $url = aws_signed_request($region, $params, $public_key, $private_key, $associate_tag);
             $ch = curl_init();
             curl_setopt($ch, CURLOPT_URL, $url);
@@ -72,10 +73,12 @@ function amazonProduct($brand,$i,$cats){
                }
                
                
-            if($amazondata[0]->Items->TotalPages>$i && $i<10){
-                amazonProduct($brand,$i,$cats);
+                if($amazondata[0]->Items->TotalPages>$i && $i<10){
+                    amazonProduct($brand,$i,$cats);
+                }
+            }else{
+                echo $xml;
             }
-        }
     }
 
      function aws_signed_request($region, $params, $public_key, $private_key, $associate_tag=NULL, $version='2017-08-01'){
@@ -189,6 +192,9 @@ function savePost($item,$brand){
 	wp_set_post_tags($post_ID,$tags);
 
 }
-amazonProduct("aloe vera",1,"Beauty");
-amazonProduct("oily skin",1,"Beauty");
+
+$key = $argv[1];
+$cat = $argv[2];
+amazonProduct($key,1,$cat);
+//amazonProduct("oily skin",1,"Beauty");
 die();
