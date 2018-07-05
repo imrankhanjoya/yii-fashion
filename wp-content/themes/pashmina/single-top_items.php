@@ -123,8 +123,110 @@ $title = get_the_title();
          </a>
          </div>
       </div>
-   </div>
-</div>
 
+     </div>
+   </div>
+
+   <!-- product dtl and card images -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-8 col-xs-12 col-sm-12">
+            <h3>Reviews for KAT VON D Everlasting Liquid Lipstick #Damned</h3>
+            <p>
+            <strong>Oops.. No review for this product yet.</strong>
+            <br>
+            Have you purchased or sampled it? Share your thoughts with the girls!
+            <br>
+            Here are some examples:
+            </p>
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 author-tab-div">
+          <div class="col-lg-4 col-md-4 col-sm-6 ">
+            <div class="panel panel-body ">
+               <strong class="text-muted">Unique and it works!</strong>
+               <p class="text-muted">I was rather skeptical when I first received the soap from a friend who got it from Korea...</p>
+            </div>
+           <h5 class="text-muted">By Sherelyn Goh</h5>
+         </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 ">
+            <div class="panel panel-body">
+               <strong class="text-muted">Unique and it works!</strong>
+               <p class="text-muted">I was rather skeptical when I first received the soap from a friend who got it from Korea...</p>
+            </div>
+           <h5 class="text-muted">By Sherelyn Goh</h5>
+         </div>
+           <div class="col-lg-4 col-md-4 col-sm-6 ">
+            <div class="panel panel-body">
+               <strong class="text-muted">Unique and it works!</strong>
+               <p class="text-muted">I was rather skeptical when I first received the soap from a friend who got it from Korea...</p>
+            </div>
+           <h5 class="text-muted">By Sherelyn Goh</h5>
+         </div>
+          </div>
+   </div>
+ <div class="col-lg-4 col-xs-12 col-md-4 col-sm-12 pull-right media">
+   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 table-bordered">
+      <h5 class="panel-body">10 Brown Shade Lipsticks that You Should Try</h5>
+
+       <div class="col-lg-6 col-xs-6">
+         <a class="prouct-silder-img" style="background-image: url(http://gloat.me/wp-content/uploads/2018/07/carousel-women.jpg)" href="/top-10/10-brown-lipsticks-that-you-should-try">
+           <p class="">Brown shades will never look out of style</p>
+         </a>
+      </div>
+
+      <div class="col-lg-6 col-xs-6">
+         <a class="prouct-silder-img" style="background-image: url(http://d1acy2vp0zxghs.cloudfront.net/featured_categories/images/000/000/110/original/26-min.jpg?1487305456)" href="/top-10/10-brown-lipsticks-that-you-should-try">
+         <p class="">Brown shades will never look out of style</p>
+         </a>
+      </div>
+
+       <div class="col-lg-6 col-xs-6">
+         <a class="prouct-silder-img" style="background-image: url(http://gloat.me/wp-content/uploads/2018/07/carousel-women.jpg)" href="/top-10/10-brown-lipsticks-that-you-should-try">
+         <p class="">Brown shades will never look out of style</p>
+         </a>
+      </div>
+
+        <div class="col-lg-6 col-xs-6">
+         <a class="prouct-silder-img" style="background-image: url(https://images-eu.ssl-images-amazon.com/images/I/314nru0lM7L.jpg)" href="/top-10/10-brown-lipsticks-that-you-should-try">
+         <p class="">Brown shades will never look out of style</p>
+         </a>
+       </div>
+      </div>
+
+      <div class="row">
+        <div  class="col-lg-12 col-xs-12 col-md-12 col-sm-12">
+        <h4>You might like these:</h4>
+        <hr>
+        <a href="">
+        <div class="col-lg-3 col-lg-3 col-sm-3 col-xs-3 col-md-3 card-brder-hovr text-center">
+           <img class="img-responsive" src="http://d1acy2vp0zxghs.cloudfront.net/products/images/000/025/456/thumb/Nivea_Fruity_Shine_Lip_Balm_%28Strawberry%29.jpg?1481189411">
+          </div>
+          <div class="col-lg-9 col-lg-9 col-sm-9 col-xs-9 col-md-9 prodt-like-cnt">
+           <span>Nivea Essential Care Lip Balm</span>
+            <h6 class="text-danger">Nivea</h6>
+             <span class=""><span class="">RM8.50</span> <span class="discount-tag">-26%</span> <strike>RM11.60</strike></span>
+             </div>
+            </a>
+         </div>
+       </div>
+
+      <div class="row">
+       <div  class="col-lg-12 col-xs-12 col-md-12 col-sm-12">
+          <hr>
+              <a href="">
+         <div class="col-lg-3 col-sm-3 col-xs-3 col-md-3 card-brder-hovr text-center">
+           <img class="img-responsive" src="http://d1acy2vp0zxghs.cloudfront.net/products/images/000/025/456/thumb/Nivea_Fruity_Shine_Lip_Balm_%28Strawberry%29.jpg?1481189411">
+         </div>
+         <div class="col-lg-9 col-lg-9 col-sm-9 col-xs-9 col-md-9 prodt-like-cnt">
+           <span>Nivea Essential Care Lip Balm</span>
+           <h6 class="text-danger">Nivea</h6>
+           <span class="product-price"><span class="discounted-price">RM8.50</span> <span class="discount-tag">-26%</span> <strike>RM11.60</strike></span>
+        </div>
+         </a>
+     </div>
+     </div>
+    </div>
+
+  </div>
+</div>
 <?php
 get_footer();

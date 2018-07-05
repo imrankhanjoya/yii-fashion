@@ -41,9 +41,9 @@ get_header();
     </div>
 </div>
 </div>
-
+<div style="clear:both"></div>
     <nav class="navbar">
-        <div class="container-fluid panel-body">
+        <div class="container-fluid">
           <div id="navbar" class="product-dtl-list">
             <ul class="nav navbar-nav">
               <li class="active"><a href="#">Mobile</a></li>
