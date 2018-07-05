@@ -64,7 +64,7 @@ $starPage = get_page_link($val->ID);
 
                         while ($dt_featured_posts->have_posts()) : $dt_featured_posts->the_post(); ?>
 
-                            <div class="swiper-slide" >
+                            <div class="swiper-slide productlist" >
                                 <?PHP  get_template_part('template-parts/content-product-min','page'); ?>
                                 <!-- .dt-featured-post -->
                             </div><!-- .swiper-slide -->

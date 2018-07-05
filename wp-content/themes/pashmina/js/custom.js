@@ -35,7 +35,7 @@ jQuery(document).ready(function() {
             type: 'bullets',
             clickable: true
         },
-        slidesPerView: 3,
+        slidesPerView: 4,
         breakpoints: {
             // when window width is <= 320px
             420: {
