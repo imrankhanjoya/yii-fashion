@@ -86,7 +86,7 @@ $title = get_the_title();
 
          <div class="col-lg-12 text-center">
             <div class="" style="border:1px solid #d0d0d0"></div>
-            <div class="text-center" style="border:1px solid #a0a0a0;width: 70%;margin-top:2px;margin-left: 15%;"></div>
+            <div class="text-center" style="border:1px solid #dadada;width: 70%;margin-top:2px;margin-left: 15%;"></div>
          </div>
                <?php $i++; endwhile; ?>
                <?php wp_reset_postdata(); // reset the query ?>

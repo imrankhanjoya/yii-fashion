@@ -501,7 +501,7 @@ ol ul {
 
 p {
 	margin-bottom:10px;
-	line-height: 1.6em;
+	line-height: 1.3;
 }
 
 a {
@@ -1769,7 +1769,6 @@ td {
 	.dt-front-post .entry-meta {
 		padding-top:0px;
 	}
-
 	.dt-front-post .entry-meta p {
 		display: inline-block;
 		margin-right: 30px;
@@ -1802,13 +1801,13 @@ td {
 
 	h3 {
 		font-size: 18px;
-		line-height: 1.8em;
+		line-height: 1.4;
 	}
 
 	h4 {
 		font-size: 16px;
 		font-weight: 500;
-		line-height: 1.8em;
+		line-height: 1.4;
 	}
 
 	.dt-featured-post .entry-footer h3 {
@@ -1923,6 +1922,10 @@ height: 100px;
 	padding: 5px 15px;
 	font-size:12px;
 }
+@media all and (max-width: 1024px) {
+.productlist .nav>li>a{
+	padding: 5px 2px !important;
+	} }
 .productlist .entry-by{
 	font-size:14px;
 	text-align: center;
@@ -2029,6 +2032,12 @@ height: 100px;
 	font-weight: bold;
 	font-size: 2em;
 	}	
+	.top-ttl-heddng span{
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 2em;
+	font-family: 'Roboto Condensed', sans-serif;
+	}	
 .top-ttl:hover .top-ttl-heddng{
 	color: red;
 }
@@ -2056,8 +2065,9 @@ height: 100px;
 }
 @media screen and (max-width: 700px){
 .should-ttl h1 {
-	 font-size: 30px;
-	 line-height: 1.5;
+	font-size: 33px;
+    line-height: 37px;
+    letter-spacing: 1px;
 } }
 .should-ttl h3 {
     font-size: 21px;

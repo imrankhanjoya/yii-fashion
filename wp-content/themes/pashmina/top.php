@@ -28,16 +28,16 @@ $cat = $GLOBALS['wp_query']->query['cat'];
 ?>
 <div class="col-md-12">
 <div class="row">
-    <div class="col-lg-6 text-center top-ttl"  style="background-color:#92FFD8">
+    <div class="col-lg-6 text-center top-ttl panel-body" style="background-color:#92FFD8">
         <a href="" class="top-ttl-heddng">
-        <h1>GloatMe's Pick</h1>
-        <p>Here are the best products that will make you look & feel good!</p>
+        <span>GloatMe's Pick</span>
+        <h4>Here are the best products that will make you look &amp; feel good!</h4>
         </a>
     </div>
-      <div class="col-lg-6 text-center top-ttl" style="background-color:#FFDFCA">
+      <div class="col-lg-6 text-center top-ttl panel-body" style="background-color:#FFDFCA">
         <a href="" class="top-ttl-heddng">
-        <h1>top 10</h1>
-        <p>view most recommended</p>
+        <span>top 10</span>
+        <h4>view most recommended</h4>
         </a>
     </div>
 </div>
