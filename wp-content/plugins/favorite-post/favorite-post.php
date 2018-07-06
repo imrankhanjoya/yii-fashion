@@ -200,12 +200,12 @@ class WeDevs_Favorite_Posts {
 
             $this->insert_favorite( $post_id, $user_id );
 
-            wp_send_json_success( '<span class="fa fa-heart f-selct">&nbsp;</span> ' . __( 'Remove from favorite', 'wfp' ) );
+            wp_send_json_success( '<span class="fa fa-heart f-selct">&nbsp;</span> ' . __( 'Favorite', 'wfp' ) );
         } else {
 
             $this->delete_favorite( $post_id, $user_id );
 
-            wp_send_json_success( '<span class="fa fa-heart fnot">&nbsp;</span> ' . __( 'Add to favorite', 'wfp' ) );
+            wp_send_json_success( '<span class="fa fa-heart fnot">&nbsp;</span> ' . __( 'Favorite', 'wfp' ) );
         }
     }
 
@@ -304,7 +304,7 @@ class WeDevs_Favorite_Posts {
 
         <a class="wpf-favorite-link" href="#" data-id="<?php echo $post_id; ?>">
             <?php if ( $status ) { ?>
-                <span class="fa fa-heart f-selct">&nbsp;</span> <?php _e( 'Remove favorite', 'wfp' ); ?>
+                <span class="fa fa-heart f-selct">&nbsp;</span> <?php _e( 'Favorite', 'wfp' ); ?>
             <?php } else { ?>
                 <span class="fa fa-heart fnot">&nbsp;</span> <?php _e( 'Favorite', 'wfp' ); ?>
             <?php } ?>
@@ -328,7 +328,7 @@ class WeDevs_Favorite_Posts {
         echo '<ul>';
         if ( $posts ) {
 
-            $remove_title = __( 'Remove from favorite', 'wfp' );
+            $remove_title = __( 'Favorite', 'wfp' );
             $remove_link = ' <a href="#" data-id="%s" title="%s" class="wpf-remove-favorite">x</a>';
 
             foreach ($posts as $item) {

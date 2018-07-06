@@ -25,7 +25,7 @@ define('DB_NAME', 'deideo');
 define('DB_USER', 'root');
 
 /** MySQL database password */
-define('DB_PASSWORD', '');
+define('DB_PASSWORD', '12345');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
@@ -55,8 +55,8 @@ define('LOGGED_IN_SALT',   'k~s@<+0jB{+/PWWf7[&}kc28zs;N$Gv+.roV<TkuyxMqSrX~.aaY
 define('NONCE_SALT',       'pQDq&+-ubJSy@<m z$1;~_Ls>GX%XUe,Cq80D$t8}t!Y56x@kB!}?O1q<}yDc#a/');
 
 /**#@-*/
-define('WP_HOME','http://localhost/deideo');
-define('WP_SITEURL','http://localhost/deideo');
+define('WP_HOME','http://dis.deideo.com/');
+define('WP_SITEURL','http://dis.deideo.com/');
 /**
  * WordPress Database Table prefix.
  *

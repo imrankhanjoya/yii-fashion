@@ -30,9 +30,7 @@ $title = substr($title,0,120);
 	</div><!-- .entry-content -->
 	<ul class="nav nav-pills btn-group-xs">
 	  <li role="presentation"><a href="<?=$val['DetailPageURL'][0]?>" ><?=$price?></a></li>
-	  <li role="presentation"><a href="#"><span class="glyphicon glyphicon-heart"></span> Fave</a></li>
-	  <li role="presentation"><a href="#"><span class="glyphicon glyphicon-share-alt
-"></span> Share</a></li>
+	  <li role="presentation"><?php if ( function_exists( 'wfp_button' ) ) wfp_button(); ?></li>
 	</ul>
 
 

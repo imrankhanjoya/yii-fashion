@@ -20,6 +20,7 @@
 
     </figure>
     <h4>Ranking <span class="label label-default"><span class="glyphicon glyphicon-star hicon"></span><?=$val['SalesRank'][0]?></span></h4>
+    
     <div class="price_box">
     	<span class="lab">Lowest price Now</span><br>
     	<span class="list"><?=$val['ListPrice'][0]?></span>
@@ -38,7 +39,7 @@
 		<h5 class="excerpt"><?php the_excerpt(); ?></h5>
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 		<span class="excerpt">By <?=$val['Brand'][0]?></span>
-
+        <?php if ( function_exists( 'wfp_button' ) ) wfp_button(); ?>
 		<?php the_content(); ?>
 	</div><!-- .entry-content -->
 	
