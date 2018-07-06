@@ -63,7 +63,7 @@ $brands = isset($site['brands'])?$site['brands']:"";
             <?php 
             //$custom_query = new WP_Query('post_type="product"'); // exclude category 9
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-$args = array( 'post_type' => 'product', 'posts_per_page' =>40, 'paged' => $paged );
+$args = array( 'post_type' => 'product', 'posts_per_page' =>40, 'paged' => $paged,"meta_key"=>"SalesRank","orderby"=>"meta_value_num","order"=>"DESC" );
 $custom_query = new WP_Query($args);
             ?>
             <?PHP while($custom_query->have_posts()) : $custom_query->the_post(); ?>

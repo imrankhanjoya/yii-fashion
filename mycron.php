@@ -26,8 +26,12 @@ ignore_user_abort(true);
 
 
 /**
- * php mycron.php "all" "LuxuryBeauty" 5
- * php mycron.php "Hair" "LuxuryBeauty" 5
+ * php mycron.php "all" "LuxuryBeauty" 1
+ * php mycron.php "Elle 18" "LuxuryBeauty" 1
+ * php mycron.php "L'Oreal" "Beauty" 1
+ * php mycron.php "ponds" "Beauty" 1
+ * php mycron.php "lotus" "Beauty" 1
+ * php mycron.php "Hair" "LuxuryBeauty" 1
  * php mycron.php "all" "Beauty" 1
  * php mycron.php "SKIN CARE FOR THE FACE" "Beauty" 1
  * @var bool
