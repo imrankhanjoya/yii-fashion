@@ -14,6 +14,7 @@ get_header();
  }else{
  	$findIn = "tag";
  }
+ $findKey = $queried_object->slug;
 
 $cat = single_cat_title(null,false);
 
@@ -40,8 +41,8 @@ $brands = isset($site['brands'])?$site['brands']:"";
   <div class="container-fluid">
     <div id="navbar" class="product-dtl-list">
       <ul class="nav navbar-nav">
-        <?php foreach($brands as $key=>$val): $cID = get_cat_ID($val);?>
-        <li class="active"><a href="<?php echo esc_url( get_category_link($cID) ); ?>"><?=$val?></a></li>
+        <?php foreach($brands as $key=>$val): $cID = get_cat_ID($val); $key==$findKey?$class='active':$class='';  ?>
+        <li ><a  class="<?=$class?>" href="<?php echo esc_url( get_category_link($cID) ); ?>"><?=$val?></a></li>
         <?PHP endforeach;?>
       </ul>
      
@@ -57,14 +58,14 @@ $brands = isset($site['brands'])?$site['brands']:"";
 				 <?php 
             //$custom_query = new WP_Query('post_type="product"'); // exclude category 9
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-$args = array( 'post_type' => 'product',$findIn=>$queried_object->slug, 'posts_per_page' =>40, 'paged' => $paged );
+$args = array( 'post_type' => 'product',$findIn=>$findKey, 'posts_per_page' =>40, 'paged' => $paged );
 $custom_query = new WP_Query($args);
             ?>
 			<?php if ( $custom_query->have_posts() ) : ?>
 
 				<header class="page-header">
 					<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
+					//the_archive_title( '<h1 class="page-title">', '</h1>' );
 					the_archive_description( '<div class="taxonomy-description">', '</div>' );
 					?>
 				</header><!-- .page-header -->

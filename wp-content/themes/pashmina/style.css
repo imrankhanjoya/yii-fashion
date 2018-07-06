@@ -1929,6 +1929,10 @@ font-size:14px;
 	padding: 5px 10px;
 	font-size:12px;
 }
+.product-dtl-list .active{
+	color:#f26798;
+}
+
 @media all and (max-width: 1024px) {
 .productlist .nav>li>a{
 	padding: 5px 2px !important;
@@ -2323,6 +2327,10 @@ a.wpf-favorite-link span{
 }
 .product-dtl-list .nav>li>a:hover{ 
 background-color: unset;
+}
+.product-dtl-list .nav>li>a.active{ 
+background-color: unset;
+color:#ED145B !important;
 }
 .product-dtl-list li{ 
     font-size: 14px;
