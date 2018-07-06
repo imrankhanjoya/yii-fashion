@@ -64,7 +64,7 @@ $starPage = get_page_link($val->ID);
 
                         while ($dt_featured_posts->have_posts()) : $dt_featured_posts->the_post(); ?>
 
-                            <div class="swiper-slide" >
+                            <div class="swiper-slide productlist" >
                                 <?PHP  get_template_part('template-parts/content-product-min','page'); ?>
                                 <!-- .dt-featured-post -->
                             </div><!-- .swiper-slide -->
@@ -148,7 +148,7 @@ $starPage = get_page_link($val->ID);
 
                 <div style=" padding:2%; text-align: center; background-color: #E8D7AB">
                     <h3>Gloat Me Join the Movement</h3>
-                    <p>We assembled Favful with the goal that together we could give straightforwardness and strengthening in excellence for each other. Here your experiences and commitments on magnificence items will mean the world to another person's next buy.</p>
+                    <p>We assembled GloatMe with the goal that together we could give straightforwardness and strengthening in excellence for each other. Here your experiences and commitments on magnificence items will mean the world to another person's next buy.</p>
                     <a href="<?=$starPage?>" class="btn btn-getfree" >Get it free</a>
 
 
