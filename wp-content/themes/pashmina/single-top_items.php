@@ -143,21 +143,21 @@ $title = get_the_title();
           <div class="col-lg-4 col-md-4 col-sm-6 ">
             <div class="panel panel-body ">
                <strong class="text-muted">Unique and it works!</strong>
-               <p class="text-muted">I was rather skeptical when I first received the soap from a friend who got it from Korea...</p>
+               <p class="text-muted small">I was rather skeptical when I first received the soap from a friend who got it from Korea...</p>
             </div>
            <h5 class="text-muted">By Sherelyn Goh</h5>
          </div>
             <div class="col-lg-4 col-md-4 col-sm-6 ">
             <div class="panel panel-body">
                <strong class="text-muted">Unique and it works!</strong>
-               <p class="text-muted">I was rather skeptical when I first received the soap from a friend who got it from Korea...</p>
+               <p class="text-muted small">I was rather skeptical when I first received the soap from a friend who got it from Korea...</p>
             </div>
            <h5 class="text-muted">By Sherelyn Goh</h5>
          </div>
            <div class="col-lg-4 col-md-4 col-sm-6 ">
             <div class="panel panel-body">
                <strong class="text-muted">Unique and it works!</strong>
-               <p class="text-muted">I was rather skeptical when I first received the soap from a friend who got it from Korea...</p>
+               <p class="text-muted small">I was rather skeptical when I first received the soap from a friend who got it from Korea...</p>
             </div>
            <h5 class="text-muted">By Sherelyn Goh</h5>
          </div>
