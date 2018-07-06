@@ -11,6 +11,8 @@ License: GPL2
 */
 ?>
 <?PHP 
+$site['brands'] = array("o3"=>"O3","KAZIMA"=>"kazima","lotus"=>"Lotus","nivea"=>"Nivea","olay"=>"Olay","mcaffeine"=>"MCaffeine","lakme"=>"Lakmé","loreal-paris"=>"L’Oreal Paris","khadi-natural"=>"Khadi Natural","ponds"=>"POND’S","brezzycloud"=>"Brezzycloud");
+
 
 function custom_rewrite_basic() {
   global $wp_rewrite;

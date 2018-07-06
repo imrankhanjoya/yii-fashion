@@ -16,11 +16,36 @@ get_header();
 $val = get_page_by_path( 'get-start' );
 $starPage = get_page_link($val->ID);
 
-
 ?>
 
 
+<!-- Contest -->
 
+    
+        
+            <?PHP 
+            $args = array('post_type' => 'contest','posts_per_page' =>1,'orderby' => 'ASC');
+            $dt_featured_posts = new WP_Query($args);
+            while ($dt_featured_posts->have_posts()) : $dt_featured_posts->the_post(); 
+                ?>
+            <div class="" style="width:100%; background-image: url(<?= get_the_post_thumbnail_url(get_the_ID())?>);">
+                <div class="row" >
+                    <div class="col-lg-12" >
+                        <a class="top-contest-banners"   href="<?php esc_url( the_permalink() ); ?>">
+                        <div class="top-blck-bacgrnd"></div>
+                        <p><?php the_title(); ?></p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <?PHP
+            endwhile; 
+            wp_reset_postdata(); 
+            ?>
+        
+    
+
+<!-- Contest -->
 <?php if (is_active_sidebar('dt-header1')) : ?>
 
     <div class="col-lg-12 col-md-12 col-sm-12 my_widget_text">
@@ -95,6 +120,30 @@ $starPage = get_page_link($val->ID);
 
 
 
+<!-- TOP ITEM LIST -->
+<div class="container container_box">
+    <div class="row">
+        <div class="col-lg-12">
+            <h2>Top Collection</h2>
+            <?PHP 
+            $args = array('post_type' => 'top_items','posts_per_page' =>2,'orderby' => 'ASC');
+            $dt_featured_posts = new WP_Query($args);
+            while ($dt_featured_posts->have_posts()) : $dt_featured_posts->the_post(); 
+                ?>
+            <div class="col-md-6">
+            <a class="top-banners"  style="background-image: url(<?= get_the_post_thumbnail_url(get_the_ID())?>);" href="<?php esc_url( the_permalink() ); ?>">
+            <div class="top-blck-bacgrnd"></div>
+            <p><?php the_title(); ?></p>
+            </a>
+            </div>
+            <?PHP
+            endwhile; 
+            wp_reset_postdata(); 
+            ?>
+        </div>
+    </div>
+</div>
+<!-- TOP ITEM LIST END -->
 
 
 
