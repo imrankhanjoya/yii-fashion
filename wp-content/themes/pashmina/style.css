@@ -2396,6 +2396,29 @@ margin-bottom: 0;
     top: 0;}
 
  .commnt-time-dtl{
- 	font-size: 13px !important;
+ 	font-size: 14px !important;
  	 color: #afafaf;
  }
+ .home-banner-img{
+background: #f7f7f7;
+    margin-bottom: 30px;
+    height: 235px;
+    text-align: center;
+    background-size: cover;
+    background-position: center center;
+    display: block;
+    overflow: hidden;
+    position: relative;
+
+}
+ .home-banner-two{
+background: #f7f7f7;
+    margin-bottom: 30px;
+    height: 500px;
+    text-align: center;
+    background-size: cover;
+    display: block;
+    overflow: hidden;
+    position: relative;
+
+}
