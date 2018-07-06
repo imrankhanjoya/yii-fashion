@@ -19,7 +19,7 @@ $user = wp_get_current_user();
 
 
 get_header(); 
-
+$brands = isset($site['brands'])?$site['brands']:"";
 ?>
 <!-- <div class="col-md-12" style="background-color: #ccc; height:100px; margin-bottom:10px">
                 &nbsp;
@@ -46,12 +46,9 @@ get_header();
         <div class="container-fluid">
           <div id="navbar" class="product-dtl-list">
             <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Mobile</a></li>
-              <li><a href="#">Computers</a></li>
-              <li><a href="#">Laptops</a></li>
-               <li class="active"><a href="#">Tablets</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Computer Accessories</a></li>
+              <?php foreach($brands as $key=>$val): $cID = get_cat_ID($key);?>
+              <li class="active"><a href="<?php echo esc_url( get_category_link($cID) ); ?>"><?=$val?></a></li>
+              <?PHP endforeach;?>
             </ul>
            
           </div>
@@ -66,7 +63,7 @@ get_header();
             <?php 
             //$custom_query = new WP_Query('post_type="product"'); // exclude category 9
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-$args = array( 'post_type' => 'product', 'posts_per_page' =>40, 'paged' => $paged );
+$args = array( 'post_type' => 'product', 'posts_per_page' =>40, 'paged' => $paged,"meta_key"=>"SalesRank","orderby"=>"meta_value_num","order"=>"DESC" );
 $custom_query = new WP_Query($args);
             ?>
             <?PHP while($custom_query->have_posts()) : $custom_query->the_post(); ?>

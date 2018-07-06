@@ -12,15 +12,48 @@ get_header();
  if($queried_object->taxonomy=='category'){
  	$findIn = "category_name";
  }else{
- 	$findIn = "tag_name";
+ 	$findIn = "tag";
  }
 
 $cat = single_cat_title(null,false);
+
+$brands = isset($site['brands'])?$site['brands']:"";
 ?>
+<div class="col-md-12">
+<div class="row">
+    <div class="col-lg-6 text-center top-ttl panel-body" style="background-color:#92FFD8">
+        <a href="" class="top-ttl-heddng">
+        <span>GloatMe's Pick</span>
+        <h4>Here are the best products that will make you look &amp; feel good!</h4>
+        </a>
+    </div>
+      <div class="col-lg-6 text-center top-ttl panel-body" style="background-color:#FFDFCA">
+        <a href="" class="top-ttl-heddng">
+        <span>top 10</span>
+        <h4>view most recommended</h4>
+        </a>
+    </div>
+</div>
+</div>
+<div style="clear:both"></div>
+<nav class="navbar">
+  <div class="container-fluid">
+    <div id="navbar" class="product-dtl-list">
+      <ul class="nav navbar-nav">
+        <?php foreach($brands as $key=>$val): $cID = get_cat_ID($val);?>
+        <li class="active"><a href="<?php echo esc_url( get_category_link($cID) ); ?>"><?=$val?></a></li>
+        <?PHP endforeach;?>
+      </ul>
+     
+    </div>
+  </div>
+</nav>
+
+
 
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-8 col-md-8">
+			<div class="col-lg-12 col-md-12">
 				 <?php 
             //$custom_query = new WP_Query('post_type="product"'); // exclude category 9
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
@@ -38,54 +71,8 @@ $custom_query = new WP_Query($args);
 
 				<?php while ( $custom_query->have_posts() ) : $custom_query->the_post(); ?>
 
-				<section class="dt-front-posts-wrap">
-					<div class="dt-front-post">
+				                <?PHP  get_template_part('template-parts/content-product','page'); ?>
 
-						<?php  if ( has_post_thumbnail() ) : ?>
-							<figure>
-
-								<?php
-								the_post_thumbnail( 'pashmina-front-post-img' );
-								?>
-
-								<span><a href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title_attribute(); ?>"><i class="fa fa-mail-forward transition5"></i></a> </span>
-							</figure>
-
-						<?php endif; ?>
-
-						<div class="row">
-							<div class="col-lg-3 col-md-3 col-sm-3">
-								<div class="entry-meta">
-									<p><strong><?php _e( 'Author:', 'pashmina' ); ?></strong><a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) ?>"><?php echo esc_html( get_the_author() ) ?></a></p>
-
-									<p><strong><?php _e( 'Published on:', 'pashmina' ); ?></strong><?php esc_html( the_time("F d, Y") ); ?></p>
-
-									<p><strong><?php _e( 'Category:', 'pashmina' ); ?></strong>
-										<?php $categories_list = get_the_category_list( esc_html__( ', ', 'pashmina' ) );
-										if ( $categories_list && pashmina_categorized_blog() ) {
-											printf( $categories_list ); // WPCS: XSS OK.
-										} ?></p>
-								</div>
-							</div>
-
-							<article class="col-lg-9 col-md-9 col-sm-9">
-								<header class="entry-header">
-									<h2><a href="<?php echo esc_url( get_the_permalink() ); ?>"><?php echo esc_attr( get_the_title() ); ?></a></h2>
-								</header><!-- .entry-header -->
-
-								<div>
-									<?php esc_html( the_excerpt() ); ?>
-								</div>
-
-								<footer class="entry-footer">
-									<a href="<?php echo esc_url( get_the_permalink() ); ?>"><?php _e( 'CONTINUE READING', 'pashmina' ); ?></a>
-								</footer><!-- .entry-footer -->
-							</article>
-
-							<div class="clearfix"></div>
-						</div>
-					</div>
-				</section>
 
 				<?php endwhile; ?>
 
@@ -103,11 +90,7 @@ $custom_query = new WP_Query($args);
 
 			</div>
 
-			<aside class="col-lg-4 col-md-4">
-				<div class="dt-sidebar">
-					<?php get_sidebar(); ?>
-				</div><!-- dt-sidebar -->
-			</aside><!-- .col-lg-4 -->
+			
 		</div>
 	</div>
 

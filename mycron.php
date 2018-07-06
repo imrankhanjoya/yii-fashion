@@ -15,14 +15,25 @@
  *
  * @package WordPress
  */
+/**
+ * 'All','Beauty','Grocery','Industrial','PetSupplies','OfficeProducts','Electronics','Watches','Jewelry','Luggage','Shoes','Furniture','KindleStore','Automotive','Pantry','MusicalInstruments','GiftCards','Toys','SportingGoods','PCHardware','Books','LuxuryBeauty','Baby','HomeGarden','VideoGames','Apparel','Marketplace','DVD','Appliances','Music','LawnAndGarden','HealthPersonalCare','Software
+ * Beauty
+ * LuxuryBeauty
+ */
 
 ignore_user_abort(true);
 
 
 
 /**
- * php mycron.php "all" "luxery Beauty"
- * php mycron.php "all" "Beauty"
+ * php mycron.php "all" "LuxuryBeauty" 1
+ * php mycron.php "Elle 18" "LuxuryBeauty" 1
+ * php mycron.php "L'Oreal" "Beauty" 1
+ * php mycron.php "ponds" "Beauty" 1
+ * php mycron.php "lotus" "Beauty" 1
+ * php mycron.php "Hair" "LuxuryBeauty" 1
+ * php mycron.php "all" "Beauty" 1
+ * php mycron.php "SKIN CARE FOR THE FACE" "Beauty" 1
  * @var bool
  */
 define('DOING_CRON', true);
@@ -36,6 +47,8 @@ require_once( ABSPATH . '/wp-admin/includes/taxonomy.php');
 
 
 function amazonProduct($brand,$i,$cats){
+        echo "Porcessing Page $i";
+        echo "\n";
         $region = "in";
         $private_key = "Hvipqt6B5syvI1YitiP61cTX6f0WasKcxnCepa1W";
         $associate_tag = "buypid-21";
@@ -51,7 +64,7 @@ function amazonProduct($brand,$i,$cats){
             "ResponseGroup" => "Images,ItemAttributes,Offers,Reviews,SalesRank",
         );
 
-        sleep(5);
+        sleep(4);
 
             $url = aws_signed_request($region, $params, $public_key, $private_key, $associate_tag);
             $ch = curl_init();
@@ -74,7 +87,9 @@ function amazonProduct($brand,$i,$cats){
                
                
                 if($amazondata[0]->Items->TotalPages>$i && $i<10){
+                    $i++;
                     amazonProduct($brand,$i,$cats);
+
                 }
             }else{
                 echo $xml;
@@ -134,12 +149,17 @@ function savePost($item,$brand){
 		return false;
 	}
 
-    echo "Storing Product";
+    
 	$ASIN = $item->ASIN;
 	global $wpdb;
 	$results = $wpdb->get_results( "select post_id, meta_key from $wpdb->postmeta where meta_value ='{$ASIN}' order by meta_id desc limit 1 ", ARRAY_A );
 
 	$postId = isset($results[0]['post_id'])?$results[0]['post_id']:0;
+    if($postId==0){
+        echo "Storing Product";
+    }else{
+        echo "Updating Product";
+    }
 	$tiemAttr = $item->ItemAttributes;
 	$postarr = array();
 	$postarr['ID'] =  $postId;
@@ -195,6 +215,7 @@ function savePost($item,$brand){
 
 $key = $argv[1];
 $cat = $argv[2];
-amazonProduct($key,1,$cat);
-//amazonProduct("oily skin",1,"Beauty");
+$page = $argv[3];
+amazonProduct($key,$page,$cat);
+//amazonProduct("oily skin",$page,"Beauty");
 die();
