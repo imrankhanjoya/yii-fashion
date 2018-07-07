@@ -57,6 +57,7 @@ define('LOGGED_IN_SALT',   'Hb&KYbP6HBHsac6q`}BM4tE)<k.~Q$0>(m#*}BPn4)[:PkI}5CY$
 define('NONCE_SALT',       'OZpxMHq$GcxS{vB`!@ng5f&< s|e~/NS|LoKkh!3tL sj,c%,<Rdyx([jmi#[aFo');
 
 /**#@-*/
+
 /**
  * WordPress Database Table prefix.
  *
