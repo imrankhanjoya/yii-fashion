@@ -27,6 +27,8 @@
     	<?PHP if(isset($val['LowestNewPrice'][0])):?>
     	<span class="offer"><?=$val['LowestNewPrice'][0]?></span>
     	<?PHP endif;?>
+        <div class="clearfix"></div>
+                    <a href="<?=$val['DetailPageURL'][0]?>" class="btn btn-success">Buy <span class="ambadge">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></a>
     </div>
     <?php the_category(); ?>
 	 <div class="clearfix"></div>
