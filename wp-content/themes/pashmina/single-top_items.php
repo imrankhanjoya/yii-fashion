@@ -12,6 +12,9 @@
 $post = get_post();
 $url = get_permalink();
 $title = get_the_title();
+$tags = get_the_tags();
+
+$tag_name = $tags[0]->name;
 ?>
 <div class="col-md-12" style="padding: 0px;">
    <div class="should-banner" style="background-image: url(<?= get_the_post_thumbnail_url(get_the_ID())?>);">
@@ -28,7 +31,7 @@ $title = get_the_title();
    <div class="row">
       <?php 
       $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-      $args = array( 'post_type' => 'product', 'posts_per_page' =>10, 'paged' => $paged );
+      $args = array( 'post_type' => 'product','tag'=>$tag_name, 'posts_per_page' =>10, 'paged' => $paged );
       $custom_query = new WP_Query($args);
       ?>
 
