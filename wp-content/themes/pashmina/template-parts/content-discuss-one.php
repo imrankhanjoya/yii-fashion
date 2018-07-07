@@ -27,7 +27,7 @@
 			<div class="col-md-2 col-lg-1 all-div-padding0 text-center"> 
 				<img class="img-circle" src="https://images.pexels.com/photos/207171/pexels-photo-207171.jpeg?auto=compress&cs=tinysrgb&h=350" style="height:50px; width:50px;">
 			</div>
-			<div class="col-md-6 col-lg-7 all-div-padding0">
+			<div class="col-md-6 col-lg-7 ">
 				<a href=""> Favful - For Beauty Enthusiast
 				<h6>Beauty Observer</h6></a>
 			</div>
