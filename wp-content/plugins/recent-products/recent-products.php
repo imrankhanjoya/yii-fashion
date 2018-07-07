@@ -50,6 +50,7 @@ class WP_Widget_Recent_Postsss extends WP_Widget {
         $number = ( ! empty( $instance['number'] ) ) ? absint( $instance['number'] ) : 10;
          $filter = array('post_type' => 'product','posts_per_page' => 5, 'no_found_rows' => true, 'post_status' => 'publish', 'ignore_sticky_posts' => true);
         if ($number) {
+
             $filter['category']=$number;
         } ?>
         <?=$before_widget?>
@@ -59,7 +60,7 @@ class WP_Widget_Recent_Postsss extends WP_Widget {
         $the_query = new WP_Query( $filter );
         if($the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
             <li class="service">
-                <h5><?php the_title(); ?></h5>
+               <?PHP  get_template_part('template-parts/content-product-min','page'); ?>
             </li><!-- /.service -->
         <?php endwhile; else: ?>
 

@@ -51,11 +51,8 @@ $title = get_the_title();
                         <h5><?=$val['Brand'][0]?></h5>
                         <div class="btn-should-card">
                            <?php if ( function_exists( 'wfp_button' ) ) wfp_button(); ?>
-                       <!--     <button class="" data-toggle="" data-target=""> -->
-                        <!--    <i class="fa fa-heart-o"></i>  -->
-                           <!-- <span class="fav-text">Fav this</span>
-                           </button> -->
-                           <span class="fav-count"> 9</span> Favs
+                       
+                           
                            &nbsp;&nbsp;&nbsp;
                            <i class="fa fa-comment"></i> <?=get_comments_number(get_the_ID())?> Reviews
                         </div>

@@ -13,7 +13,7 @@
  */
 get_header();
 
-$val = get_page_by_path( 'get-start' );
+$val = get_page_by_path('get-start');
 $starPage = get_page_link($val->ID);
 
 ?>
@@ -28,7 +28,7 @@ $starPage = get_page_link($val->ID);
             $dt_featured_posts = new WP_Query($args);
             while ($dt_featured_posts->have_posts()) : $dt_featured_posts->the_post(); 
                 ?>
-            <div class="" style="width:100%; background-image: url(<?= get_the_post_thumbnail_url(get_the_ID())?>);">
+            <div class="" style="width:100%; height:300px; background-image: url(<?= get_the_post_thumbnail_url(get_the_ID())?>);">
                 <div class="row" >
                     <div class="col-lg-12" >
                         <a class="top-contest-banners"   href="<?php esc_url( the_permalink() ); ?>">
@@ -46,185 +46,138 @@ $starPage = get_page_link($val->ID);
     
 
 <!-- Contest -->
-<?php if (is_active_sidebar('dt-header1')) : ?>
-
-    <div class="col-lg-12 col-md-12 col-sm-12 my_widget_text">
-
-        <?php dynamic_sidebar('dt-header1'); ?>
-    </div><!-- .col-lg-3 -->
-
-<?php endif; ?>
-
-
-
-
-
-
-
-<?php if (get_theme_mod('featured_posts') != '') : ?>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-
-                <div class="dt-featured-post-slider">
-                    <div class="swiper-wrapper">
-
-                        <?php
-                        $dt_featured_posts = esc_html(get_theme_mod('featured_posts_select'));
-                        $featured_posts_count = esc_html(get_theme_mod('featured_posts_count'));
-
-                        if ($dt_featured_posts == '') {
-                            $dt_featured_posts = '';
-                        }
-
-                        $args = array(
-                            'post_type' => 'product',
-                            'posts_per_page' => $featured_posts_count,
-                            'orderby' => 'ASC',
-                            'category__in' => $dt_featured_posts
-                        );
-
-                        $dt_featured_posts = new WP_Query($args);
-
-                        while ($dt_featured_posts->have_posts()) : $dt_featured_posts->the_post(); ?>
-
-                            <div class="swiper-slide productlist" >
-                                <?PHP  get_template_part('template-parts/content-product-min','page'); ?>
-                                <!-- .dt-featured-post -->
-                            </div><!-- .swiper-slide -->
-
-                        <?php endwhile; ?>
-
-                        <?php wp_reset_postdata(); ?>
-
-                        <div class="clearfix"></div>
-                    </div>
-                    <!-- .swiper-wrapper -->
-
-                    <!-- Add Pagination -->
-                    <div class="swiper-pagination"></div>
-                </div>
-                <!-- .dt-featured-post-slider -->
-            </div>
-            <!-- .col-lg-12 -->
-        </div>
-        <!-- .row -->
-    </div><!-- .container -->
-
-<?php else : ?>
-
-    <div class="dt-slider-separator"></div>
-
-<?php endif; ?>
-
 
 
 <!-- TOP ITEM LIST -->
-<div class="container container_box">
+<div class="container ">
     <div class="row">
         <div class="col-lg-12">
-            <h2>Top Collection</h2>
-            <?PHP 
+            <br>
+            <?PHP
             $args = array('post_type' => 'top_items','posts_per_page' =>2,'orderby' => 'ASC');
             $dt_featured_posts = new WP_Query($args);
-            while ($dt_featured_posts->have_posts()) : $dt_featured_posts->the_post(); 
-                ?>
-            <div class="col-md-6">
-            <a class="top-banners"  style="background-image: url(<?= get_the_post_thumbnail_url(get_the_ID())?>);" href="<?php esc_url( the_permalink() ); ?>">
-            <div class="top-blck-bacgrnd"></div>
-            <p><?php the_title(); ?></p>
-            </a>
-            </div>
-            <?PHP
-            endwhile; 
-            wp_reset_postdata(); 
+            while ($dt_featured_posts->have_posts()) : $dt_featured_posts->the_post();
             ?>
+                <div class="col-md-6">
+                <a class="top-banners"  style="background-image: url(<?= get_the_post_thumbnail_url(get_the_ID())?>);" href="<?php esc_url( the_permalink() ); ?>">
+                <div class="top-blck-bacgrnd"></div>
+                <p><?php the_title(); ?></p>
+                </a>
+                </div>
+            <?PHP endwhile; wp_reset_postdata(); ?>
         </div>
     </div>
 </div>
 <!-- TOP ITEM LIST END -->
-
-
-
-    <div class="container container_box">
-        <div class="row">
-            <div class="col-lg-8">
-                <div class="card front-henna-card"
-                     style="background:url('http://gloat.me/wp-content/uploads/2018/07/henna_retouched.jpg'); background-repeat:no-repeat">
-                    <div style="background:rgba(255,255,255, 0.8); padding:0% 2%; text-align: center">
-                        <h2>Henna is all you need for your beauty</h2>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
-
-                        <p style="">Henna is one of the best hair beauty ingredients that India has shared with the rest
-                            of the world. Since years, if not centuries, women have used the power of this natural
-                            compound to strengthen, nourish and beautify their tresses. Back then, they would use the
-                            leaves of henna for hair treatment; the modern woman use henna powder for hair therapy.</p>
-
-                    </div>
-                    
-                    <a class="btn a-btn-knowmore"  href="<?=$starPage?>">Know More</a>
-                </div>
-            </div>
-
-
-            <div class="col-lg-4">
-                <div class="card front-henna-sub">
-                    <img
-                        src="http://gloat.me/wp-content/uploads/2018/07/81XtrpOsnjL._SL1204_.jpg">
-
-                    <div style=" padding:0% 2%; text-align: center; background-color: #fff">
-                        <h3>Subscribe for Henna kit for hair in just ₹199 monthly</h3>
-
-                        <a class="btn a-btn-knowmore"  value="Subscribe" href="https://amzn.to/2LMs0n9" target="_blank">Subscribe</a>
-
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div class="container container_box">
-        <div class="row">
-            <div class="col-lg-9">
-
-                <div style=" padding:2%; text-align: center; background-color: #E8D7AB">
-                    <h3>Gloat Me Join the Movement</h3>
-                    <p>We assembled GloatMe with the goal that together we could give straightforwardness and strengthening in excellence for each other. Here your experiences and commitments on magnificence items will mean the world to another person's next buy.</p>
-                    <a href="<?=$starPage?>" class="btn btn-getfree" >Get it free</a>
-
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
+    <!-- home pages -->
     <div class="container">
         <div class="row">
-            <div class="col-lg-12">
 
-                <div style=" padding:2%; text-align: center;">
-                    <img style="height: 30px" src="http://gloat.me/wp-content/uploads/2018/07/front-border.png">
-                    <h3>Join the Movement</h3>
+            <div class="col-lg-12 col-xs-12 col-md-12 col-sm-12">
+                <div style=" padding:2%; text-align: center; background-color: #E8D7AB;    margin-bottom: 30px;">
+                    <h3>Gloat Me Join the Movement</h3>
 
-                    <h3>Subscribe for Henna kit for hair in just $10 monthly</h3>
+                    <p>We assembled GloatMe with the goal that together we could give straightforwardness and
+                        strengthening in excellence for each other. Here your experiences and commitments on
+                        magnificence items will mean the world to another person's next buy.</p>
+                    <a href="<?=$starPage?>" class="btn btn-getfree">Lets Start</a>
+                </div>
+            </div>
 
-                    <input class="btn btn-getfree" type="button" value="Get it free">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12"><a class="home-banner-two"
+                                                                 style="background-image: url(https://cdn5.f-cdn.com/contestentries/985367/20576522/58ed4d048f118_thumb900.jpg);"
+                                                                 href="">
+                </a>
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12"><a class="home-banner-img"
+                                                                 style="background-image: url(https://ohio4h.org/sites/ohio4h/files/styles/basic_page_banner/public/State%20Fashion%20Board%20Banner2.jpg?itok=tPIUJUni);"
+                                                                 href="">
+                </a>
+            </div>
 
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-right"><a class="home-banner-img"
+                                                                            style="background-image: url(https://cdn5.f-cdn.com/contestentries/985367/20576522/58ed4d048f118_thumb900.jpg);"
+                                                                            href="">
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-right"><a class="home-banner-img"
+                                                                            style="background-image: url(http://gloat.me/wp-content/uploads/2018/07/beautiful-girl-9-1365886.jpg);"
+                                                                            href="">
+                </a>
+            </div>
+        </div>
 
+        <div class="row media">
+            <div class="col-lg-12 text-center ">
+                <img class="" style="height: 30px" src="http://gloat.me/wp-content/uploads/2018/07/front-border.png">
+
+                <h3>Latest Reviews</h3>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 media">
+                <div class="panel-default panel-body panel">
+                    <div class="media">
+                        <div class="col-lg-2 col-sm-2 col-md-2 col-xs-2 all-div-padding0">
+                            <img class="img-responsive img-circle"
+                                 src="http://d1acy2vp0zxghs.cloudfront.net/users/avatars/000/023/249/original/ps.jpg?1528530815">
+                        </div>
+                        <div class="col-lg-10 col-sm-10 col-md-10 col-xs-10">
+                            <p class="commnt-time-dtl small">By <b class="text-info">Emily</b><br>
+                                Combination skin, Olive, 25-35</p>
+                            <span class="text-muted small"><b>Unique and it works!</b></span>
+
+                            <p class="text-muted small">I was rather skeptical when I first received the soap from a
+                                friend who got it from Korea...</p>
+                            <i class="fa fa-clock-o commnt-time-dtl"><span class=""> 1 day ago</span></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 media">
+                <div class="panel-default panel-body panel">
+                    <div class="media">
+                        <div class="col-lg-2 col-sm-2 col-md-2 col-xs-2 all-div-padding0">
+                            <img class="img-responsive img-circle"
+                                 src="http://d1acy2vp0zxghs.cloudfront.net/users/avatars/000/023/249/original/ps.jpg?1528530815">
+                        </div>
+                        <div class="col-lg-10 col-sm-10 col-md-10 col-xs-10">
+                            <p class="commnt-time-dtl small">By <b class="text-info">Emily</b><br>
+                                Combination skin, Olive, 25-35</p>
+                            <span class="text-muted small"><b>Unique and it works!</b></span>
+
+                            <p class="text-muted small">I was rather skeptical when I first received the soap from a
+                                friend who got it from Korea...</p>
+                            <i class="fa fa-clock-o commnt-time-dtl"><span class=""> 1 day ago</span></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 media">
+                <div class="panel-default panel-body panel">
+                    <div class="media">
+                        <div class="col-lg-2 col-sm-2 col-md-2 col-xs-2 all-div-padding0">
+                            <img class="img-responsive img-circle"
+                                 src="http://d1acy2vp0zxghs.cloudfront.net/users/avatars/000/023/249/original/ps.jpg?1528530815">
+                        </div>
+                        <div class="col-lg-10 col-sm-10 col-md-10 col-xs-10">
+                            <p class="commnt-time-dtl small">By <b class="text-info">Emily</b><br>
+                                Combination skin, Olive, 25-35</p>
+                            <span class="text-muted small"><b>Unique and it works!</b></span>
+
+                            <p class="text-muted small">I was rather skeptical when I first received the soap from a
+                                friend who got it from Korea...</p>
+                            <i class="fa fa-clock-o commnt-time-dtl"><span class=""> 1 day ago</span></i>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+
     </div>
+    <!-- end home pages -->
+
+
 
 
 

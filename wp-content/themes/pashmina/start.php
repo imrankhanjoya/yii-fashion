@@ -19,6 +19,7 @@ if(!session_id()) {
 
 <?PHP
 
+$pageID =  get_page_by_path('get-start');
 
 
 $user = wp_get_current_user();
@@ -67,7 +68,7 @@ $meta = get_user_meta($user->ID);
             $show = sotreUserMeta("description",$_POST['description']);
         }
 
-        $url = add_query_arg(array('show' =>'profile'),get_page_link(231));
+        $url = add_query_arg(array('show' =>'profile'),get_page_link($pageID->ID));
         wp_redirect($url);
     }elseif(isset($_POST['brands'])) {
         delete_user_meta($user->ID,'brands');
@@ -75,12 +76,12 @@ $meta = get_user_meta($user->ID);
             $show = sotreUserMeta('brands',$val,false);
         }
 
-        $url = add_query_arg(array('show' => $show),get_page_link(231));
+        $url = add_query_arg(array('show' => $show),get_page_link($pageID->ID));
         wp_redirect($url);
     }elseif(isset($_GET['key']) && isset($_GET['val'])){
         $show = sotreUserMeta($_GET['key'],$_GET['val']);
-        $val = get_page_by_path( 'get-start' );
-        $url = add_query_arg(array('show' => $show),get_page_link($val->ID));
+        
+        $url = add_query_arg(array('show' => $show),get_page_link($pageID->ID));
         wp_redirect($url);
     }elseif(isset($_GET['show'])){
         $show = $_GET['show'];
@@ -102,6 +103,9 @@ $brands = array("Clinique","BCBGMAXAZRIA","Levi's","Torrid","Benefit Cosmetics",
 $eyeColor = array("White","Dark","Orange");
 $DressSize = array("0","2","4","6","8","10","12","14");
 $topSize = array("xs","s","m","l","xl","xxl");
+
+
+
 
 get_header('nomenu'); 
 
@@ -129,7 +133,7 @@ get_header('nomenu');
             <?PHP $class = $key == $attrib[0]?"btn-active":"" ?>
             <div class="form-group col-md-3 col-xs-4 site-form" style="background-image:url(<?=$color['img']?>); background-position:center; background-size: cover;">
 
-            <?php $url = add_query_arg(array('key' => 'skin','val' =>$key),get_page_link(231));?>
+            <?php $url = add_query_arg(array('key' => 'skin','val' =>$key),get_page_link($pageID->ID));?>
             <a class="btn a-btn-knowmore <?=$class?>" href="<?=$url?>"><?=$key?></a>
 
             </div>
@@ -147,7 +151,7 @@ get_header('nomenu');
             <?php foreach($skinType as $type):?>
             <?PHP $class = $type == $attrib[0]?"btn-active":"" ?>
             <div class="form-group col-md-3 col-xs-6 site-form">
-            <?php $url = add_query_arg(array('key' => 'skinType','val' =>$type),get_page_link(231));?>
+            <?php $url = add_query_arg(array('key' => 'skinType','val' =>$type),get_page_link($pageID->ID));?>
             <a class="btn a-btn-knowmore <?=$class?>" href="<?=$url?>"><?=$type?></a>
             </div>
             <?PHP endforeach;?>
@@ -164,7 +168,7 @@ get_header('nomenu');
             <?php foreach($eyeColor as $color):?>
             <?PHP $class = $color == $attrib[0]?"btn-active":"" ?>
             <div class="form-group col-md-3 col-xs-6 site-form">
-            <?php $url = add_query_arg(array('key' => 'eye','val' =>$color),get_page_link(231));?>
+            <?php $url = add_query_arg(array('key' => 'eye','val' =>$color),get_page_link($pageID->ID));?>
             <a class="btn a-btn-knowmore <?=$class?>" href="<?=$url?>"><?=$color?></a>
             </div>
             <?PHP endforeach;?>
@@ -180,7 +184,7 @@ get_header('nomenu');
                 <?php foreach($DressSize as $dress):?>
                 <?PHP $class = $dress == $attrib[0]?"btn-active":"" ?>
                 <div class="col-md-3 col-xs-4 site-form text-center <?=$class?> chociebox" >
-                <?php $url = add_query_arg(array('key' => 'dress','val' =>$dress),get_page_link(231));?>
+                <?php $url = add_query_arg(array('key' => 'dress','val' =>$dress),get_page_link($pageID->ID));?>
                  <a   href="<?=$url?>"><?=$dress?></a>
                 </div>
                 <?PHP endforeach;?>
@@ -196,7 +200,7 @@ get_header('nomenu');
                 <?php foreach($topSize as $top):?>
                     <?PHP $class = $top == $attrib[0]?"btn-active":"" ?>
                     <div class="col-md-3 col-xs-4 site-form chociebox <?=$class?>">
-                    <?php $url = add_query_arg(array('key' => 'top','val' =>$top),get_page_link(231));?>
+                    <?php $url = add_query_arg(array('key' => 'top','val' =>$top),get_page_link($pageID->ID));?>
                     <a  href="<?=$url?>"><?=$top?></a>
                     </div>
                 <?PHP endforeach;?>

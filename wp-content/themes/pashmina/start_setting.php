@@ -84,6 +84,15 @@ $eyeColor = array("White","Dark","Orange");
 $DressSize = array("0","2","4","6","8","10","12","14");
 $topSize = array("xs","s","m","l","xl","xxl");
 
+
+
+
+$pageID =  get_page_by_path('get-start');
+print_r($pageID);
+exit;
+
+
+
 get_header(); 
 
 ?>
@@ -110,7 +119,7 @@ get_header();
                     <?PHP $class = $color == $attrib[0]?"btn-active":"" ?>
                 <div class="form-group col-md-3 col-xs-4 site-form">
                     
-                    <?php $url = add_query_arg(array('key' => 'skin','val' =>$color),get_page_link(231));?>
+                    <?php $url = add_query_arg(array('key' => 'skin','val' =>$color),get_page_link($pageID->ID));?>
                      <a class="btn a-btn-knowmore <?=$class?>" href="<?=$url?>"><?=$color?></a>
 
                 </div>
@@ -127,7 +136,7 @@ get_header();
                 <?php foreach($hairColor as $color):?>
                     <?PHP $class = $color == $attrib[0]?"btn-active":"" ?>
                 <div class="form-group col-md-3 col-xs-6 site-form">
-                    <?php $url = add_query_arg(array('key' => 'hair','val' =>$color),get_page_link(231));?>
+                    <?php echo $url = add_query_arg(array('key' => 'hair','val' =>$color),get_page_link($pageID->ID));?>
                      <a class="btn a-btn-knowmore <?=$class?>" href="<?=$url?>"><?=$color?></a>
                 </div>
                 <?PHP endforeach;?>
@@ -144,7 +153,7 @@ get_header();
                 <?php foreach($eyeColor as $color):?>
                     <?PHP $class = $color == $attrib[0]?"btn-active":"" ?>
                 <div class="form-group col-md-3 col-xs-6 site-form">
-                    <?php $url = add_query_arg(array('key' => 'eye','val' =>$color),get_page_link(231));?>
+                    <?php $url = add_query_arg(array('key' => 'eye','val' =>$color),get_page_link($pageID->ID));?>
                      <a class="btn a-btn-knowmore <?=$class?>" href="<?=$url?>"><?=$color?></a>
                 </div>
                 <?PHP endforeach;?>
@@ -160,7 +169,7 @@ get_header();
                 <?php foreach($DressSize as $dress):?>
                 <?PHP $class = $dress == $attrib[0]?"btn-active":"" ?>
                 <div class="col-md-3 col-xs-4 site-form">
-                <?php $url = add_query_arg(array('key' => 'dress','val' =>$dress),get_page_link(231));?>
+                <?php $url = add_query_arg(array('key' => 'dress','val' =>$dress),get_page_link($pageID->ID));?>
                  <a class="btn a-btn-knowmore <?=$class?>" href="<?=$url?>"><?=$dress?></a>
                 </div>
                 <?PHP endforeach;?>
@@ -176,7 +185,7 @@ get_header();
                 <?php foreach($topSize as $top):?>
                     <?PHP $class = $top == $attrib[0]?"btn-active":"" ?>
                     <div class="col-md-3 col-xs-4 site-form">
-                    <?php $url = add_query_arg(array('key' => 'top','val' =>$top),get_page_link(231));?>
+                    <?php $url = add_query_arg(array('key' => 'top','val' =>$top),get_page_link($pageID->ID));?>
                     <a class="btn a-btn-knowmore <?=$class?>" href="<?=$url?>"><?=$top?></a>
                     </div>
                 <?PHP endforeach;?>
