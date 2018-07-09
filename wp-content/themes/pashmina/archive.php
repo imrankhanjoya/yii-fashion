@@ -22,18 +22,47 @@ $brands = isset($site['brands'])?$site['brands']:"";
 ?>
 <div class="col-md-12">
 <div class="row">
-    <div class="col-lg-6 text-center top-ttl panel-body" style="background-color:#92FFD8">
-        <a href="" class="top-ttl-heddng">
-        <span>GloatMe's Pick</span>
-        <h4>Here are the best products that will make you look &amp; feel good!</h4>
+    <div class="row product_cat">
+    <div class="col-lg-2 text-center top-ttl panel-body" style="background-color:#92FFD8">
+        <a href="/tag/lip/" class="top-ttl-heddng">
+        <span>LIPSTICK</span>
+        <img class="picon" src="<?= get_template_directory_uri();?>/images/lipstick.svg">
         </a>
     </div>
-      <div class="col-lg-6 text-center top-ttl panel-body" style="background-color:#FFDFCA">
-        <a href="" class="top-ttl-heddng">
-        <span>top 10</span>
-        <h4>view most recommended</h4>
+      <div class="col-lg-2 text-center top-ttl panel-body" style="background-color:#FFDFCA">
+        <a href="/tag/eye/" class="top-ttl-heddng">
+        <span>Eyes</span>
+        <img class="picon" src="<?= get_template_directory_uri();?>/images/eye-shadow.svg">
         </a>
     </div>
+    <div class="col-lg-2 text-center top-ttl panel-body" style="background-color:#92FFD8">
+        <a href="/tag/nail/" class="top-ttl-heddng">
+        <span>Nail-Polish</span>
+        <img class="picon" src="<?= get_template_directory_uri();?>/images/nail-polish.svg">
+        
+        </a>
+    </div>
+    <div class="col-lg-2 text-center top-ttl panel-body" style="background-color:#FFDFCA">
+        <a href="/tag/hair/" class="top-ttl-heddng">
+        <span>hair</span>
+        <img class="picon" src="<?= get_template_directory_uri();?>/images/woman-with-long-hair.svg">
+        </a>
+    </div>
+    <div class="col-lg-2 text-center top-ttl panel-body" style="background-color:#92FFD8">
+        <a href="/tag/skin/" class="top-ttl-heddng">
+        <span>facial</span>
+        <img class="picon" src="<?= get_template_directory_uri();?>/images/facial-treatment.svg">
+        </a>
+    </div>
+    <div class="col-lg-2 text-center top-ttl panel-body" style="background-color:#FFDFCA">
+        <a href="/tag/cream/" class="top-ttl-heddng">
+        <span>cream</span>
+        <img class="picon" src="<?= get_template_directory_uri();?>/images/cream.svg">
+        </a>
+    </div>
+    
+
+</div>
 </div>
 </div>
 <div style="clear:both"></div>
