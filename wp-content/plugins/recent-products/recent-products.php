@@ -55,15 +55,13 @@ class WP_Widget_Recent_Postsss extends WP_Widget {
         } ?>
         <?=$before_widget?>
         <?php if ( $title ) echo $before_title . $title . $after_title; ?>
-        <ul id="service-list">
-        <?php 
+<div class="row">        <?php 
         $the_query = new WP_Query( $filter );
         if($the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-            <li class="service">
                <?PHP  get_template_part('template-parts/content-product-min','page'); ?>
-            </li><!-- /.service -->
+            <!-- /.service -->
         <?php endwhile; else: ?>
-
+        </div>
             <p>Nothing Here.</p>
 
         <?php endif; wp_reset_postdata(); ?>
@@ -75,8 +73,6 @@ class WP_Widget_Recent_Postsss extends WP_Widget {
     }
 
     function update( $new_instance, $old_instance ) {
-        print_r($old_instance);
-        print_r($new_instance);die();
         $instance = $old_instance;
         $instance['title'] = strip_tags($new_instance['title']);
         $instance['catnew'] = (int) $new_instance['catnew'];
