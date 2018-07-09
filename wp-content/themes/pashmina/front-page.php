@@ -110,65 +110,43 @@ $starPage = get_page_link($val->ID);
 
                 <h3>Latest Reviews</h3>
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 media">
-                <div class="panel-default panel-body panel">
-                    <div class="media">
-                        <div class="col-lg-2 col-sm-2 col-md-2 col-xs-2 all-div-padding0">
-                            <img class="img-responsive img-circle"
-                                 src="http://d1acy2vp0zxghs.cloudfront.net/users/avatars/000/023/249/original/ps.jpg?1528530815">
-                        </div>
-                        <div class="col-lg-10 col-sm-10 col-md-10 col-xs-10">
-                            <p class="commnt-time-dtl small">By <b class="text-info">Emily</b><br>
-                                Combination skin, Olive, 25-35</p>
-                            <span class="text-muted small"><b>Unique and it works!</b></span>
+            
 
-                            <p class="text-muted small">I was rather skeptical when I first received the soap from a
-                                friend who got it from Korea...</p>
-                            <i class="fa fa-clock-o commnt-time-dtl"><span class=""> 1 day ago</span></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php $args = array(
+                        'post_type' => 'product',
+                        'comment_approved'=>1,
+                        'number'=>3, 
+                        'comment_status'=>1 
+                     );
+                  $comments = get_comments($args);
+                  $commentcount = count($comments); 
 
-            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 media">
-                <div class="panel-default panel-body panel">
-                    <div class="media">
-                        <div class="col-lg-2 col-sm-2 col-md-2 col-xs-2 all-div-padding0">
-                            <img class="img-responsive img-circle"
-                                 src="http://d1acy2vp0zxghs.cloudfront.net/users/avatars/000/023/249/original/ps.jpg?1528530815">
-                        </div>
-                        <div class="col-lg-10 col-sm-10 col-md-10 col-xs-10">
-                            <p class="commnt-time-dtl small">By <b class="text-info">Emily</b><br>
-                                Combination skin, Olive, 25-35</p>
-                            <span class="text-muted small"><b>Unique and it works!</b></span>
 
-                            <p class="text-muted small">I was rather skeptical when I first received the soap from a
-                                friend who got it from Korea...</p>
-                            <i class="fa fa-clock-o commnt-time-dtl"><span class=""> 1 day ago</span></i>
+            foreach ($comments as $key => $comment) {
+                           $ago = human_time_diff(strtotime($comment->comment_date));
+                           //$coomentimage=get_avatar_url( $comment, '45' );
+                           //echo"<pre>";print_r($comment);
+                           $useravatar = get_avatar_url($comment->user_id); ?>
+                           
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ">
+                           <div class="panel-default panel-body panel">
+                              <div class="media">
+                                 <div class="col-lg-2 col-sm-2 col-md-2 col-xs-2 all-div-padding0">
+                                    <img class="img-responsive img-circle" src="<?=$useravatar?>">
+                                 </div>
+                                 <div class="col-lg-10 col-sm-10 col-md-10 col-xs-10">
+                                    <p class="commnt-time-dtl small">By <b class="text-info"><?=$comment->comment_author?></b>
+                                    </p>
+                                    
+                                    <p class="text-muted small"><a href="<?php echo get_permalink($comment->comment_post_ID); ?>#comment-<?php echo $comment->comment_ID; ?>" ><?=$comment->comment_content?></a></p>
+                                    <i class="fa fa-clock-o commnt-time-dtl"><span class=""> <?=$ago?> ago</span></i>
+                                 </div>
+                              </div>
+                           </div>
                         </div>
-                    </div>
-                </div>
-            </div>
+                     <?php  } ?>
 
-            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 media">
-                <div class="panel-default panel-body panel">
-                    <div class="media">
-                        <div class="col-lg-2 col-sm-2 col-md-2 col-xs-2 all-div-padding0">
-                            <img class="img-responsive img-circle"
-                                 src="http://d1acy2vp0zxghs.cloudfront.net/users/avatars/000/023/249/original/ps.jpg?1528530815">
-                        </div>
-                        <div class="col-lg-10 col-sm-10 col-md-10 col-xs-10">
-                            <p class="commnt-time-dtl small">By <b class="text-info">Emily</b><br>
-                                Combination skin, Olive, 25-35</p>
-                            <span class="text-muted small"><b>Unique and it works!</b></span>
 
-                            <p class="text-muted small">I was rather skeptical when I first received the soap from a
-                                friend who got it from Korea...</p>
-                            <i class="fa fa-clock-o commnt-time-dtl"><span class=""> 1 day ago</span></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
 
     </div>
