@@ -1922,6 +1922,10 @@ img.check{
 height: 120px;
 font-size:14px;
 }
+
+.min_img{
+width:100px;
+}
 .picon{
 	height: 40px;
 }
