@@ -1922,6 +1922,9 @@ img.check{
 height: 120px;
 font-size:14px;
 }
+.picon{
+	height: 40px;
+}
 .productlist .entry-title{
 	font-size:14px;
 }
@@ -2037,6 +2040,9 @@ font-size:14px;
 	bottom: 0;
 	background: #000;
 	opacity: 0.3;
+}
+.product_cat a{
+	font-size:10px;
 }
 .top-banners p {
 	color: #FFFFFF;
