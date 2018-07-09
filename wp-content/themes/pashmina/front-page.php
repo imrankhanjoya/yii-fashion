@@ -89,17 +89,17 @@ $starPage = get_page_link($val->ID);
                 </a>
             </div>
             <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                <a class="home-banner-img" style="background-image: url(http://dis.deideo.com/wp-content/uploads/2018/07/banner.png);">
+                <a href="http://gloat.me/get-start" class="home-banner-img" style="background-image: url('http://gloat.me/wp-content/uploads/2018/07/reward.png');">
                 </a>
             </div>
 
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-right">
-                <a class="home-banner-img" style="background-image: url(https://cdn5.f-cdn.com/contestentries/985367/20576522/58ed4d048f118_thumb900.jpg);" >
+                <a href="http://gloat.me/tag/lakme/" class="home-banner-img" style="background-image: url(http://gloat.me/wp-content/uploads/2018/07/lakme.png);" >
                 </a>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-right"><a class="home-banner-img"
-                                                                            style="background-image: url(http://gloat.me/wp-content/uploads/2018/07/beautiful-girl-9-1365886.jpg);"
-                                                                            href="">
+                                                                            style="background-image: url(http://gloat.me/wp-content/uploads/2018/07/stay.png);"
+                                                                            href="http://gloat.me/discuss-beauty-tips/">
                 </a>
             </div>
         </div>
