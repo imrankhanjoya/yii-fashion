@@ -84,20 +84,17 @@ $starPage = get_page_link($val->ID);
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12"><a class="home-banner-two"
-                                                                 style="background-image: url(https://cdn5.f-cdn.com/contestentries/985367/20576522/58ed4d048f118_thumb900.jpg);"
-                                                                 href="">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <a href="http://gloat.me/tag/loreal/" class="home-banner-two" style="background-image: url('http://gloat.me/wp-content/uploads/2018/07/LorealParisDK0213136586v2Logo.jpg');">
                 </a>
             </div>
-            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12"><a class="home-banner-img"
-                                                                 style="background-image: url(https://ohio4h.org/sites/ohio4h/files/styles/basic_page_banner/public/State%20Fashion%20Board%20Banner2.jpg?itok=tPIUJUni);"
-                                                                 href="">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                <a class="home-banner-img" style="background-image: url(http://dis.deideo.com/wp-content/uploads/2018/07/banner.png);">
                 </a>
             </div>
 
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-right"><a class="home-banner-img"
-                                                                            style="background-image: url(https://cdn5.f-cdn.com/contestentries/985367/20576522/58ed4d048f118_thumb900.jpg);"
-                                                                            href="">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-right">
+                <a class="home-banner-img" style="background-image: url(https://cdn5.f-cdn.com/contestentries/985367/20576522/58ed4d048f118_thumb900.jpg);" >
                 </a>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-right"><a class="home-banner-img"
