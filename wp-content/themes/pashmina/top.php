@@ -69,21 +69,7 @@ $custom_query = new WP_Query($args);
 
 <?php next_posts_link( '&larr; Older posts', $custom_query->max_num_pages); ?>
 <?php previous_posts_link( 'Newer posts &rarr;' ); ?>
- <!-- <div class="col-lg-12">
-  <nav aria-label="Page navigation example">
-  <ul class="pagination justify-content-center">
-    <li class="page-item disabled">
-      <a class="page-link" href="#" tabindex="-1">Previous</a>
-    </li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#">Next</a>
-    </li>
-  </ul>
-</nav>
- </div> -->
+ 
 <!-- end html farukh -->
 
 
