@@ -77,9 +77,7 @@ $starPage = get_page_link($val->ID);
                 <div style=" padding:2%; text-align: center; background-color: #E8D7AB;    margin-bottom: 30px;">
                     <h3>Gloat Me Join the Movement</h3>
 
-                    <p>We assembled GloatMe with the goal that together we could give straightforwardness and
-                        strengthening in excellence for each other. Here your experiences and commitments on
-                        magnificence items will mean the world to another person's next buy.</p>
+                    <p>welcome to the beauty tips and collection of best cosmetics. Get solutions to all your Beauty queries and stay upto on the latest Beauty Trends.</p>
                     <a href="<?=$starPage?>" class="btn btn-getfree">Lets Start</a>
                 </div>
             </div>
