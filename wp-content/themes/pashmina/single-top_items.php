@@ -35,7 +35,7 @@ $tag_name = $tags[0]->name;
       $custom_query = new WP_Query($args);
       ?>
 
-      <div class="col-lg-9 col-md-9 col-xs-12 col-sm-9">
+      <div class="col-lg-8 col-md-8 col-xs-12 col-sm-8">
          <?PHP $i=1; while($custom_query->have_posts()) : $custom_query->the_post(); 
          $val = get_post_meta(get_the_ID()); 
          //print_r($val);
@@ -92,7 +92,7 @@ $tag_name = $tags[0]->name;
                <?php wp_reset_postdata(); // reset the query ?>
       </div>
 
-      <div class="col-lg-3 col-md-3 col-xs-12 col-sm-3 " style="margin-top: 60px;">
+      <div class="col-lg-4 col-md-4 col-xs-12 col-sm-4 " style="margin-top: 60px;">
          <div class="social-icon-top">
             <h5>SHARE THIS LIST</h5>
             
@@ -108,20 +108,23 @@ $tag_name = $tags[0]->name;
             <a class="fa fa-envelope-o" href=""></a>
          </div>
          <div class="social-ttl-list">
-          <h5>RECENT TOP 10</h5>
-         <a href="">
-            <h6>10 Products To Use For Beautiful, Defined Brows</h6>
-         </a>
-         <a href="">
-            <h6>10 Products To Use For Beautiful, Defined Brows</h6>
-         </a>
-          <a href="">
-            <h6>10 Products To Use For Beautiful, Defined Brows</h6>
-         </a>
-          <a href="">
-            <h6>10 Products To Use For Beautiful, Defined Brows</h6>
-         </a>
+          <h5>RECENT TOP PRODUCTS</h5>
+          <?php
+            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+$args = array( 'post_type' => 'top_items', 'posts_per_page' =>10, 'paged' => $paged );
+$custom_query = new WP_Query($args);
+            ?>
+            <?PHP while($custom_query->have_posts()) : $custom_query->the_post(); ?>
+            <a href="">
+            <a href="<?php esc_url( the_permalink() ); ?>"><h6 class="entry-title"><?php the_title(); ?></h6></a>
+            </a>
+            <?PHP endwhile;?>
+         
+         
          </div>
+
+
+          <?php get_sidebar(); ?>
       </div>
 
      </div>
