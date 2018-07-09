@@ -67,7 +67,9 @@ $custom_query = new WP_Query($args);
 </div>
  <?php endwhile; ?>
 
- <div class="col-lg-12">
+<?php next_posts_link( '&larr; Older posts', $custom_query->max_num_pages); ?>
+<?php previous_posts_link( 'Newer posts &rarr;' ); ?>
+ <!-- <div class="col-lg-12">
   <nav aria-label="Page navigation example">
   <ul class="pagination justify-content-center">
     <li class="page-item disabled">
@@ -81,7 +83,7 @@ $custom_query = new WP_Query($args);
     </li>
   </ul>
 </nav>
- </div>
+ </div> -->
 <!-- end html farukh -->
 
 

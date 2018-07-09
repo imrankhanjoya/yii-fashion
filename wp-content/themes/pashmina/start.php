@@ -110,18 +110,73 @@ $topSize = array("xs","s","m","l","xl","xxl");
 get_header('nomenu'); 
 
 ?>
-    <div class="container">
+    <div class="container" id="page-wrapper">
         <div class="row">
             
             <?php if($user->ID==0):?>
-            <div class="col-lg-12 col-md-12">
+            <div class="col-lg-12 col-md-12" >
 
-            <div class="form-group col-md-12 site-form  ">
+            <div class="form-group col-md-12 jointhemove text-center">
             <h1>Hi, Join the movement!</h1>
             <a class="btn a-btn-knowmore" href="<?=fbloginurl()?>">Join In</a>
             </div>
             </div>
             <div class="clear"></div>
+            <style type="text/css">
+                .dt-header{
+                    background-color: transparent;
+                }
+                .page-template-start{
+                background-position: 50% 50%;
+                background-repeat: no-repeat;
+                background-size:inherit;
+                -webkit-animation-name: cycle; /* Safari 4.0 - 8.0 */
+                -webkit-animation-duration: 15s; /* Safari 4.0 - 8.0 */
+                -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+                animation-name: cycle;
+                animation-duration: 25s;
+                animation-iteration-count: infinite;
+                width: 100%;
+                height: 100%;
+                position:relative;
+
+                }
+
+                @keyframes cycle {
+                0% { background-image: url("http://gloat.me/wp-content/uploads/2018/07/woman-girl-shooting-photography.jpg"); }
+                25% { background-image: url("http://gloat.me/wp-content/uploads/2018/07/pexels-photo-1185617.jpeg"); }
+                50% { background-image: url("http://gloat.me/wp-content/uploads/2018/07/pexels-photo-1038041.jpeg");}
+                75% { background-image: url("http://gloat.me/wp-content/uploads/2018/07/pexels-photo-1035685.jpeg"); }
+                100% { background-image: url("http://gloat.me/wp-content/uploads/2018/07/pexels-photo-458684.jpeg"); }
+                }
+                body{
+                    color:#fff;
+                    text-shadow: 0px 0px 5px #ccc;
+                    min-height:100%;
+                   position:relative;
+
+                }
+                .jointhemove{
+                    color:#fff;
+                    text-shadow: 0px 0px 5px #ccc;
+                }
+                .dt-logo img {
+                    width: auto;
+                    max-height: 120px;
+                    margin: 20px 0;
+                    /* box-shadow: 2px 2px 5px #fff; */
+                    background-color: #f1ee69;
+                    padding: 5px;
+                }
+                footer {
+                clear: both;
+                position: relative;
+                z-index: 10;
+                height: 3em;
+                margin-top: -3em;
+                }
+
+                  </style>
             <?PHP endif;?>
 
             <?PHP if($show=='skin'):?>
@@ -306,7 +361,7 @@ get_header('nomenu');
                  </div>
               </div>
             </div>
-
+            
             <?PHP endif;?>
             
 

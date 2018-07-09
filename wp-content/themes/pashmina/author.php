@@ -35,7 +35,7 @@
                </h6>
             </div>
             <div class="col-lg-12">
-               <a href=""><button type="button" class="btn-block"> logout</button></a>
+               <a href="<?=wp_logout_url(); ?>" class="btn btn-block">Log Out</a>
             </div>
          </div>
       </div>

@@ -27,7 +27,6 @@ function add_loginout_link( $items, $args ) {
     
     if (is_user_logged_in() && $args->theme_location == 'primary') {
         $user = wp_get_current_user();
-        //$items .= '<li><a href="'. wp_logout_url() .'">Log Out</a></li>';
         $items .= '<li><a href="'.get_author_posts_url($user->ID).'" alt="View my Profile"><span class="glyphicon glyphicon-heart"></span>&nbsp;Me</a></li>';
     }
     elseif (!is_user_logged_in() && $args->theme_location == 'primary') {

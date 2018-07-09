@@ -130,39 +130,7 @@ $tag_name = $tags[0]->name;
    <!-- product dtl and card images -->
 <div class="container">
   <div class="row">
-    <div class="col-lg-8 col-md-8 col-xs-12 col-sm-12">
-            <h3>Reviews for KAT VON D Everlasting Liquid Lipstick #Damned</h3>
-            <p>
-            <strong>Oops.. No review for this product yet.</strong>
-            <br>
-            Have you purchased or sampled it? Share your thoughts with the girls!
-            <br>
-            Here are some examples:
-            </p>
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 author-tab-div">
-          <div class="col-lg-4 col-md-4 col-sm-6 ">
-            <div class="panel panel-body ">
-               <strong class="text-muted">Unique and it works!</strong>
-               <p class="text-muted small">I was rather skeptical when I first received the soap from a friend who got it from Korea...</p>
-            </div>
-           <h5 class="text-muted">By Sherelyn Goh</h5>
-         </div>
-            <div class="col-lg-4 col-md-4 col-sm-6 ">
-            <div class="panel panel-body">
-               <strong class="text-muted">Unique and it works!</strong>
-               <p class="text-muted small">I was rather skeptical when I first received the soap from a friend who got it from Korea...</p>
-            </div>
-           <h5 class="text-muted">By Sherelyn Goh</h5>
-         </div>
-           <div class="col-lg-4 col-md-4 col-sm-6 ">
-            <div class="panel panel-body">
-               <strong class="text-muted">Unique and it works!</strong>
-               <p class="text-muted small">I was rather skeptical when I first received the soap from a friend who got it from Korea...</p>
-            </div>
-           <h5 class="text-muted">By Sherelyn Goh</h5>
-         </div>
-          </div>
-   </div>
+    
  <div class="col-lg-4 col-xs-12 col-md-4 col-sm-12 pull-right media">
    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 table-bordered">
       <h5 class="panel-body">10 Brown Shade Lipsticks that You Should Try</h5>
