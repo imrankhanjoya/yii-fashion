@@ -11,6 +11,13 @@
 
  $val = get_page_by_path( 'about-us' );
  $about = get_page_link($val->ID);
+
+ $val = get_page_by_path( 'privacy-policy' );
+ $privacypolicy = get_page_link($val->ID);
+
+ $val = get_page_by_path( 'terms-and-conditions' );
+ $termsconditions = get_page_link($val->ID);
+
 ?>
 
 <footer class="dt-footer">
@@ -27,6 +34,8 @@
 				<div class="col-lg-4 col-md-4">
 					<div class="dt-copyright">
 						<a href="<?=$about ?>">About US</a>
+						<a href="<?=$privacypolicy ?>">Privacy policy</a>
+						<a href="<?=$termsconditions ?>">Terms & Conditions</a>
 					</div><!-- .dt-copyright -->
 				</div><!-- .col-lg-4 .col-md-4 -->
 
