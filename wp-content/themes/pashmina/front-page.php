@@ -75,9 +75,9 @@ $starPage = get_page_link($val->ID);
 
             <div class="col-lg-12 col-xs-12 col-md-12 col-sm-12">
                 <div style=" padding:2%; text-align: center; background-color: #E8D7AB;    margin-bottom: 30px;">
-                    <h3>Gloat Me Join the Movement</h3>
+                    <h1>Gloat Me Join the Movement Of Beauty Tips</h1>
 
-                    <p>welcome to the beauty tips and collection of best cosmetics. Get solutions to all your Beauty queries and stay upto on the latest Beauty Trends.</p>
+                    <p>Welcome to the beauty tips and collection of best cosmetics. Get solutions to all your Beauty queries and stay up-to on the latest Beauty Trends. It's platform where we make opinion collectively on the bases of your reviews and favorite products </p>
                     <a href="<?=$starPage?>" class="btn btn-getfree">Lets Start</a>
                 </div>
             </div>
@@ -106,7 +106,7 @@ $starPage = get_page_link($val->ID);
             <div class="col-lg-12 text-center ">
                 <img class="" style="height: 30px" src="http://gloat.me/wp-content/uploads/2018/07/front-border.png">
 
-                <h3>Latest Reviews</h3>
+                <h3>Latest Reviews On Cosmetics</h3>
             </div>
             
 
@@ -150,8 +150,7 @@ $starPage = get_page_link($val->ID);
     </div>
     <!-- end home pages -->
 
-
-
+    
 
 
 <?php

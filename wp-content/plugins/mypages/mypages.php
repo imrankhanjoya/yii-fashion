@@ -38,3 +38,10 @@ function rj_add_query_vars_filter( $vars ){
     return $vars;
 }
 add_filter( 'query_vars', 'rj_add_query_vars_filter' );
+
+add_action('wp_logout','auto_redirect_after_logout');
+function auto_redirect_after_logout(){
+wp_redirect( home_url() );
+exit();
+}
+

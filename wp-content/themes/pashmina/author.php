@@ -24,7 +24,7 @@
             </div>
             <div class="col-lg-12 col-sm-8 col-md-12">
                <span><b><?=$userdata->data->display_name?></b></span>
-               <a class="pull-right" href="/users/current/steps/skin-type"><i class="fa fa-edit"></i> Edit</a>
+               <a class="pull-right" href="/get-start/?show=profile"><i class="fa fa-edit"></i> Edit</a>
                <h5 class=""><a href="">Update your beauty statement!</a></h5>
                <h6 class=""><b>Skin Type:</b> <?=$usermeta['skinType'][0]?></h6>
                <h6 class=""><b>Skin Color:</b> <?=$usermeta['skin'][0]?></h6>

@@ -352,7 +352,7 @@ get_header('nomenu');
                         </tbody></table>
                         </div>
                     <div class="col-lg-6">
-                    <input type="submit" class="btn-outline-dark btn-lg btn-block" value="Update"/>
+                    <a href="/">View Profile</a>
                     </div>
                     <div class="col-lg-6">
                         <input type="submit" class="btn btn-success btn-lg btn-block" value="Update"/>
