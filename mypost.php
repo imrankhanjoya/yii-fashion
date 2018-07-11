@@ -34,56 +34,41 @@ if ( !defined('ABSPATH') ) {
 }
 
 require_once( ABSPATH . '/wp-admin/includes/taxonomy.php');
+$user = wp_get_current_user();
 
+if(isset($user->data->ID)){
+	if ( ! function_exists( 'wp_handle_upload' ) ) {
+    require_once( ABSPATH . 'wp-admin/includes/file.php' );
+	}
+	$file = $_FILES['file'];
+	$fileType = trim($file['type']);
+	if($file['size']<= 1961538 && ( $fileType == 'image/jpeg' || $fileType == 'image/jpg' || $fileType == 'image/png')){
+		
+		$upload_overrides = array( 'test_form' => false );
 
-$item = '{"ASIN":"B00DRE0XJ4","DetailPageURL":"https:\/\/www.amazon.in\/Lotus-Herbals-Whitening-Brightening-Nourishing\/dp\/B00DRE0XJ4?SubscriptionId=AKIAIK7E2OWNUD4OEXAQ&tag=buypid-21&linkCode=xm2&camp=2025&creative=165953&creativeASIN=B00DRE0XJ4","ItemLinks":{"ItemLink":[{"Description":"Add To Wishlist","URL":"https:\/\/www.amazon.in\/gp\/registry\/wishlist\/add-item.html?asin.0=B00DRE0XJ4&SubscriptionId=AKIAIK7E2OWNUD4OEXAQ&tag=buypid-21&linkCode=xm2&camp=2025&creative=165953&creativeASIN=B00DRE0XJ4"},{"Description":"Tell A Friend","URL":"https:\/\/www.amazon.in\/gp\/pdp\/taf\/B00DRE0XJ4?SubscriptionId=AKIAIK7E2OWNUD4OEXAQ&tag=buypid-21&linkCode=xm2&camp=2025&creative=165953&creativeASIN=B00DRE0XJ4"},{"Description":"All Customer Reviews","URL":"https:\/\/www.amazon.in\/review\/product\/B00DRE0XJ4?SubscriptionId=AKIAIK7E2OWNUD4OEXAQ&tag=buypid-21&linkCode=xm2&camp=2025&creative=165953&creativeASIN=B00DRE0XJ4"},{"Description":"All Offers","URL":"https:\/\/www.amazon.in\/gp\/offer-listing\/B00DRE0XJ4?SubscriptionId=AKIAIK7E2OWNUD4OEXAQ&tag=buypid-21&linkCode=xm2&camp=2025&creative=165953&creativeASIN=B00DRE0XJ4"}]},"SalesRank":"371","SmallImage":{"URL":"https:\/\/images-eu.ssl-images-amazon.com\/images\/I\/51OOx1z77qL._SL75_.jpg","Height":"75","Width":"75"},"MediumImage":{"URL":"https:\/\/images-eu.ssl-images-amazon.com\/images\/I\/51OOx1z77qL._SL160_.jpg","Height":"160","Width":"160"},"LargeImage":{"URL":"https:\/\/images-eu.ssl-images-amazon.com\/images\/I\/51OOx1z77qL.jpg","Height":"500","Width":"500"},"ImageSets":{"ImageSet":[{"@attributes":{"Category":"variant"},"SwatchImage":{"URL":"https:\/\/images-eu.ssl-images-amazon.com\/images\/I\/51E9Pl8kdhL._SL30_.jpg","Height":"30","Width":"30"},"SmallImage":{"URL":"https:\/\/images-eu.ssl-images-amazon.com\/images\/I\/51E9Pl8kdhL._SL75_.jpg","Height":"75","Width":"75"},"ThumbnailImage":{"URL":"https:\/\/images-eu.ssl-images-amazon.com\/images\/I\/51E9Pl8kdhL._SL75_.jpg","Height":"75","Width":"75"},"TinyImage":{"URL":"https:\/\/images-eu.ssl-images-amazon.com\/images\/I\/51E9Pl8kdhL._SL110_.jpg","Height":"110","Width":"110"},"MediumImage":{"URL":"https:\/\/images-eu.ssl-images-amazon.com\/images\/I\/51E9Pl8kdhL._SL160_.jpg","Height":"160","Width":"160"},"LargeImage":{"URL":"https:\/\/images-eu.ssl-images-amazon.com\/images\/I\/51E9Pl8kdhL.jpg","Height":"500","Width":"500"}},{"@attributes":{"Category":"variant"},"SwatchImage":{"URL":"https:\/\/images-eu.ssl-images-amazon.com\/images\/I\/51XwcZlf2AL._SL30_.jpg","Height":"30","Width":"30"},"SmallImage":{"URL":"https:\/\/images-eu.ssl-images-amazon.com\/images\/I\/51XwcZlf2AL._SL75_.jpg","Height":"75","Width":"75"},"ThumbnailImage":{"URL":"https:\/\/images-eu.ssl-images-amazon.com\/images\/I\/51XwcZlf2AL._SL75_.jpg","Height":"75","Width":"75"},"TinyImage":{"URL":"https:\/\/images-eu.ssl-images-amazon.com\/images\/I\/51XwcZlf2AL._SL110_.jpg","Height":"110","Width":"110"},"MediumImage":{"URL":"https:\/\/images-eu.ssl-images-amazon.com\/images\/I\/51XwcZlf2AL._SL160_.jpg","Height":"160","Width":"160"},"LargeImage":{"URL":"https:\/\/images-eu.ssl-images-amazon.com\/images\/I\/51XwcZlf2AL.jpg","Height":"500","Width":"500"}},{"@attributes":{"Category":"primary"},"SwatchImage":{"URL":"https:\/\/images-eu.ssl-images-amazon.com\/images\/I\/51OOx1z77qL._SL30_.jpg","Height":"30","Width":"30"},"SmallImage":{"URL":"https:\/\/images-eu.ssl-images-amazon.com\/images\/I\/51OOx1z77qL._SL75_.jpg","Height":"75","Width":"75"},"ThumbnailImage":{"URL":"https:\/\/images-eu.ssl-images-amazon.com\/images\/I\/51OOx1z77qL._SL75_.jpg","Height":"75","Width":"75"},"TinyImage":{"URL":"https:\/\/images-eu.ssl-images-amazon.com\/images\/I\/51OOx1z77qL._SL110_.jpg","Height":"110","Width":"110"},"MediumImage":{"URL":"https:\/\/images-eu.ssl-images-amazon.com\/images\/I\/51OOx1z77qL._SL160_.jpg","Height":"160","Width":"160"},"LargeImage":{"URL":"https:\/\/images-eu.ssl-images-amazon.com\/images\/I\/51OOx1z77qL.jpg","Height":"500","Width":"500"}}]},"ItemAttributes":{"Binding":"Personal Care","Brand":"Lotus","EAN":"0806360270608","EANList":{"EANListElement":"0806360270608"},"Feature":["Reduces Uneven Pigmentation","Enhances Skins Radiance","Reduces Dark Spots","Visible Fairness in a Week","Milk enzyme in the composition helps block melanin pathways"],"IsAdultProduct":"0","ItemDimensions":{"Height":"512","Length":"197","Weight":"57","Width":"118"},"Label":"Lotus","LegalDisclaimer":"Lotus Herbals White Glow Skin Whitening and Brightening Nourishing Night Cr\u00e8me, 60g","ListPrice":{"Amount":"42500","CurrencyCode":"INR","FormattedPrice":"INR 425.00"},"Manufacturer":"Lotus","Model":"B100116","MPN":"806360270608","NumberOfItems":"1","PackageDimensions":{"Height":"280","Length":"291","Weight":"49","Width":"291"},"PackageQuantity":"1","PartNumber":"806360270608","ProductGroup":"Beauty","ProductTypeName":"BEAUTY","Publisher":"Lotus","ReleaseDate":"2017-01-01","Studio":"Lotus","Title":"Lotus Herbals White Glow Skin Whitening and Brightening Nourishing Night Creme, 60g","UPC":"806360270608","UPCList":{"UPCListElement":"806360270608"}},"OfferSummary":{"LowestNewPrice":{"Amount":"26000","CurrencyCode":"INR","FormattedPrice":"INR 260.00"},"TotalNew":"47","TotalUsed":"0","TotalCollectible":"0","TotalRefurbished":"0"},"Offers":{"TotalOffers":"1","TotalOfferPages":"1","MoreOffersUrl":"https:\/\/www.amazon.in\/gp\/offer-listing\/B00DRE0XJ4?SubscriptionId=AKIAIK7E2OWNUD4OEXAQ&tag=buypid-21&linkCode=xm2&camp=2025&creative=165953&creativeASIN=B00DRE0XJ4","Offer":{"OfferAttributes":{"Condition":"New"},"OfferListing":{"OfferListingId":"dgUDnloHqxna2g%2B9Qy%2FuuEQjhqTpHXSm0NZwTl5YB1Bnw5quzD3xC7awwkyqCm8stVPSkcq0wp8SpjSAUBlJJdRozUTK%2B9nKZV6hFz9rn2YXgnkipJdq%2FA%3D%3D","Price":{"Amount":"31900","CurrencyCode":"INR","FormattedPrice":"INR 319.00"},"AmountSaved":{"Amount":"10600","CurrencyCode":"INR","FormattedPrice":"INR 106.00"},"PercentageSaved":"25","Availability":"Usually dispatched within 24 hours","AvailabilityAttributes":{"AvailabilityType":"now","MinimumHours":"0","MaximumHours":"0"},"IsEligibleForSuperSaverShipping":"1","IsEligibleForPrime":"1"}}},"CustomerReviews":{"IFrameURL":"https:\/\/www.amazon.in\/reviews\/iframe?akid=AKIAIK7E2OWNUD4OEXAQ&alinkCode=xm2&asin=B00DRE0XJ4&atag=buypid-21&exp=2018-06-30T09%3A05%3A45Z&v=2&sig=awPcrOLqK%252F5yutlJIYshYdtalWdl99jsHv%252B9pIGVh6Y%253D","HasReviews":"true"}}';
+		$movefile = wp_handle_upload( $file, $upload_overrides );
 
-$item = json_decode($item);
+		if ( $movefile && ! isset( $movefile['error'] ) ) {
+		    delete_user_meta($user->data->ID,'cupp_upload_meta');
+		    $val = add_user_meta($user->data->ID,'cupp_upload_meta',$movefile['url'],false);
+		    header("Content-Type: application/json; charset=utf-8");
+		    $output = array("success" => true,"data"=>$movefile['url'],"error" => "No error");
 
-print_r($item);
+			 echo json_encode($output);
 
-$ASIN = $item->ASIN;
-global $wpdb;
-$results = $wpdb->get_results( "select post_id, meta_key from $wpdb->postmeta where meta_value ='{$ASIN}' order by meta_id desc limit 1 ", ARRAY_A );
+		} else {
+		    
+		    echo json_encode($movefile);
+		}
+	}else{
+		
+		if($file['size'] > 181730){
+			$file['error'] = "File is too large";
+		}else{
+			$file['error'] = "File type not supported ".$file['type'];
+		}
 
-$postId = isset($results[0]['post_id'])?$results[0]['post_id']:0;
-$tiemAttr = $item->ItemAttributes;
-$postarr = array();
-$postarr['ID'] =  $postId;
-$postarr['post_author'] = 1;
-$postarr['post_type'] = 'product';
-$postarr['post_title'] =  $tiemAttr->Title;
-$postarr['post_name'] =  $tiemAttr->Title;
-$postarr['post_content'] =  "<ul class='pro_featurs'><li>".implode("</li><li>",$tiemAttr->Feature)."</li></ul>";
-$postarr['post_excerpt'] =  $tiemAttr->LegalDisclaimer;
-$postarr['comment_status'] =  "open";
-$postarr['meta_input']['ASIN'] =  $item->ASIN;
-$postarr['meta_input']['EAN'] =  $tiemAttr->EAN;
-$postarr['meta_input']['LargeImage'] =  $item->LargeImage->URL;
-$postarr['meta_input']['SalesRank'] =  $item->SalesRank;
-$postarr['meta_input']['DetailPageURL'] =  $item->DetailPageURL;
-$postarr['meta_input']['ListPrice'] =  $tiemAttr->ListPrice->FormattedPrice;
-$postarr['meta_input']['LowestNewPrice'] =  $tiemAttr->OfferSummary->LowestNewPrice->FormattedPrice;
-$postarr['meta_input']['Publisher'] =  $tiemAttr->Publisher;
-$tags = array();
-$Tagresult = preg_replace("/[^a-zA-Z ]+/", "",$tiemAttr->Title);
-$tags = explode(" ",$Tagresult);
-$skip = array("and","the","an","a","of","with","which");
-foreach ($tags as $key => $value) {
-    
-    if(strlen($value)<2 || in_array($value,$skip)){
-        unset($tags[$key]);
-    }
+		echo json_encode($file);
+	}
 }
-
-
-
-
-$post_ID = wp_insert_post($postarr,true );
-
-$cat[] = wp_create_category($tiemAttr->Brand,0);
-$cat[] = wp_create_category($tiemAttr->ProductGroup,0);
-wp_set_post_categories( $post_ID,$cat); 
-wp_set_post_tags($post_ID,$tags);
-print_r($val);
 die();
