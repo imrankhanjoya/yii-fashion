@@ -29,7 +29,12 @@ ignore_user_abort(true);
  * php mycron.php "all" "LuxuryBeauty" 1
  * php mycron.php "Elle 18" "LuxuryBeauty" 1
  * php mycron.php "L'Oreal" "Beauty" 1
+ * php mycron.php "NYX Cosmetics" "Beauty" 1
+ * php mycron.php "Maybelline" "Beauty" 1
+ * php mycron.php "Maybelline" "Beauty" 1
+ * php mycron.php "lakme" "Beauty" 1
  * php mycron.php "korean" "Beauty" 1
+ * php mycron.php "nail" "Beauty" 1
  * php mycron.php "Thai" "Beauty" 1
  * php mycron.php "ponds" "Beauty" 1
  * php mycron.php "lotus" "Beauty" 1
