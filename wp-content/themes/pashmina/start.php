@@ -15,6 +15,9 @@ if(!session_id()) {
  *
  * @package Pashmina
  */
+
+wp_enqueue_script( 'swiper', get_template_directory_uri() . '/js/simpleUpload.min.js', array( 'jquery' ), '4.0.6', '' );
+
 ?>
 
 <?PHP
@@ -297,11 +300,17 @@ get_header('nomenu');
                 <h4 class="text-center">Awesome you are all set!</h4>
                  <h4 class="text-center">Now just make sure you provide the right contact to get noticed for giveaways & more love </h4>
                  <div class="row">
+                    <input id="upfilefield" type="file" name="file" style="display:none">
                     <form class="form-inline" name="myForm" method="POST" action="" >
                         <input class="profile-input" required=true type="text" value="profile" name="profile" id="profile">
                         <div class="col-lg-4 text-center">
-                        <img src="<?=$meta['cupp_upload_meta'][0]?>" style="width: 50px;">
-                        <h5>Change avatar</h5>
+                        <img id="userimage" 
+                        ld="<?=get_template_directory_uri();?>/images/loading.svg" 
+                        src="<?=$meta['cupp_upload_meta'][0]?>" 
+                        org="<?=$meta['cupp_upload_meta'][0]?>" 
+                        style="width: 50px;">
+                        <h5 id="upfile" style="cursor: pointer;">Change avatar</h5>
+                        
                         </div>
 
                         <div class="col-lg-8">
@@ -369,7 +378,45 @@ get_header('nomenu');
 
             
     </div>
+<script type="text/javascript">
+var  $ = jQuery;
 
+jQuery(document).ready(function(){
+
+    jQuery("#upfile").click(function(){
+        $( "#upfilefield" ).trigger( "click" );
+
+    });
+    jQuery('input[type=file]').change(function(){
+
+        jQuery(this).simpleUpload("/mypost.php", {
+
+            start: function(file){
+                $("#userimage").attr("src",$("#userimage").attr("ld"));
+            },
+
+            progress: function(progress){
+                //received progress
+                console.log("upload progress: " + Math.round(progress) + "%");
+            },
+
+            success: function(data){
+                
+                jQuery("#userimage").attr("src",data.data);
+            },
+
+            error: function(error){
+                //upload failed
+                $("#userimage").attr("src",$("#userimage").attr("org"));
+            }
+
+        });
+
+    });
+
+});
+
+</script>
 <?php
 get_footer();
 ?>

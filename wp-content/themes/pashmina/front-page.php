@@ -28,7 +28,7 @@ $starPage = get_page_link($val->ID);
             $dt_featured_posts = new WP_Query($args);
             while ($dt_featured_posts->have_posts()) : $dt_featured_posts->the_post(); 
                 ?>
-            <div class="" style="width:100%; height:300px; background-image: url(<?= get_the_post_thumbnail_url(get_the_ID())?>);">
+            <div class="container" style="width:100%; height:300px; background-image: url(<?= get_the_post_thumbnail_url(get_the_ID())?>);">
                 <div class="row" >
                     <div class="col-lg-12" >
                         <a class="top-contest-banners"   href="<?php esc_url( the_permalink() ); ?>">
@@ -51,7 +51,6 @@ $starPage = get_page_link($val->ID);
 <!-- TOP ITEM LIST -->
 <div class="container ">
     <div class="row">
-        <div class="col-lg-12">
             <br>
             <?PHP
             $args = array('post_type' => 'top_items','posts_per_page' =>2,'orderby' => 'ASC');
@@ -65,7 +64,6 @@ $starPage = get_page_link($val->ID);
                 </a>
                 </div>
             <?PHP endwhile; wp_reset_postdata(); ?>
-        </div>
     </div>
 </div>
 <!-- TOP ITEM LIST END -->
