@@ -1922,6 +1922,13 @@ img.check{
 height: 120px;
 font-size:14px;
 }
+
+.min_img{
+width:100px;
+}
+.picon{
+	height: 40px;
+}
 .productlist .entry-title{
 	font-size:14px;
 }
@@ -2037,6 +2044,9 @@ font-size:14px;
 	bottom: 0;
 	background: #000;
 	opacity: 0.3;
+}
+.product_cat a{
+	font-size:10px;
 }
 .top-banners p {
 	color: #FFFFFF;
@@ -2207,7 +2217,7 @@ font-size:14px;
 	height: 350px;
 	background-size: cover;
 	background-position: center;
-	background-image: url(https://d3g527wfeloree.cloudfront.net/assets/497640715.jpg);
+	background-image: url('http://gloat.me/wp-content/uploads/2018/07/fbss.png');
 	}
 .user-images-commt {
      width: 40px;
@@ -2312,7 +2322,6 @@ a.wpf-favorite-link span{
 }
 .author-tab-div {
 	padding: 24px;
-	background: #f7f7f7;
 }
 .authore-table{
 	border:none;

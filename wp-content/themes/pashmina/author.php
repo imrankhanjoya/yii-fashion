@@ -9,31 +9,36 @@
    
    get_header(); ?>
 <?PHP
+   $user_id = $_GET['author'];
+   $userdata = get_userdata( $user_id );
+   //echo "<pre>";print_r($userdata->data);
+   $usermeta = get_user_meta($user_id);
    ?>
+
 <div class="container">
    <div class="row">
       <div class="col-lg-3 col-xs-12 col-md-3 col-sm-12 panel-body">
          <div class="row">
-         <div class="col-lg-12 col-sm-4 col-md-12 text-center author-img-heiht">
-            <img class="img-responsive prodct-crd-img" alt="anjali sharma" title="anjali sharma" src="https://i.pinimg.com/originals/fb/4e/eb/fb4eeb22cd9bf6d06d7a09bcec4eb531.jpg">
+            <div class="col-lg-12 col-sm-4 col-md-12 text-center author-img-heiht">
+               <img class="img-responsive prodct-crd-img" alt="<?=$userdata->data->display_name?>" title="<?=$userdata->data->display_name?>" src="<?=get_avatar_url($_GET['author'])?>">
+            </div>
+            <div class="col-lg-12 col-sm-8 col-md-12">
+               <span><b><?=$userdata->data->display_name?></b></span>
+               <a class="pull-right" href="/get-start/?show=profile"><i class="fa fa-edit"></i> Edit</a>
+               <h5 class=""><a href="">Update your beauty statement!</a></h5>
+               <h6 class=""><b>Skin Type:</b> <?=$usermeta['skinType'][0]?></h6>
+               <h6 class=""><b>Skin Color:</b> <?=$usermeta['skin'][0]?></h6>
+               <h6 class=""><b>Eye Type:</b> <?=$usermeta['eye'][0]?></h6>
+               <h6 class="">
+                  <b>Influences:</b>
+                  1842
+               </h6>
+            </div>
+            <div class="col-lg-12">
+               <a href="<?=wp_logout_url(); ?>" class="btn btn-block">Log Out</a>
+            </div>
          </div>
-         <div class="col-lg-12 col-sm-8 col-md-12">
-         <span><b>Rnjali Sharma</b></span>
-         <a class="pull-right" href="/users/current/steps/skin-type"><i class="fa fa-edit"></i> Edit</a>
-         <h5 class=""><a href="">Update your beauty statement!</a></h5>
-         <h6 class=""><b>Skin Type:</b> oily</h6>
-         <h6 class=""><b>Skin Color:</b> tan</h6>
-         <h6 class=""><b>Age Group:</b> </h6>
-         <h6 class="">
-            <b>Influences:</b>
-            1842
-         </h6>
       </div>
-      <div class="col-lg-12">
-         <a href=""><button type="button" class="btn-block"> logout</button></a>
-      </div>
-      </div>
-   </div>
       <div class="col-lg-9 col-xs-12 col-md-9 col-sm-12 media">
          <div class="tabbable-panel">
             <div class="author-its-tab">
@@ -45,17 +50,36 @@
                      <span class="">Rewards</span>
                      </a>
                   </li>
+                  <?php $args = array(
+                        'user_id' => $user_id,
+                        'post_type' => 'product',
+                        'comment_approved'=>1 
+                     );
+                  $comments = get_comments($args);
+                  $commentcount = count($comments); ?>
                   <li>
                      <a href="#tab_default_2" data-toggle="tab">
                      <span class=""><i class="fa fa-star-o"></i></span>
-                     <span class="">0</span>
+                     <span class=""><?=$commentcount?></span>
                      <span class="">Reviews</span>
                      </a>
                   </li>
+                  <?php                    
+                     $WeDevs_Favorite_Posts = new WeDevs_Favorite_Posts();
+                     $limit = 10;
+                     $post_type = 'product';
+                     $favposts = $WeDevs_Favorite_Posts->get_favorites('product', $user_id, $limit );
+                     $myfavpost = [];
+                     $myfavpostvar = '';
+                     foreach ($favposts as $key => $favpost) {
+                        $myfavpost[] = $favpost->post_id;
+                        $myfavpostvar .= $favpost->post_id;
+                     }
+                  ?>
                   <li>
                      <a href="#tab_default_3" data-toggle="tab">
                      <span class=""><i class="fa fa-heart-o"></i></span>
-                     <span class="">1</span>
+                     <span class=""><?=count($myfavpost)?></span>
                      <span class="">Favs</span>
                      </a>
                   </li>
@@ -169,74 +193,49 @@
                      </div>
                   </div>
                   <div class="tab-pane author-tab-div" id="tab_default_2">
-                     <button type="button" class="btn a-btn-knowmore">Approved (0)</button>
-                     <button type="button" class="btn a-btn-knowmore">Pending (0)</button>
-                     <button type="button" class="btn a-btn-knowmore">Rejected (0)</button>
-                     <div class="panel-body">
-                        <p class="panel-body"> No approve review yet</p>
+                     <div class="row media">
+
+
+                        <?php foreach ($comments as $key => $comment) {
+                           $ago = human_time_diff($comment->comment_date,date() );
+                           //$coomentimage=get_avatar_url( $comment, '45' );
+                           //echo"<pre>";print_r($comment);
+                           $useravatar = get_avatar_url($comment->user_id); ?>
+                           
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ">
+                           <div class="panel-default panel-body panel">
+                              <div class="media">
+                                 <div class="col-lg-2 col-sm-2 col-md-2 col-xs-2 all-div-padding0">
+                                    <img class="img-responsive img-circle" src="<?=$useravatar?>">
+                                 </div>
+                                 <div class="col-lg-10 col-sm-10 col-md-10 col-xs-10">
+                                    <p class="commnt-time-dtl small">By <b class="text-info"><?=$comment->comment_author?></b>
+                                    </p>
+                                    
+                                    <p class="text-muted small"><a href="<?php echo get_permalink($comment->comment_post_ID); ?>#comment-<?php echo $comment->comment_ID; ?>" ><?=$comment->comment_content?></a></p>
+                                    <i class="fa fa-clock-o commnt-time-dtl"><span class=""> <?=$ago?> ago</span></i>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     <?php  } ?>
                      </div>
                   </div>
-                  <div class="tab-pane author-tab-div" id="tab_default_3">
-                     <div class="row">
-                        <div class="col-lg-4 col-xs-12 col-md-4 col-sm-4">
-                           <div class="panel panel-body author-crd-heiht">
-                              <div class="col-lg-12 text-center author-img-heiht">
-                                 <img class="img-responsive prodct-crd-img" src="http://d1acy2vp0zxghs.cloudfront.net/products/images/000/009/645/medium/Etude_House_Wonder_Pore_Freshner_500ml-500x500.jpg?1466148158">
-                              </div>
-                              <div class="text-center">
-                                 <h4 class=""> Etude House </h4>
-                                 <h5 class="">Etude House Wonder Pore Freshner 250ml </h5>
-                                 <small>115 reviews</small><br>
-                                 <small>Lowest price from</small><br>
-                                 <div class="productlist">
-                                    <ul class="nav nav-pills btn-group-xs">
-                                       <li role="presentation"><a href="">INR 599.00</a></li>
-                                       <li role="presentation" class="pull-right"><a href="#"><span class="glyphicon glyphicon-share-alt
-                                          "></span> Share1</a></li>
-                                    </ul>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-lg-4 col-xs-12 col-md-4 col-sm-4">
-                           <div class="panel panel-body author-crd-heiht">
-                              <div class="col-lg-12 text-center author-img-heiht">
-                                 <img class="img-responsive prodct-crd-img" src="http://d1acy2vp0zxghs.cloudfront.net/products/images/000/009/645/medium/Etude_House_Wonder_Pore_Freshner_500ml-500x500.jpg?1466148158">
-                              </div>
-                              <div class="text-center">
-                                 <h4 class=""> Etude House </h4>
-                                 <h5 class="">Etude House Wonder Pore Freshner 250ml </h5>
-                                 <small>115 reviews</small><br>
-                                 <small>Lowest price from</small><br>
-                                 <div class="productlist">
-                                    <ul class="nav nav-pills btn-group-xs">
-                                       <li role="presentation"><a href="">INR 599.00</a></li>
-                                       <li role="presentation" class="pull-right"><a href="#"><span class="glyphicon glyphicon-share-alt
-                                          "></span> Share</a></li>
-                                    </ul>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-lg-4 col-xs-12 col-md-4 col-sm-4">
-                           <div class="panel panel-body author-crd-heiht">
-                              <div class="col-lg-12 text-center author-img-heiht">
-                                 <img class="img-responsive prodct-crd-img" src="http://d1acy2vp0zxghs.cloudfront.net/products/images/000/009/645/medium/Etude_House_Wonder_Pore_Freshner_500ml-500x500.jpg?1466148158">
-                              </div>
-                              <div class="text-center">
-                                 <h4 class=""> Etude House </h4>
-                                 <h5 class="">Etude House Wonder Pore Freshner 250ml </h5>
-                                 <small>115 reviews</small><br>
-                                 <small>Lowest price from</small><br>
-                                 <div class="productlist">
-                                    <ul class="nav nav-pills btn-group-xs">
-                                       <li role="presentation"><a href="">INR 599.00</a></li>
-                                       <li role="presentation" class="pull-right"><a href="#"><span class="glyphicon glyphicon-share-alt
-                                          "></span> Share</a></li>
-                                    </ul>
-                                 </div>
-                              </div>
-                           </div>
+                  <div class="tab-pane " id="tab_default_3">
+                     <div class="container discussion-page">
+                        <div class="row">
+                           <?php
+                              
+                              $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+                              $custom_query = new WP_Query($args); 
+                              $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+                              $args = array( 'post_type' => 'product','post__in' => $myfavpost, 'posts_per_page' =>10, 'paged' => $paged,"orderby"=>"meta_value_num","order"=>"DESC" );
+                              $custom_query = new WP_Query($args); ?>
+                           <?PHP while($custom_query->have_posts()) : $custom_query->the_post(); ?>
+                           <?PHP  get_template_part('template-parts/content-product','page'); ?>
+                           <?php endwhile; ?>
+                           <?php next_posts_link( '&larr; Older posts', $custom_query->max_num_pages); ?>
+                           <?php previous_posts_link( 'Newer posts &rarr;' ); ?>
                         </div>
                      </div>
                   </div>

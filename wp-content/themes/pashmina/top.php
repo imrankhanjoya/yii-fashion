@@ -29,13 +29,13 @@ $cat = $GLOBALS['wp_query']->query['cat'];
 <div class="col-md-12">
 <div class="row">
     <div class="col-lg-6 text-center top-ttl panel-body" style="background-color:#92FFD8">
-        <a href="" class="top-ttl-heddng">
+        <a href="/gloat-me-pick/" class="top-ttl-heddng">
         <span>GloatMe's Pick</span>
         <h4>Here are the best products that will make you look &amp; feel good!</h4>
         </a>
     </div>
       <div class="col-lg-6 text-center top-ttl panel-body" style="background-color:#FFDFCA">
-        <a href="" class="top-ttl-heddng">
+        <a href="/top-recommended/" class="top-ttl-heddng">
         <span>top 10</span>
         <h4>view most recommended</h4>
         </a>
@@ -67,21 +67,9 @@ $custom_query = new WP_Query($args);
 </div>
  <?php endwhile; ?>
 
- <div class="col-lg-12">
-  <nav aria-label="Page navigation example">
-  <ul class="pagination justify-content-center">
-    <li class="page-item disabled">
-      <a class="page-link" href="#" tabindex="-1">Previous</a>
-    </li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#">Next</a>
-    </li>
-  </ul>
-</nav>
- </div>
+<?php next_posts_link( '&larr; Older posts', $custom_query->max_num_pages); ?>
+<?php previous_posts_link( 'Newer posts &rarr;' ); ?>
+ 
 <!-- end html farukh -->
 
 
