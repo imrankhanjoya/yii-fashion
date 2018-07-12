@@ -46,11 +46,21 @@ if(isset($user->data->ID)){
 		
 		$upload_overrides = array( 'test_form' => false );
 
+		
+		
 		$movefile = wp_handle_upload( $file, $upload_overrides );
+		
+		
 
+		
+		$newPath = $movefile['url'];
 		if ( $movefile && ! isset( $movefile['error'] ) ) {
+			$val = image_resize($movefile['file'],300,300,true);
+			$val = explode("wp-content",$val);
+			$newPath = get_site_url()."/wp-content".$val[1];
+			
 		    delete_user_meta($user->data->ID,'cupp_upload_meta');
-		    $val = add_user_meta($user->data->ID,'cupp_upload_meta',$movefile['url'],false);
+		    $val = add_user_meta($user->data->ID,'cupp_upload_meta',$newPath,false);
 		    header("Content-Type: application/json; charset=utf-8");
 		    $output = array("success" => true,"data"=>$movefile['url'],"error" => "No error");
 

@@ -137,3 +137,14 @@ function parseUserInfo($response){
 function showheader(){
     return false;
 }
+
+function get_fav_count($userID,$post_type){
+
+    global $wpdb;
+
+    $sql = "SELECT count(*) as count FROM ".$wpdb->prefix."favorite_post WHERE user_id = {$userID} and post_type = '{$post_type}'";
+    $val = $wpdb->get_results($sql, ARRAY_A);   
+                  
+    return $val[0]['count'];
+
+}

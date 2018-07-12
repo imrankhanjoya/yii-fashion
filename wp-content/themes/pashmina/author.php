@@ -9,10 +9,11 @@
    
    get_header(); ?>
 <?PHP
-   $user_id = $_GET['author'];
+   $user_id = get_the_ID();
    $userdata = get_userdata( $user_id );
-   //echo "<pre>";print_r($userdata->data);
    $usermeta = get_user_meta($user_id);
+   
+   $img = $usermeta['cupp_upload_meta'][0];
    ?>
 
 <div class="container">
@@ -20,7 +21,7 @@
       <div class="col-lg-3 col-xs-12 col-md-3 col-sm-12 panel-body">
          <div class="row">
             <div class="col-lg-12 col-sm-4 col-md-12 text-center author-img-heiht">
-               <img class="img-responsive prodct-crd-img" alt="<?=$userdata->data->display_name?>" title="<?=$userdata->data->display_name?>" src="<?=get_avatar_url($_GET['author'])?>">
+               <img class="img-responsive prodct-crd-img" alt="<?=$userdata->data->display_name?>" title="<?=$userdata->data->display_name?>" src="<?=$img?>">
             </div>
             <div class="col-lg-12 col-sm-8 col-md-12">
                <span><b><?=$userdata->data->display_name?></b></span>
@@ -75,11 +76,14 @@
                         $myfavpost[] = $favpost->post_id;
                         $myfavpostvar .= $favpost->post_id;
                      }
+
+                     $favCount = get_fav_count($user_id,'product');
+
                   ?>
                   <li>
                      <a href="#tab_default_3" data-toggle="tab">
                      <span class=""><i class="fa fa-heart-o"></i></span>
-                     <span class=""><?=count($myfavpost)?></span>
+                     <span class=""><?=$favCount?></span>
                      <span class="">Favs</span>
                      </a>
                   </li>
@@ -193,6 +197,9 @@
                      </div>
                   </div>
                   <div class="tab-pane author-tab-div" id="tab_default_2">
+                     <button type="button" class="btn a-btn-knowmore">Approved (0)</button>
+                     <button type="button" class="btn a-btn-knowmore">Pending (0)</button>
+                     <button type="button" class="btn a-btn-knowmore">Rejected (0)</button>
                      <div class="row media">
 
 
@@ -240,9 +247,7 @@
                      </div>
                   </div>
                   <div class="tab-pane author-tab-div" id="tab_default_4">
-                     <button type="button" class="btn a-btn-knowmore">Approved (0)</button>
-                     <button type="button" class="btn a-btn-knowmore">Pending (0)</button>
-                     <button type="button" class="btn a-btn-knowmore">Rejected (0)</button>
+                     
                      <div class="panel-body">
                         <p class="panel-body"> No approve review yet</p>
                      </div>
