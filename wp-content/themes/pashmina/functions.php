@@ -310,6 +310,9 @@ function pashmina_register_required_plugins() {
 	tgmpa( $plugins, $config );
 }
 
+
+
+
 if (!function_exists('df_disable_admin_bar')) {
 
 	function df_disable_admin_bar() {
@@ -338,33 +341,36 @@ if (!function_exists('df_disable_admin_bar')) {
 add_action('init','df_disable_admin_bar');
 
 
-add_filter( 'get_avatar' , 'my_custom_avatar' , 1 , 5 );
+add_filter( 'get_avatar' , 'my_custom_avatar' , 1 , 5);
 
 function my_custom_avatar( $avatar, $id_or_email, $size, $default, $alt ) {
-    $user = false;
+    $comment_user = false;
     
+
+
     if ( is_numeric( $id_or_email ) ) {
 
         $id = (int) $id_or_email;
-        $user = get_user_by( 'id' , $id );
+        $comment_user = get_user_by( 'id' , $id );
+ 
 
     } elseif ( is_object( $id_or_email ) ) {
 
         if ( ! empty( $id_or_email->user_id ) ) {
             $id = (int) $id_or_email->user_id;
-            $user = get_user_by( 'id' , $id );
+            $comment_user = get_user_by( 'id' , $id );
         }
 
     } else {
-        $user = get_user_by( 'email', $id_or_email );	
+        $comment_user = get_user_by( 'email', $id_or_email );	
     }
 
-    if ( $user && is_object( $user ) ) {
+    if ( $comment_user && is_object( $comment_user ) ) {
 
-        if ( $user->data->ID == '1' ) {
-            $avatar = 'YOUR_NEW_IMAGE_URL';
-            $avatar = "<img alt='{$alt}' src='{$avatar}' class='avatar avatar-{$size} photo' height='{$size}' width='{$size}' />";
-        }
+    			$avatar = get_the_author_meta( 'cupp_upload_meta', $comment_user->data->ID );
+    			
+            $avatar = "<img alt='{$alt}' src='{$avatar}' class='avatar avatar-{$size} img-circle photo' height='{$size}' width='{$size}' />";
+        
 
     }
 

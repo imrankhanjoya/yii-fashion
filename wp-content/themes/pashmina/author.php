@@ -76,11 +76,14 @@
                         $myfavpost[] = $favpost->post_id;
                         $myfavpostvar .= $favpost->post_id;
                      }
+
+                     $favCount = get_fav_count($user_id,'product');
+
                   ?>
                   <li>
                      <a href="#tab_default_3" data-toggle="tab">
                      <span class=""><i class="fa fa-heart-o"></i></span>
-                     <span class=""><?=count($myfavpost)?></span>
+                     <span class=""><?=$favCount?></span>
                      <span class="">Favs</span>
                      </a>
                   </li>
@@ -194,6 +197,9 @@
                      </div>
                   </div>
                   <div class="tab-pane author-tab-div" id="tab_default_2">
+                     <button type="button" class="btn a-btn-knowmore">Approved (0)</button>
+                     <button type="button" class="btn a-btn-knowmore">Pending (0)</button>
+                     <button type="button" class="btn a-btn-knowmore">Rejected (0)</button>
                      <div class="row media">
 
 
@@ -241,9 +247,7 @@
                      </div>
                   </div>
                   <div class="tab-pane author-tab-div" id="tab_default_4">
-                     <button type="button" class="btn a-btn-knowmore">Approved (0)</button>
-                     <button type="button" class="btn a-btn-knowmore">Pending (0)</button>
-                     <button type="button" class="btn a-btn-knowmore">Rejected (0)</button>
+                     
                      <div class="panel-body">
                         <p class="panel-body"> No approve review yet</p>
                      </div>

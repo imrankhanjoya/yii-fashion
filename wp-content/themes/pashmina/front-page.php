@@ -120,15 +120,14 @@ $starPage = get_page_link($val->ID);
 
             foreach ($comments as $key => $comment) {
                            $ago = human_time_diff(strtotime($comment->comment_date));
-                           //$coomentimage=get_avatar_url( $comment, '45' );
-                           //echo"<pre>";print_r($comment);
-                           $useravatar = get_avatar_url($comment->user_id); ?>
+                           //$useravatar = get_avatar($comment->user_id); 
+                           ?>
                            
                         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ">
                            <div class="panel-default panel-body panel">
                               <div class="media">
                                  <div class="col-lg-2 col-sm-2 col-md-2 col-xs-2 all-div-padding0">
-                                    <img class="img-responsive img-circle" src="<?=$useravatar?>">
+                                    <?= get_avatar($comment->user_id)?>
                                  </div>
                                  <div class="col-lg-10 col-sm-10 col-md-10 col-xs-10">
                                     <p class="commnt-time-dtl small">By <b class="text-info"><?=$comment->comment_author?></b>

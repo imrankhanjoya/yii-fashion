@@ -28,6 +28,7 @@ $pageID =  get_page_by_path('get-start');
 $user = wp_get_current_user();
 $meta = get_user_meta($user->ID);
 
+
     require_once __DIR__ . '/Facebook/autoload.php';
 
     if(isset($_REQUEST['code'])){
@@ -302,7 +303,7 @@ get_header('nomenu');
                  <div class="row">
                     <input id="upfilefield" type="file" name="file" style="display:none">
                     <form class="form-inline" name="myForm" method="POST" action="" >
-                        <input class="profile-input" required=true type="text" value="profile" name="profile" id="profile">
+                        
                         <div class="col-lg-4 text-center">
                         <img id="userimage" 
                         ld="<?=get_template_directory_uri();?>/images/loading.svg" 
@@ -315,7 +316,15 @@ get_header('nomenu');
 
                         <div class="col-lg-8">
                         <table cellspacing="0" cellpadding="0">
-                        <tbody><tr>
+                        <tbody>
+                        <tr>
+                        <td class="profile-dtl">Slug:</td>
+                        <td>
+                        <input class="profile-input" required=true type="text" value="<?=$user->user_login?>" name="nickname" id="nickname">
+                        <div class="form-note">Type to change your Name</div>
+                        </td>
+                        </tr>
+                        <tr>
                         <td class="profile-dtl">Name:</td>
                         <td>
                         <input class="profile-input" required=true type="text" value="<?=$meta['nickname'][0]?>" name="nickname" id="nickname">
