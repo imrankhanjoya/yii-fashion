@@ -14,6 +14,9 @@
    $usermeta = get_user_meta($user_id);
    
    $img = $usermeta['cupp_upload_meta'][0];
+   if($_GET['debug']){
+      print_r($img);
+   }
    ?>
 
 <div class="container">
@@ -21,7 +24,7 @@
       <div class="col-lg-3 col-xs-12 col-md-3 col-sm-12 panel-body">
          <div class="row">
             <div class="col-lg-12 col-sm-4 col-md-12 text-center author-img-heiht">
-               <img class="img-responsive prodct-crd-img" alt="<?=$userdata->data->display_name?>" title="<?=$userdata->data->display_name?>" src="<?=$img?>">
+               <img class="img-responsive prodct-crd-img" alt="<?=$userdata->data->display_name?>" title="<?=$userdata->data->display_name?>" src="<?=$img?>" >
             </div>
             <div class="col-lg-12 col-sm-8 col-md-12">
                <span><b><?=$userdata->data->display_name?></b></span>
@@ -30,10 +33,7 @@
                <h6 class=""><b>Skin Type:</b> <?=$usermeta['skinType'][0]?></h6>
                <h6 class=""><b>Skin Color:</b> <?=$usermeta['skin'][0]?></h6>
                <h6 class=""><b>Eye Type:</b> <?=$usermeta['eye'][0]?></h6>
-               <h6 class="">
-                  <b>Influences:</b>
-                  1842
-               </h6>
+               
             </div>
             <div class="col-lg-12">
                <a href="<?=wp_logout_url(); ?>" class="btn btn-block">Log Out</a>
