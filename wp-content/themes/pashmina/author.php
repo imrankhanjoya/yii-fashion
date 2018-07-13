@@ -9,13 +9,17 @@
    
    get_header(); ?>
 <?PHP
-   $user_id = get_the_ID();
+   $author = get_user_by( 'slug', get_query_var( 'author_name' ) );
+   $user_id = $author->ID;
+
+
    $userdata = get_userdata( $user_id );
    $usermeta = get_user_meta($user_id);
    
    $img = $usermeta['cupp_upload_meta'][0];
    if($_GET['debug']){
-      print_r($img);
+      //print_r($userdata);
+      print_r($usermeta['mycred_default_total']);
    }
    ?>
 
@@ -28,26 +32,31 @@
             </div>
             <div class="col-lg-12 col-sm-8 col-md-12">
                <span><b><?=$userdata->data->display_name?></b></span>
+               <?php if($user_id == get_the_ID()):?>
                <a class="pull-right" href="/get-start/?show=profile"><i class="fa fa-edit"></i> Edit</a>
-               <h5 class=""><a href="">Update your beauty statement!</a></h5>
+               <?PHP endif;?>
+               <h5 class=""><?=$usermeta['description'][0]?></h5>
                <h6 class=""><b>Skin Type:</b> <?=$usermeta['skinType'][0]?></h6>
                <h6 class=""><b>Skin Color:</b> <?=$usermeta['skin'][0]?></h6>
                <h6 class=""><b>Eye Type:</b> <?=$usermeta['eye'][0]?></h6>
                
             </div>
+            <?php if($user_id == get_the_ID()):?>
             <div class="col-lg-12">
                <a href="<?=wp_logout_url(); ?>" class="btn btn-block">Log Out</a>
             </div>
+            <?PHP endif;?>
          </div>
       </div>
       <div class="col-lg-9 col-xs-12 col-md-9 col-sm-12 media">
          <div class="tabbable-panel">
             <div class="author-its-tab">
                <ul class="nav nav-tabs ">
+                  
                   <li class="active">
                      <a href="#tab_default_1" data-toggle="tab">
                      <span class=""><i class="fa fa-gift"></i></span>
-                     <span class="">36</span>
+                     <span class=""><?=$usermeta['mycred_default_total'][0]?></span>
                      <span class="">Rewards</span>
                      </a>
                   </li>
@@ -80,7 +89,7 @@
                      $favCount = get_fav_count($user_id,'product');
 
                   ?>
-                  <li>
+                  <li >
                      <a href="#tab_default_3" data-toggle="tab">
                      <span class=""><i class="fa fa-heart-o"></i></span>
                      <span class=""><?=$favCount?></span>
@@ -110,28 +119,50 @@
                   </li>
                </ul>
                <div class="tab-content media">
-                  <div class="author-tab-div  active tab-pane" id="tab_default_1">
+                  <div class="author-tab-div active tab-pane" id="tab_default_1">
                      <div class="panel panel-body">
                         <h4>Glad to see you here!</h4>
                         <p>With every review you make, you collect coins that takes you a step closer to FREE beauty products, FREE samples, exclusive discounts and brand sponsorships catered to you.</p>
                         <div class="row">
                            <div class="col-sm-4">
-                              <h3>Total Coins: <br>
-                                 <span class="text-danger">0</span>
+                              <h3>Total Glaot Points: <br>
+                                 <span class="text-danger"><?=$usermeta['mycred_default_total'][0]?></span>
                               </h3>
                            </div>
                            <div class="col-sm-8">
                               <div>
-                                 <h4>Get more coins with:</h4>
+                                 <h4>Get more GloatMe Points with:</h4>
                                  <table class="table authore-table">
                                     <tbody>
                                        <tr>
-                                          <td class="text-left">Every approved Video Review</td>
-                                          <td class="text-right">150 coins</td>
+                                          <td class="text-left">Every Visit you Earn</td>
+                                          <td class="text-right">1 Gloat</td>
                                        </tr>
                                        <tr>
-                                          <td class="text-left">Every approved Image Review</td>
-                                          <td class="text-right">50 coins</td>
+                                          <td class="text-left">Registration you Earn</td>
+                                          <td class="text-right">5 Gloats</td>
+                                       </tr>
+                                       <tr>
+                                          <td class="text-left">Every Starting Discussion</td>
+                                          <td class="text-right">5 Gloats</td>
+                                       </tr>
+                                       <tr>
+                                          <td class="text-left">Every discuss reply</td>
+                                          <td class="text-right">3 Gloats</td>
+                                       </tr>
+                                       <tr>
+                                          <td class="text-left">Every approved Review</td>
+                                          <td class="text-right">3 Gloats</td>
+                                       </tr>
+                                       <tr>
+                                          <td class="text-left">Every every referral.
+                                             <textarea style="width: 100%"><?= site_url().do_shortcode("[mycred_affiliate_link]",true);?></textarea>
+                                          </td>
+
+                                          <td class="text-right">5 Gloats
+                                             <a href="[mycred_affiliate_link]">Click on this referral link</a>
+
+                                          </td>
                                        </tr>
                                     </tbody>
                                  </table>
@@ -205,8 +236,7 @@
 
                         <?php foreach ($comments as $key => $comment) {
                            $ago = human_time_diff($comment->comment_date,date() );
-                           //$coomentimage=get_avatar_url( $comment, '45' );
-                           //echo"<pre>";print_r($comment);
+                           
                            $useravatar = get_avatar_url($comment->user_id); ?>
                            
                         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ">
@@ -283,8 +313,7 @@
                   </div>
                   <div class="tab-pane author-tab-div" id="tab_default_6">
                      <h3>Shipping Address</h3>
-                     <p>If you are selected in our <a class="text-danger" href="" target="_blank">Favful Sampling Program</a>, you will receive new products samples from us. Items will be delivered to the address you provide below.</p>
-                     hari ji morra 
+                     <p>If you are selected in our <a class="text-danger" href="" target="_blank">GloatMe Sampling Program</a>, you will receive new products samples from us. Items will be delivered to the address you provide below.</p>
                      <div class="address-holder">
                         <form id="" action="" accept-charset="" method="">
                            <input name="" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="">
