@@ -61,11 +61,12 @@ $meta = get_user_meta($user->ID);
         
         if(isset($_POST['nickname'])){
             $show = sotreUserMeta("nickname",$_POST['nickname']);
+            $user->display_name = $_POST['nickname'];
+            wp_update_user($user);
         }
         if(isset($_POST['email'])){
             $user->user_email = $_POST['email'];
             wp_update_user($user);
-            print_r($user);
         }
         if(isset($_POST['description'])){
             
@@ -297,85 +298,92 @@ get_header('nomenu');
             <?PHP if($show=='profile'):?>  
             
             <div class="container">
-              <div class="profile-cards">
+              <div class="">
                 <h4 class="text-center">Awesome you are all set!</h4>
                  <h4 class="text-center">Now just make sure you provide the right contact to get noticed for giveaways & more love </h4>
                  <div class="row">
                     <input id="upfilefield" type="file" name="file" style="display:none">
-                    <form class="form-inline" name="myForm" method="POST" action="" >
+                    
                         
-                        <div class="col-lg-4 text-center">
-                        <img id="userimage" 
-                        ld="<?=get_template_directory_uri();?>/images/loading.svg" 
-                        src="<?=$meta['cupp_upload_meta'][0]?>" 
-                        org="<?=$meta['cupp_upload_meta'][0]?>" 
-                        style="width: 50px;">
-                        <h5 id="upfile" style="cursor: pointer;">Change avatar</h5>
-                        
+                        <div class="col-lg-3 col-md-offset-2 text-center">
+                            <div style="width: 100%; position: relative;">
+                            <img id="userimage" 
+                            ld="<?=get_template_directory_uri();?>/images/loading.svg" 
+                            src="<?=$meta['cupp_upload_meta'][0]?>" 
+                            org="<?=$meta['cupp_upload_meta'][0]?>" 
+                            style="width:100%;">
+                            <span id="upfile" class="glyphicon glyphicon-camera"  style="color:#fff;cursor: pointer; position: absolute; top:20px; left:10px; text-shadow: 1px 1px 5px #ccc">Change</span>
+                            </div>
+                            <table class="table">
+                                 </tr>
+                            <tr>
+                            <td>Skin Type:</td>
+                            <td><a href="/get-start/?show=skinType"><?=$meta['skinType'][0]?></a></td>
+                            </tr>
+                            <tr>
+                            <td>Skin Color:</td>
+                            <td><a href="/get-start/?show=skin"><?=$meta['skin'][0]?></a></td>
+                            </tr>
+                            <tr>
+                            <td>Eye:</td>
+                            <td><a href="/get-start/?show=eye"><?=$meta['eye'][0]?></a></td>
+                            </tr>
+                            <tr>
+                            <td>Dress Size:</td>
+                            <td><a href="/get-start/?show=dress"><?=$meta['dress'][0]?></a></td>
+                            </tr>
+                            <tr>
+                            <td>Top Size:</td>
+                            <td><a href="/get-start/?show=top"><?=$meta['top'][0]?></a></td>
+                            </tr>
+                            </table>
                         </div>
 
-                        <div class="col-lg-8">
-                        <table cellspacing="0" cellpadding="0">
-                        <tbody>
-                        <tr>
-                        <td class="profile-dtl">Slug:</td>
-                        <td>
-                        <input class="profile-input" required=true type="text" value="<?=$user->user_login?>" name="nickname" id="nickname">
-                        <div class="form-note">Type to change your Name</div>
-                        </td>
-                        </tr>
-                        <tr>
-                        <td class="profile-dtl">Name:</td>
-                        <td>
-                        <input class="profile-input" required=true type="text" value="<?=$meta['nickname'][0]?>" name="nickname" id="nickname">
-                        <div class="form-note">Type to change your Name</div>
-                        </td>
-                        </tr>
-                        <tr>
-                        <td class="profile-dtl">Email:</td>
-                        <td>
-                        <input class="profile-input" type="email" value="<?=$user->user_email?>" name="email" id="email">
-                        </td>
-                        </tr>
-                        <tr>
-                        <td class="profile-dtl">About you:</td>
-                        <td>
-                        <input class="profile-input" value="<?=$meta['description'][0]?>" placeholder="Your professional title" type="text" name="description" id="description">
-                        </td>
-                        </tr>
-                        <tr>
-                        <td class="profile-dtl">Skin Type:</td>
-                        <td><?=$meta['skinType'][0]?></td>
-                        </tr>
-                        <tr>
-                        <td class="profile-dtl">Skin Color:</td>
-                        <td><?=$meta['skin'][0]?></td>
-                        </tr>
-                        <tr>
-                        <td class="profile-dtl">Eye:</td>
-                        <td><?=$meta['eye'][0]?></td>
-                        </tr>
-                        <tr>
-                        <td class="profile-dtl">Dress Size:</td>
-                        <td><?=$meta['dress'][0]?></td>
-                        </tr>
-                        <tr>
-                        <td class="profile-dtl">Top Size:</td>
-                        <td><?=$meta['top'][0]?></td>
-                        </tr>
-                        <tr>
-                        <td class="profile-dtl">Birthday:</td>
-                        <td>12 / 12 / 2001</td>
-                        </tr>
-                        </tbody></table>
+                        <div class="col-lg-6">
+                            <form class="form-horizontal"  name="myForm" method="POST" action="" >
+                                
+                                <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-2 control-label">Slug</label>
+                                <div class="col-sm-10">
+                                <input type="text" class="form-control" value="<?=$user->user_login?>" name="username" id="username" placeholder="Username">
+                                </div>
+                                </div>
+
+                                <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-2 control-label">Name</label>
+                                <div class="col-sm-10">
+                                <input type="text" class="form-control" value="<?=$meta['nickname'][0]?>" name="nickname" id="nickname" placeholder="Display Name">
+                                </div>
+                                </div>
+
+                                <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                                <div class="col-sm-10">
+                                <input type="email" class="form-control" value="<?=$user->user_email?>" name="email" id="email" placeholder="Email">
+                                </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-2 control-label">BirthDay</label>
+                                <div class="col-sm-10">
+                                <input type="text" class="form-control" value="<?=$meta['birthday'][0]?>" name="birthday" id="birthday" placeholder="Your BirthDay">
+                                </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-2 control-label">Style Statement</label>
+                                <div class="col-sm-10">
+                                <textarea class="form-control" placeholder="Your style statement"  name="description" id="description"><?=$meta['description'][0]?></textarea>
+                                </div>
+                                </div>
+                                <input type="submit" name="profile" class="col-md-offset-5 col-md-3 btn btn-success" value="Update"/>
+                             </form>
                         </div>
-                    <div class="col-lg-6">
-                    <a href="/">View Profile</a>
-                    </div>
-                    <div class="col-lg-6">
-                        <input type="submit" class="btn btn-success btn-lg btn-block" value="Update"/>
-                    </div>
-               </form>
+                    
+                    
+              
                  </div>
               </div>
             </div>

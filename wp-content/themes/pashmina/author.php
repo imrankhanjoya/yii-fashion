@@ -174,7 +174,7 @@
                                  </table>
                               </div>
                               <div class="text-right">
-                                 <a href=""><button type="button" class="btn btn-danger"> Choose a product to review now</button></a>
+                                 <a href="/product/"><button type="button" class="btn btn-danger"> Choose a product to review now</button></a>
                               </div>
                            </div>
                         </div>
