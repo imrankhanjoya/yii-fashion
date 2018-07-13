@@ -86,7 +86,11 @@ function sotreUserMeta($key,$val,$flag=true){
         return "profile";
     }elseif($key=="nickname"){
         delete_user_meta($user->ID,'nickname');
+        delete_user_meta($user->ID,'first_name');
+        delete_user_meta($user->ID,'display_name');
+        add_user_meta($user->ID,'first_name',$val,false); 
         add_user_meta($user->ID,'nickname',$val,false); 
+        add_user_meta($user->ID,'display_name',$val,false); 
         return "profile";
     }elseif($key=="description"){
         delete_user_meta($user->ID,'description');
@@ -125,6 +129,7 @@ function parseUserInfo($response){
     $userInfo = [];
     $userInfo['fbid'] = $val->id; 
     $userInfo['nickname'] = $val->name; 
+    $userInfo['display_name'] = $val->name; 
     $userInfo['username'] = $username; 
     $userInfo['gender'] = $val->gender; 
     $userInfo['picture'] = $val->picture->data->url; 
