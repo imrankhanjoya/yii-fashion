@@ -22,6 +22,7 @@
       print_r($usermeta['mycred_default_total']);
    }
    ?>
+<!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=imrankhanjoya"></script>
 
 <div class="container">
    <div class="row">
@@ -121,8 +122,16 @@
                <div class="tab-content media">
                   <div class="author-tab-div active tab-pane" id="tab_default_1">
                      <div class="panel panel-body">
+                        
                         <h4>Glad to see you here!</h4>
-                        <p>With every review you make, you collect coins that takes you a step closer to FREE beauty products, FREE samples, exclusive discounts and brand sponsorships catered to you.</p>
+                        <p>With every review, discuss and referral you make, you collect coins that takes you a step closer to FREE beauty products, FREE samples, exclusive discounts and brand sponsorships catered to you.</p>
+                        <?PHP
+                        $shareUrl = site_url().do_shortcode("[mycred_affiliate_link]",true);
+                        ?>
+                        <textarea style="width: 100%;" disabled="true"></textarea>
+                        <div class="addthis_sharing_toolbox" data-url="<?=$shareUrl?>" data-title="Hi Friends this is <?=$userdata->data->display_name?>" data-description="Join me at Gloat.Me and lets discuss about beauty and products #Gloat.Me" data-media="<?=$img?>"></div>
+
+
                         <div class="row">
                            <div class="col-sm-4">
                               <h3>Total Glaot Points: <br>
@@ -156,13 +165,10 @@
                                        </tr>
                                        <tr>
                                           <td class="text-left">Every every referral.
-                                             <textarea style="width: 100%"><?= site_url().do_shortcode("[mycred_affiliate_link]",true);?></textarea>
+                                             
                                           </td>
 
-                                          <td class="text-right">5 Gloats
-                                             <a href="[mycred_affiliate_link]">Click on this referral link</a>
-
-                                          </td>
+                                          <td class="text-right">5 Gloats</td>
                                        </tr>
                                     </tbody>
                                  </table>
