@@ -128,7 +128,7 @@
                         <?PHP
                         $shareUrl = site_url().do_shortcode("[mycred_affiliate_link]",true);
                         ?>
-                        <textarea style="width: 100%;" disabled="true"></textarea>
+                        <textarea style="width: 100%;" disabled="true"><?=$shareUrl?></textarea>
                         <div class="addthis_sharing_toolbox" data-url="<?=$shareUrl?>" data-title="Hi Friends this is <?=$userdata->data->display_name?>" data-description="Join me at Gloat.Me and lets discuss about beauty and products #Gloat.Me" data-media="<?=$img?>"></div>
 
 
