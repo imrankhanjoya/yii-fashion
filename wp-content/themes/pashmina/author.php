@@ -103,7 +103,10 @@
                   <li>
                      <?php
                      $fav_author_list = get_user_option( 'favorite-authors',$user_id );
-                     $babes = count($fav_author_list);
+                     if(empty($fav_author_list))
+                        $babes =0;
+                     else
+                        $babes = count($fav_author_list);
                      ?>
                      <a href="#tab_default_4" data-toggle="tab">
                      <span class=""><i class="fa fa-user-o"></i></span>
@@ -113,6 +116,7 @@
                      </span>
                      </a>
                   </li>
+                  <?php if($user_id == $current_user->data->ID):?>
                   <li>
                      <a href="#tab_default_5" data-toggle="tab">
                      <span class=""><i class="fa fa-bullhorn"></i></span>
@@ -125,6 +129,7 @@
                      <span class="">Address</span>
                      </a>
                   </li>
+                  <?php endif;?>
                </ul>
                <div class="tab-content media">
                   <div class="author-tab-div active tab-pane" id="tab_default_1">
@@ -246,6 +251,7 @@
                         
                      </div>
                   </div>
+                  <?php if($user_id == $current_user->data->ID):?>
                   <!--THIS IS FOR INFLUNSER-->
                   <div class="tab-pane author-tab-div" id="tab_default_5">
                      <div class="panel-body">
@@ -321,6 +327,7 @@
                         </form>
                      </div>
                   </div>
+               <?php endif; ?>
                </div>
             </div>
          </div>

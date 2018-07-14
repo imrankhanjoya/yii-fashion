@@ -246,7 +246,7 @@ function fav_authors_get_list($user_id=0){
             echo '</div>';
         echo '</div>';    
     }else{
-        echo '<h2>Add your first favorite author!</h2>';
+        echo '<h2>Have not added to favorite author!</h2>';
     }
 }
 
