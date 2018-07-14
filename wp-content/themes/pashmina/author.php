@@ -19,7 +19,7 @@
    
    $img = $usermeta['cupp_upload_meta'][0];
    if($_GET['debug']){
-      print_r($current_user);
+      print_r($usermeta);
    }
    ?>
 <!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=imrankhanjoya"></script>
@@ -30,13 +30,16 @@
          <div class="row">
             <div class="col-lg-12 col-sm-4 col-md-12 text-center author-img-heiht">
                <img class="img-responsive prodct-crd-img" alt="<?=$userdata->data->display_name?>" title="<?=$userdata->data->display_name?>" src="<?=$img?>" >
+
             </div>
             <div class="col-lg-12 col-sm-8 col-md-12">
+
+               <?php fav_authors_link($user_id); ?> <br>
                <span><b><?=$userdata->data->display_name?></b></span>
                <?php if($user_id == $current_user->data->ID):?>
                <a class="pull-right" href="/get-start/?show=profile"><i class="fa fa-edit"></i> Edit</a>
                <?PHP endif;?>
-               <h5 class=""><?=$usermeta['description'][0]?></h5>
+               <h5 id="uid" v="<?=$user_id?>"><?=$usermeta['description'][0]?></h5>
                <h6 class=""><b>Skin Type:</b> <?=$usermeta['skinType'][0]?></h6>
                <h6 class=""><b>Skin Color:</b> <?=$usermeta['skin'][0]?></h6>
                <h6 class=""><b>Eye Type:</b> <?=$usermeta['eye'][0]?></h6>
@@ -98,14 +101,22 @@
                      </a>
                   </li>
                   <li>
+                     <?php
+                     $fav_author_list = get_user_option( 'favorite-authors',$user_id );
+                     if(empty($fav_author_list))
+                        $babes =0;
+                     else
+                        $babes = count($fav_author_list);
+                     ?>
                      <a href="#tab_default_4" data-toggle="tab">
                      <span class=""><i class="fa fa-user-o"></i></span>
                      <span class="">
-                     <span class="">0</span>
+                     <span class=""><?=$babes?></span>
                      <span class="">Babes</span>
                      </span>
                      </a>
                   </li>
+                  <?php if($user_id == $current_user->data->ID):?>
                   <li>
                      <a href="#tab_default_5" data-toggle="tab">
                      <span class=""><i class="fa fa-bullhorn"></i></span>
@@ -118,6 +129,7 @@
                      <span class="">Address</span>
                      </a>
                   </li>
+                  <?php endif;?>
                </ul>
                <div class="tab-content media">
                   <div class="author-tab-div active tab-pane" id="tab_default_1">
@@ -179,64 +191,11 @@
                            </div>
                         </div>
                      </div>
-                     <div class="row">
-                        <div class="col-lg-4 col-xs-12 col-md-4 col-sm-4">
-                           <div class="panel">
-                              <div class="panel-body author-crd-heiht">
-                                 <div class="col-lg-12 text-center author-img-heiht">
-                                    <img class="img-responsive prodct-crd-img" src="http://d1acy2vp0zxghs.cloudfront.net/products/images/000/009/645/medium/Etude_House_Wonder_Pore_Freshner_500ml-500x500.jpg?1466148158">
-                                 </div>
-                                 <div class="text-center">
-                                    <h4 class=""> Etude House </h4>
-                                    <h5 class="">Etude House Wonder Pore Freshner 250ml </h5>
-                                    <small>115 reviews</small><br>
-                                    <small>Lowest price from</small><br>
-                                    0
-                                 </div>
-                              </div>
-                              <a href=""><button type="button" class="btn-block btn-danger">Redeem</button></a>
-                           </div>
-                        </div>
-                        <div class="col-lg-4 col-xs-12 col-md-4 col-sm-4">
-                           <div class="panel">
-                              <div class=" panel-body author-crd-heiht">
-                                 <div class="col-lg-12 text-center author-img-heiht">
-                                    <img class="img-responsive prodct-crd-img" src="http://d1acy2vp0zxghs.cloudfront.net/products/images/000/009/645/medium/Etude_House_Wonder_Pore_Freshner_500ml-500x500.jpg?1466148158">
-                                 </div>
-                                 <div class="text-center">
-                                    <h4 class=""> Etude House </h4>
-                                    <h5 class="">Etude House Wonder Pore Freshner 250ml </h5>
-                                    <small>115 reviews</small><br>
-                                    <small>Lowest price from</small><br>
-                                    0
-                                 </div>
-                              </div>
-                              <button type="button" class="btn-block btn-danger">Redeem</button>
-                           </div>
-                        </div>
-                        <div class="col-lg-4 col-xs-12 col-md-4 col-sm-4">
-                           <div class="panel">
-                              <div class=" panel-body author-crd-heiht">
-                                 <div class="col-lg-12 text-center author-img-heiht">
-                                    <img class="img-responsive prodct-crd-img" src="http://d1acy2vp0zxghs.cloudfront.net/products/images/000/009/645/medium/Etude_House_Wonder_Pore_Freshner_500ml-500x500.jpg?1466148158">
-                                 </div>
-                                 <div class="text-center">
-                                    <h4 class=""> Etude House </h4>
-                                    <h5 class="">Etude House Wonder Pore Freshner 250ml </h5>
-                                    <small>115 reviews</small><br>
-                                    <small>Lowest price from</small><br>
-                                    0
-                                 </div>
-                              </div>
-                              <button type="button" class="btn-block btn-danger">Redeem</button>
-                           </div>
-                        </div>
-                     </div>
+                     
+                        
                   </div>
                   <div class="tab-pane author-tab-div" id="tab_default_2">
-                     <button type="button" class="btn a-btn-knowmore">Approved (0)</button>
-                     <button type="button" class="btn a-btn-knowmore">Pending (0)</button>
-                     <button type="button" class="btn a-btn-knowmore">Rejected (0)</button>
+                     
                      <div class="row media">
 
 
@@ -286,29 +245,13 @@
                   </div>
                   <div class="tab-pane author-tab-div" id="tab_default_4">
                      
-                     <div class="panel-body">
-                        <p class="panel-body"> No approve review yet</p>
-                     </div>
+                     
                      <div class="row">
-                        <div class="col-md-4 col-lg-4 col-xs-12 col-sm-4">
-                           <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 list-group-item">
-                              <div class="col-lg-4 col-md-4 col-xs-4 col-sm-4">
-                                 <img class="img-circle" src="http://d1acy2vp0zxghs.cloudfront.net/users/avatars/000/019/934/original/picture?1522166151" alt="Picture?1522166151">
-                              </div>
-                              <div class="col-lg-8 col-md-8 col-xs-8 col-sm-8" style="padding: 0px;">
-                                 <a class="" title="Elleena Zaini" href="">
-                                    <h5 class="media-heading"><b>Elleena Zaini</b></h5>
-                                 </a>
-                                 <a href="">
-                                    <h6 class="media-heading">Unfollow</h6>
-                                 </a>
-                                 <h6 class="media-heading">no user beauty profile</h6>
-                                 <h6 class="media-heading">650 pts - 7 reviews</h6>
-                              </div>
-                           </div>
-                        </div>
+                        <?php fav_authors_get_list($user_id); ?>
+                        
                      </div>
                   </div>
+                  <?php if($user_id == $current_user->data->ID):?>
                   <!--THIS IS FOR INFLUNSER-->
                   <div class="tab-pane author-tab-div" id="tab_default_5">
                      <div class="panel-body">
@@ -384,6 +327,7 @@
                         </form>
                      </div>
                   </div>
+               <?php endif; ?>
                </div>
             </div>
          </div>
