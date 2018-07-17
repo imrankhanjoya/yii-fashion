@@ -68,6 +68,9 @@ $meta = get_user_meta($user->ID);
             $user->user_email = $_POST['email'];
             wp_update_user($user);
         }
+        if(isset($_POST['birthday'])){
+            sotreUserMeta('birthday',$_POST['birthday']);
+        }
         if(isset($_POST['description'])){
             
             $show = sotreUserMeta("description",$_POST['description']);
@@ -379,7 +382,7 @@ get_header('nomenu');
                                 <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-2 control-label">BirthDay</label>
                                 <div class="col-sm-10">
-                                <input type="text" class="form-control" value="<?=$meta['birthday'][0]?>" name="birthday" id="birthday" placeholder="Your BirthDay">
+                                <input type="date" class="form-control" value="<?=$meta['birthday'][0]?>" name="birthday" id="birthday" placeholder="Your BirthDay">
                                 </div>
                                 </div>
 
