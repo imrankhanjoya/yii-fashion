@@ -27,64 +27,10 @@ jQuery(document).ready(function() {
         jQuery(this).find( '.fa' ).toggleClass( 'fa-bars fa-close' );
     });
 
-    // Featured Posts Slider
 
-    var dt_featured_post_slider = new Swiper('.dt-featured-post-slider', {
-        pagination: {
-            el: '.swiper-pagination',
-            type: 'bullets',
-            clickable: true
-        },
-        slidesPerView: 4,
-        breakpoints: {
-            // when window width is <= 320px
-            420: {
-                slidesPerView: 1,
-                spaceBetween: 0
-            },
-            // when window width is <= 640px
-            640: {
-                slidesPerView: 2,
-                spaceBetween: 15
-            },
-            // when window width is <= 768px
-            768: {
-                slidesPerView: 2,
-                spaceBetween: 20
-            }
-        },
-        paginationClickable: true,
-        spaceBetween: 30,
-        autoplay: 3000,
-        speed: 800,
-        touchEventsTarget: 'swiper-wrapper'
-    });
-
-    // Back to Top
-    if (jQuery('#back-to-top').length) {
-        var scrollTrigger = 500, // px
-            backToTop = function () {
-                var scrollTop = jQuery(window).scrollTop();
-                if (scrollTop > scrollTrigger) {
-                    jQuery('#back-to-top').addClass('show');
-                } else {
-                    jQuery('#back-to-top').removeClass('show');
-                }
-            };
-        backToTop();
-        jQuery(window).on('scroll', function () {
-            backToTop();
-        });
-        jQuery('#back-to-top').on('click', function (e) {
-            e.preventDefault();
-            jQuery('html,body').animate({
-                scrollTop: 0
-            }, 600);
-        });
-    }
 
     jQuery(".img-check").click(function(){
         jQuery(this).toggleClass("check");
-        });
+    });
 
 });
