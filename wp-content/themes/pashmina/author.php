@@ -19,7 +19,13 @@
    
    $img = $usermeta['cupp_upload_meta'][0];
    if($_GET['debug']){
-      print_r($usermeta);
+      print_r($current_user);
+   }
+
+
+   if(isset($_POST['saveshipping'])){
+      storeUseraddress($current_user->data->ID);
+      wp_redirect(get_permalink());
    }
    ?>
 <!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=imrankhanjoya"></script>
@@ -268,42 +274,42 @@
                      <h3>Shipping Address</h3>
                      <p>If you are selected in our <a class="text-danger" href="" target="_blank">GloatMe Sampling Program</a>, you will receive new products samples from us. Items will be delivered to the address you provide below.</p>
                      <div class="address-holder">
-                        <form id="" action="" accept-charset="" method="">
+                        <form id="" action="" accept-charset="" method="post">
                            <input name="" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="">
                            <div class="row">
                               <div class="col col-sm-12 media">
                                  <label class="form-label">
                                     <h6 class="media-heading">Recipient name:*</h6>
                                  </label>
-                                 <input type="text" name="r" id="" value="anjali sharma" class="form-control">
+                                 <input type="text" name="address_name" value="<?=$usermeta['address_name'][0]?>" id="" value="anjali sharma" class="form-control">
                               </div>
                               <div class="col col-sm-6 media">
                                  <label class="form-label">
                                     <h6 class="media-heading">Recipient email:*</h6>
                                  </label>
-                                 <input type="email" name="recipient_email" id="recipient_email" value="anjalisharma@gmail.com" class="form-control">
+                                 <input type="email" name="recipient_email" id="recipient_email" value="<?=$usermeta['recipient_email'][0]?>" class="form-control">
                               </div>
                               <div class="col col-sm-6 media">
                                  <label class="form-label">
                                     <h6 class="media-heading">Recipient contact:*</h6>
                                  </label>
-                                 <input type="text" name="recipient_contact" id="recipient_contact" class="form-control" required="required">
+                                 <input type="text" name="recipient_contact" id="recipient_contact" class="form-control" required="required" value="<?=$usermeta['recipient_contact'][0]?>">
                               </div>
                               <div class="col col-sm-12 media">
                                  <label class="form-label">
                                     <h6 class="media-heading">Shipping Address:*</h6>
                                  </label>
-                                 <input type="text" name="address_1" id="address_1" class="form-control" placeholder="Address line 1">
-                                 <input type="text" name="address_2" id="address_2" class="form-control media" placeholder="Address line 2">
+                                 <input type="text" name="address_1" id="address_1" class="form-control" placeholder="Address line 1" value="<?=$usermeta['address_1'][0]?>" >
+                                 <input type="text" name="address_2" id="address_2" class="form-control media" placeholder="Address line 2" value="<?=$usermeta['address_2'][0]?>">
                               </div>
                               <div class="col col-sm-6 media">
-                                 <input type="text" name="post_code" id="post_code" class="form-control" placeholder="Post code">
+                                 <input type="text" name="post_code" id="post_code" class="form-control" placeholder="Post code" value="<?=$usermeta['post_code'][0]?>" >
                               </div>
                               <div class="col col-sm-6 media">
-                                 <input type="text" name="city" id="city" class="form-control" placeholder="City">
+                                 <input type="text" name="city" id="city" class="form-control" placeholder="City" value="<?=$usermeta['city'][0]?>" >
                               </div>
                               <div class="col col-sm-6 media">
-                                 <input type="text" name="state" id="state" class="form-control" placeholder="State">
+                                 <input type="text" name="state" id="state" class="form-control" placeholder="State" value="<?=$usermeta['state'][0]?>" >
                               </div>
                               <div class="col col-sm-6 media">
                                  <select name="country" id="c" class="form-control">
@@ -312,16 +318,9 @@
                                     <option>Thailand</option>
                                  </select>
                               </div>
+                              
                               <div class="col col-sm-12 media">
-                                 <input type="checkbox" name="" id="save_address" value="yes" checked="checked">
-                                 <span>Make this as default shipping address</span>
-                              </div>
-                              <div class="col col-sm-12">
-                                 <input type="checkbox" name="agree_terms" id="" value="yes">
-                                 <span>I agree to the <a href="s" target="">terms &amp; conditions</a></span>
-                              </div>
-                              <div class="col col-sm-12 media">
-                                 <input type="submit" name="commit" value="Save Address" class="btn btn-success">
+                                 <input type="submit" name="saveshipping" value="Save Address" class="btn btn-success">
                               </div>
                            </div>
                         </form>

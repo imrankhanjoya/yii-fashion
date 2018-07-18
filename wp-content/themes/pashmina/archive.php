@@ -85,7 +85,6 @@ $brands = isset($site['brands'])?$site['brands']:"";
 		<div class="row">
 			<div class="col-lg-12 col-md-12">
 				 <?php 
-            //$custom_query = new WP_Query('post_type="product"'); // exclude category 9
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 $args = array( 'post_type' => 'product',$findIn=>$findKey, 'posts_per_page' =>40, 'paged' => $paged );
 $custom_query = new WP_Query($args);
