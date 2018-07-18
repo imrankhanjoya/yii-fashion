@@ -10,6 +10,16 @@ Author URI: http://mrtotallyawesome.com
 License: GPL2
 */
 require_once __DIR__ . '/Facebook/autoload.php';
+ini_set("display_errors",1);
+
+
+function storeUseraddress($userID){
+
+    foreach($_POST as $key=>$val){
+        delete_user_meta($userID,$key);
+        add_user_meta($userID,$key,$val,true);
+    }
+}
 function getLoginPage(){
     $val = get_page_by_path( 'get-start');
     return $callback = get_page_link($val->ID);;
