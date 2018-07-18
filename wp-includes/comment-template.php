@@ -1924,6 +1924,7 @@ function comment_form_title( $noreplytext = false, $replytext = false, $linktopa
  * @param array $comments Optional. Array of WP_Comment objects.
  */
 function wp_list_comments( $args = array(), $comments = null ) {
+
 	global $wp_query, $comment_alt, $comment_depth, $comment_thread_alt, $overridden_cpage, $in_comment_loop;
 
 	$in_comment_loop = true;
@@ -1940,7 +1941,7 @@ function wp_list_comments( $args = array(), $comments = null ) {
 		'type'              => 'all',
 		'page'              => '',
 		'per_page'          => '',
-		'avatar_size'       => 32,
+		'avatar_size'       => 50,
 		'reverse_top_level' => null,
 		'reverse_children'  => '',
 		'format'            => current_theme_supports( 'html5', 'comment-list' ) ? 'html5' : 'xhtml',
@@ -1963,6 +1964,7 @@ function wp_list_comments( $args = array(), $comments = null ) {
 
 	// Figure out what comments we'll be looping through ($_comments)
 	if ( null !== $comments ) {
+
 		$comments = (array) $comments;
 		if ( empty($comments) )
 			return;
@@ -1979,6 +1981,7 @@ function wp_list_comments( $args = array(), $comments = null ) {
 		 * If 'page' or 'per_page' has been passed, and does not match what's in $wp_query,
 		 * perform a separate comment query and allow Walker_Comment to paginate.
 		 */
+
 		if ( $r['page'] || $r['per_page'] ) {
 			$current_cpage = get_query_var( 'cpage' );
 			if ( ! $current_cpage ) {
@@ -2019,6 +2022,7 @@ function wp_list_comments( $args = array(), $comments = null ) {
 
 		// Otherwise, fall back on the comments from `$wp_query->comments`.
 		} else {
+
 			if ( empty($wp_query->comments) )
 				return;
 			if ( 'all' != $r['type'] ) {
@@ -2030,7 +2034,7 @@ function wp_list_comments( $args = array(), $comments = null ) {
 			} else {
 				$_comments = $wp_query->comments;
 			}
-
+			
 			if ( $wp_query->max_num_comment_pages ) {
 				$default_comments_page = get_option( 'default_comments_page' );
 				$cpage = get_query_var( 'cpage' );
