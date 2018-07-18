@@ -313,9 +313,7 @@
                               </div>
                               <div class="col col-sm-6 media">
                                  <select name="country" id="c" class="form-control">
-                                    <option>Malaysia</option>
-                                    <option>Singapore</option>
-                                    <option>Thailand</option>
+                                    <option>India</option>
                                  </select>
                               </div>
                               
