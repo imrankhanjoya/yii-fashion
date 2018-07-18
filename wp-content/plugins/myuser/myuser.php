@@ -73,6 +73,10 @@ function sotreUserMeta($key,$val,$flag=true){
         delete_user_meta($user->ID,'haircolor');
         add_user_meta($user->ID,'haircolor',$val,true); 
         return "eye";
+    }elseif($key=="birthday"){
+        delete_user_meta($user->ID,'birthday');
+        add_user_meta($user->ID,'birthday',$val,true); 
+        return "eye";
     }elseif($key=="dress"){
         delete_user_meta($user->ID,'dress');
         add_user_meta($user->ID,'dress',$val,true); 
