@@ -75,7 +75,7 @@ $brands = isset($site['brands'])?$site['brands']:"";
     <div id="navbar" class="product-dtl-list">
       <ul class="nav navbar-nav">
         <?php foreach($brands as $key=>$val): $cID = get_cat_ID($val); $key==$findKey?$class='active':$class='';  ?>
-        <li ><a  class="<?=$class?>" href="<?php echo esc_url( get_category_link($cID) ); ?>"><?=$val?></a></li>
+        <li ><a  class="<?=$class?>" href="<?php echo esc_url( get_category_link($cID) ); ?>"><?=esc_html($val)?></a></li>
         <?PHP endforeach;?>
       </ul>
      
