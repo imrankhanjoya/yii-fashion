@@ -1,30 +1,38 @@
 <?php
 /**
- * Template part for displaying results in search pages.
+ * Template part for displaying single posts.
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package Pashmina
  */
 
+$post_ID = get_the_ID();
+$val = get_post_meta($post_ID);
+
+$price = $val['LowestNewPrice'][0]!=""?$val['LowestNewPrice'][0]:$val['ListPrice'][0];
+$title = get_the_title();
+$title = substr($title,0,120);  
+
 ?>
-
+<div class="col-md-3 productlist" >
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+    <center>
+    <figure>
+        <?= "<img src='".$val['LargeImage'][0]."' class='img-responsive small-img'>"?>
+    </figure>
+	</center>
 
-		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php pashmina_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
+	<div class="entry-content">
+		<a href="<?php esc_url( the_permalink() ); ?>" title="<?=$val['Publisher'][0]?>"><h2 class="entry-by"><?=$val['Brand'][0]?></h2></a>
+		<a href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title_attribute(); ?>"><h2 class="entry-title"><?=$title ?></h2></a>
+		
+	</div><!-- .entry-content -->
+	<ul class="nav nav-pills btn-group-xs">
+	  <li role="presentation"><a href="<?=$val['DetailPageURL'][0]?>" ><?=$price?></a></li>
+	  <li role="presentation"><?php if ( function_exists( 'wfp_button' ) ) wfp_button(); ?></li>
+	</ul>
 
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
 
-	<footer class="entry-footer">
-		<?php pashmina_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
+</div>
