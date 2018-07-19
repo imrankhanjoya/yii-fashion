@@ -13,6 +13,25 @@ License: GPL2
 <?PHP 
 $site['brands'] = array("avon"=>"AVON","bobbi-brown"=>"Bobbi Brown","o3"=>"O3","KAZIMA"=>"kazima","lotus"=>"Lotus","nivea"=>"Nivea","olay"=>"Olay","mcaffeine"=>"MCaffeine","lakme"=>"Lakmé","loreal"=>"L’Oreal Paris","khadi-natural"=>"Khadi Natural","ponds"=>"POND’S","brezzycloud"=>"Brezzycloud");
 
+$skinType = array("Normal","Dry","Oily","Acne-prone","Sensitive","Combination");
+$skinColor = array("Extremely fair"=>array("img"=>"http://gloat.me/wp-content/uploads/2018/07/face-phd0.png"),"Fair"=>array("img"=>"http://gloat.me/wp-content/uploads/2018/07/face-phd1.png"),"Tan"=>array("img"=>"http://gloat.me/wp-content/uploads/2018/07/face-phd2.png"),"Medium Brown"=>array("img"=>"http://gloat.me/wp-content/uploads/2018/07/face-phd3.png"),"Dark"=>array("img"=>"http://gloat.me/wp-content/uploads/2018/07/face-phd4.png"),"Deep Dark"=>array("img"=>"http://gloat.me/wp-content/uploads/2018/07/face-phd5.png"),"Light"=>array("img"=>"http://gloat.me/wp-content/uploads/2018/07/face-phd6.png"));
+$hairColor = array("White","Dark","Orange");
+$brands = array(
+"bobbi_brown"=>array("title"=>"Bobbi Brown","logo"=>"/2018/07/Bobbi_Brown_logo_logotype-copy.png"),
+"avon"=>array("title"=>"AVON","logo"=>"/2018/07/avon.png"),
+"nyx"=>array("title"=>"NYX","logo"=>"/2018/07/NYX_logo-copy.png"),
+"mac"=>array("title"=>"Mac","logo"=>"/2018/07/Mac_logo_logotype-copy.png"),
+"lakme"=>array("title"=>"LAKME","logo"=>"/2018/07/LAKME-copy.png"),
+"la_girl_usa"=>array("title"=>"LA Girl USA","logo"=>"/2018/07/LA_Girl_USA_logo-copy.png"),
+"pearls_paris"=>array("title"=>"Pearls & Paris","logo"=>"/2018/07/cropped-logoupdated22-copy.png"),
+"clinique"=>array("title"=>"Clinique","logo"=>"/2018/07/Clinique_logo_logotype-copy.png"),
+"revlon"=>array("title"=>"Revlon","logo"=>"/2018/07/Revlon_logo-copy.png")
+);
+
+$eyeColor = array("White","Dark","Orange");
+$DressSize = array("0","2","4","6","8","10","12","14");
+$topSize = array("xs","s","m","l","xl","xxl");
+
 
 function custom_rewrite_basic() {
   global $wp_rewrite;

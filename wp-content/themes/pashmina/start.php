@@ -29,7 +29,7 @@ $user = wp_get_current_user();
 $meta = get_user_meta($user->ID);
 
 
-    require_once __DIR__ . '/Facebook/autoload.php';
+require_once __DIR__ . '/Facebook/autoload.php';
 
     if(isset($_REQUEST['code'])){
 
@@ -55,74 +55,57 @@ $meta = get_user_meta($user->ID);
 
     }elseif($user->ID){
 
-    $show = 'skin';
-    if(isset($_POST['profile'])) {
-        
-        
-        if(isset($_POST['nickname'])){
-            $show = sotreUserMeta("nickname",$_POST['nickname']);
-            $user->display_name = $_POST['nickname'];
-            wp_update_user($user);
-        }
-        if(isset($_POST['email'])){
-            $user->user_email = $_POST['email'];
-            wp_update_user($user);
-        }
-        if(isset($_POST['birthday'])){
-            sotreUserMeta('birthday',$_POST['birthday']);
-        }
-        if(isset($_POST['description'])){
-            
-            $show = sotreUserMeta("description",$_POST['description']);
-        }
+            $show = 'skin';
+            if(isset($_POST['profile'])) {
+                
+                if(isset($_POST['nickname'])){
+                    $show = sotreUserMeta("nickname",$_POST['nickname']);
+                    $user->display_name = $_POST['nickname'];
+                    wp_update_user($user);
+                }
+                if(isset($_POST['email'])){
+                    $user->user_email = $_POST['email'];
+                    wp_update_user($user);
+                }
+                if(isset($_POST['birthday'])){
+                    sotreUserMeta('birthday',$_POST['birthday']);
+                }
+                if(isset($_POST['description'])){
+                    
+                    $show = sotreUserMeta("description",$_POST['description']);
+                }
 
-        $url = add_query_arg(array('show' =>'profile'),get_page_link($pageID->ID));
-        wp_redirect($url);
-    }elseif(isset($_POST['brands'])) {
-        delete_user_meta($user->ID,'brands');
-        foreach($_POST['brands'] as $val){
-            $show = sotreUserMeta('brands',$val,false);
-        }
+                $url = add_query_arg(array('show' =>'profile'),get_page_link($pageID->ID));
+                wp_redirect($url);
+            }elseif(isset($_POST['brands'])) {
+                delete_user_meta($user->ID,'brands');
+                foreach($_POST['brands'] as $val){
+                    $show = sotreUserMeta('brands',$val,false);
+                }
+                $url = add_query_arg(array('show' => $show),get_page_link($pageID->ID));
+                wp_redirect($url);
+            }elseif(isset($_GET['key']) && isset($_GET['val'])){
+                $show = sotreUserMeta($_GET['key'],$_GET['val']);
+                
+                $url = add_query_arg(array('show' => $show),get_page_link($pageID->ID));
+                wp_redirect($url);
+            }elseif(isset($_GET['show'])){
+                $show = $_GET['show'];
 
-        $url = add_query_arg(array('show' => $show),get_page_link($pageID->ID));
-        wp_redirect($url);
-    }elseif(isset($_GET['key']) && isset($_GET['val'])){
-        $show = sotreUserMeta($_GET['key'],$_GET['val']);
-        
-        $url = add_query_arg(array('show' => $show),get_page_link($pageID->ID));
-        wp_redirect($url);
-    }elseif(isset($_GET['show'])){
-        $show = $_GET['show'];
+            }
+            $attrib = get_user_meta($user->ID,$show);
+            $UserSkin = get_user_meta($user->ID,'skin');
 
+    }elseif(isset($_GET['fbgo'])){
+        $fblogin = fbloginurl();
+        wp_redirect($fblogin);
+        exit;
     }
-    $attrib = get_user_meta($user->ID,$show);
-    $UserSkin = get_user_meta($user->ID,'skin');
-
-}
 
 
 
 
 
-$skinType = array("Normal","Dry","Oily","Acne-prone","Sensitive","Combination");
-$skinColor = array("Extremely fair"=>array("img"=>"http://gloat.me/wp-content/uploads/2018/07/face-phd0.png"),"Fair"=>array("img"=>"http://gloat.me/wp-content/uploads/2018/07/face-phd1.png"),"Tan"=>array("img"=>"http://gloat.me/wp-content/uploads/2018/07/face-phd2.png"),"Medium Brown"=>array("img"=>"http://gloat.me/wp-content/uploads/2018/07/face-phd3.png"),"Dark"=>array("img"=>"http://gloat.me/wp-content/uploads/2018/07/face-phd4.png"),"Deep Dark"=>array("img"=>"http://gloat.me/wp-content/uploads/2018/07/face-phd5.png"),"Light"=>array("img"=>"http://gloat.me/wp-content/uploads/2018/07/face-phd6.png"));
-$hairColor = array("White","Dark","Orange");
-$brands = array("Clinique","BCBGMAXAZRIA","Levi's","Torrid","Benefit Cosmetics","Calvin Klein","La Roche-Posay","Laura Geller","Alex and Ani","Ella Moss","Milly","stila","Perricone MD","Mario Badescu");
-$brands = array(
-"bobbi_brown"=>array("title"=>"Bobbi Brown","logo"=>"/2018/07/Bobbi_Brown_logo_logotype-copy.png"),
-"avon"=>array("title"=>"AVON","logo"=>"/2018/07/avon.png"),
-"nyx"=>array("title"=>"NYX","logo"=>"/2018/07/NYX_logo-copy.png"),
-"mac"=>array("title"=>"Mac","logo"=>"/2018/07/Mac_logo_logotype-copy.png"),
-"lakme"=>array("title"=>"LAKME","logo"=>"/2018/07/LAKME-copy.png"),
-"la_girl_usa"=>array("title"=>"LA Girl USA","logo"=>"/2018/07/LA_Girl_USA_logo-copy.png"),
-"pearls_paris"=>array("title"=>"Pearls & Paris","logo"=>"/2018/07/cropped-logoupdated22-copy.png"),
-"clinique"=>array("title"=>"Clinique","logo"=>"/2018/07/Clinique_logo_logotype-copy.png"),
-"revlon"=>array("title"=>"Revlon","logo"=>"/2018/07/Revlon_logo-copy.png")
-);
-
-$eyeColor = array("White","Dark","Orange");
-$DressSize = array("0","2","4","6","8","10","12","14");
-$topSize = array("xs","s","m","l","xl","xxl");
 
 
 
@@ -138,7 +121,8 @@ get_header('nomenu');
 
             <div class="form-group col-md-12 jointhemove text-center">
             <h1>Hi, Join the movement!</h1>
-            <a class="btn a-btn-knowmore" href="<?=fbloginurl()?>">Join In</a>
+
+            <a class="btn a-btn-knowmore" href="<?=getLoginPage()?>">Join In</a>
             </div>
             </div>
             <div class="clear"></div>
