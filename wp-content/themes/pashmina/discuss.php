@@ -15,6 +15,16 @@ if(!session_id()) {
  *
  * @package Pashmina
  */
+
+function gloatme_header_metadata() {
+
+  echo '<title>Discussion related to beauty</title>';
+  echo '<meta name="description" content="Discussion related to products and beauty tips." />';    
+        
+}
+add_action( 'wp_head', 'gloatme_header_metadata',0);
+
+
 $user = wp_get_current_user();
 
 

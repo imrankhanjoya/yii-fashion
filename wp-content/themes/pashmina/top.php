@@ -20,6 +20,14 @@ if(!session_id()) {
 <?PHP
 
 
+function gloatme_header_metadata() {
+
+  $data['title'] = "Collection of top and trending products.";
+  $data['description'] = "Tops cosmetic collection grouped by occasion and best combination. We have collected on the bases of user review and ratting";  
+  echo generateMeta($data);  
+        
+}
+add_action( 'wp_head', 'gloatme_header_metadata',0);
 
 get_header(); 
 

@@ -7,7 +7,10 @@
     * @package Pashmina
     */
    
-   get_header(); ?>
+   get_header(); 
+
+?>
+
 <?PHP
    $current_user = wp_get_current_user();
 

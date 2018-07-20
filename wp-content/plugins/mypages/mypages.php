@@ -40,7 +40,7 @@ function custom_rewrite_basic() {
   $wp_rewrite->flush_rules();	
 
   $page = get_page_by_path('top');	
-  add_rewrite_rule('^top-in-([a-z A-Z]+)/?', 'index.php?page_id='.$page->ID.'&cat=$matches[1]', 'top');
+  add_rewrite_rule('^top-cosmetic-products/?', 'index.php?page_id='.$page->ID.'&cat=$matches[1]', 'top');
 	 
   $page = get_page_by_path('archive');
   add_rewrite_rule('^gloat-me-pick/?', 'index.php?page_id='.$page->ID.'&tag=gloatme', 'top');
@@ -60,7 +60,7 @@ add_filter( 'query_vars', 'rj_add_query_vars_filter' );
 
 add_action('wp_logout','auto_redirect_after_logout');
 function auto_redirect_after_logout(){
-wp_redirect( home_url() );
-exit();
+  wp_redirect( home_url() );
+  exit();
 }
 

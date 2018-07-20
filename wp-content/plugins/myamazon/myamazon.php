@@ -14,7 +14,7 @@ License: GPL2
 
 add_filter( 'wp_nav_menu_items', 'your_custom_menu_item', 2, 3 );
 function your_custom_menu_item ( $items, $args ) {
-    $items .= '<li><a href="/top-in-dove/">Top</a></li>';
+    $items .= '<li><a href="/top-cosmetic-products/">Top</a></li>';
     $items .= '<li><a href="/product/">Products</a></li>';
     $items .= '<li><a href="/discuss-beauty/">Discuss</a></li>';
     
@@ -35,3 +35,14 @@ function add_loginout_link( $items, $args ) {
     return $items;
 }
 
+
+function generateMeta($data){
+    $out = '';
+    if(isset($data['title'])){
+        $out .= '<title>'.$data['title'].'</title>';
+    }
+    if(isset($data['description'])){
+        $out .= '<meta name="description" content="'.$data['description'].'" />';
+    }
+    return $out;
+}

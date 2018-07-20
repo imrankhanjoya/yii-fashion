@@ -2,332 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="161fd73e-5ff3-4d9f-bc73-f39ac165eeef" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/posttypes/posttypes.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/01-07-18-MakeupBlog-JanesWinterPicks-1080x1080-600x460-1-150x150.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/01-07-18-MakeupBlog-JanesWinterPicks-1080x1080-600x460-1-340x260.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/01-07-18-MakeupBlog-JanesWinterPicks-1080x1080-600x460-1-400x307.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/01-07-18-MakeupBlog-JanesWinterPicks-1080x1080-600x460-1-450x450.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/01-07-18-MakeupBlog-JanesWinterPicks-1080x1080-600x460-1-600x450.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/01-07-18-MakeupBlog-JanesWinterPicks-1080x1080-600x460-1-96x96.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/01-07-18-MakeupBlog-JanesWinterPicks-1080x1080-600x460-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/03-04-18-BLOG-StPatricksDayMakeupLook-1-150x150.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/03-04-18-BLOG-StPatricksDayMakeupLook-1-340x260.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/03-04-18-BLOG-StPatricksDayMakeupLook-1-400x400.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/03-04-18-BLOG-StPatricksDayMakeupLook-1-450x450.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/03-04-18-BLOG-StPatricksDayMakeupLook-1-600x450.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/03-04-18-BLOG-StPatricksDayMakeupLook-1-768x768.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/03-04-18-BLOG-StPatricksDayMakeupLook-1-800x520.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/03-04-18-BLOG-StPatricksDayMakeupLook-1-900x900.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/03-04-18-BLOG-StPatricksDayMakeupLook-1-96x96.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/03-04-18-BLOG-StPatricksDayMakeupLook-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/03-04-18-BLOG-StPatricksDayMakeupLook-1024x1024.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/03-04-18-BLOG-StPatricksDayMakeupLook-300x300.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/03-04-18-BLOG-StPatricksDayMakeupLook-e1528698068253.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/03-04-18-BLOG-StPatricksDayMakeupLook-e1528698314885.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/14b72871-afa0-3789-aec2-1e439bbea200-150x150.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/14b72871-afa0-3789-aec2-1e439bbea200-225x300.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/14b72871-afa0-3789-aec2-1e439bbea200-768x1025.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/14b72871-afa0-3789-aec2-1e439bbea200.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/602da4300557070b9825ee93fe045248_featured_v2-150x150.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/602da4300557070b9825ee93fe045248_featured_v2-300x225.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/602da4300557070b9825ee93fe045248_featured_v2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/6fa8d944-7c86-3266-adb9-298443f966cb-150x150.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/6fa8d944-7c86-3266-adb9-298443f966cb-300x200.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/6fa8d944-7c86-3266-adb9-298443f966cb-768x512.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/6fa8d944-7c86-3266-adb9-298443f966cb.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/787ac6f3-a9cd-35ed-8255-520da1e60af3-1-150x150.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/787ac6f3-a9cd-35ed-8255-520da1e60af3-1-300x200.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/787ac6f3-a9cd-35ed-8255-520da1e60af3-1-340x260.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/787ac6f3-a9cd-35ed-8255-520da1e60af3-1-600x450.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/787ac6f3-a9cd-35ed-8255-520da1e60af3-1-768x512.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/787ac6f3-a9cd-35ed-8255-520da1e60af3-1-800x520.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/787ac6f3-a9cd-35ed-8255-520da1e60af3-1-96x96.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/787ac6f3-a9cd-35ed-8255-520da1e60af3-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/787ac6f3-a9cd-35ed-8255-520da1e60af3-300x200.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/7b35979a-682d-343d-a51c-819cf938a35b-150x150.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/7b35979a-682d-343d-a51c-819cf938a35b.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/Haircare-Not-Complicated-Website-Banner-Image-300x169.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/NEW_1800banners-Yellow-Daff-01_1024x-1024x427.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/NEW_1800banners-Yellow-Daff-01_1024x-300x125.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/SonamCollection_NomadTrench_Natural_ProductHero_1600x1600-1-300x113.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/SonamCollection_NomadTrench_Natural_ProductHero_1600x1600-1-600x450.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/SonamCollection_NomadTrench_Natural_ProductHero_1600x1600-1-800x520.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/SonamCollection_NomadTrench_Natural_ProductHero_1600x1600-300x113.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/SonamCollection_NomadTrench_Natural_ProductHero_1600x1600-600x450.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/SonamCollection_NomadTrench_Natural_ProductHero_1600x1600-800x520.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/a06b822e-27ff-39b4-8dad-a46b20c2c249-150x150.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/a06b822e-27ff-39b4-8dad-a46b20c2c249-300x200.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/a06b822e-27ff-39b4-8dad-a46b20c2c249-768x512.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/a06b822e-27ff-39b4-8dad-a46b20c2c249.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/b57cfc07-bf69-3a0e-8947-55c8e34508ff-150x150.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/b57cfc07-bf69-3a0e-8947-55c8e34508ff-300x200.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/b57cfc07-bf69-3a0e-8947-55c8e34508ff-768x512.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/b57cfc07-bf69-3a0e-8947-55c8e34508ff.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/b80cbb28b3ca671daa3faa02591025fb-1-150x150.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/b80cbb28b3ca671daa3faa02591025fb-1-340x260.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/b80cbb28b3ca671daa3faa02591025fb-1-400x309.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/b80cbb28b3ca671daa3faa02591025fb-1-450x450.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/b80cbb28b3ca671daa3faa02591025fb-1-600x450.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/b80cbb28b3ca671daa3faa02591025fb-1-768x593.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/b80cbb28b3ca671daa3faa02591025fb-1-800x520.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/b80cbb28b3ca671daa3faa02591025fb-1-900x695.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/b80cbb28b3ca671daa3faa02591025fb-1-96x96.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/b80cbb28b3ca671daa3faa02591025fb-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/b80cbb28b3ca671daa3faa02591025fb-1024x791.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/b80cbb28b3ca671daa3faa02591025fb-300x232.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/banner2_-300x150.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/beautiful-daytime-desert-979601-150x150.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/beautiful-daytime-desert-979601-340x260.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/beautiful-daytime-desert-979601-400x266.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/beautiful-daytime-desert-979601-450x450.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/beautiful-daytime-desert-979601-600x450.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/beautiful-daytime-desert-979601-768x512.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/beautiful-daytime-desert-979601-800x520.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/beautiful-daytime-desert-979601-900x599.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/beautiful-daytime-desert-979601-96x96.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/beautiful-daytime-desert-979601.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/beautiful-girl-9-1365886-1-150x150.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/beautiful-girl-9-1365886-1-340x260.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/beautiful-girl-9-1365886-1-400x266.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/beautiful-girl-9-1365886-1-450x450.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/beautiful-girl-9-1365886-1-600x450.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/beautiful-girl-9-1365886-1-768x511.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/beautiful-girl-9-1365886-1-800x520.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/beautiful-girl-9-1365886-1-900x599.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/beautiful-girl-9-1365886-1-96x96.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/beautiful-girl-9-1365886-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/brand_tigerlily_banner-300x64.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/brand_tigerlily_banner-340x260.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/brand_tigerlily_banner-600x300.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/brand_tigerlily_banner-768x165.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/brand_tigerlily_banner-800x300.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-602da4300557070b9825ee93fe045248_featured_v2-150x150.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-602da4300557070b9825ee93fe045248_featured_v2-300x180.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-602da4300557070b9825ee93fe045248_featured_v2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-Haircare-Not-Complicated-Website-Banner-Image-150x150.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-Haircare-Not-Complicated-Website-Banner-Image-300x138.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-Haircare-Not-Complicated-Website-Banner-Image-340x260.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-Haircare-Not-Complicated-Website-Banner-Image-600x450.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-Haircare-Not-Complicated-Website-Banner-Image-768x353.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-Haircare-Not-Complicated-Website-Banner-Image-800x520.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-Haircare-Not-Complicated-Website-Banner-Image-96x96.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-Haircare-Not-Complicated-Website-Banner-Image.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-NEW_1800banners-Yellow-Daff-01_1024x-1024x256.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-NEW_1800banners-Yellow-Daff-01_1024x-150x150.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-NEW_1800banners-Yellow-Daff-01_1024x-300x75.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-NEW_1800banners-Yellow-Daff-01_1024x-340x256.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-NEW_1800banners-Yellow-Daff-01_1024x-600x256.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-NEW_1800banners-Yellow-Daff-01_1024x-768x192.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-NEW_1800banners-Yellow-Daff-01_1024x-800x256.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-NEW_1800banners-Yellow-Daff-01_1024x-96x96.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-NEW_1800banners-Yellow-Daff-01_1024x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-b80cbb28b3ca671daa3faa02591025fb-1024x257.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-b80cbb28b3ca671daa3faa02591025fb-150x150.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-b80cbb28b3ca671daa3faa02591025fb-300x75.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-b80cbb28b3ca671daa3faa02591025fb-340x257.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-b80cbb28b3ca671daa3faa02591025fb-600x257.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-b80cbb28b3ca671daa3faa02591025fb-768x193.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-b80cbb28b3ca671daa3faa02591025fb-800x257.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-b80cbb28b3ca671daa3faa02591025fb-96x96.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-b80cbb28b3ca671daa3faa02591025fb.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-banner2_-1-1038x240.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-banner2_-1-150x150.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-banner2_-1-266x215.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-banner2_-1-300x57.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-banner2_-1-672x240.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-banner2_-1-768x146.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-banner2_-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-banner2_-150x150.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-banner2_-2-150x150.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-banner2_-2-300x75.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-banner2_-2-340x260.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-banner2_-2-600x301.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-banner2_-2-768x193.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-banner2_-2-800x301.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-banner2_-2-96x96.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-banner2_-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-banner2_-3-150x150.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-banner2_-3-180x180.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-banner2_-3-192x192.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-banner2_-3-270x270.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-banner2_-3-300x300.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-banner2_-3-32x32.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-banner2_-3-340x260.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-banner2_-3-512x450.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-banner2_-3-96x96.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-banner2_-3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-banner2_-300x180.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-banner2_-768x461.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-banner2_.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-brand_tigerlily_banner-150x150.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-brand_tigerlily_banner-300x75.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-brand_tigerlily_banner-340x260.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-brand_tigerlily_banner-600x300.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-brand_tigerlily_banner-768x192.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-brand_tigerlily_banner-800x300.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-brand_tigerlily_banner-96x96.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-brand_tigerlily_banner.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-deideo-1-150x150.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-deideo-1-180x180.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-deideo-1-192x192.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-deideo-1-270x270.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-deideo-1-300x300.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-deideo-1-32x32.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-deideo-1-340x260.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-deideo-1-512x450.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-deideo-1-96x96.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-deideo-1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-deideo-150x150.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-deideo-180x180.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-deideo-192x192.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-deideo-270x270.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-deideo-300x300.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-deideo-32x32.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-deideo-340x260.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-deideo-512x450.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-deideo-96x96.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-deideo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-o-FASHION-MODELS-facebook-150x150.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-o-FASHION-MODELS-facebook-300x75.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-o-FASHION-MODELS-facebook-340x260.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-o-FASHION-MODELS-facebook-600x375.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-o-FASHION-MODELS-facebook-768x192.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-o-FASHION-MODELS-facebook-800x375.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-o-FASHION-MODELS-facebook-96x96.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/cropped-o-FASHION-MODELS-facebook.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/deideo-1-150x81.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/deideo-1-96x81.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/deideo-1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/deideo-96x40.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/e0598998-db7a-3fad-b46d-9dc2d520aca1-150x150.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/e0598998-db7a-3fad-b46d-9dc2d520aca1-300x200.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/e0598998-db7a-3fad-b46d-9dc2d520aca1-768x512.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/e0598998-db7a-3fad-b46d-9dc2d520aca1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/e1f6212d-45b4-33fe-9860-6052ae02f7a8.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/food-300x168.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/food-400x350.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/lovely-sukalp-beauty-zone-kota-rajasthan-27xpg-1-150x150.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/lovely-sukalp-beauty-zone-kota-rajasthan-27xpg-1-300x196.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/lovely-sukalp-beauty-zone-kota-rajasthan-27xpg-1-340x260.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/lovely-sukalp-beauty-zone-kota-rajasthan-27xpg-1-600x450.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/lovely-sukalp-beauty-zone-kota-rajasthan-27xpg-1-96x96.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/lovely-sukalp-beauty-zone-kota-rajasthan-27xpg-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/lovely-sukalp-beauty-zone-kota-rajasthan-27xpg-300x196.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/o-FASHION-MODELS-facebook-300x150.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/o-FASHION-MODELS-facebook-800x520.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-206470-150x150.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-206470-340x260.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-206470-400x266.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-206470-450x426.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-206470-600x426.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-206470-96x96.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-206470.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-291762-150x150.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-291762-340x260.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-291762-400x266.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-291762-450x426.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-291762-600x426.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-291762-96x96.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-291762.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-336372-150x150.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-336372-340x260.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-336372-400x266.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-336372-450x426.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-336372-600x426.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-336372-96x96.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-336372.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-346744-150x150.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-346744-340x260.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-346744-400x173.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-346744-450x444.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-346744-600x444.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-346744-768x333.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-346744-800x444.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-346744-900x390.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-346744-96x96.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-346744.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-428338-1-150x150.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-428338-1-340x260.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-428338-1-400x267.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-428338-1-450x450.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-428338-1-600x450.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-428338-1-768x512.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-428338-1-800x520.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-428338-1-900x600.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-428338-1-96x96.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-428338-1.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-428338-150x150.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-428338-340x260.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-428338-400x267.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-428338-450x450.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-428338-600x450.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-428338-768x512.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-428338-800x520.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-428338-900x600.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-428338-96x96.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-428338.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-768975-150x150.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-768975-340x260.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-768975-400x262.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-768975-450x450.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-768975-600x450.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-768975-768x503.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-768975-800x520.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-768975-900x590.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-768975-96x96.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/pexels-photo-768975.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/primary_banner_gofitjo-300x86.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/primary_banner_gofitjo-600x450.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/primary_banner_gofitjo-800x520.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/tip-300x168.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/tip-400x350.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/03-04-18-BLOG-StPatricksDayMakeupLook-150x150.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2018/06/03-04-18-BLOG-StPatricksDayMakeupLook-150x150.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/03-04-18-BLOG-StPatricksDayMakeupLook-340x260.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2018/06/03-04-18-BLOG-StPatricksDayMakeupLook-340x260.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/03-04-18-BLOG-StPatricksDayMakeupLook-450x450.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2018/06/03-04-18-BLOG-StPatricksDayMakeupLook-450x450.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/03-04-18-BLOG-StPatricksDayMakeupLook-600x450.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2018/06/03-04-18-BLOG-StPatricksDayMakeupLook-600x450.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/03-04-18-BLOG-StPatricksDayMakeupLook-768x768.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2018/06/03-04-18-BLOG-StPatricksDayMakeupLook-768x768.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/03-04-18-BLOG-StPatricksDayMakeupLook-800x520.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2018/06/03-04-18-BLOG-StPatricksDayMakeupLook-800x520.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/03-04-18-BLOG-StPatricksDayMakeupLook-96x96.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2018/06/03-04-18-BLOG-StPatricksDayMakeupLook-96x96.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/03-04-18-BLOG-StPatricksDayMakeupLook.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2018/06/03-04-18-BLOG-StPatricksDayMakeupLook.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/787ac6f3-a9cd-35ed-8255-520da1e60af3-150x150.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2018/06/787ac6f3-a9cd-35ed-8255-520da1e60af3-150x150.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/787ac6f3-a9cd-35ed-8255-520da1e60af3-768x512.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2018/06/787ac6f3-a9cd-35ed-8255-520da1e60af3-768x512.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/Haircare-Not-Complicated-Website-Banner-Image-150x150.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2018/06/Haircare-Not-Complicated-Website-Banner-Image-150x150.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/Haircare-Not-Complicated-Website-Banner-Image-340x260.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2018/06/Haircare-Not-Complicated-Website-Banner-Image-340x260.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/Haircare-Not-Complicated-Website-Banner-Image-600x450.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2018/06/Haircare-Not-Complicated-Website-Banner-Image-600x450.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/Haircare-Not-Complicated-Website-Banner-Image-768x432.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2018/06/Haircare-Not-Complicated-Website-Banner-Image-768x432.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/Haircare-Not-Complicated-Website-Banner-Image-800x520.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2018/06/Haircare-Not-Complicated-Website-Banner-Image-800x520.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/Haircare-Not-Complicated-Website-Banner-Image-96x96.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2018/06/Haircare-Not-Complicated-Website-Banner-Image-96x96.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/SonamCollection_NomadTrench_Natural_ProductHero_1600x1600-1-150x150.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2018/06/SonamCollection_NomadTrench_Natural_ProductHero_1600x1600-1-150x150.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/SonamCollection_NomadTrench_Natural_ProductHero_1600x1600-1-340x260.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2018/06/SonamCollection_NomadTrench_Natural_ProductHero_1600x1600-1-340x260.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/SonamCollection_NomadTrench_Natural_ProductHero_1600x1600-1-768x288.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2018/06/SonamCollection_NomadTrench_Natural_ProductHero_1600x1600-1-768x288.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/SonamCollection_NomadTrench_Natural_ProductHero_1600x1600-1-96x96.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2018/06/SonamCollection_NomadTrench_Natural_ProductHero_1600x1600-1-96x96.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/SonamCollection_NomadTrench_Natural_ProductHero_1600x1600-150x150.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2018/06/SonamCollection_NomadTrench_Natural_ProductHero_1600x1600-150x150.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/SonamCollection_NomadTrench_Natural_ProductHero_1600x1600-340x260.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2018/06/SonamCollection_NomadTrench_Natural_ProductHero_1600x1600-340x260.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/SonamCollection_NomadTrench_Natural_ProductHero_1600x1600-768x288.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2018/06/SonamCollection_NomadTrench_Natural_ProductHero_1600x1600-768x288.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/SonamCollection_NomadTrench_Natural_ProductHero_1600x1600-96x96.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2018/06/SonamCollection_NomadTrench_Natural_ProductHero_1600x1600-96x96.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/banner2_-150x150.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2018/06/banner2_-150x150.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/banner2_-768x384.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2018/06/banner2_-768x384.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/brand_tigerlily_banner-150x150.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2018/06/brand_tigerlily_banner-150x150.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/brand_tigerlily_banner-96x96.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2018/06/brand_tigerlily_banner-96x96.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/deideo.png" afterPath="$PROJECT_DIR$/wp-content/uploads/2018/06/deideo.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/o-FASHION-MODELS-facebook-150x150.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2018/06/o-FASHION-MODELS-facebook-150x150.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/o-FASHION-MODELS-facebook-340x260.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2018/06/o-FASHION-MODELS-facebook-340x260.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/o-FASHION-MODELS-facebook-600x450.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2018/06/o-FASHION-MODELS-facebook-600x450.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/o-FASHION-MODELS-facebook-768x384.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2018/06/o-FASHION-MODELS-facebook-768x384.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/o-FASHION-MODELS-facebook-96x96.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2018/06/o-FASHION-MODELS-facebook-96x96.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/primary_banner_gofitjo-150x150.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2018/06/primary_banner_gofitjo-150x150.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/primary_banner_gofitjo-340x260.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2018/06/primary_banner_gofitjo-340x260.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/primary_banner_gofitjo-768x221.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2018/06/primary_banner_gofitjo-768x221.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/2018/06/primary_banner_gofitjo-96x96.jpg" afterPath="$PROJECT_DIR$/wp-content/uploads/2018/06/primary_banner_gofitjo-96x96.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/pashmina/author.php" afterPath="$PROJECT_DIR$/wp-content/themes/pashmina/author.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/pashmina/template-parts/content-single.php" afterPath="$PROJECT_DIR$/wp-content/themes/pashmina/template-parts/content-single.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/pashmina/js/custom.js" afterPath="$PROJECT_DIR$/wp-content/themes/pashmina/js/custom.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/pashmina/front-page.php" afterPath="$PROJECT_DIR$/wp-content/themes/pashmina/front-page.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/pashmina/header.php" afterPath="$PROJECT_DIR$/wp-content/themes/pashmina/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/pashmina/single.php" afterPath="$PROJECT_DIR$/wp-content/themes/pashmina/single.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/pashmina/style.css" afterPath="$PROJECT_DIR$/wp-content/themes/pashmina/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="deideo.iws" />
@@ -356,39 +30,21 @@
       <file leaf-file-name="author.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/pashmina/author.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="2175">
-              <caret line="37" column="35" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="735" max-vertical-offset="5355">
+              <caret line="49" column="35" selection-start-line="49" selection-start-column="35" selection-end-line="49" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="3five_cupp.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/plugins/custom-user-profile-photo/3five_cupp.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3246" max-vertical-offset="4605">
-              <caret line="244" column="76" selection-start-line="244" selection-start-column="60" selection-end-line="244" selection-end-column="76" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/pashmina/header.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="1380">
-              <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="start.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="start.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/pashmina/start.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="810" max-vertical-offset="3915">
-              <caret line="68" column="16" selection-start-line="68" selection-start-column="16" selection-end-line="68" selection-end-column="16" />
-              <folding />
+            <state vertical-scroll-proportion="0.06637168" vertical-offset="2070" max-vertical-offset="4905">
+              <caret line="141" column="22" selection-start-line="141" selection-start-column="22" selection-end-line="141" selection-end-column="22" />
+              <folding>
+                <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -406,8 +62,8 @@
       <file leaf-file-name="awesomeplugin.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/plugins/awesomeplugin/awesomeplugin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="265" max-vertical-offset="945">
-              <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="250" max-vertical-offset="915">
+              <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -416,8 +72,31 @@
       <file leaf-file-name="myuser.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/plugins/myuser/myuser.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="1380">
-              <caret line="24" column="47" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="47" />
+            <state vertical-scroll-proportion="21.125" vertical-offset="1347" max-vertical-offset="2025">
+              <caret line="65" column="21" selection-start-line="65" selection-start-column="8" selection-end-line="65" selection-end-column="21" />
+              <folding>
+                <element signature="e#6#204#0#PHP" expanded="false" />
+                <marker date="1530691334000" expanded="true" signature="916:1055" placeholder="select user_..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="search.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/pashmina/search.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="885">
+              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/pashmina/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="17895" max-vertical-offset="36840">
+              <caret line="1194" column="21" selection-start-line="1194" selection-start-column="21" selection-end-line="1194" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -435,7 +114,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cptui.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="cptui.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/plugins/custom-post-type-ui/js/cptui.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2730">
@@ -445,12 +124,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="general-template.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-includes/general-template.php">
+      <file leaf-file-name="front-page.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/pashmina/front-page.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="39809" max-vertical-offset="63930">
-              <caret line="2607" column="9" selection-start-line="2607" selection-start-column="9" selection-end-line="2607" selection-end-column="9" />
-              <folding />
+            <state vertical-scroll-proportion="-5.7058825" vertical-offset="519" max-vertical-offset="2865">
+              <caret line="54" column="15" selection-start-line="54" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+              <folding>
+                <element signature="e#841#945#0#HTML" expanded="true" />
+                <element signature="e#1932#2010#0#HTML" expanded="true" />
+                <element signature="e#2476#2567#0#HTML" expanded="true" />
+                <element signature="e#3223#3335#0#HTML" expanded="true" />
+                <element signature="e#3604#3757#0#HTML" expanded="true" />
+                <element signature="e#4049#4161#0#HTML" expanded="true" />
+                <element signature="e#4463#4566#0#HTML" expanded="true" />
+                <element signature="e#4819#4839#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -488,13 +176,14 @@
         <option value="$PROJECT_DIR$/wp-content/themes/pashmina/functions.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/pashmina/home.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/pashmina/header.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/pashmina/front-page.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/pashmina/js/custom.js" />
         <option value="$PROJECT_DIR$/wp-content/plugins/myuser/myuser.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/pashmina/style.css" />
-        <option value="$PROJECT_DIR$/wp-content/themes/pashmina/start.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/pashmina/author.php" />
         <option value="$PROJECT_DIR$/wp-content/plugins/posttypes/posttypes.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/pashmina/search.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/pashmina/style.css" />
+        <option value="$PROJECT_DIR$/wp-content/themes/pashmina/front-page.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/pashmina/start.php" />
       </list>
     </option>
   </component>
@@ -529,6 +218,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -575,6 +265,46 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="deideo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="deideo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pashmina" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="deideo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="deideo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="plugins" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -597,18 +327,17 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="posttypes" />
+              <option name="myItemId" value="myuser" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="style.css&#9;FILE&#9;file:///private/var/www/html/p/deideo/wp-content/themes/pashmina/style.css" />
+    <property name="SearchEverywhereHistoryKey" value="front&#9;FILE&#9;file:///private/var/www/html/p/deideo/wp-content/themes/pashmina/front-page.php&#10;style.c&#9;FILE&#9;file:///private/var/www/html/p/deideo/wp-content/themes/pashmina/style.css&#10;style.css&#9;FILE&#9;file:///private/var/www/html/p/deideo/wp-content/themes/pashmina/style.css" />
     <property name="LayoutCode.rearrangeEntriesPHP" value="false" />
   </component>
   <component name="RecentsManager">
@@ -633,9 +362,6 @@
       <BehatRunner />
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
@@ -645,9 +371,15 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
     <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="161fd73e-5ff3-4d9f-bc73-f39ac165eeef" name="Default" comment="" />
@@ -658,7 +390,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="6" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -667,19 +399,19 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2819063" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28594506" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -791,13 +523,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="1110">
           <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/pashmina/search.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="885">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -934,13 +659,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/pashmina/front-page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.8684211" vertical-offset="2250" max-vertical-offset="2820">
-          <caret line="117" column="90" selection-start-line="117" selection-start-column="90" selection-end-line="117" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/pashmina/front-page_bk.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3870">
@@ -969,7 +687,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.36491227" vertical-offset="59447" max-vertical-offset="62820">
           <caret line="3982" column="37" selection-start-line="3982" selection-start-column="27" selection-end-line="3982" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -980,19 +697,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/pashmina/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="17385" max-vertical-offset="28365">
-          <caret line="1186" column="40" selection-start-line="1186" selection-start-column="40" selection-end-line="1186" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-includes/author-template.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-16.291666" vertical-offset="1919" max-vertical-offset="8100">
           <caret line="163" column="60" selection-start-line="163" selection-start-column="52" selection-end-line="163" selection-end-column="60" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1006,8 +714,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/pashmina/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="1380">
-          <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="1500">
+          <caret line="27" column="11" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
           <folding />
         </state>
       </provider>
@@ -1028,34 +736,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/pashmina/start.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="810" max-vertical-offset="3915">
-          <caret line="68" column="16" selection-start-line="68" selection-start-column="16" selection-end-line="68" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/pashmina/author.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="2175">
-          <caret line="37" column="35" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="735" max-vertical-offset="5355">
+          <caret line="49" column="35" selection-start-line="49" selection-start-column="35" selection-end-line="49" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/plugins/awesomeplugin/awesomeplugin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="265" max-vertical-offset="945">
-          <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/myuser/myuser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="1380">
-          <caret line="24" column="47" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="47" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="250" max-vertical-offset="915">
+          <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -1075,6 +767,60 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2730">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/pashmina/search.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="885">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/pashmina/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="17895" max-vertical-offset="36840">
+          <caret line="1194" column="21" selection-start-line="1194" selection-start-column="21" selection-end-line="1194" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/pashmina/front-page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.7058825" vertical-offset="519" max-vertical-offset="2865">
+          <caret line="54" column="15" selection-start-line="54" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding>
+            <element signature="e#841#945#0#HTML" expanded="true" />
+            <element signature="e#1932#2010#0#HTML" expanded="true" />
+            <element signature="e#2476#2567#0#HTML" expanded="true" />
+            <element signature="e#3223#3335#0#HTML" expanded="true" />
+            <element signature="e#3604#3757#0#HTML" expanded="true" />
+            <element signature="e#4049#4161#0#HTML" expanded="true" />
+            <element signature="e#4463#4566#0#HTML" expanded="true" />
+            <element signature="e#4819#4839#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/myuser/myuser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="21.125" vertical-offset="1347" max-vertical-offset="2025">
+          <caret line="65" column="21" selection-start-line="65" selection-start-column="8" selection-end-line="65" selection-end-column="21" />
+          <folding>
+            <element signature="e#6#204#0#PHP" expanded="false" />
+            <marker date="1530691334000" expanded="true" signature="916:1055" placeholder="select user_..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/pashmina/start.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.06637168" vertical-offset="2070" max-vertical-offset="4905">
+          <caret line="141" column="22" selection-start-line="141" selection-start-column="22" selection-end-line="141" selection-end-column="22" />
+          <folding>
+            <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
