@@ -20,7 +20,7 @@ if(!session_id()) {
 function gloatme_header_metadata() {
 
   $data['title'] = 'Cosmetic Product listing';
-  
+  $data['url'] = "http://www.gloat.me/product/";
   $data['image'] = "http://www.gloat.me/wp-content/uploads/2018/07/gloatmeproducts.png";
   $data['width'] = 600;
   $data['height'] = 600;

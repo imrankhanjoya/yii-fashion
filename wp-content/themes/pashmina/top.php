@@ -23,6 +23,7 @@ if(!session_id()) {
 function gloatme_header_metadata() {
 
   $data['title'] = "Collection of top and trending products.";
+  $data['url'] = "http://www.gloat.me/top-cosmetic-products/";
   $data['image'] = "http://www.gloat.me/wp-content/uploads/2018/07/GloatMetop.png";
   $data['width'] = 2288;
   $data['height'] = 1002;

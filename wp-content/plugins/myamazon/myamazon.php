@@ -39,6 +39,7 @@ function add_loginout_link( $items, $args ) {
 function generateMeta($data){
     $out = '<meta property="og:site_name" content="Gloat.Me fashion and style"/>';
     $out .= "\n";
+    $out .= '<meta property="fb:app_id" content="135773309784309" />';$out .= "\n";
     $out .= '<meta property="og:locale" content="en_US" />';$out .= "\n";
     $out .= '<meta property="og:type" content="article" />';$out .= "\n";
     $out .= '<meta property="article:publisher" content="https://www.facebook.com/gloatme" />';$out .= "\n";
