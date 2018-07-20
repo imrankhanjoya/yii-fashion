@@ -28,7 +28,7 @@ $brands = array(
 "revlon"=>array("title"=>"Revlon","logo"=>"/2018/07/Revlon_logo-copy.png")
 );
 
-$eyeColor = array("White","Dark","Orange");
+$eyeColor = array("Black","Brown","Green","Amber","Hazel","Gray","Golden");
 $DressSize = array("0","2","4","6","8","10","12","14");
 $topSize = array("xs","s","m","l","xl","xxl");
 
