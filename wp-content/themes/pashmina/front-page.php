@@ -16,6 +16,8 @@ function gloatme_header_metadata() {
 
   $data['title'] = 'Gloat Me Join the Movement Of Beauty Tips';
   $data['image'] = 'http://www.gloat.me/wp-content/uploads/2018/07/fb_meta.png';
+  $data['width'] = 750;
+  $data['height'] = 752;
   $data['description'] ="Welcome to the beauty tips and collection of best cosmetics. Get solutions to all your Beauty queries and stay up-to on the latest Beauty Trends. It's platform where we make opinion collectively on the bases of your reviews and favorite products";  
   echo generateMeta($data);  
         

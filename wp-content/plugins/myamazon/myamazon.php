@@ -60,8 +60,10 @@ function generateMeta($data){
     }
     if(isset($data['image'])){
         $out .= '<meta property="og:image" content="'.$data['image'].'" />';$out .= "\n";
-        $out .= '<meta property="og:image:width" content="1200" />';$out .= "\n";
-        $out .= '<meta property="og:image:height" content="630" />';$out .= "\n";
+        if(isset($data['width']))
+        $out .= '<meta property="og:image:width" content="'.$data['width'].'" />';$out .= "\n";
+        if(isset($data['height']))
+        $out .= '<meta property="og:image:height" content="'.$data['height'].'" />';$out .= "\n";
         $out .= '<meta itemprop="image" content="'.$data['image'].'" />';$out .= "\n";
         $out .= '<meta name="twitter:image" content="'.$data['image'].'" /><meta name="twitter:card" content="summary_large_image" />';$out .= "\n";        
     }
