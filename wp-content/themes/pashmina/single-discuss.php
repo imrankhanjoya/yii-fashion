@@ -6,6 +6,14 @@
  *
  * @package Pashmina
  */
+function gloatme_header_metadata() {
+
+  $data['title'] = get_the_title();
+  $data['description'] = "Find the reviews and comments for topic: ".get_the_title();  
+  echo generateMeta($data);  
+        
+}
+add_action( 'wp_head', 'gloatme_header_metadata',0);
 
 get_header(); ?>
 	<div class="container">

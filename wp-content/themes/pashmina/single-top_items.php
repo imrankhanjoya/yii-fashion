@@ -1,13 +1,20 @@
 <?php
-   /**
-    * The template for displaying all single posts.
-    *
-    * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
-    *
-    * @package Pashmina
-    */
+/**
+* The template for displaying all single posts.
+*
+* @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
+*
+* @package Pashmina
+*/
    
-   get_header(); 
+function gloatme_header_metadata() {
+  $data['title'] = get_the_title();
+  $data['description'] = get_the_excerpt();  
+  echo generateMeta($data);          
+}
+add_action( 'wp_head', 'gloatme_header_metadata',0);
+
+get_header(); 
    
 $post = get_post();
 $url = get_permalink();

@@ -7,7 +7,21 @@
  * @package Pashmina
  */
 
-get_header(); ?>
+
+function gloatme_header_metadata() {
+
+  $data['title'] = get_the_title();
+  $data['description'] = "'.get_the_title().' related reviews and comments with where to buy option.";  
+  echo generateMeta($data);  
+        
+}
+add_action( 'wp_head', 'gloatme_header_metadata',0);
+
+
+get_header(); 
+
+
+?>
 	<div class="container product_one">
 		<div class="row">
 			<div class="col-lg-8 col-md-8">

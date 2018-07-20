@@ -7,10 +7,13 @@
     * @package Pashmina
     */
    
+
+
    get_header(); 
    
 $post = get_post();
 ?>
+TOP SINGLE PRODUCT
 <div class="col-md-12" style="padding: 0px;" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
    <div class="should-banner" style="background-image: url(<?= get_the_post_thumbnail_url(get_the_ID())?>);">
       <div class="should-ttl">

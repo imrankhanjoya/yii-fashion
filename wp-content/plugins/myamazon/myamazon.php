@@ -35,3 +35,14 @@ function add_loginout_link( $items, $args ) {
     return $items;
 }
 
+
+function generateMeta($data){
+    $out = '';
+    if(isset($data['title'])){
+        $out .= '<title>'.$data['title'].'</title>';
+    }
+    if(isset($data['description'])){
+        $out .= '<meta name="description" content="'.$data['description'].'" />';
+    }
+    return $out;
+}

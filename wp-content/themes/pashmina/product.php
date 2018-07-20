@@ -15,6 +15,18 @@ if(!session_id()) {
  *
  * @package Pashmina
  */
+
+
+function gloatme_header_metadata() {
+
+  $data['title'] = 'Cosmetic Product listing';
+  $data['description'] ="Listing of best cosmetic products on the bases of seller ranking and comments.";  
+  echo generateMeta($data);  
+        
+}
+add_action( 'wp_head', 'gloatme_header_metadata',0);
+
+
 $user = wp_get_current_user();
 
 
