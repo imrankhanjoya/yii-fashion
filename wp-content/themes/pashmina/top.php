@@ -23,6 +23,9 @@ if(!session_id()) {
 function gloatme_header_metadata() {
 
   $data['title'] = "Collection of top and trending products.";
+  $data['image'] = "http://www.gloat.me/wp-content/uploads/2018/07/GloatMetop.png";
+  $data['width'] = 2288;
+  $data['height'] = 1002;
   $data['description'] = "Tops cosmetic collection grouped by occasion and best combination. We have collected on the bases of user review and ratting";  
   echo generateMeta($data);  
         
