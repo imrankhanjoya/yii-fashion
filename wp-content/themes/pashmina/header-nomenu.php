@@ -55,7 +55,7 @@ $showHeader = true;
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
-					<div class="dt-logo">
+					<div style="text-align: center; padding:10px">
 
                         <?php
 
