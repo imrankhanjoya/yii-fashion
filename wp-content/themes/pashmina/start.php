@@ -291,8 +291,9 @@ get_header('nomenu');
                             </div>
                         <?PHP endforeach;?>
                         <div class="clearfix"></div>
-                        <input type="submit" value="Love these brands">
-
+                        <div class="col-md-offset-5 col-md-2 col-xs-4">
+                        <input class="showloader" type="submit" value="Love these brands">
+                        </div>
                     </form>
             <?PHP endif;?>
 
