@@ -15,6 +15,7 @@
 function gloatme_header_metadata() {
 
   $data['title'] = 'Gloat Me Join the Movement Of Beauty Tips';
+  $data['url'] = 'http://www.gloat.me/';
   $data['image'] = 'http://www.gloat.me/wp-content/uploads/2018/07/fb_meta.png';
   $data['width'] = 750;
   $data['height'] = 752;

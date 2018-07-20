@@ -20,6 +20,7 @@ function gloatme_header_metadata() {
 
   
   $data['title'] = "Discussion related to beauty";
+  $data['url'] = "http://www.gloat.me/discuss-beauty-tips/";
   $data['image'] = "http://www.gloat.me/wp-content/uploads/2018/07/gloatmediscuss.png";
   $data['width'] = 964;
   $data['height'] = 720;
