@@ -190,12 +190,12 @@ get_header('nomenu');
             </div>
             <?php foreach($skinColor as $key=>$color):?>
             <?PHP $class = $key == $attrib[0]?"btn-active":"" ?>
-            <div class="form-group col-md-3 col-xs-4 site-form" style="background-image:url(<?=$color['img']?>); background-position:center; background-size: cover;">
-
             <?php $url = add_query_arg(array('key' => 'skin','val' =>$key),get_page_link($pageID->ID));?>
-            <a class="btn a-btn-knowmore <?=$class?>" href="<?=$url?>"><?=$key?></a>
-
-            </div>
+            <a class="showloader" href="<?=$url?>" >
+                <div class="hovereffect form-group col-md-3 col-xs-4 site-form" style="background-image:url(<?=$color['img']?>); background-position:center; background-size: cover;">
+                <span class="btn a-btn-knowmore <?=$class?>"><?=$key?></span>
+                </div>
+            </a>
             <?PHP endforeach;?>
             <div class="clear"></div>
             <?PHP endif;?>
@@ -209,10 +209,13 @@ get_header('nomenu');
             </div>
             <?php foreach($skinType as $type):?>
             <?PHP $class = $type == $attrib[0]?"btn-active":"" ?>
-            <div class="form-group col-md-3 col-xs-6 site-form">
             <?php $url = add_query_arg(array('key' => 'skinType','val' =>$type),get_page_link($pageID->ID));?>
-            <a class="btn a-btn-knowmore <?=$class?>" href="<?=$url?>"><?=$type?></a>
+            <a class="showloader" href="<?=$url?>">
+            <div class="hovereffect form-group col-md-3 col-xs-6 site-form btn a-btn-knowmore <?=$class?>">
+            
+            <?=$type?>
             </div>
+            </a>
             <?PHP endforeach;?>
             <div class="clear"></div>
             <?PHP endif;?>
@@ -226,10 +229,13 @@ get_header('nomenu');
             <form class="form-inline" name="myForm" method="POST" action="../process.php">
             <?php foreach($eyeColor as $color):?>
             <?PHP $class = $color == $attrib[0]?"btn-active":"" ?>
-            <div class="form-group col-md-3 col-xs-6 site-form">
             <?php $url = add_query_arg(array('key' => 'eye','val' =>$color),get_page_link($pageID->ID));?>
-            <a class="btn a-btn-knowmore <?=$class?>" href="<?=$url?>"><?=$color?></a>
+            <a class="showloader" href="<?=$url?>">
+            <div class="hovereffect form-group col-md-3 col-xs-6 site-form btn a-btn-knowmore <?=$class?>">
+            
+            <span><?=$color?></span>
             </div>
+            </a>
             <?PHP endforeach;?>
             <div class="clear"></div>
             </form>
@@ -244,7 +250,7 @@ get_header('nomenu');
                 <?PHP $class = $dress == $attrib[0]?"btn-active":"" ?>
                 <div class="col-md-3 col-xs-4 site-form text-center <?=$class?> chociebox" >
                 <?php $url = add_query_arg(array('key' => 'dress','val' =>$dress),get_page_link($pageID->ID));?>
-                 <a   href="<?=$url?>"><?=$dress?></a>
+                 <a   class="showloader" href="<?=$url?>"><?=$dress?></a>
                 </div>
                 <?PHP endforeach;?>
                 <div class="clear"></div>
@@ -260,7 +266,7 @@ get_header('nomenu');
                     <?PHP $class = $top == $attrib[0]?"btn-active":"" ?>
                     <div class="col-md-3 col-xs-4 site-form chociebox <?=$class?>">
                     <?php $url = add_query_arg(array('key' => 'top','val' =>$top),get_page_link($pageID->ID));?>
-                    <a  href="<?=$url?>"><?=$top?></a>
+                    <a class="showloader" href="<?=$url?>"><?=$top?></a>
                     </div>
                 <?PHP endforeach;?>
             <div class="clear"></div>
@@ -305,7 +311,7 @@ get_header('nomenu');
                     
                         
                         <div class="col-lg-3 col-md-offset-2 text-center">
-                            <div style="width: 100%; position: relative;">
+                            <div style="width: 100%; min-height: 200px; position: relative;">
                             <img id="userimage" 
                             ld="<?=get_template_directory_uri();?>/images/loading.svg" 
                             src="<?=$meta['cupp_upload_meta'][0]?>" 
@@ -428,11 +434,20 @@ jQuery(document).ready(function(){
 
         });
 
+
     });
+
+    jQuery(".showloader").click(function() {
+      jQuery('.loader').show();
+    });
+
 
 });
 
 </script>
+<div class="loader">
+    <img src="<?=get_template_directory_uri();?>/images/loading.svg">
+</div>
 <?php
 get_footer();
 ?>
