@@ -37,12 +37,33 @@ function add_loginout_link( $items, $args ) {
 
 
 function generateMeta($data){
-    $out = '';
+    $out = '<meta property="og:site_name" content="Gloat.Me fashion and style"/>';
+    $out .= "\n";
+    $out .= '<meta property="og:locale" content="en_US" />';$out .= "\n";
+    $out .= '<meta property="og:type" content="article" />';$out .= "\n";
+    $out .= '<meta property="article:publisher" content="https://www.facebook.com/gloatme" />';$out .= "\n";
     if(isset($data['title'])){
-        $out .= '<title>'.$data['title'].'</title>';
+        $out .= '<title>'.$data['title'].'</title>';$out .= "\n";
+        $out .= '<meta itemprop="name" content="'.$data['title'].'" />';$out .= "\n";
+        $out .= '<meta name="twitter:title" content="'.$data['title'].'" />';$out .= "\n";
+        $out .= '<meta property="og:title" content="'.$data['title'].'" />';$out .= "\n";
     }
     if(isset($data['description'])){
-        $out .= '<meta name="description" content="'.$data['description'].'" />';
+        $out .= '<meta property="description" content="'.$data['description'].'" />';$out .= "\n";
+        $out .= '<meta property="og:description" content="'.$data['description'].'" />';$out .= "\n";
+        $out .= '<meta itemprop="description" content="'.$data['description'].'" />';$out .= "\n";
+        $out .= '<meta name="twitter:description" content="'.$data['description'].'" />';$out .= "\n";
+    }
+    if(isset($data['url'])){
+        $out .= '<meta name="twitter:url" content="'.$data['url'].'" />';$out .= "\n";
+        $out .= '<meta property="og:url" content="'.$data['url'].'" />';$out .= "\n";
+    }
+    if(isset($data['image'])){
+        $out .= '<meta property="og:image" content="'.$data['image'].'" />';$out .= "\n";
+        $out .= '<meta property="og:image:width" content="1200" />';$out .= "\n";
+        $out .= '<meta property="og:image:height" content="630" />';$out .= "\n";
+        $out .= '<meta itemprop="image" content="'.$data['image'].'" />';$out .= "\n";
+        $out .= '<meta name="twitter:image" content="'.$data['image'].'" /><meta name="twitter:card" content="summary_large_image" />';$out .= "\n";        
     }
     return $out;
 }
