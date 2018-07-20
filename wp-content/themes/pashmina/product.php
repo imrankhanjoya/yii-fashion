@@ -20,6 +20,10 @@ if(!session_id()) {
 function gloatme_header_metadata() {
 
   $data['title'] = 'Cosmetic Product listing';
+  
+  $data['image'] = "http://www.gloat.me/wp-content/uploads/2018/07/gloatmeproducts.png";
+  $data['width'] = 600;
+  $data['height'] = 600;
   $data['description'] ="Listing of best cosmetic products on the bases of seller ranking and comments.";  
   echo generateMeta($data);  
         
