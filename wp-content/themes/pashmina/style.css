@@ -847,7 +847,9 @@ td {
 	border-radius: 20%;
 	text-align: center;
 }
-
+.userframe{
+	width: 100%; min-height: 200px; position: relative;
+}
 /*--------------------------------------------------------------
 # Home Page Featured Posts
 --------------------------------------------------------------*/
@@ -1942,7 +1944,7 @@ button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type=
 }
 img.check{
     opacity: 0.5;
-    background-color: #8a6d3b;
+    border:2px solid #8a6d3b
 }
 /*--------------------------------------------------------------
 # Product
@@ -2579,6 +2581,18 @@ margin-bottom: 0;
 	.active > div { display:block; }
 	.active > div:first-child { display:block; }
 
+	
+	.a-btn-knowmore{
+		font-size:20px;
+		padding:35px;
+	}
+	.site-form .a-btn-knowmore{
+		padding: 5px;
+	}
+	.userframe{
+		max-height: 150px;
+		overflow: hidden;
+	}
 }
 @media (min-width: 767px) and (max-width: 992px ) {
 	.carsl-run.carousel-inner .active.left { left: -50%; }

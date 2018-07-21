@@ -200,7 +200,7 @@ get_header('nomenu');
                         <?php foreach($skinColor as $key=>$color):?>
                         <?PHP $class = $key == $meta['skin'][0]?"btn-active":"" ?>
                         <?php $url = add_query_arg(array('key' => 'skin','val' =>$key),get_page_link($pageID->ID));?>
-                        <div key="skin" val="<?=$key?>" class="save_personal hovereffect form-group col-md-3 col-xs-12 site-form" style="background-image:url(<?=$color['img']?>); background-position:center; background-size: cover;">
+                        <div key="skin" val="<?=$key?>" class="save_personal hovereffect form-group col-md-3 col-xs-6 site-form " style="background-image:url(<?=$color['img']?>); background-position:center; background-size: cover;">
                         <span class="btn a-btn-knowmore <?=$class?>"><?=$key?></span>
                         </div>
                         
@@ -222,7 +222,7 @@ get_header('nomenu');
                     <?php foreach($skinType as $type):?>
                     <?PHP $class = $type == $meta['skinType'][0]?"btn-active":"" ?>
                     <?php $url = add_query_arg(array('key' => 'skinType','val' =>$type),get_page_link($pageID->ID));?>
-                    <div key="skinType" val="<?=$type?>" class="save_personal hovereffect form-group col-md-3 col-xs-6 site-form btn a-btn-knowmore <?=$class?>">
+                    <div key="skinType" val="<?=$type?>" class="save_personal hovereffect form-group col-md-3 col-xs-6 btn a-btn-knowmore site-form <?=$class?>">
 
                     <?=$type?>
                     </div>
@@ -348,7 +348,7 @@ get_header('nomenu');
                     
                         
                         <div class="col-lg-3 col-md-offset-2 text-center">
-                            <div style="width: 100%; min-height: 200px; position: relative;">
+                            <div class="userframe" >
                             <img id="userimage" 
                             ld="<?=get_template_directory_uri();?>/images/loading.svg" 
                             src="<?=$meta['cupp_upload_meta'][0]?>" 
