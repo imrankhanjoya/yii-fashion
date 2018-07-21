@@ -193,14 +193,14 @@ get_header('nomenu');
                     
                     <!--SKIN COLOR -->
 
-                        <div class="col-md-12 text-center ">
+                        <div class="col-md-12 col-xs-12 text-center ">
                         <h1>Whats your skin color!</h1>
                         <p>you can change this anytime in your profile.</p>
                         </div>
                         <?php foreach($skinColor as $key=>$color):?>
                         <?PHP $class = $key == $meta['skin'][0]?"btn-active":"" ?>
                         <?php $url = add_query_arg(array('key' => 'skin','val' =>$key),get_page_link($pageID->ID));?>
-                        <div key="skin" val="<?=$key?>" class="save_personal hovereffect form-group col-md-3 col-xs-4 site-form" style="background-image:url(<?=$color['img']?>); background-position:center; background-size: cover;">
+                        <div key="skin" val="<?=$key?>" class="save_personal hovereffect form-group col-md-3 col-xs-12 site-form" style="background-image:url(<?=$color['img']?>); background-position:center; background-size: cover;">
                         <span class="btn a-btn-knowmore <?=$class?>"><?=$key?></span>
                         </div>
                         
