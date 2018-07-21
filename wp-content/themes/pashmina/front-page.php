@@ -42,7 +42,8 @@ $starPage = get_page_link($val->ID);
             $dt_featured_posts = new WP_Query($args);
             while ($dt_featured_posts->have_posts()) : $dt_featured_posts->the_post(); 
                 ?>
-            <div class="container" style="width:100%; height:300px; background-image: url(<?= get_the_post_thumbnail_url(get_the_ID())?>);">
+            <div class="container" style="width:100%; height:300px; background-image: url(<?= get_the_post_thumbnail_url(get_the_ID())?>); background-position: center;
+    background-size: cover;">
                 <div class="row" >
                     <div class="col-lg-12" >
                         <a class="top-contest-banners"   href="<?php esc_url( the_permalink() ); ?>">
