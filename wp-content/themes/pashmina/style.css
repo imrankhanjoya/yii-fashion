@@ -2576,7 +2576,7 @@ margin-bottom: 0;
 	.carsl-run.carousel-inner .active.left { left: -100%; }
 	.carsl-run.carousel-inner .next        { left:  100%; }
 	.carsl-run.carousel-inner .prev		 { left: -100%; }
-	.active > div { display:none; }
+	.active > div { display:block; }
 	.active > div:first-child { display:block; }
 
 }
