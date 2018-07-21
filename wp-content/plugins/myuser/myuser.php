@@ -56,7 +56,9 @@ function saveUser($response,$token){
         wp_redirect($url);
     }else{
 
-    
+        if($userData['email']==''){
+            $userData['email'] = rand(100,3000).time()."@dummy.com";
+        }
         $UserId = wp_create_user($userData['username'],base64_encode(rand(100,3000)),$userData['email']);
         if($UserId){
             add_user_meta($UserId,'gender',$userData['gender'],false); 
