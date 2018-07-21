@@ -6,7 +6,29 @@
     *
     * @package Pashmina
     */
-   
+
+$author = get_user_by( 'slug', get_query_var( 'author_name' ) );
+$user_id = $author->ID;
+$userdata = get_userdata( $user_id );
+$usermeta = get_user_meta($user_id);
+$img = $usermeta['cupp_upload_meta'][0];
+
+
+
+function gloatme_header_metadata() {
+
+  $data['title'] = 'Its me '.get_query_var( 'author_name' )." at Gloat.Me";
+  $data['url'] = "http://www.gloat.me/its/".get_query_var( 'author_name' );
+  $data['image'] = $img;
+  $data['description'] = "Gloat.Me fan for its beauty tips.".$usermeta['description'][0];  
+  echo generateMeta($data);  
+        
+}
+add_action( 'wp_head', 'gloatme_header_metadata',0);
+
+
+
+
    get_header(); 
 
 ?>
@@ -14,13 +36,7 @@
 <?PHP
    $current_user = wp_get_current_user();
 
-   $author = get_user_by( 'slug', get_query_var( 'author_name' ) );
-   $user_id = $author->ID;
-
-   $userdata = get_userdata( $user_id );
-   $usermeta = get_user_meta($user_id);
    
-   $img = $usermeta['cupp_upload_meta'][0];
    if($_GET['debug']){
       print_r($current_user);
    }
