@@ -125,71 +125,7 @@ $custom_query = new WP_Query($args);
         </div>
     </div>
 
-<!-- 6/7/2018 -->
-<div class="container">
-   <div class="row">
-    
-     <div class="col-lg-3 col-sm-12 col-md-3 col-xs-12">
-     <div class="panel panel-body"  style="background-color: #fde8e7;">
-     <h3><strong>Welcome love!</strong></h3>
-     <p class="small">
-    We built Favful so that together we could provide transparency and empowerment in beauty for each other.  Here your insights and contributions on beauty products will mean everything to someone else’s next purchase.
-     </p>
-     <p class="small">Here we show you support and love with beauty sponsors, giveaways, community deals and honest stories.</p>
-     <p class="small">Let’s have fun! XO.</p>
-    </div>
 
-     <h3>Latest Reviews</h3>
-
-
-      <div class="table-bordered panel-body media">
-           <span class="text-muted small"><b>Unique and it works!</b></span>
-           <p class="text-muted small">I was rather skeptical when I first received the soap from a friend who got it from Korea...</p>
-            <i class="fa fa-clock-o commnt-time-dtl"><span class=""> 1 day ago</span></i>
-      </div>
-      <div class="media panel-group">
-      <div class="col-lg-2 col-sm-2 col-md-2 col-xs-2 all-div-padding0">
-      <img class="img-responsive img-circle" src="http://d1acy2vp0zxghs.cloudfront.net/users/avatars/000/023/249/original/ps.jpg?1528530815">
-      </div>
-      <div class="col-lg-10 col-sm-10 col-md-10 col-xs-10">
-      <p class="commnt-time-dtl small">By <b>Emily</b><br>
-     Combination skin, Olive, 25-35</p>
-     </div>
-    </div>
-
-
-      <div class="table-bordered panel-body media">
-        <span class="text-muted small"><b>Unique and it works!</b></span>
-      <p class="text-muted small">I was rather skeptical when I first received the soap from a friend who got it from Korea...</p>
-      <i class="fa fa-clock-o commnt-time-dtl"><span class=""> 1 day ago</span></i>
-      </div>
-      <div class="media panel-group">
-      <div class="col-lg-2 col-sm-2 col-md-2 col-xs-2 all-div-padding0">
-      <img class="img-responsive img-circle" src="http://d1acy2vp0zxghs.cloudfront.net/users/avatars/000/023/249/original/ps.jpg?1528530815">
-      </div>
-      <div class="col-lg-10 col-sm-10 col-md-10 col-xs-10">
-      <p class="commnt-time-dtl small">By <b>Emily</b><br>
-     Combination skin, Olive, 25-35</p>
-     </div>
-    </div>
-
-
-      <div class="table-bordered panel-body media">
-           <span class="text-muted small"><b>Unique and it works!</b></span>
-           <p class="text-muted small">I was rather skeptical when I first received the soap from a friend who got it from Korea...</p>
-            <i class="fa fa-clock-o commnt-time-dtl"><span class=""> 1 day ago</span></i>
-      </div>
-      <div class="media panel-group">
-      <div class="col-lg-2 col-sm-2 col-md-2 col-xs-2 all-div-padding0">
-      <img class="img-responsive img-circle" src="http://d1acy2vp0zxghs.cloudfront.net/users/avatars/000/023/249/original/ps.jpg?1528530815">
-      </div>
-      <div class="col-lg-10 col-sm-10 col-md-10 col-xs-10">
-      <p class="commnt-time-dtl small">By <b>Emily</b><br>
-     Combination skin, Olive, 25-35</p>
-     </div>
-    </div>
-   </div>
-  </div>
 </div>
 
 <?php
