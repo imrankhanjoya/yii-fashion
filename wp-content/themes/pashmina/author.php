@@ -11,16 +11,20 @@ $author = get_user_by( 'slug', get_query_var( 'author_name' ) );
 $user_id = $author->ID;
 $userdata = get_userdata( $user_id );
 $usermeta = get_user_meta($user_id);
+global $img;
+global $desc;
+$desc = $usermeta['description'][0];
 $img = $usermeta['cupp_upload_meta'][0];
 
 
 
 function gloatme_header_metadata() {
-
+   global $img;
+   global $desc;
   $data['title'] = 'Its me '.get_query_var( 'author_name' )." at Gloat.Me";
   $data['url'] = "http://www.gloat.me/its/".get_query_var( 'author_name' );
   $data['image'] = $img;
-  $data['description'] = "Gloat.Me fan for its beauty tips.".$usermeta['description'][0];  
+  $data['description'] = "Gloat.Me fan for its beauty tips. ".$desc;  
   echo generateMeta($data);  
         
 }
