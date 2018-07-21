@@ -184,7 +184,7 @@ get_header('nomenu');
 
             <?PHP if($show=='personal'):?>
             
-            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
               
 
               <!-- Wrapper for slides -->
@@ -317,12 +317,8 @@ get_header('nomenu');
                 </div>
               </div>
 
-                <!-- Left and right controls -->
                 
-                <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right"></span>
-                <span class="sr-only">Next</span>
-                </a>
+                
               
               
             </div>
@@ -360,29 +356,7 @@ get_header('nomenu');
                             style="width:100%;">
                             <span id="upfile" class="glyphicon glyphicon-camera"  style="color:#fff;cursor: pointer; position: absolute; top:20px; left:10px; text-shadow: 1px 1px 5px #ccc">Change</span>
                             </div>
-                            <table class="table">
-                                 </tr>
-                            <tr>
-                            <td>Skin Type:</td>
-                            <td><a href="/get-start/?show=skinType"><?=$meta['skinType'][0]?></a></td>
-                            </tr>
-                            <tr>
-                            <td>Skin Color:</td>
-                            <td><a href="/get-start/?show=skin"><?=$meta['skin'][0]?></a></td>
-                            </tr>
-                            <tr>
-                            <td>Eye:</td>
-                            <td><a href="/get-start/?show=eye"><?=$meta['eye'][0]?></a></td>
-                            </tr>
-                            <tr>
-                            <td>Dress Size:</td>
-                            <td><a href="/get-start/?show=dress"><?=$meta['dress'][0]?></a></td>
-                            </tr>
-                            <tr>
-                            <td>Top Size:</td>
-                            <td><a href="/get-start/?show=top"><?=$meta['top'][0]?></a></td>
-                            </tr>
-                            </table>
+                            
                         </div>
 
                         <div class="col-lg-6">
@@ -428,7 +402,25 @@ get_header('nomenu');
                              </form>
                         </div>
                     
-                    
+                        <div class="col-lg-9 col-md-offset-2 text-center" style="margin-top:50px">
+                        <table class="table">
+                        <tr>
+                        <td>Skin Type:</td>
+                        <td>Skin Color:</td>
+                        <td>Eye:</td>
+                        <td>Dress Size:</td>
+                        <td>Top Size:</td>
+                        </tr>
+                        <tr>
+                        <td><a href="/get-start/?show=personal"><?=$meta['skinType'][0]?></a></td>
+                        <td><a href="/get-start/?show=personal"><?=$meta['skin'][0]?></a></td>
+                        <td><a href="/get-start/?show=personal"><?=$meta['eye'][0]?></a></td>
+                        <td><a href="/get-start/?show=personal"><?=$meta['dress'][0]?></a></td>
+                        <td><a href="/get-start/?show=personal"><?=$meta['top'][0]?></a></td>
+                        </tr>
+                        </table>
+                        </div>
+                
               
                  </div>
               </div>
@@ -449,7 +441,6 @@ jQuery(document).ready(function(){
 
     jQuery("#upfile").click(function(){
         $( "#upfilefield" ).trigger( "click" );
-
     });
     jQuery('input[type=file]').change(function(){
 

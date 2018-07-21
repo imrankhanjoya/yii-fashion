@@ -11,12 +11,13 @@ get_header('nomenu');
 
 $post_ID = get_the_ID();
 $post = get_post();  
-
+$userID = 23;
 ?>
+<?php if(isset($_GET['startit']) && $userID ):?>
 
+<?PHP include('contest-form.php'); ?>
 
-
-
+<?php else: ?>
 	<div class="container" style="background-image: url(<?= get_the_post_thumbnail_url(get_the_ID())?>); height:650px; width: 100%" >
 		<div class="row" >
 			<div class="col-lg-12 col-md-12">
@@ -39,6 +40,6 @@ $post = get_post();
 			
 		</div><!-- .row -->
 	</div><!-- .container -->
-
+<?php endif; ?>
 <?php
 get_footer('contest');

@@ -30,7 +30,8 @@ function add_loginout_link( $items, $args ) {
         $items .= '<li><a href="'.get_author_posts_url($user->ID).'" alt="View my Profile"><span class="glyphicon glyphicon-heart"></span>&nbsp;Me</a></li>';
     }
     elseif (!is_user_logged_in() && $args->theme_location == 'primary') {
-        $items .= '<li><a href="'. getLoginPage().'">Log In</a></li>';
+        $items .= '<li><a href="'. getLoginPage().'">Join</a></li>';
+        $items .= '<li><a href="'. getLoginPage().'">Get Start</a></li>';
     }
     return $items;
 }
@@ -50,7 +51,7 @@ function generateMeta($data){
         $out .= '<meta property="og:title" content="'.$data['title'].'" />';$out .= "\n";
     }
     if(isset($data['description'])){
-        $out .= '<meta property="description" content="'.$data['description'].'" />';$out .= "\n";
+        $out .= '<meta name="description" content="'.$data['description'].'" />';$out .= "\n";
         $out .= '<meta property="og:description" content="'.$data['description'].'" />';$out .= "\n";
         $out .= '<meta itemprop="description" content="'.$data['description'].'" />';$out .= "\n";
         $out .= '<meta name="twitter:description" content="'.$data['description'].'" />';$out .= "\n";
