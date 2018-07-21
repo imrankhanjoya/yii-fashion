@@ -299,7 +299,7 @@ get_header('nomenu');
                         <?php foreach($brands as $key=>$brand):?>
                             <?php $class = in_array($key,$meta['brands'])?"check":""?>
                             <?php $checked = in_array($key,$meta['brands'])?"checked":""?>
-                            <div class="col-md-2 col-xs-4">
+                            <div class="col-md-2 col-xs-6">
                                 <label class="">
                                     <img src="<?="http://www.gloat.me/wp-content/uploads/".$brand['logo']?>" alt="..." class="img-thumbnail img-check  <?=$class?>">
                                     <?=$brand['title']?>
