@@ -54,22 +54,27 @@ function saveUser($response,$token){
         $val = get_page_by_path( 'get-start' );
         $url = add_query_arg(array('show' =>'personal'),get_page_link($val->ID));
         wp_redirect($url);
-    }
+    }else{
 
     
-    $UserId = wp_create_user($userData['username'],base64_encode(rand(100,3000)),$userData['email']);
-    if($UserId){
-        add_user_meta($UserId,'gender',$userData['gender'],false); 
-        add_user_meta($UserId,'first_name',$userData['nickname'],false); 
-        add_user_meta($UserId,'nickname',$userData['nickname'],false); 
-        add_user_meta($UserId,'fbid',$userData['fbid'],false); 
-        add_user_meta($UserId,'fbToken',$token,false); 
-        add_user_meta($UserId,'picture',$userData['picture'],false); 
-        add_user_meta($UserId,'cupp_upload_meta',$userData['picture'],false);
-        loginUser($UserId);
-        $val = get_page_by_path( 'get-start' );
-        $url = add_query_arg(array('show' =>'personal'),get_page_link($val->ID));
-        wp_redirect($url);
+        $UserId = wp_create_user($userData['username'],base64_encode(rand(100,3000)),$userData['email']);
+        if($UserId){
+            add_user_meta($UserId,'gender',$userData['gender'],false); 
+            add_user_meta($UserId,'first_name',$userData['nickname'],false); 
+            add_user_meta($UserId,'nickname',$userData['nickname'],false); 
+            add_user_meta($UserId,'fbid',$userData['fbid'],false); 
+            add_user_meta($UserId,'fbToken',$token,false); 
+            add_user_meta($UserId,'picture',$userData['picture'],false); 
+            add_user_meta($UserId,'cupp_upload_meta',$userData['picture'],false);
+            loginUser($UserId);
+            $val = get_page_by_path( 'get-start' );
+            $url = add_query_arg(array('show' =>'personal'),get_page_link($val->ID));
+            wp_redirect($url);
+        }else{
+            $val = get_page_by_path( 'discuss-beauty-tips' );
+            $url = add_query_arg(array('show' =>'personal'),get_page_link($val->ID));
+            wp_redirect($url);
+        }
     }
 }
 
