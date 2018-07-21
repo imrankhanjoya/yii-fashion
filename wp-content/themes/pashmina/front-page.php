@@ -46,9 +46,12 @@ $starPage = get_page_link($val->ID);
                 <div class="row" >
                     <div class="col-lg-12" >
                         <a class="top-contest-banners"   href="<?php esc_url( the_permalink() ); ?>">
-                        <div class="top-blck-bacgrnd"></div>
-                        <p><?php the_title(); ?></p>
+                          <p><?php the_title(); ?></p>
                         </a>
+                        
+                    </div>
+                    <div class="col-lg-offset-3 col-lg-6 contest-para" >
+                      <p><?php the_content( $more_link_text = null, $strip_teaser = false ); ?></p>
                     </div>
                 </div>
             </div>
