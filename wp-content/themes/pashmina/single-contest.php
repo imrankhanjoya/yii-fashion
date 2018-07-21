@@ -11,13 +11,15 @@ get_header('nomenu');
 
 $post_ID = get_the_ID();
 $post = get_post();  
-$userID = 23;
+$user = wp_get_current_user();
+$userID = $user->ID;
 ?>
 <?php if(isset($_GET['startit']) && $userID ):?>
 
 <?PHP include('contest-form.php'); ?>
 
 <?php else: ?>
+	<a href="home">
 	<div class="container" style="background-image: url(<?= get_the_post_thumbnail_url(get_the_ID())?>); height:650px; width: 100%; background-position: center; background-size: cover;" >
 		<div class="row" >
 			<div class="col-lg-12 col-md-12">
@@ -40,6 +42,7 @@ $userID = 23;
 			
 		</div><!-- .row -->
 	</div><!-- .container -->
+	</a>
 <?php endif; ?>
 <?php
 get_footer('contest');
