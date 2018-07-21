@@ -55,13 +55,13 @@ function saveUser($response,$token){
 
     if(!empty($results)){
         
-        loginUser($results[0]['ID']);
+        loginUser($results[0]['user_id']);
         $val = get_page_by_path( 'get-start' );
         $url = add_query_arg(array('show' =>'personal','t'=>'exist'),get_page_link($val->ID));
         wp_redirect($url);
     }if(!empty($emailresults)){
         
-        loginUser($results[0]['user_id']);
+        loginUser($results[0]['ID']);
         $val = get_page_by_path( 'get-start' );
         $url = add_query_arg(array('show' =>'personal','t'=>'exist'),get_page_link($val->ID));
         wp_redirect($url);
