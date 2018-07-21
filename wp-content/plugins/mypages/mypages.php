@@ -16,6 +16,14 @@ $site['brands'] = array("avon"=>"AVON","bobbi-brown"=>"Bobbi Brown","o3"=>"O3","
 $skinType = array("Normal","Dry","Oily","Acne-prone","Sensitive","Combination");
 $skinColor = array("Extremely fair"=>array("img"=>"http://gloat.me/wp-content/uploads/2018/07/face-phd0.png"),"Fair"=>array("img"=>"http://gloat.me/wp-content/uploads/2018/07/face-phd1.png"),"Tan"=>array("img"=>"http://gloat.me/wp-content/uploads/2018/07/face-phd2.png"),"Medium Brown"=>array("img"=>"http://gloat.me/wp-content/uploads/2018/07/face-phd3.png"),"Dark"=>array("img"=>"http://gloat.me/wp-content/uploads/2018/07/face-phd4.png"),"Deep Dark"=>array("img"=>"http://gloat.me/wp-content/uploads/2018/07/face-phd5.png"),"Light"=>array("img"=>"http://gloat.me/wp-content/uploads/2018/07/face-phd6.png"));
 $hairColor = array("White","Dark","Orange");
+/*
+Lakme 
+L'Oreal 
+Lotus
+Maybelline
+Colorbar
+Huda beauty 
+ */
 $brands = array(
 "bobbi_brown"=>array("title"=>"Bobbi Brown","logo"=>"/2018/07/Bobbi_Brown_logo_logotype-copy.png"),
 "avon"=>array("title"=>"AVON","logo"=>"/2018/07/avon.png"),
@@ -39,6 +47,9 @@ function custom_rewrite_basic() {
   $wp_rewrite->author_base = "its"; // or whatever
   $wp_rewrite->flush_rules();	
 
+  $page = get_page_by_path('contest-play');  
+  add_rewrite_rule('^contest-play/?([^/]*)', 'index.php?page_id='.$page->ID.'&contest=$matches[1]', 'top');
+  
   $page = get_page_by_path('top');	
   add_rewrite_rule('^top-cosmetic-products/?', 'index.php?page_id='.$page->ID.'&cat=$matches[1]', 'top');
 	 

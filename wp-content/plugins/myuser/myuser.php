@@ -52,7 +52,7 @@ function saveUser($response,$token){
         
         loginUser($results[0]['user_id']);
         $val = get_page_by_path( 'get-start' );
-        $url = add_query_arg(array('show' =>'skin'),get_page_link($val->ID));
+        $url = add_query_arg(array('show' =>'personal'),get_page_link($val->ID));
         wp_redirect($url);
     }
 
