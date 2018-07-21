@@ -52,7 +52,7 @@ function saveUser($response,$token){
         
         loginUser($results[0]['user_id']);
         $val = get_page_by_path( 'get-start' );
-        $url = add_query_arg(array('show' =>'personal'),get_page_link($val->ID));
+        $url = add_query_arg(array('show' =>'personal','t'=>'exist'),get_page_link($val->ID));
         wp_redirect($url);
     }else{
 
@@ -68,7 +68,7 @@ function saveUser($response,$token){
             add_user_meta($UserId,'cupp_upload_meta',$userData['picture'],false);
             loginUser($UserId);
             $val = get_page_by_path( 'get-start' );
-            $url = add_query_arg(array('show' =>'personal'),get_page_link($val->ID));
+            $url = add_query_arg(array('show' =>'personal','t'=>'new'),get_page_link($val->ID));
             wp_redirect($url);
         }else{
             $val = get_page_by_path( 'discuss-beauty-tips' );
