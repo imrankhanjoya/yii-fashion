@@ -14,9 +14,9 @@ License: GPL2
 add_action( 'wp_ajax_find_product', 'find_product' );
 
 function find_product() {
-    $key = $_POST['key'];
-    $val = $_POST['val'];
-    echo sotreUserMeta($key,$val);
+    echo $key = $_POST['key'];
+    echo $val = $_POST['val'];
+    return $val;
     exit;
 }
 
