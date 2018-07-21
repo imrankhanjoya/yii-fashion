@@ -94,7 +94,6 @@ require_once __DIR__ . '/Facebook/autoload.php';
 
             }
             $attrib = get_user_meta($user->ID,$show);
-            $UserSkin = get_user_meta($user->ID,'skin');
 
     }elseif(isset($_GET['fbgo'])){
         $fblogin = fbloginurl();
@@ -183,105 +182,123 @@ get_header('nomenu');
                   </style>
             <?PHP endif;?>
 
-            <?PHP if($show=='skin'):?>
-            <div class="col-md-12 text-center ">
-            <h1>Whats your skin color!</h1>
-            <p>you can change this anytime in your profile.</p>
-            </div>
-            <?php foreach($skinColor as $key=>$color):?>
-            <?PHP $class = $key == $attrib[0]?"btn-active":"" ?>
-            <?php $url = add_query_arg(array('key' => 'skin','val' =>$key),get_page_link($pageID->ID));?>
-            <a class="showloader" href="<?=$url?>" >
-                <div class="hovereffect form-group col-md-3 col-xs-4 site-form" style="background-image:url(<?=$color['img']?>); background-position:center; background-size: cover;">
-                <span class="btn a-btn-knowmore <?=$class?>"><?=$key?></span>
-                </div>
-            </a>
-            <?PHP endforeach;?>
-            <div class="clear"></div>
-            <?PHP endif;?>
-                         
+            <?PHP if($show=='personal'):?>
             
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+              
 
-            <?PHP if($show=='skinType'):?>  
-            <div class="col-md-12 text-center ">
-            <h1>Whats your skin Type!</h1>
-            <p>you can change this anytime in your profile.</p>
-            </div>
-            <?php foreach($skinType as $type):?>
-            <?PHP $class = $type == $attrib[0]?"btn-active":"" ?>
-            <?php $url = add_query_arg(array('key' => 'skinType','val' =>$type),get_page_link($pageID->ID));?>
-            <a class="showloader" href="<?=$url?>">
-            <div class="hovereffect form-group col-md-3 col-xs-6 site-form btn a-btn-knowmore <?=$class?>">
-            
-            <?=$type?>
-            </div>
-            </a>
-            <?PHP endforeach;?>
-            <div class="clear"></div>
-            <?PHP endif;?>
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner">
+                <div class="item active skin">
+                    
+                    <!--SKIN COLOR -->
+
+                        <div class="col-md-12 text-center ">
+                        <h1>Whats your skin color!</h1>
+                        <p>you can change this anytime in your profile.</p>
+                        </div>
+                        <?php foreach($skinColor as $key=>$color):?>
+                        <?PHP $class = $key == $meta['skin'][0]?"btn-active":"" ?>
+                        <?php $url = add_query_arg(array('key' => 'skin','val' =>$key),get_page_link($pageID->ID));?>
+                        <div key="skin" val="<?=$key?>" class="save_personal hovereffect form-group col-md-3 col-xs-4 site-form" style="background-image:url(<?=$color['img']?>); background-position:center; background-size: cover;">
+                        <span class="btn a-btn-knowmore <?=$class?>"><?=$key?></span>
+                        </div>
+                        
+                        <?PHP endforeach;?>
 
 
-            <?PHP if($show=='eye'):?>  
-            <div class="col-md-12 text-center ">
-            <h1>Whats your eye color!</h1>
-            <p>you can change this anytime in your profile.</p>
-            </div>
-            <form class="form-inline" name="myForm" method="POST" action="../process.php">
-            <?php foreach($eyeColor as $color):?>
-            <?PHP $class = $color == $attrib[0]?"btn-active":"" ?>
-            <?php $url = add_query_arg(array('key' => 'eye','val' =>$color),get_page_link($pageID->ID));?>
-            <a class="showloader" href="<?=$url?>">
-            <div class="hovereffect form-group col-md-3 col-xs-6 site-form btn a-btn-knowmore <?=$class?>">
-            
-            <span><?=$color?></span>
-            </div>
-            </a>
-            <?PHP endforeach;?>
-            <div class="clear"></div>
-            </form>
-            <?PHP endif;?>
+                    <!--SKIN END COLOR -->
 
-            <?PHP if($show=='dress'):?>  
-                <div class="col-md-12 text-center ">
-                <h1>Whats your Dress size!</h1>
-                <p>you can change this anytime in your profile.</p>
+
                 </div>
-                <?php foreach($DressSize as $dress):?>
-                <?PHP $class = $dress == $attrib[0]?"btn-active":"" ?>
-                <div class="col-md-3 col-xs-4 site-form text-center <?=$class?> chociebox" >
-                <?php $url = add_query_arg(array('key' => 'dress','val' =>$dress),get_page_link($pageID->ID));?>
-                 <a   class="showloader" href="<?=$url?>"><?=$dress?></a>
-                </div>
-                <?PHP endforeach;?>
-                <div class="clear"></div>
-            <?PHP endif;?>
 
+                <div class="item skinType">
 
-            <?PHP if($show=='top'):?>  
-                <div class="col-md-12 text-center ">
-                    <h1>Whats your Dress size!</h1>
+                    <!--SKIN TYPE -->
+                    <div class="col-md-12 text-center ">
+                    <h1>Whats your skin Type!</h1>
                     <p>you can change this anytime in your profile.</p>
-                </div>
-                <?php foreach($topSize as $top):?>
-                    <?PHP $class = $top == $attrib[0]?"btn-active":"" ?>
-                    <div class="col-md-3 col-xs-4 site-form chociebox <?=$class?>">
-                    <?php $url = add_query_arg(array('key' => 'top','val' =>$top),get_page_link($pageID->ID));?>
-                    <a class="showloader" href="<?=$url?>"><?=$top?></a>
                     </div>
-                <?PHP endforeach;?>
-            <div class="clear"></div>
-            <?PHP endif;?>
+                    <?php foreach($skinType as $type):?>
+                    <?PHP $class = $type == $meta['skinType'][0]?"btn-active":"" ?>
+                    <?php $url = add_query_arg(array('key' => 'skinType','val' =>$type),get_page_link($pageID->ID));?>
+                    <div key="skinType" val="<?=$type?>" class="save_personal hovereffect form-group col-md-3 col-xs-6 site-form btn a-btn-knowmore <?=$class?>">
+
+                    <?=$type?>
+                    </div>
+                    <?PHP endforeach;?>
+                    <div class="clear"></div>
+                    <!--SKIN END TYPE -->
+                  
+                </div>
+
+                <div class="item eye">
+
+                    <!--EYE COLOR -->
+                    <div class="col-md-12 text-center ">
+                    <h1>Whats your eye color!</h1>
+                    <p>you can change this anytime in your profile.</p>
+                    </div>
+                    <?php foreach($eyeColor as $color):?>
+                    <?PHP $class = $color == $meta['eye'][0]?"btn-active":"" ?>
+                    <?php $url = add_query_arg(array('key' => 'eye','val' =>$color),get_page_link($pageID->ID));?>
+                    <div key="eye" val="<?=$color?>" class="save_personal hovereffect form-group col-md-3 col-xs-6 site-form btn a-btn-knowmore <?=$class?>">
+                    
+                    <span><?=$color?></span>
+                    </div>
+                    <?PHP endforeach;?>
+
+                    <!--EYE COLOR END-->
+
+                </div>
+
+                <div class="item dress">
+
+                    <!--DRESS -->
+                    <div class="col-md-12 text-center ">
+                        <h1>Whats your Dress size!</h1>
+                        <p>you can change this anytime in your profile.</p>
+                    </div>
+                    <?php foreach($DressSize as $dress):?>
+                    <?PHP $class = $dress == $meta['dress'][0]?"btn-active":"" ?>
+                    <div key="eye" val="<?=$color?>" class="save_personal hovereffect col-md-3 col-xs-4 site-form text-center a-btn-knowmore <?=$class?>" >
+                     <?=$dress?>
+                    </div>
+                    <?PHP endforeach;?>
+                    
+                    <!--DRESS END-->
+
+                </div>
 
 
-            <?PHP if($show=='brands'):?>
+                <div class="item top">
+
+                    <!--TOP SIZE -->
+                    <div class="col-md-12 text-center ">
+                    <h1>Whats your Top size!</h1>
+                    <p>you can change this anytime in your profile.</p>
+                    </div>
+                    <?php foreach($topSize as $top):?>
+                        <?PHP $class = $top == $meta['top'][0]?"btn-active":"" ?>
+                        <div key="top" val="<?=$top?>" class="save_personal hovereffect col-md-3 col-xs-4 site-form chociebox a-btn-knowmore <?=$class?>">
+                        <?php $url = add_query_arg(array('key' => 'top','val' =>$top),get_page_link($pageID->ID));?>
+                        <?=$top?>
+                        </div>
+                    <?PHP endforeach;?>
+                    <!--TOP SIZE END-->
+
+                </div>
+                <div class="item brands">
+
+                    <!--BRANDS-->
                     <div class="col-md-12 text-center ">
                         <h1>Whats Brands you like!</h1>
                         <p>you can change this anytime in your profile.</p>
                     </div>
                     <form class="form-inline" name="myForm" method="POST" action="">
                         <?php foreach($brands as $key=>$brand):?>
-                            <?php $class = in_array($key,$attrib)?"check":""?>
-                            <?php $checked = in_array($key,$attrib)?"checked":""?>
+                            <?php $class = in_array($key,$meta['brands'])?"check":""?>
+                            <?php $checked = in_array($key,$meta['brands'])?"checked":""?>
                             <div class="col-md-2 col-xs-4">
                                 <label class="">
                                     <img src="<?="http://www.gloat.me/wp-content/uploads/".$brand['logo']?>" alt="..." class="img-thumbnail img-check  <?=$class?>">
@@ -295,7 +312,30 @@ get_header('nomenu');
                         <input class="showloader" type="submit" value="Love these brands">
                         </div>
                     </form>
-            <?PHP endif;?>
+                    <!--BRANDS END-->
+
+                </div>
+              </div>
+
+                <!-- Left and right controls -->
+                
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+                </a>
+              
+              
+            </div>
+
+
+
+            <?php endif;?>
+
+
+
+
+
+            
 
 
 
@@ -403,6 +443,7 @@ get_header('nomenu');
     </div>
 <script type="text/javascript">
 var  $ = jQuery;
+var ajax_url = '<?=admin_url( 'admin-ajax.php' )?>';
 
 jQuery(document).ready(function(){
 
@@ -438,16 +479,34 @@ jQuery(document).ready(function(){
 
     });
 
-    jQuery(".showloader").click(function() {
-      jQuery('.loader').show();
+    jQuery(".save_personal").click(function(){
+        jQuery("div."+jQuery(this).attr('key')+" div.a-btn-knowmore").removeClass('btn-active');
+        jQuery("div."+jQuery(this).attr('key')+" div").removeClass('btn-active');
+        jQuery(this).addClass('btn-active');
+        jQuery('.loader').show();
+        jQuery.ajax({
+            url : ajax_url,
+            type : 'post',
+            data : {
+                action : 'save_personal',
+                key: jQuery(this).attr('key'),
+                val: jQuery(this).attr('val')
+            },
+            success : function( response ) {
+                
+                jQuery("#myCarousel").carousel("next");
+                jQuery('.loader').hide();
+            }
+        });
     });
+
 
 
 });
 
 </script>
 <div class="loader">
-    <img src="<?=get_template_directory_uri();?>/images/loading.svg">
+    <img src="<?=get_template_directory_uri();?>/images/loading.svg" width=50%>
 </div>
 <?php
 get_footer();

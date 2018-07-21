@@ -13,6 +13,15 @@ require_once __DIR__ . '/Facebook/autoload.php';
 ini_set("display_errors",1);
 
 
+add_action( 'wp_ajax_save_personal', 'save_personal' );
+
+function save_personal() {
+    $key = $_POST['key'];
+    $val = $_POST['val'];
+    echo sotreUserMeta($key,$val);
+    exit;
+}
+
 function storeUseraddress($userID){
 
     foreach($_POST as $key=>$val){

@@ -107,25 +107,18 @@ function pashmina_scripts() {
 	//wp_enqueue_style( 'bootstrap_lo',get_template_directory_uri() .'/css/bootstrap.css','1.1.1');
 
 	// Enqueue Google fonts
-    /*
-     * font-family: 'Roboto Condensed', sans-serif;
-font-family: 'Raleway Dots', cursive;
-font-family: 'Pinyon Script', cursive;
-font-family: 'Dawning of a New Day', cursive;
-font-family: 'Open Sans Condensed', sans-serif;
-font-family: 'Pathway Gothic One', sans-serif;
-
- */
+    
 	wp_enqueue_style( 'pashmina-roboto', '//fonts.googleapis.com/css?family=Pathway+Gothic+One|Open+Sans+Condensed:300,700|Dawning+of+a+New+Day|Pinyon+Script|Raleway+Dots|Roboto+Condensed:300,300i,400,700|Roboto:400,300,500,700,900|Dancing+Script' );
 
 	// Enqueue Swiper.css
-	wp_enqueue_style( 'swiper', get_template_directory_uri() . '/css/swiper.min.css', array(), '4.0.6', '' );
+	//IKJ wp_enqueue_style( 'swiper', get_template_directory_uri() . '/css/swiper.min.css', array(), '4.0.6', '' );
 
 	// Stylesheet
 	wp_enqueue_style( 'pashmina-style', get_stylesheet_uri() );
 
 	// Enqueue Swiper
-	wp_enqueue_script( 'swiper', get_template_directory_uri() . '/js/swiper.min.js', array( 'jquery' ), '4.0.6', '' );
+	//IKJ wp_enqueue_script( 'swiper', get_template_directory_uri() . '/js/swiper.min.js', array( 'jquery' ), '4.0.6', '' );
+	wp_enqueue_script( 'bootstrapjs',"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js", array( 'jquery' ), '4.0.6', '' );
 
 	// Enqueue FontAwesome
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css', array(), '4.4.0', '' );

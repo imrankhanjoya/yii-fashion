@@ -826,10 +826,13 @@ td {
 .loader{
 	position: fixed;
 	width:10%;
-	height: 50px;
+	height:80px;
 	top:20%;
 	left: 45%;
 	display:none;
+	background:#FFF;
+	border-radius: 20%;
+	text-align: center;
 }
 
 /*--------------------------------------------------------------
@@ -1216,6 +1219,7 @@ td {
     border-radius: 0px !important;
     font-family: 'Raleway Dots', cursive;
     padding: 10px;
+    font-size:25px;
 }
 
 .btn-knowmore{
@@ -1925,7 +1929,7 @@ button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type=
 }
 img.check{
     opacity: 0.5;
-    background-color: #000;
+    background-color: #8a6d3b;
 }
 /*--------------------------------------------------------------
 # Product
