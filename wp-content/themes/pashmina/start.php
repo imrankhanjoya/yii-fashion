@@ -491,13 +491,13 @@ jQuery(document).ready(function(){
         });
     });
 
-    
+
 
 });
 
 </script>
 <div class="loader">
-    <img src="<?=get_template_directory_uri();?>/images/loading.svg" width=50%>
+    <img src="<?=get_template_directory_uri();?>/images/loading.svg" width=100%>
 </div>
 <?php
 get_footer();
