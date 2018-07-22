@@ -1811,6 +1811,15 @@ td {
 		margin-right: 30px;
 		margin-bottom: 5px;
 	}
+	.top-ttl-heddng span{
+		font-size: 1.5em !important;
+	}
+	.picon{
+		height:2.5em !important; 
+	}
+	.productlist{
+		box-shadow: 1px 2px 5px #cccc;
+	}
 }
 
 @media all and (max-width: 600px) {
