@@ -58,7 +58,7 @@ add_action( 'wp_head', 'gloatme_header_metadata',0);
       <div class="col-lg-3 col-xs-12 col-md-3 col-sm-12 panel-body">
          <div class="row">
             <div class="col-lg-12 col-sm-4 col-md-12 text-center author-img-heiht">
-               <img class="img-responsive prodct-crd-img" alt="<?=$userdata->data->display_name?>" title="<?=$userdata->data->display_name?>" src="<?=$img?>" >
+               <img class="img-responsive" alt="<?=$userdata->data->display_name?>" title="<?=$userdata->data->display_name?>" src="<?=$img?>" >
 
             </div>
             <div class="col-lg-12 col-sm-8 col-md-12">
@@ -66,7 +66,7 @@ add_action( 'wp_head', 'gloatme_header_metadata',0);
                <?php fav_authors_link($user_id); ?> <br>
                <span><b><?=$userdata->data->display_name?></b></span>
                <?php if($user_id == $current_user->data->ID):?>
-               <a class="pull-right" href="/get-start/?show=profile"><i class="fa fa-edit"></i> Edit</a>
+               <a class="pull-right" href="/get-start/?show=profile"><i class="fa fa-edit"></i></a>
                <?PHP endif;?>
                <h5 id="uid" v="<?=$user_id?>"><?=$usermeta['description'][0]?></h5>
                <h6 class=""><b>Skin Type:</b> <?=$usermeta['skinType'][0]?></h6>
@@ -76,7 +76,7 @@ add_action( 'wp_head', 'gloatme_header_metadata',0);
             </div>
             <?php if($user_id == $current_user->data->ID):?>
             <div class="col-lg-12">
-               <a href="<?=wp_logout_url(); ?>" class="btn btn-block">Log Out</a>
+               <a href="<?=wp_logout_url(); ?>" class="">Log Out</a>
             </div>
             <?PHP endif;?>
          </div>

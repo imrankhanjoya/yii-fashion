@@ -1948,7 +1948,8 @@ button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type=
 	background-color:#000;
 }
 .site-form{
-	padding:50px;
+	padding-top:50px;
+	padding-bottom:50px;
 	border:1px solid #f4f4f4;
 }
 img.check{
@@ -1977,7 +1978,7 @@ width:100px;
 	font-size:12px;
 }
 .product-dtl-list .active{
-	color:#f26798;
+	color:#8a6d3b;
 }
 
 @media all and (max-width: 1024px) {
@@ -2384,9 +2385,10 @@ a.wpf-favorite-link span{
 }
 .author-img-heiht{
 	height: 155px;
+	overflow: hidden;
 }
 .author-img-heiht img{
-	max-height: 140px;
+	width:100%;
 }
 .product-dtl-list .nav>li>a:hover{ 
 background-color: unset;
@@ -2604,6 +2606,12 @@ margin-bottom: 0;
 	}
 	.chat-banner-img{
 		height: 150px;
+	}
+	.author-tab-div{
+		padding: 0px;
+	}
+	.media .panel-body{
+		padding: 0px;	
 	}
 }
 @media (min-width: 767px) and (max-width: 992px ) {
