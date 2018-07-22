@@ -63,7 +63,7 @@ $username = $current_user->display_name;
             <p>
             <strong>Oops.. No review for this product yet.</strong>
             <br>
-            Have you purchased or sampled it? Be the first one to Share your thoughts with the girls! And get <b style="color:pink">Rewards</b> :)
+            Have you purchased or sampled it? Be the first one to Share your thoughts with the girls! And get <b style="color:#8a6d3b">Rewards</b> :)
             <br>
             Here are some examples:
             </p>
