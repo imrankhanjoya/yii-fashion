@@ -2158,8 +2158,8 @@ width:100px;
 	color: #e6e6e6;
 	letter-spacing: 1px;
 	font-size: 14px;
-	padding: 34px 0px;
-	text-align: center;
+	padding: 34px 10px;
+	text-align: justify;
 }
 .top-item {
     position: relative;
@@ -2601,6 +2601,9 @@ margin-bottom: 0;
 	.userframe{
 		max-height: 150px;
 		overflow: hidden;
+	}
+	.chat-banner-img{
+		height: 150px;
 	}
 }
 @media (min-width: 767px) and (max-width: 992px ) {
