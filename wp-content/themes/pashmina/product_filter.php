@@ -1,38 +1,38 @@
 <div class="col-md-12">
 <div class="row product_cat">
     <div class="col-lg-2 col-xs-6 text-center top-ttl panel-body" style="background-color:#92FFD8">
-        <a href="/tag/lip/" class="top-ttl-heddng">
+        <a href="/products-for/lip/" class="top-ttl-heddng">
         <span>LIPSTICK</span>
         <img class="picon" src="<?= get_template_directory_uri();?>/images/lipstick.svg">
         </a>
     </div>
       <div class="col-lg-2 col-xs-6 text-center top-ttl panel-body" style="background-color:#FFDFCA">
-        <a href="/tag/eye/" class="top-ttl-heddng">
+        <a href="/products-for/eye/" class="top-ttl-heddng">
         <span>Eyes</span>
         <img class="picon" src="<?= get_template_directory_uri();?>/images/eye-shadow.svg">
         </a>
     </div>
     <div class="col-lg-2 col-xs-6 text-center top-ttl panel-body" style="background-color:#92FFD8">
-        <a href="/tag/nail/" class="top-ttl-heddng">
+        <a href="/products-for/nail/" class="top-ttl-heddng">
         <span>Nail-Polish</span>
         <img class="picon" src="<?= get_template_directory_uri();?>/images/nail-polish.svg">
         
         </a>
     </div>
     <div class="col-lg-2 col-xs-6 text-center top-ttl panel-body" style="background-color:#FFDFCA">
-        <a href="/tag/hair/" class="top-ttl-heddng">
+        <a href="/products-for/hair/" class="top-ttl-heddng">
         <span>hair</span>
         <img class="picon" src="<?= get_template_directory_uri();?>/images/woman-with-long-hair.svg">
         </a>
     </div>
     <div class="col-lg-2 col-xs-6 text-center top-ttl panel-body" style="background-color:#92FFD8">
-        <a href="/tag/skin/" class="top-ttl-heddng">
+        <a href="/products-for/skin/" class="top-ttl-heddng">
         <span>facial</span>
         <img class="picon" src="<?= get_template_directory_uri();?>/images/facial-treatment.svg">
         </a>
     </div>
     <div class="col-lg-2 col-xs-6 text-center top-ttl panel-body" style="background-color:#FFDFCA">
-        <a href="/tag/cream/" class="top-ttl-heddng">
+        <a href="/products-for/cream/" class="top-ttl-heddng">
         <span>cream</span>
         <img class="picon" src="<?= get_template_directory_uri();?>/images/cream.svg">
         </a>
@@ -55,3 +55,4 @@
     </div>
   </div>
 </nav>
+

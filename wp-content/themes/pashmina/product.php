@@ -43,7 +43,6 @@ $brands = isset($site['brands'])?$site['brands']:"";
 
 <?php
 include( "product_filter.php");
-
 ?>
 
 
