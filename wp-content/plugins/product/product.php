@@ -72,10 +72,11 @@ function save_tagedproduct(){
 	$val = get_post_meta($_POST['ppost'],'taggedProduct');
 	$tp=[];
 	$jsonProduct = file_get_contents($proPath = get_template_directory()."/parsed.json");
-	$jsonProduct = json_decode($jsonProduct);
+	$jsonProduct = json_decode($jsonProduct,true);
+	//print_r($jsonProduct);
 	foreach ($val[0] as $key => $value) {
-		$title = $jsonProduct[$value]['title'];
-		$image = $jsonProduct[$value]['icon'];
+		$title = isset($jsonProduct[$value]['title'])?$jsonProduct[$value]['title']:$value;
+		$image = isset($jsonProduct[$value]['icon'])?$jsonProduct[$value]['icon']:"";
 		$tp[] = array("title"=>$title,"image"=>$image);
 	}
 

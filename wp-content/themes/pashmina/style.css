@@ -228,10 +228,10 @@ textarea:focus {
 	font-size:11px;
 }
 .spro{
-	border:1px solid #424242;
+	border-bottom:1px solid #424242;
 	font-size:14px;
 	position: relative;
-	
+	height: 100px;
 }
 .spro span{
 	position: absolute;
