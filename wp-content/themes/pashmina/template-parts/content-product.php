@@ -10,6 +10,7 @@
 $post_ID = get_the_ID();
 $val = get_post_meta($post_ID);
 
+
 $price = $val['LowestNewPrice'][0]!=""?$val['LowestNewPrice'][0]:$val['ListPrice'][0];
 $title = get_the_title();
 $title = substr($title,0,120);  

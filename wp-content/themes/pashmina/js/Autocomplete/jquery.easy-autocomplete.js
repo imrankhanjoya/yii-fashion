@@ -998,7 +998,7 @@ var EasyAutocomplete = (function(scope) {
 				}
 
 				if (template.getTemplateClass() !== "") {
-					classes += " " + template.getTemplateClass();
+					classes += " imran " + template.getTemplateClass();
 				}
 				
 

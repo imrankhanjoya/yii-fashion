@@ -30,13 +30,17 @@ if ( !defined('ABSPATH') ) {
 global $geotag_table, $wpdb;
 
 global $wpdb;
-$results = $wpdb->get_results( "select post_title from $wpdb->posts where post_type = 'product' and post_status ='publish' ", ARRAY_A );
+$results = $wpdb->get_results( "select SUBSTRING(posts.post_title,1,40) as title,posts.ID as id,meta.meta_value as icon from $wpdb->posts as posts 
+	left join $wpdb->postmeta as meta on meta.post_id = posts.ID and meta.meta_key = 'LargeImage'
+	where post_type = 'product' and post_status ='publish' ", ARRAY_A );
 
-$allPost=[];
-foreach($results as $post){
-    $allPost[] = $post['post_title'];
+$parsed = [];
+foreach ($results as $key => $value) {
+	$parsed[$value['title']] = $value; 
 }
-$jsondata = json_encode($allPost);
+$parsed = json_encode($parsed);
+$jsondata = json_encode($results);
 $productjson = file_put_contents(get_template_directory()."/product.json",$jsondata);
+$productjson = file_put_contents(get_template_directory()."/parsed.json",$parsed);
 
 die();

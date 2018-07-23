@@ -223,6 +223,22 @@ textarea:focus {
 	border-radius:0px !important;
 	box-shadow:none !important;
 }
+#error{
+	color:red;
+	font-size:11px;
+}
+.spro{
+	border:1px solid #424242;
+	font-size:14px;
+	position: relative;
+	
+}
+.spro span{
+	position: absolute;
+	top:0px;
+	right:0px;
+}
+
 /*--------------------------------------------------------------
 # contest form
 --------------------------------------------------------------*/
@@ -474,7 +490,7 @@ body {
 	font-size: 16px;
 	line-height: 1.6em;
 	letter-spacing: 0.02em;
-	color: rgba(39,48,57,.85);
+	color: rgba(0,0,0);
 }
 
 .transition5 {
