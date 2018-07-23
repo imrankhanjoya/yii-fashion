@@ -238,7 +238,9 @@ textarea:focus {
 	top:0px;
 	right:0px;
 }
-
+.carousel-inner{
+	overflow: display !important;
+}
 /*--------------------------------------------------------------
 # contest form
 --------------------------------------------------------------*/

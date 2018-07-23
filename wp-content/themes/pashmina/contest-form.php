@@ -207,7 +207,6 @@ jQuery(document).ready(function(){
     	  var p = $("#products").val();
     	var ppost = <?=$post->ID?>;
     	$("#products").val('');
-    	//$("#taggedPro").append(setpro(index, value));
 
     	jQuery.ajax({
             url : ajax_url,
