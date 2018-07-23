@@ -220,6 +220,7 @@ jQuery(document).ready(function(){
                 ppost:ppost,
             },
             success : function( response ) {
+            	$("#taggedPro").html('');
             	$.each(response, function(index, value) {
                 	$("#taggedPro").append(setpro(index,value));
                 	console.log(value);
@@ -245,6 +246,7 @@ jQuery(document).ready(function(){
                 ppost:<?=$post->ID?>,
             },
             success : function( response ) {
+            	$("#taggedPro").html('');
             	$.each(response, function(index, value) {
                 	$("#taggedPro").append(setpro(index,value));
                 	console.log(value);
