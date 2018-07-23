@@ -209,7 +209,7 @@ jQuery(document).ready(function(){
     	  var p = $("#products").val();
     	var ppost = <?=$post->ID?>;
     	$("#products").val('');
-    	$("#taggedPro").append("<div class='col-md-4 spro'>"+p+"</div>");
+    	$("#taggedPro").append(setpro(index, value));
 
     	jQuery.ajax({
             url : ajax_url,
@@ -229,10 +229,9 @@ jQuery(document).ready(function(){
     }
 	});
 
-    $("#tagthis").click(function(){
-    	
-    	
-    });
+    function setpro(index, value){
+    	return "<div class='col-md-4 spro'><div class='col-md-4'><img src='"+value.image+"' class='img-responsive' ></div><div class='col-md-8'>"+value.title+"<span class='glyphicon glyphicon-remove-circle'></span></div></div>";
+    }
 
     jQuery.ajax({
             url : ajax_url,
@@ -245,7 +244,7 @@ jQuery(document).ready(function(){
             },
             success : function( response ) {
             	$.each(response, function(index, value) {
-                	$("#taggedPro").append("<div class='col-md-4 spro'>"+value+"<span class='glyphicon glyphicon-remove-circle'></span></div>");
+                	$("#taggedPro").append(setpro(index,value));
                 	console.log(value);
                 });             
             }
