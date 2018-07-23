@@ -75,8 +75,10 @@ function save_tagedproduct(){
 	$jsonProduct = json_decode($jsonProduct,true);
 	//print_r($jsonProduct);
 	foreach ($val[0] as $key => $value) {
+		if($value=="")
+			continue;
 		$title = isset($jsonProduct[$value]['title'])?$jsonProduct[$value]['title']:$value;
-		$image = isset($jsonProduct[$value]['icon'])?$jsonProduct[$value]['icon']:"";
+		$image = isset($jsonProduct[$value]['icon'])?$jsonProduct[$value]['icon']:"http://www.gloat.me/wp-content/uploads/2018/07/makeup.png";
 		$tp[] = array("title"=>$title,"image"=>$image);
 	}
 

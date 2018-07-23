@@ -89,9 +89,7 @@ if($contest_post){
 	  <div class="form-group col-md-12" style="padding:0px">
 	    <input type="text" style="width: 100%" id="products" placeholder="Tag the products that you used in your awesome look" >
 	  </div>
-	  <div class="form-group col-md-12" style="padding:0px">
-	  	<input type="button" id="tagthis" value="Tag this product" >
-	  </div>
+	  
 	  <div class="row" id="taggedPro"></div>	  
 
 	</div>
@@ -209,7 +207,7 @@ jQuery(document).ready(function(){
     	  var p = $("#products").val();
     	var ppost = <?=$post->ID?>;
     	$("#products").val('');
-    	$("#taggedPro").append(setpro(index, value));
+    	//$("#taggedPro").append(setpro(index, value));
 
     	jQuery.ajax({
             url : ajax_url,
@@ -222,6 +220,10 @@ jQuery(document).ready(function(){
                 ppost:ppost,
             },
             success : function( response ) {
+            	$.each(response, function(index, value) {
+                	$("#taggedPro").append(setpro(index,value));
+                	console.log(value);
+                }); 
                 jQuery("#error").html("");                
             }
         });		
