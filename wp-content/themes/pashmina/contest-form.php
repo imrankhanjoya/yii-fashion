@@ -232,7 +232,7 @@ jQuery(document).ready(function(){
 	});
 
     function setpro(index, value){
-    	return "<div class='col-md-4 col-xs-4 spro'><div class='col-md-4 col-xs-4'><img src='"+value.image+"' class='img-responsive' ></div><div class='col-md-8 col-xs-8'>"+value.title+"<span class='glyphicon glyphicon-remove-circle'></span></div></div>";
+    	return "<div class='col-md-4 col-xs-6 spro'><div class='col-md-4 col-xs-4'><img src='"+value.image+"' class='img-responsive' ></div><div class='col-md-8 col-xs-8'>"+value.title+"<span class='glyphicon glyphicon-remove-circle'></span></div></div>";
     }
 
     jQuery.ajax({
