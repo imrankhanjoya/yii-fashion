@@ -353,7 +353,7 @@ get_header('nomenu');
                             ld="<?=get_template_directory_uri();?>/images/loading.svg" 
                             src="<?=$meta['cupp_upload_meta'][0]?>" 
                             org="<?=$meta['cupp_upload_meta'][0]?>" 
-                            style="width:100%;">
+                            style="width:100%; ">
                             <span id="upfile" class="glyphicon glyphicon-camera"  style="color:#fff;cursor: pointer; position: absolute; top:20px; left:10px; text-shadow: 1px 1px 5px #ccc">Change</span>
                             </div>
                             

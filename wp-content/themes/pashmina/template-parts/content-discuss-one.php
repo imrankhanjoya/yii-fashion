@@ -23,7 +23,7 @@
 
 	<div class="entry-content">
 
-		<div class="row">
+		<!-- <div class="row">
 			<div class="col-md-2 col-lg-1 all-div-padding0 text-center"> 
 				<img class="img-circle" src="https://images.pexels.com/photos/207171/pexels-photo-207171.jpeg?auto=compress&cs=tinysrgb&h=350" style="height:50px; width:50px;">
 			</div>
@@ -32,10 +32,10 @@
 				<h6>Beauty Observer</h6></a>
 			</div>
 			<div class="col-md-4 col-lg-4 text-right">8 Jun 2018</div>
-		</div>
+		</div> -->
 
 
-
+		<h1 class="entry-title"><?php the_title(); ?></h1>
 		<?PHP the_content();?>
 		<?php
 			wp_link_pages( array(
@@ -43,6 +43,8 @@
 				'after'  => '</div>',
 			) );
 		?>
+		<?php pashmina_posted_on(); ?>
+
 
 
 	</div><!-- .entry-content -->

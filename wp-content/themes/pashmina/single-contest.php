@@ -19,7 +19,7 @@ $userID = $user->ID;
 <?PHP include('contest-form.php'); ?>
 
 <?php else: ?>
-	<a href="home">
+	
 	<div class="container" style="background-image: url(<?= get_the_post_thumbnail_url(get_the_ID())?>); height:650px; width: 100%; background-position: center; background-size: cover;" >
 		<div class="row" >
 			<div class="col-lg-12 col-md-12">
@@ -27,7 +27,7 @@ $userID = $user->ID;
 					<main id="main" class="site-main" role="main">
 						<div class="entry-content">
 
-						<a href="<?php esc_url( the_permalink() ); ?>">
+						<a href="<?php esc_url( the_permalink() ); ?>?startit=true">
               <h1 class="entry-title"><?php the_title(); ?></h1>
             </a>
 						<?=$post->post_content?>
@@ -42,7 +42,7 @@ $userID = $user->ID;
 			
 		</div><!-- .row -->
 	</div><!-- .container -->
-	</a>
+	
 <?php endif; ?>
 <?php
 get_footer('contest');
