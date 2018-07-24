@@ -50,6 +50,7 @@ if($contest_post){
       <div style="col-md-8 col-md-offset-2">
 		<input type="file" name="file" id="upfilefield" style="display: none;">
 		<input type="hidden" name="imagepath" value="<?=$img?>" id="imagepath">
+		<button type="submit" id="upfile" class="">Choose Photo</button>
 		<div class="col-md-6" id="imageFrame">
 				<button type="submit" id="upfile" class="" style="top:45%; position: absolute; left:30%">Choose Photo</button>
 				<img id="userimage" 
