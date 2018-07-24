@@ -38,7 +38,7 @@ if($contest_post){
 
 
 
-	<div  class="carousel slide" id="myCarousel" data-ride="carousel" style="height: 600px">
+	<div  class="carousel slide" id="myCarousel" data-interval="false" data-ride="carousel" style="height: 600px">
   
 
   <!-- Wrapper for slides -->
@@ -58,7 +58,7 @@ if($contest_post){
                              >
 				<button type="submit" id="upfile" class="" style="top:45%; position: absolute; left:30%">Choose Photo</button>
 		</div>
-		<div class="col-md-6" style="margin-bottom: 20px">
+		<div class="col-md-6" style="margin-bottom:60px">
 			
 			<h2>Awesome lets start to win!</h2>
 			<div id="error"></div>
