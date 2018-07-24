@@ -43,7 +43,7 @@ if($contest_post){
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
-    <div class="item activ">
+    <div class="item active">
       
 
       <!--ITEM START-->
