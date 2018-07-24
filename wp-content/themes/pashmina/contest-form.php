@@ -135,7 +135,7 @@ jQuery(document).ready(function(){
         jQuery(this).simpleUpload("/mypost.php", {
 
             start: function(file){
-                $("#imageFrame").attr("src",$("#userimage").attr("ld"));
+                $("#userimage").attr("src",$("#userimage").attr("ld"));
             },
 
             progress: function(progress){
