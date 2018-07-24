@@ -18,7 +18,9 @@ $contest_post = findContest($post->ID,$user->ID);
 $title = '';
 $desc = '';
 $img = '';
+$reply_url = '';
 if($contest_post){
+    $reply_url = $contest_post[0]['guid'];
     $title = $contest_post[0]['post_title'];
     $desc = $contest_post[0]['post_content'] ;
     $userimage = get_post_meta($contest_post[0]['ID']);
@@ -100,8 +102,8 @@ if($contest_post){
       <div class="col-md-2 col-xs-5" style="margin-bottom: 50px; margin-top: 50px">
       <input type="button" name="submit" id="gobackbutton" class="a-btn-knowmore" value="Back to Photo">
       </div>
-      <div class="col-md-offset-8 col-md-2 col-xs-offset-2 col-xs-5" style="margin-bottom: 50px; margin-top: 50px">
-      <input type="button" name="submit" class="a-btn-knowmore" value="Submit & Share">
+      <div class="col-md-offset-7 col-md-3 col-xs-offset-2 col-xs-5" style="margin-bottom: 50px; margin-top: 50px">
+      <a href="<?=$reply_url?>" type="button" name="submit" class="a-btn-knowmore" >Submit & Share</a>
       </div>
     
     </div>
