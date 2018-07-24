@@ -136,7 +136,8 @@ if($contest_post){
 
 
 <script type="text/javascript">
-var  $ = jQuery;
+var $ = jQuery.noConflict();
+
 var ajax_url = '<?=admin_url( 'admin-ajax.php' )?>';
 
 
