@@ -176,9 +176,52 @@ $(document).ready(function(){
 
     });
 
+    jQuery("#sendmessage").click(function(){
+        var title = jQuery("#title").val();
+        var description = jQuery("#description").val();
+        var imagepath = jQuery("#imagepath").val();
+        var ppost = <?=$post->ID?>;
+        if(imagepath.length<10){
+            jQuery("#error").html("Upload image first.");
+            return false;
+        }
+        if(title.length<2){
+            jQuery("#error").html("Enter nice title please.");
+            return false;
+        }
+        if(description.length<10){
+            jQuery("#error").html("Enter nice description please.");
+            return false;
+        }
+        
+        
+        var findkey = jQuery(this).val();
+        jQuery('.loader').show();
+        jQuery.ajax({
+            url : ajax_url,
+            type : 'post',
+            async: false,
+            dataType: 'json',
+            data : {
+                action : 'save_contest',
+                ppost:ppost,
+                title:title,
+                image:imagepath,
+                description:description,
+            },
+            success : function( response ) {
+                jQuery("#error").html("");
+                jQuery("#myCarousel").carousel('next');
+                
+            }
+        });
+    });
+
+    jQuery("#gobackbutton").click(function(){
+        jQuery("#myCarousel").carousel('prev');
+    });
     
     
-   
 
 });
 
