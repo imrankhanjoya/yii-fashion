@@ -31,7 +31,7 @@ if($contest_post){
 	
 	<div class="col-md-12" style="text-align: center; margin-top:2%; margin-bottom:2%">
 	<h1 class="seffect"><?=the_title()?></h1>
-	
+	<span id="upfile" class="glyphicon glyphicon-camera"  style="pointer;">Change</span>
 	</div>
 
 
@@ -50,7 +50,7 @@ if($contest_post){
       <div style="col-md-8 col-md-offset-2">
 		<input type="file" name="file" id="upfilefield" style="display: none;">
 		<input type="hidden" name="imagepath" value="<?=$img?>" id="imagepath">
-		<span id="upfile" class="glyphicon glyphicon-camera"  style="pointer;">Change</span>
+		
       
 		<div class="col-md-6" id="imageFrame">
 				<!-- <button type="submit" id="upfile" class="" style="top:45%; position: absolute; left:30%">Choose Photo</button> -->
