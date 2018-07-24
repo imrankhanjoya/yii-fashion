@@ -58,7 +58,7 @@ if($contest_post){
                              >
 				<button type="submit" id="upfile" class="" style="top:45%; position: absolute; left:30%">Choose Photo</button>
 		</div>
-		<div class="col-md-6">
+		<div class="col-md-6" style="margin-bottom: 20px">
 			
 			<h2>Awesome lets start to win!</h2>
 			<div id="error"></div>
@@ -72,9 +72,7 @@ if($contest_post){
 
 		</div>
 
-		<div class=" col-md-offset-10 col-md-2" style="margin-bottom: 50px; margin-top: 50px">
-	  <input type="button" name="submit" class="a-btn-knowmore" value="Tag products ">
-	  </div>
+		
 	</div>
 		
 	<!--ITEM END-->
@@ -94,10 +92,16 @@ if($contest_post){
 	    <input type="text" style="width: 100%" id="products" placeholder="Tag the products that you used in your awesome look" >
 	  </div>
 	  
-	  <div class="row" id="taggedPro"></div>	  
-	  <div class="col-md-12" style="margin-bottom: 50px; margin-top: 50px">
-	  <input type="button" name="submit" class="a-btn-knowmore" value="Submit ">
+	  <div class="col-md-12" id="taggedPro"></div>	
+
+
+	  <div class="col-md-2 col-xs-5" style="margin-bottom: 50px; margin-top: 50px">
+	  <input type="button" name="submit" id="gobackbutton" class="a-btn-knowmore" value="Back to Photo">
 	  </div>
+	  <div class="col-md-offset-8 col-md-2 col-xs-offset-2 col-xs-5" style="margin-bottom: 50px; margin-top: 50px">
+	  <input type="button" name="submit" class="a-btn-knowmore" value="Submit & Share">
+	  </div>
+	
 	</div>
     	<!--ITEM ENDSTART-->
 
@@ -151,7 +155,7 @@ function removeBox(key){
         });
     }
 function setpro(index, value){
-    	return "<div id='"+value.key+"' class='col-md-3 col-xs-6 spro'><div class='col-md-4 col-xs-4'><img src='"+value.image+"' class='img-responsive' ></div><div class='col-md-8 col-xs-8'>"+value.title+"<span onClick='removeBox(\""+value.key+"\")'  class='glyphicon glyphicon-remove-circle'></span></div></div>";
+    	return "<div id='"+value.key+"' class='col-md-3 col-xs-12 spro'><div class='col-md-4 col-xs-4'><img src='"+value.image+"' class='img-responsive' ></div><div class='col-md-8 col-xs-8'>"+value.title+"<span onClick='removeBox(\""+value.key+"\")'  class='glyphicon glyphicon-remove-circle'></span></div></div>";
     }    
 function storevalue(val){
     	var p = val;
@@ -258,11 +262,7 @@ jQuery(document).ready(function(){
     $("#gobackbutton").click(function(){
     	jQuery("#myCarousel").carousel('next');
     });
-    $('#products').on('keydown', function(e) {
-    if (e.which == 13) {
-    	  
-    }
-	});
+    
 
 
     

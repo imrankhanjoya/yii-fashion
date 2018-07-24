@@ -131,7 +131,7 @@ textarea,
 select {
 	color: rgba(39,48,57,.85);
 	border-radius:0px;
-	border: 1px solid rgba(39,48,57,.25);
+	border: 1px solid rgba(0,0,0);
 	min-width: 60%;
 	max-width: 100%;
 	padding:6px 0px 7px 10px;
@@ -220,6 +220,10 @@ textarea:focus {
 	text-align: left;
 }
 .easy-autocomplete input{
+	border:1px solid #000;
+	border-color:#000 !important;
+}
+.easy-autocomplete input{
 	border-radius:0px !important;
 	box-shadow:none !important;
 }
@@ -278,6 +282,9 @@ textarea.form-control{
 .form-control:focus{
 	box-shadow:none;
 	border-color: #000000;
+}
+#taggedPro{
+	height:300px;
 }
 /*--------------------------------------------------------------
 # contest form
