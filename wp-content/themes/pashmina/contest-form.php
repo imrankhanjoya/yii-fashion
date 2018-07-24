@@ -176,73 +176,7 @@ $(document).ready(function(){
 
     });
 
-    $("#sendmessage").click(function(){
-        var title = $("#title").val();
-        var description = $("#description").val();
-        var imagepath = $("#imagepath").val();
-        var ppost = <?=$post->ID?>;
-        if(imagepath.length<10){
-            $("#error").html("Upload image first.");
-            return false;
-        }
-        if(title.length<2){
-            $("#error").html("Enter nice title please.");
-            return false;
-        }
-        if(description.length<10){
-            $("#error").html("Enter nice description please.");
-            return false;
-        }
-        
-        
-        var findkey = $(this).val();
-        $('.loader').show();
-        $.ajax({
-            url : ajax_url,
-            type : 'post',
-            async: false,
-            dataType: 'json',
-            data : {
-                action : 'save_contest',
-                ppost:ppost,
-                title:title,
-                image:imagepath,
-                description:description,
-            },
-            success : function( response ) {
-                $("#error").html("");
-                $("#myCarousel").carousel('next');
-                
-            }
-        });
-    });
-
-    $("#gobackbutton").click(function(){
-        $("#myCarousel").carousel('prev');
-    });
     
-    
-
-    $.ajax({
-            url : ajax_url,
-            type : 'post',
-            async: false,
-            dataType: 'json',
-            data : {
-                action : 'save_tagedproduct',
-                ppost:<?=$contest_post[0]['ID']?>,
-            },
-            success : function( response ) {
-                $("#taggedPro").html('');
-                $.each(response, function(index, value) {
-                    $("#taggedPro").append(setpro(index,value));
-                });
-                             
-            }
-        });
-    
-
-    $("#products").easyAutocomplete(productFile);
     
    
 
