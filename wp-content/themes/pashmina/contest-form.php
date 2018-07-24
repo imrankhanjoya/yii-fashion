@@ -223,6 +223,29 @@ $(document).ready(function(){
     
     
 
+    jQuery.ajax({
+            url : ajax_url,
+            type : 'post',
+            async: false,
+            dataType: 'json',
+            data : {
+                action : 'save_tagedproduct',
+                ppost:<?=$contest_post[0]['ID']?>,
+            },
+            success : function( response ) {
+                jQuery("#taggedPro").html('');
+                jQuery.each(response, function(index, value) {
+                    jQuery("#taggedPro").append(setpro(index,value));
+                });
+                             
+            }
+        });
+    
+
+    jQuery("#products").easyAutocomplete(productFile);
+    
+   
+
 });
 
 
