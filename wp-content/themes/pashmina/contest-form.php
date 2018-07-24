@@ -142,7 +142,6 @@ var ajax_url = '<?=admin_url( 'admin-ajax.php' )?>';
 $(document).ready(function(){
 
     $("#upfile").click(function(){
-            alert("hello");
         $( "#upfilefield" ).trigger( "click" );
     });
     
