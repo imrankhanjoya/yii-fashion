@@ -50,7 +50,6 @@ if($contest_post){
       <div style="col-md-8 col-md-offset-2">
 		<input type="file" name="file" id="upfilefield" style="display: none;">
 		<input type="hidden" name="imagepath" value="<?=$img?>" id="imagepath">
-		<button type="submit" id="upfile" class="">Choose Photo</button>
 		<span id="upfile" class="glyphicon glyphicon-camera"  style="pointer;">Change</span>
       
 		<div class="col-md-6" id="imageFrame">
@@ -192,11 +191,10 @@ function storevalue(val){
 jQuery(document).ready(function(){
 
     jQuery("#upfile").click(function(){
+    		alert("hello");
         $( "#upfilefield" ).trigger( "click" );
     });
-    jQuery("#upfile").tap(function(){
-        $( "#upfilefield" ).trigger( "click" );
-    });
+    
 
     jQuery('input[type=file]').change(function(){
 
