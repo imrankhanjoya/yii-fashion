@@ -165,7 +165,7 @@ function storevalue(val){
     	  var ppost = <?=$contest_post[0]['ID']?>;
     	  $("#products").attr('val','');
 
-    	jQuery.ajax({
+    	$.ajax({
             url : ajax_url,
             type : 'post',
             async: false,
@@ -183,22 +183,22 @@ function storevalue(val){
                 	$("#taggedPro").find("div span").unbind("click").bind("click",function(){ removeBox(); });
                 }); 
             	
-                jQuery("#error").html("");                
+                $("#error").html("");                
             }
         });		
     }
 
-jQuery(document).ready(function(){
+$(document).ready(function(){
 
-    jQuery("#upfile").click(function(){
+    $("#upfile").click(function(){
     		alert("hello");
         $( "#upfilefield" ).trigger( "click" );
     });
     
 
-    jQuery('input[type=file]').change(function(){
+    $('input[type=file]').change(function(){
 
-        jQuery(this).simpleUpload("/mypost.php", {
+        $(this).simpleUpload("/mypost.php", {
 
             start: function(file){
                 $("#userimage").attr("src",$("#userimage").attr("ld"));
@@ -210,8 +210,8 @@ jQuery(document).ready(function(){
 
             success: function(data){
                 
-                jQuery("#userimage").attr("src",data.data);
-                jQuery("#imagepath").val(data.data);
+                $("#userimage").attr("src",data.data);
+                $("#imagepath").val(data.data);
             },
 
             error: function(error){
@@ -224,28 +224,28 @@ jQuery(document).ready(function(){
 
     });
 
-    jQuery("#sendmessage").click(function(){
+    $("#sendmessage").click(function(){
         var title = $("#title").val();
         var description = $("#description").val();
         var imagepath = $("#imagepath").val();
         var ppost = <?=$post->ID?>;
         if(imagepath.length<10){
-        	jQuery("#error").html("Upload image first.");
+        	$("#error").html("Upload image first.");
         	return false;
         }
         if(title.length<2){
-        	jQuery("#error").html("Enter nice title please.");
+        	$("#error").html("Enter nice title please.");
         	return false;
         }
         if(description.length<10){
-        	jQuery("#error").html("Enter nice description please.");
+        	$("#error").html("Enter nice description please.");
         	return false;
         }
         
         
         var findkey = $(this).val();
-        jQuery('.loader').show();
-        jQuery.ajax({
+        $('.loader').show();
+        $.ajax({
             url : ajax_url,
             type : 'post',
             async: false,
@@ -258,20 +258,20 @@ jQuery(document).ready(function(){
                 description:description,
             },
             success : function( response ) {
-                jQuery("#error").html("");
-                jQuery("#myCarousel").carousel('next');
+                $("#error").html("");
+                $("#myCarousel").carousel('next');
                 
             }
         });
     });
 
     $("#gobackbutton").click(function(){
-    	jQuery("#myCarousel").carousel('prev');
+    	$("#myCarousel").carousel('prev');
     });
     
     
 
-    jQuery.ajax({
+    $.ajax({
             url : ajax_url,
             type : 'post',
             async: false,
@@ -290,9 +290,9 @@ jQuery(document).ready(function(){
         });
     
 
-    jQuery("#products").easyAutocomplete(productFile);
-    //jQuery("#myCarousel").carousel({interval:false});
-    //jQuery("#myCarousel").carousel("next");
+    $("#products").easyAutocomplete(productFile);
+    //$("#myCarousel").carousel({interval:false});
+    //$("#myCarousel").carousel("next");
 
    
 
