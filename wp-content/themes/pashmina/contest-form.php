@@ -1,11 +1,11 @@
 <?PHP
+wp_enqueue_script( 'swiper', get_template_directory_uri() . '/js/simpleUpload.min.js', array( 'jquery' ), '4.0.6', '' );
 
 
 $post = get_post();
 
 wp_enqueue_style('autocomplete',get_template_directory_uri().'/js/Autocomplete/easy-autocomplete.min.css', array(), '4.4.0', '' );
 wp_enqueue_script('autocomplete',get_template_directory_uri().'/js/Autocomplete/jquery.easy-autocomplete.js', array('jquery'), '4.4.0', '' );
-wp_enqueue_script( 'swiper', get_template_directory_uri() . '/js/simpleUpload.min.js', array( 'jquery' ), '4.0.6', '' );
 
 $filePath = get_template_directory_uri()."/brands.json";
 $proPath = get_template_directory_uri()."/product.json";
@@ -48,7 +48,7 @@ if($contest_post){
 
       <!--ITEM START-->
       <div style="col-md-8 col-md-offset-2">
-		<input type="file" name="file" id="upfilefield" >
+		<input type="file" name="file" id="upfilefield" style="display: none;">
 		<input type="hidden" name="imagepath" value="<?=$img?>" id="imagepath">
 		
       
