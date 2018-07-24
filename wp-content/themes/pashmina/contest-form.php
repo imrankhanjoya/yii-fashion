@@ -190,8 +190,9 @@ function storevalue(val){
 
 $(document).ready(function(){
 
+    alert("hello");
     $("#upfile").click(function(){
-    		alert("hello");
+    	alert("hello");
         $( "#upfilefield" ).trigger( "click" );
     });
     
