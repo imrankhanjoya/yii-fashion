@@ -73,23 +73,43 @@ function save_tagedproduct(){
 	$tp=[];
 	$jsonProduct = file_get_contents($proPath = get_template_directory()."/parsed.json");
 	$jsonProduct = json_decode($jsonProduct,true);
-	//print_r($jsonProduct);
 	foreach ($val[0] as $key => $value) {
 		if($value=="")
 			continue;
 		$title = isset($jsonProduct[$value]['title'])?$jsonProduct[$value]['title']:$value;
 		$image = isset($jsonProduct[$value]['icon'])?$jsonProduct[$value]['icon']:"http://www.gloat.me/wp-content/uploads/2018/07/makeup.png";
-		$tp[] = array("title"=>$title,"image"=>$image);
+		$tp[] = array("title"=>$title,"image"=>$image,"key"=>md5($title));
 	}
 
 	echo json_encode($tp,true);
 	exit;
 }
+
+add_action( 'wp_ajax_remove_tagedproduct', 'remove_tagedproduct' );
 function remove_tagedproduct(){
-	$product_title = $_POST['product_title'];
-	$ppost = $_POST['ppost'];
-	$results = findContest($_POST['ppost'],$user->ID);
-	$val = update_post_meta($_POST['ppost'],'taggedProduct',$product_title,false);
+	$pkey = $_POST['key'];
+	$val = get_post_meta($_POST['ppost'],'taggedProduct');
+	
+	$jsonProduct = file_get_contents($proPath = get_template_directory()."/parsed.json");
+	$jsonProduct = json_decode($jsonProduct,true);
+	$tp=[];
+	$upval = [];
+	foreach ($val[0] as $key => $value) {
+		if(md5($value) == $pkey){ //This is removeing items 
+			continue;
+		}	
+		if($value==""){
+			continue;
+		}
+
+		$upval[] = $value;
+		$title = isset($jsonProduct[$value]['title'])?$jsonProduct[$value]['title']:$value;
+		$image = isset($jsonProduct[$value]['icon'])?$jsonProduct[$value]['icon']:"http://www.gloat.me/wp-content/uploads/2018/07/makeup.png";
+		
+		$tp[] = array("title"=>$title,"image"=>$image,"key"=>md5($title));
+	}
+	$val = update_post_meta($_POST['ppost'],'taggedProduct',$upval,false);
+	echo json_encode($tp,true);
 	exit;
 }
 

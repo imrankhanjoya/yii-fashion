@@ -10,7 +10,7 @@ wp_enqueue_script( 'swiper', get_template_directory_uri() . '/js/simpleUpload.mi
 $filePath = get_template_directory_uri()."/brands.json";
 $proPath = get_template_directory_uri()."/product.json";
 
-$userimage = 'http://www.gloat.me/wp-content/uploads/2018/07/gloatmeproducts.png';
+$userimage = 'http://www.gloat.me/wp-content/uploads/2018/07/upload.png';
 
 $user = wp_get_current_user();
 
@@ -50,12 +50,12 @@ if($contest_post){
       <div style="col-md-8 col-md-offset-2">
 		<input type="file" name="file" id="upfilefield" style="display: none;">
 		<input type="hidden" name="imagepath" value="<?=$img?>" id="imagepath">
-		<div class="col-md-6" id="imageFrame" style="background-position: center; text-align: center; position: relative; height: 300px; width: 300px; overflow: hidden;">
+		<div class="col-md-6" id="imageFrame">
 				<img id="userimage" 
                             ld="<?=get_template_directory_uri();?>/images/loading.svg" 
                             src="<?=$userimage?>" 
                             org="<?=$userimage?>" 
-                            style="min-width:100%; min-height: 100%; height: auto;width: auto;" >
+                             >
 				<button type="submit" id="upfile" class="" style="top:45%; position: absolute; left:30%">Choose Photo</button>
 		</div>
 		<div class="col-md-6">
@@ -68,9 +68,13 @@ if($contest_post){
 			<div class="form-group">
 			<textarea id="description" class="form-control" name="detail" placeholder="Say some thing about your style" required><?=$desc?></textarea>
 			</div>
-			<button type="submit" id="sendmessage" >Submit</button>
+			<button type="submit" id="sendmessage" >Save</button>
 
 		</div>
+
+		<div class=" col-md-offset-10 col-md-2" style="margin-bottom: 50px; margin-top: 50px">
+	  <input type="button" name="submit" class="a-btn-knowmore" value="Tag products ">
+	  </div>
 	</div>
 		
 	<!--ITEM END-->
@@ -91,7 +95,9 @@ if($contest_post){
 	  </div>
 	  
 	  <div class="row" id="taggedPro"></div>	  
-
+	  <div class="col-md-12" style="margin-bottom: 50px; margin-top: 50px">
+	  <input type="button" name="submit" class="a-btn-knowmore" value="Submit ">
+	  </div>
 	</div>
     	<!--ITEM ENDSTART-->
 
@@ -101,6 +107,7 @@ if($contest_post){
   </div>
 
   
+
 </div>
 
 
@@ -124,6 +131,55 @@ if($contest_post){
 <script type="text/javascript">
 var  $ = jQuery;
 var ajax_url = '<?=admin_url( 'admin-ajax.php' )?>';
+function removeBox(key){
+    		jQuery.ajax({
+            url : ajax_url,
+            type : 'post',
+            async: false,
+            dataType: 'json',
+            data : {
+                action : 'remove_tagedproduct',
+                ppost:<?=$contest_post[0]['ID']?>,
+                key:key
+            },
+            success : function( response ) {
+            	
+            	$("#"+key).hide(500);
+            	
+                             
+            }
+        });
+    }
+function setpro(index, value){
+    	return "<div id='"+value.key+"' class='col-md-3 col-xs-6 spro'><div class='col-md-4 col-xs-4'><img src='"+value.image+"' class='img-responsive' ></div><div class='col-md-8 col-xs-8'>"+value.title+"<span onClick='removeBox(\""+value.key+"\")'  class='glyphicon glyphicon-remove-circle'></span></div></div>";
+    }    
+function storevalue(val){
+    	var p = val;
+    	  var ppost = <?=$contest_post[0]['ID']?>;
+    	  $("#products").attr('val','');
+
+    	jQuery.ajax({
+            url : ajax_url,
+            type : 'post',
+            async: false,
+            dataType: 'json',
+            data : {
+                action : 'save_tagedproduct',
+                product_title:p,
+                ppost:ppost,
+            },
+            success : function( response ) {
+            	$("#taggedPro").html('');
+            	$("#products").attr('val','');
+            	$.each(response, function(index, value) {
+                	$("#taggedPro").append(setpro(index,value));
+                	$("#taggedPro").find("div span").unbind("click").bind("click",function(){ removeBox(); });
+                }); 
+            	
+                jQuery("#error").html("");                
+            }
+        });		
+    }
 
 jQuery(document).ready(function(){
 
@@ -204,36 +260,16 @@ jQuery(document).ready(function(){
     });
     $('#products').on('keydown', function(e) {
     if (e.which == 13) {
-    	  var p = $("#products").val();
-    	var ppost = <?=$post->ID?>;
-    	$("#products").val('');
-
-    	jQuery.ajax({
-            url : ajax_url,
-            type : 'post',
-            async: false,
-            dataType: 'json',
-            data : {
-                action : 'save_tagedproduct',
-                product_title:p,
-                ppost:ppost,
-            },
-            success : function( response ) {
-            	$("#taggedPro").html('');
-            	$.each(response, function(index, value) {
-                	$("#taggedPro").append(setpro(index,value));
-                	console.log(value);
-                }); 
-                jQuery("#error").html("");                
-            }
-        });		
-        e.preventDefault();
+    	  
     }
 	});
 
-    function setpro(index, value){
-    	return "<div class='col-md-4 col-xs-6 spro'><div class='col-md-4 col-xs-4'><img src='"+value.image+"' class='img-responsive' ></div><div class='col-md-8 col-xs-8'>"+value.title+"<span class='glyphicon glyphicon-remove-circle'></span></div></div>";
-    }
+
+    
+
+    
+
+    
 
     jQuery.ajax({
             url : ajax_url,
@@ -242,14 +278,14 @@ jQuery(document).ready(function(){
             dataType: 'json',
             data : {
                 action : 'save_tagedproduct',
-                ppost:<?=$post->ID?>,
+                ppost:<?=$contest_post[0]['ID']?>,
             },
             success : function( response ) {
             	$("#taggedPro").html('');
             	$.each(response, function(index, value) {
                 	$("#taggedPro").append(setpro(index,value));
-                	console.log(value);
-                });             
+                });
+                             
             }
         });
     
@@ -275,11 +311,16 @@ var options = {
 };
 var productFile = {
 	url:'<?=$proPath?>',
-	list: {match:{enabled: true}},
+	list: {match:{enabled: true}, onKeyEnterEvent:function(){ 
+		var value = $("#products").getSelectedItemData().title;
+		storevalue(value);
+
+
+	}},
 	template: {
 		type: "custom",
 		method: function(value, item) {
-			return "<div style='width:60px; height:60px; float:left; margin-right:5px'><img src='" + item.icon + "'  style=' min-height:100%; min-width:100%; width:auto; height:auto;' /> </div><div>"+ value+"</div> <div class='clearfix'></div>";
+			return "<div style='width:60px; height:60px; float:left; margin-right:5px; overflow:hidden'><img src='" + item.icon + "'  style=' min-height:100%; min-width:100%; width:auto; height:auto;' /> </div><div>"+ value+"</div> <div class='clearfix'></div>";
 		}
 	},
 	getValue:"title"
