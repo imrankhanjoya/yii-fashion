@@ -48,7 +48,7 @@ if($contest_post){
 
       <!--ITEM START-->
       <div style="col-md-8 col-md-offset-2">
-		<input type="file" name="file" id="upfilefield" style="display: none;">
+		<input type="file" name="file" id="upfilefield" >
 		<input type="hidden" name="imagepath" value="<?=$img?>" id="imagepath">
 		
       
@@ -140,7 +140,6 @@ if($contest_post){
 jQuery(document).ready(function(){
 
     jQuery("#upfile").click(function(){
-    		alert("hello");
         $( "#upfilefield" ).trigger( "click" );
     });
     
