@@ -210,6 +210,7 @@ $(document).ready(function(){
             success : function( response ) {
                 jQuery("#error").html("");
                 jQuery("#myCarousel").carousel('next');
+                jQuery('.loader').hide();
                 
             }
         });
@@ -235,6 +236,7 @@ $(document).ready(function(){
                 jQuery.each(response, function(index, value) {
                     jQuery("#taggedPro").append(setpro(index,value));
                 });
+
                              
             }
         });
@@ -265,6 +267,7 @@ var productFile = {
     getValue:"title"
 };
 function removeBox(key){
+    jQuery('.loader').show();
     jQuery.ajax({
         url : ajax_url,
         type : 'post',
@@ -277,6 +280,7 @@ function removeBox(key){
     },
     success : function( response ) {
         jQuery("#"+key).hide(500);
+        jQuery('.loader').hide();
     }
     });
 }
@@ -288,7 +292,7 @@ function storevalue(val){
         var p = val;
           var ppost = <?=$contest_post[0]['ID']?>;
           jQuery("#products").attr('val','');
-
+          jQuery('.loader').show();
         jQuery.ajax({
             url : ajax_url,
             type : 'post',
@@ -306,7 +310,7 @@ function storevalue(val){
                     jQuery("#taggedPro").append(setpro(index,value));
                     jQuery("#taggedPro").find("div span").unbind("click").bind("click",function(){ removeBox(); });
                 }); 
-                
+                jQuery('.loader').hide();
                 jQuery("#error").html("");                
             }
         });     
@@ -314,3 +318,6 @@ function storevalue(val){
 
 
 </script>
+<div class="loader">
+    <img src="<?=get_template_directory_uri();?>/images/loading.svg" width=100%>
+</div>
