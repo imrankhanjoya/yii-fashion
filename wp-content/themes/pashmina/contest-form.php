@@ -143,9 +143,9 @@ var ajax_url = '<?=admin_url( 'admin-ajax.php' )?>';
 jQuery(document).ready(function(){
 
     alert("hello");
-    $("#upfile").click(function(){
+    jQuery("#upfile").click(function(){
     	alert("hello");
-        $( "#upfilefield" ).trigger( "click" );
+        jQuery( "#upfilefield" ).trigger( "click" );
     });
     
 
@@ -177,159 +177,11 @@ jQuery(document).ready(function(){
 
     });
 
-    $("#sendmessage").click(function(){
-        var title = $("#title").val();
-        var description = $("#description").val();
-        var imagepath = $("#imagepath").val();
-        var ppost = <?=$post->ID?>;
-        if(imagepath.length<10){
-        	$("#error").html("Upload image first.");
-        	return false;
-        }
-        if(title.length<2){
-        	$("#error").html("Enter nice title please.");
-        	return false;
-        }
-        if(description.length<10){
-        	$("#error").html("Enter nice description please.");
-        	return false;
-        }
-        
-        
-        var findkey = $(this).val();
-        $('.loader').show();
-        $.ajax({
-            url : ajax_url,
-            type : 'post',
-            async: false,
-            dataType: 'json',
-            data : {
-                action : 'save_contest',
-                ppost:ppost,
-                title:title,
-                image:imagepath,
-                description:description,
-            },
-            success : function( response ) {
-                $("#error").html("");
-                $("#myCarousel").carousel('next');
-                
-            }
-        });
-    });
-
-    $("#gobackbutton").click(function(){
-    	$("#myCarousel").carousel('prev');
-    });
     
-    
-
-    $.ajax({
-            url : ajax_url,
-            type : 'post',
-            async: false,
-            dataType: 'json',
-            data : {
-                action : 'save_tagedproduct',
-                ppost:<?=$contest_post[0]['ID']?>,
-            },
-            success : function( response ) {
-            	$("#taggedPro").html('');
-            	$.each(response, function(index, value) {
-                	$("#taggedPro").append(setpro(index,value));
-                });
-                             
-            }
-        });
-    
-
-    $("#products").easyAutocomplete(productFile);
-    //$("#myCarousel").carousel({interval:false});
-    //$("#myCarousel").carousel("next");
 
    
 
 });
-
-
-var options = {
-	url:'<?=$filePath?>',
-	getValue: "title",
-	list: {match:{enabled: true},
-	template: {
-		type: "iconRight",
-		fields: {
-			iconSrc: "icon"
-		}
-	}
-	}
-};
-var productFile = {
-	url:'<?=$proPath?>',
-	list: {match:{enabled: true}, onKeyEnterEvent:function(){ 
-		var value = $("#products").getSelectedItemData().title;
-		storevalue(value);}, onChooseEvent:function(){ 
-		var value = $("#products").getSelectedItemData().title;
-		storevalue(value);}
-	},
-	template: {
-		type: "custom",
-		method: function(value, item) {
-			return "<div style='width:60px; height:60px; float:left; margin-right:5px; overflow:hidden'><img src='" + item.icon + "'  style=' min-height:100%; min-width:100%; width:auto; height:auto;' /> </div><div>"+ value+"</div> <div class='clearfix'></div>";
-		}
-	},
-	getValue:"title"
-};
-
-function removeBox(key){
-            $.ajax({
-            url : ajax_url,
-            type : 'post',
-            async: false,
-            dataType: 'json',
-            data : {
-                action : 'remove_tagedproduct',
-                ppost:<?=$contest_post[0]['ID']?>,
-                key:key
-            },
-            success : function( response ) {
-                
-                $("#"+key).hide(500);
-                
-                             
-            }
-        });
-    }
-function setpro(index, value){
-        return "<div id='"+value.key+"' class='col-md-3 col-xs-12 spro'><div class='col-md-4 col-xs-4'><img src='"+value.image+"' class='img-responsive' ></div><div class='col-md-8 col-xs-8'>"+value.title+"<span onClick='removeBox(\""+value.key+"\")'  class='glyphicon glyphicon-remove-circle'></span></div></div>";
-    }    
-function storevalue(val){
-        var p = val;
-          var ppost = <?=$contest_post[0]['ID']?>;
-          $("#products").attr('val','');
-
-        $.ajax({
-            url : ajax_url,
-            type : 'post',
-            async: false,
-            dataType: 'json',
-            data : {
-                action : 'save_tagedproduct',
-                product_title:p,
-                ppost:ppost,
-            },
-            success : function( response ) {
-                $("#taggedPro").html('');
-                $("#products").attr('val','');
-                $.each(response, function(index, value) {
-                    $("#taggedPro").append(setpro(index,value));
-                    $("#taggedPro").find("div span").unbind("click").bind("click",function(){ removeBox(); });
-                }); 
-                
-                $("#error").html("");                
-            }
-        });     
-    }
 
 
 
