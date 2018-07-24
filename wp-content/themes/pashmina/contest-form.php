@@ -249,18 +249,7 @@ $(document).ready(function(){
 });
 
 
-var options = {
-    url:'<?=$filePath?>',
-    getValue: "title",
-    list: {match:{enabled: true},
-    template: {
-        type: "iconRight",
-        fields: {
-            iconSrc: "icon"
-        }
-    }
-    }
-};
+
 var productFile = {
     url:'<?=$proPath?>',
     list: {match:{enabled: true}, onKeyEnterEvent:function(){ 
@@ -279,54 +268,5 @@ var productFile = {
 };
 
 
-function removeBox(key){
-            $.ajax({
-            url : ajax_url,
-            type : 'post',
-            async: false,
-            dataType: 'json',
-            data : {
-                action : 'remove_tagedproduct',
-                ppost:<?=$contest_post[0]['ID']?>,
-                key:key
-            },
-            success : function( response ) {
-                
-                $("#"+key).hide(500);
-                
-                             
-            }
-        });
-    }
-function setpro(index, value){
-        return "<div id='"+value.key+"' class='col-md-3 col-xs-12 spro'><div class='col-md-4 col-xs-4'><img src='"+value.image+"' class='img-responsive' ></div><div class='col-md-8 col-xs-8'>"+value.title+"<span onClick='removeBox(\""+value.key+"\")'  class='glyphicon glyphicon-remove-circle'></span></div></div>";
-    }    
-function storevalue(val){
-        var p = val;
-          var ppost = <?=$contest_post[0]['ID']?>;
-          $("#products").attr('val','');
-
-        $.ajax({
-            url : ajax_url,
-            type : 'post',
-            async: false,
-            dataType: 'json',
-            data : {
-                action : 'save_tagedproduct',
-                product_title:p,
-                ppost:ppost,
-            },
-            success : function( response ) {
-                $("#taggedPro").html('');
-                $("#products").attr('val','');
-                $.each(response, function(index, value) {
-                    $("#taggedPro").append(setpro(index,value));
-                    $("#taggedPro").find("div span").unbind("click").bind("click",function(){ removeBox(); });
-                }); 
-                
-                $("#error").html("");                
-            }
-        });     
-    }
 
 </script>
