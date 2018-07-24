@@ -188,7 +188,7 @@ function storevalue(val){
         });		
     }
 
-$(document).ready(function(){
+jQuery(document).ready(function(){
 
     alert("hello");
     $("#upfile").click(function(){
