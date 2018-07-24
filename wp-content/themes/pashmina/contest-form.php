@@ -30,7 +30,7 @@ if($contest_post){
 <div class="row">
 	
 	<div class="col-md-12" style="text-align: center; margin-top:2%; margin-bottom:2%">
-	<h1><?=the_title()?></h1>
+	<h1 class="seffect"><?=the_title()?></h1>
 	
 	</div>
 
@@ -79,7 +79,7 @@ if($contest_post){
 
       
     </div>
-    <div class="item">
+    <div class="item" style="min-width:300px">
       
 
 
@@ -190,6 +190,10 @@ jQuery(document).ready(function(){
     jQuery("#upfile").click(function(){
         $( "#upfilefield" ).trigger( "click" );
     });
+    jQuery("#upfile").tap(function(){
+        $( "#upfilefield" ).trigger( "click" );
+    });
+    
     jQuery('input[type=file]').change(function(){
 
         jQuery(this).simpleUpload("/mypost.php", {
@@ -263,12 +267,6 @@ jQuery(document).ready(function(){
     	jQuery("#myCarousel").carousel('next');
     });
     
-
-
-    
-
-    
-
     
 
     jQuery.ajax({
@@ -292,6 +290,9 @@ jQuery(document).ready(function(){
 
     jQuery("#products").easyAutocomplete(productFile);
     jQuery("#myCarousel").carousel({interval:false});
+
+
+   
 
 });
 
