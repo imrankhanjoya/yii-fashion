@@ -136,7 +136,7 @@ if($contest_post){
 
 
 <script type="text/javascript">
-
+	var $ = jQuery;
 jQuery(document).ready(function(){
 
     jQuery("#upfile").click(function(){
