@@ -38,7 +38,7 @@ if($contest_post){
 
 
 
-	<div  class="carousel slide" id="myCarousel" data-interval="false" data-ride="carousel" style="height: 600px">
+	<div  class="slide" id="myCarousel" data-interval="false" data-ride="carousel" style="height: 600px">
   
 
   <!-- Wrapper for slides -->
@@ -291,8 +291,8 @@ jQuery(document).ready(function(){
     
 
     jQuery("#products").easyAutocomplete(productFile);
-    jQuery("#myCarousel").carousel({interval:false});
-
+    //jQuery("#myCarousel").carousel({interval:false});
+    //jQuery("#myCarousel").carousel("next");
 
    
 
