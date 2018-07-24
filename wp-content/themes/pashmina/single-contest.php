@@ -13,13 +13,13 @@ $post_ID = get_the_ID();
 $post = get_post();  
 $user = wp_get_current_user();
 $userID = $user->ID;
+$url = get_permalink().'?startit=true';
 ?>
 <?php if(isset($_GET['startit']) && $userID ):?>
 
 <?PHP include('contest-form.php'); ?>
 
 <?php else: ?>
-	
 	<div class="container" style="background-image: url(<?= get_the_post_thumbnail_url(get_the_ID())?>); height:650px; width: 100%; background-position: center; background-size: cover;" >
 		<div class="row" >
 			<div class="col-lg-12 col-md-12">
@@ -27,14 +27,13 @@ $userID = $user->ID;
 					<main id="main" class="site-main" role="main">
 						<div class="entry-content">
 
-						<a href="<?php esc_url( the_permalink() ); ?>?startit=true">
-              <h1 class="entry-title"><?php the_title(); ?></h1>
+						<a href="<?=$url?>">
+              		<h1 class="entry-title"><?php the_title(); ?></h1>
             </a>
 						<?=$post->post_content?>
 
 						</div><!-- .entry-content -->
 						
-						<a href="getStart">Get Start</a>
 					</main><!-- #main -->
 				</div><!-- #primary -->
 			</div><!-- .col-lg-8 -->
@@ -42,7 +41,12 @@ $userID = $user->ID;
 			
 		</div><!-- .row -->
 	</div><!-- .container -->
-	
+<script type="text/javascript">
+	jQuery("div").click(function(){
+		window.location = '<?=$url?>';
+	})
+
+</script>
 <?php endif; ?>
 <?php
 get_footer('contest');
