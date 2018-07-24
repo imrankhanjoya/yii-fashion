@@ -998,7 +998,7 @@ var EasyAutocomplete = (function(scope) {
 				}
 
 				if (template.getTemplateClass() !== "") {
-					classes += " imran " + template.getTemplateClass();
+					classes += " " + template.getTemplateClass();
 				}
 				
 
@@ -1018,6 +1018,7 @@ var EasyAutocomplete = (function(scope) {
 				var fieldWidth = $field.outerWidth();
 
 				$field.parent().css("width", fieldWidth);				
+				$field.parent().css("min-width","350px");				
 			}
 
 			function removeWrapper() {

@@ -219,6 +219,9 @@ textarea:focus {
 .easy-autocomplete-container ul li div{
 	text-align: left;
 }
+.easy-autocomplete{
+	min-width: 350px;
+}
 .easy-autocomplete input{
 	border:1px solid #000;
 	border-color:#000 !important;

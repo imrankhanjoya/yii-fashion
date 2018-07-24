@@ -89,7 +89,7 @@ if($contest_post){
 	  
 	<div class="col-md-12">
 	  <div class="form-group col-md-12" style="padding:0px">
-	    <input type="text" style="width: 100%" id="products" placeholder="Tag the products that you used in your awesome look" >
+	    <input type="text" style="width: 100%; min-width:300px " id="products" placeholder="Tag the products that you used in your awesome look" >
 	  </div>
 	  
 	  <div class="col-md-12" id="taggedPro"></div>	
@@ -312,10 +312,10 @@ var productFile = {
 	url:'<?=$proPath?>',
 	list: {match:{enabled: true}, onKeyEnterEvent:function(){ 
 		var value = $("#products").getSelectedItemData().title;
-		storevalue(value);
-
-
-	}},
+		storevalue(value);}, onChooseEvent:function(){ 
+		var value = $("#products").getSelectedItemData().title;
+		storevalue(value);}
+	},
 	template: {
 		type: "custom",
 		method: function(value, item) {
