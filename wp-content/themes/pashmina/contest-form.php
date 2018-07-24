@@ -149,12 +149,12 @@ jQuery(document).ready(function(){
     });
     
 
-    $('input[type=file]').change(function(){
+    jQuery('input[type=file]').change(function(){
 
-        $(this).simpleUpload("/mypost.php", {
+        jQuery(this).simpleUpload("/mypost.php", {
 
             start: function(file){
-                $("#userimage").attr("src",$("#userimage").attr("ld"));
+                jQuery("#userimage").attr("src",jQuery("#userimage").attr("ld"));
             },
 
             progress: function(progress){
@@ -163,13 +163,13 @@ jQuery(document).ready(function(){
 
             success: function(data){
                 
-                $("#userimage").attr("src",data.data);
-                $("#imagepath").val(data.data);
+                jQuery("#userimage").attr("src",data.data);
+                jQuery("#imagepath").val(data.data);
             },
 
             error: function(error){
                 //upload failed
-                $("#userimage").attr("src",$("#userimage").attr("org"));
+                jQuery("#userimage").attr("src",jQuery("#userimage").attr("org"));
             }
 
         });
