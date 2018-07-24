@@ -51,8 +51,10 @@ if($contest_post){
 		<input type="file" name="file" id="upfilefield" style="display: none;">
 		<input type="hidden" name="imagepath" value="<?=$img?>" id="imagepath">
 		<button type="submit" id="upfile" class="">Choose Photo</button>
+		<span id="upfile" class="glyphicon glyphicon-camera"  style="pointer;">Change</span>
+      
 		<div class="col-md-6" id="imageFrame">
-				<button type="submit" id="upfile" class="" style="top:45%; position: absolute; left:30%">Choose Photo</button>
+				<!-- <button type="submit" id="upfile" class="" style="top:45%; position: absolute; left:30%">Choose Photo</button> -->
 				<img id="userimage" 
                             ld="<?=get_template_directory_uri();?>/images/loading.svg" 
                             src="<?=$userimage?>" 
