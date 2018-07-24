@@ -140,7 +140,7 @@ if($contest_post){
 jQuery(document).ready(function(){
 
     jQuery("#upfile").click(function(){
-        $( "#upfilefield" ).trigger( "click" );
+        jQuery( "#upfilefield" ).trigger( "click" );
     });
     
 
@@ -149,7 +149,7 @@ jQuery(document).ready(function(){
         jQuery(this).simpleUpload("/mypost.php", {
 
             start: function(file){
-                $("#userimage").attr("src",$("#userimage").attr("ld"));
+                jQuery("#userimage").attr("src",jQuery("#userimage").attr("ld"));
             },
 
             progress: function(progress){
@@ -164,7 +164,7 @@ jQuery(document).ready(function(){
 
             error: function(error){
                 //upload failed
-                $("#userimage").attr("src",$("#userimage").attr("org"));
+                jQuery("#userimage").attr("src",jQuery("#userimage").attr("org"));
             }
 
         });
