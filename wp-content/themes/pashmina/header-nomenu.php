@@ -51,10 +51,10 @@ $showHeader = true;
 ?>
 
 
-	<header class="dt-header" <?php if ( ! empty( $header_image ) ) { ?>style="background-image: url('<?php header_image(); ?>'); background-position: center; background-repeat: no-repeat;"<?php } ?> >
+	<header class="dt-header" >
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-12">
+				<div class="col-lg-2">
 					<div style="text-align: center; padding:10px">
 
                         <?php
@@ -67,11 +67,7 @@ $showHeader = true;
 
                         ?>
 
-                        <?php
-                        $description = get_bloginfo( 'description', 'display' );
-                        if ( $description || is_customize_preview() ) : ?>
-                            <p class="site-description"><?php echo $description; ?></p>
-                        <?php endif; ?>
+                        
 
 					</div><!-- .dt-logo -->
 				</div><!-- .col-lg-12 -->
