@@ -124,3 +124,11 @@ function findContest($postID,$userID){
    	return false;
    }
 }
+
+add_action( 'wp_ajax_get_participent', 'get_participent' );
+function get_participent(){
+	$contest_id = $_POST['contest'];
+	global $wpdb;
+	$sql = "SELECT * from post_meta ";
+	$val = $wpdb->get_results($sql, ARRAY_A); 
+}

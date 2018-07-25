@@ -55,7 +55,9 @@ if(isset($user->data->ID)){
 		
 		$newPath = $movefile['url'];
 		if ( $movefile && ! isset( $movefile['error'] ) ) {
-			$val = image_resize($movefile['file'],300,300,true);
+			$val = image_resize($movefile['file'],200,200,true,'small');
+			$val = image_resize($movefile['file'],300,300,false,'mid');
+			$val = image_resize($movefile['file'],600,600,false,'max');
 			$val = explode("wp-content",$val);
 			$newPath = get_site_url()."/wp-content".$val[1];
 			
