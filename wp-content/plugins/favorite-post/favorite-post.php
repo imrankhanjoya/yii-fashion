@@ -200,12 +200,12 @@ class WeDevs_Favorite_Posts {
 
             $this->insert_favorite( $post_id, $user_id );
 
-            wp_send_json_success( '<span class="fa fa-heart f-selct">&nbsp;</span> ' . __( 'Favorite', 'wfp' ) );
+            wp_send_json_success( '<span class="fa fa-heart f-selct">&nbsp;</span>');
         } else {
 
             $this->delete_favorite( $post_id, $user_id );
 
-            wp_send_json_success( '<span class="fa fa-heart fnot">&nbsp;</span> ' . __( 'Favorite', 'wfp' ) );
+            wp_send_json_success( '<span class="fa fa-heart fnot">&nbsp;</span>');
         }
     }
 

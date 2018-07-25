@@ -290,8 +290,13 @@ textarea.form-control{
 	height:300px;
 }
 .voteBox{
-	font-size:65px;
+	font-size:45px;
 	text-align: center;
+}
+.voteBox .wpf-favorite-link{
+	display: block;
+	margin-right:25px;
+	margin-bottom:10px;
 }
 .voteBox .glyphicon-class{
 	font-size: 22px;
@@ -2020,6 +2025,18 @@ td {
 }
 button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover{
 	background-color:#000;
+}
+.a-button{
+	background-color: #000;
+	color: #fff;
+	display: block;
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	cursor: pointer;
+}
+.a-button:hover{
+	color: #fff;
 }
 .site-form{
 	padding-top:50px;
