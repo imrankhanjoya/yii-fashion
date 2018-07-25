@@ -54,8 +54,8 @@ $showHeader = true;
 	<header class="dt-header" >
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-2">
-					<div style="text-align: center; padding:10px">
+				<div class="col-lg-12">
+					<div style="text-align: center; padding:10px;">
 
                         <?php
 
@@ -79,3 +79,9 @@ $showHeader = true;
         
 
     </header>
+  <style>
+  .custom-logo{
+    height: 20px;
+    width: auto;
+  }
+  </style>

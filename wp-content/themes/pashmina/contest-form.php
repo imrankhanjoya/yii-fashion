@@ -15,7 +15,7 @@ $userimage = 'http://www.gloat.me/wp-content/uploads/2018/07/upload.png';
 $user = wp_get_current_user();
 
 $contest_post = findContest($post->ID,$user->ID);
-$title = '';
+$title = $user->display_name;
 $desc = '';
 $img = '';
 $reply_url = '';
@@ -24,7 +24,14 @@ if($contest_post){
     $title = $contest_post[0]['post_title'];
     $desc = $contest_post[0]['post_content'] ;
     $userimage = get_post_meta($contest_post[0]['ID']);
+
     $img = $userimage = $userimage['image'][0];
+    $array = explode('.',$img);
+    if(!empty($array)){
+        $userimage = str_replace(".".end($array),"-max.".end($array),$img);
+    }
+}else{
+    $contest_post[0]['ID'] = 0;
 }
 ?>
 <div class="container">
@@ -67,7 +74,7 @@ if($contest_post){
             <h2>Awesome lets start to win!</h2>
             <div id="error"></div>
             <div class="form-group">
-            <input type="text" name="title" value="<?=$title?>" placeholder="Say some thing about your style" class="form-control" id="title" required>
+            <input type="text" name="title" value="<?=$title?>" placeholder="Your Display Name" class="form-control" id="title" required>
             </div>
             <div class="form-group">
             <textarea id="description" class="form-control" name="detail" placeholder="Say some thing about your style" required><?=$desc?></textarea>
@@ -139,7 +146,7 @@ if($contest_post){
 <script type="text/javascript">
 var  $ = jQuery.noConflict();
 var ajax_url = '<?=admin_url( 'admin-ajax.php' )?>';
-
+var userPostId = <?=$contest_post[0]['ID']?>;
 
 $(document).ready(function(){
 
@@ -210,9 +217,11 @@ $(document).ready(function(){
                 description:description,
             },
             success : function( response ) {
+                userPostId = response;
                 jQuery("#error").html("");
                 jQuery("#myCarousel").carousel('next');
                 jQuery('.loader').hide();
+
                 
             }
         });
@@ -231,7 +240,7 @@ $(document).ready(function(){
             dataType: 'json',
             data : {
                 action : 'save_tagedproduct',
-                ppost:<?=$contest_post[0]['ID']?>,
+                ppost:userPostId,
             },
             success : function( response ) {
                 jQuery("#taggedPro").html('');
@@ -277,7 +286,7 @@ function removeBox(key){
         dataType: 'json',
         data : {
         action : 'remove_tagedproduct',
-        ppost:<?=$contest_post[0]['ID']?>,
+        ppost:userPostId,
         key:key
     },
     success : function( response ) {
@@ -292,7 +301,7 @@ function setpro(index, value){
 
 function storevalue(val){
         var p = val;
-          var ppost = <?=$contest_post[0]['ID']?>;
+          var ppost = userPostId;
           jQuery("#products").attr('val','');
           jQuery('.loader').show();
         jQuery.ajax({

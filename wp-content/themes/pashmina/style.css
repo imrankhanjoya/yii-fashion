@@ -289,6 +289,14 @@ textarea.form-control{
 #taggedPro{
 	height:300px;
 }
+.voteBox{
+	font-size:65px;
+	text-align: center;
+}
+.voteBox .glyphicon-class{
+	font-size: 22px;
+	display: block;
+}
 /*--------------------------------------------------------------
 # contest form
 --------------------------------------------------------------*/

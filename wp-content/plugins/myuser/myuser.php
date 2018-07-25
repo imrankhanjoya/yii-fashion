@@ -194,3 +194,20 @@ function get_fav_count($userID,$post_type){
     return $val[0]['count'];
 
 }
+
+function get_contest_vodecount($post_id){
+
+    global $wpdb;
+    $sql = "SELECT count(*) as count FROM {$wpdb->prefix}favorite_post WHERE post_id = %d";
+    $return = $wpdb->get_results( $wpdb->prepare( $sql, $post_id ), ARRAY_A);
+    
+    return $return[0]['count'];
+
+}
+
+function get_post_favstatus( $post_id, $user_id ) {
+        global $wpdb;
+        $sql = "SELECT post_id FROM {$wpdb->prefix}favorite_post WHERE post_id = %d AND user_id = %d";
+        $return = $wpdb->get_row( $wpdb->prepare( $sql, $post_id, $user_id ) );
+        return $return;
+}
