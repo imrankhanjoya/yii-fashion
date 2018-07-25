@@ -106,10 +106,10 @@ if($contest_post){
       <div class="col-md-12" id="taggedPro"></div>  
 
 
-      <div class="col-md-2 col-xs-5" style="margin-bottom: 50px; margin-top: 50px">
-      <input type="button" name="submit" id="gobackbutton" class="a-btn-knowmore" value="Back to Photo">
+      <div class="col-md-3 col-xs-5" style="margin-bottom: 50px; margin-top: 50px">
+      <a   id="gobackbutton" class="a-btn-knowmore" >Back to Photo</a>
       </div>
-      <div class="col-md-offset-7 col-md-3 col-xs-offset-2 col-xs-5" style="margin-bottom: 50px; margin-top: 50px">
+      <div class="col-md-offset-6 col-md-3 col-xs-offset-2 col-xs-5" style="margin-bottom: 50px; margin-top: 50px">
       <a href="<?=$reply_url?>" type="button" name="submit" class="a-btn-knowmore" >Submit & Share</a>
       </div>
     

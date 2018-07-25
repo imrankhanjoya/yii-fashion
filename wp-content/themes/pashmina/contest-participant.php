@@ -39,7 +39,7 @@ wp_enqueue_script( 'infinitescroll', get_template_directory_uri() . '/js/jquery.
 #container {
     border: 1px solid;
     padding: 5px;
-    height: auto
+    height: auto;
 }
 
 
@@ -52,7 +52,7 @@ wp_enqueue_script( 'infinitescroll', get_template_directory_uri() . '/js/jquery.
 <script type="text/javascript">
 var $ = jQuery.noConflict();
 var page = 0;
-function loadData(){
+function loadData($grid){
 		page++;
 	jQuery.ajax({
       url : "/contest-participent.php?postid=348&page=1",
@@ -76,8 +76,8 @@ function loadData(){
           
 				
           console.log(response.data);
-            $grid.masonry('layout');
-
+          $grid.masonry('layout');
+          $("#container").css("height","auto");
                        
       }
   });
@@ -88,14 +88,15 @@ $(document).ready(function() {
 
 	
 
-	loadData();
+	
 	var $grid = $('.grid').masonry({
 				itemSelector: '.grid-item',
 				columnWidth:40,
 				percentPosition: true,
 				gutter: 10
 
-				}); 
+				});
+	loadData($grid);			 
 });
 
 </script>
