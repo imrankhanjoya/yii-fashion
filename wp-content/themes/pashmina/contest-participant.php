@@ -21,11 +21,10 @@ wp_enqueue_script( 'infinitescroll', get_template_directory_uri() . '/js/jquery.
 
 ?>
 
-
+<h2>Who else have participated</h2>
 <div id="container" class="grid">
 	
 </div>
-<span class="loadmore" onClick='loadData()'>Load more</span>
 <style type="text/css">
 	
 
@@ -37,7 +36,8 @@ wp_enqueue_script( 'infinitescroll', get_template_directory_uri() . '/js/jquery.
 }
 
 #container {
-    border: 1px solid;
+
+    border:1px solid;
     padding: 5px;
     height: auto;
 }
