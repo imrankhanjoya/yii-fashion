@@ -126,9 +126,19 @@ function findContest($postID,$userID){
 }
 
 add_action( 'wp_ajax_get_participent', 'get_participent' );
-function get_participent(){
-	$contest_id = $_POST['contest'];
+function get_participent($contest_id =0){
+	if(isset($_POST['contest'])){
+		$contest_id = $_POST['contest'];	
+	}
+	
 	global $wpdb;
-	$sql = "SELECT * from post_meta ";
-	$val = $wpdb->get_results($sql, ARRAY_A); 
+	$query =  "select count(*) as count from $wpdb->posts as posts
+	where posts.post_parent = $contest_id and posts.post_type= 'contest_replay' and posts.post_status = 'publish'";
+
+	$results = $wpdb->get_results($query, ARRAY_A );
+	if(!empty($results)){
+		return $results['0']['count'];
+	}else{
+		return 0 ;
+	}
 }
