@@ -52,6 +52,9 @@
 <a id="back-to-top" class="transition35"><i class="fa fa-angle-up"></i></a><!-- #back-to-top -->
 
 <?php wp_footer(); ?>
-
+<?php
+    global $wpdb;
+    print_r( $wpdb->queries );
+?>
 </body>
 </html>

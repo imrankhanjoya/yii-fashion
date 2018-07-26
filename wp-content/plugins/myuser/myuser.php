@@ -33,6 +33,7 @@ function getLoginPage(){
     $val = get_page_by_path( 'get-start');
     return $callback = add_query_arg(array('fbgo' =>'true'),get_page_link($val->ID));
 }
+
 function fbloginurl(){
     $fb = new Facebook\Facebook(["app_id"=>"135773309784309","app_secret"=>"ed1a94d872c933bda46ef4f80ca66bb6"]);
     $helper = $fb->getRedirectLoginHelper();
@@ -55,15 +56,24 @@ function saveUser($response,$token){
 
     if(!empty($results)){
         
+        $url = preUrl();
+
         loginUser($results[0]['user_id']);
         $val = get_page_by_path( 'get-start' );
-        $url = add_query_arg(array('show' =>'personal','t'=>'exist'),get_page_link($val->ID));
+        
+        if(!$url){
+            $url = add_query_arg(array('show' =>'personal','t'=>'exist'),get_page_link($val->ID));
+        }
         wp_redirect($url);
+        
     }elseif(!empty($emailresults)){
-
+        $url = preUrl();
         loginUser($emailresults[0]['ID']);
         $val = get_page_by_path( 'get-start' );
-        $url = add_query_arg(array('show' =>'personal','t'=>'exist'),get_page_link($val->ID));
+        
+        if(!$url){
+            $url = add_query_arg(array('show' =>'personal','t'=>'exist'),get_page_link($val->ID));
+        }    
         wp_redirect($url);
     }else{
 

@@ -6,20 +6,26 @@
  *
  * @package Pashmina
  */
+$user = wp_get_current_user();
+$userID = $user->ID;
+if(!$userID){
+    $url = getLoginPage();
+    wp_redirect($url);
+}
+
 
 get_header('nomenu'); 
 
 $post_ID = get_the_ID();
 $post = get_post();  
-$user = wp_get_current_user();
-$userID = $user->ID;
+
 $url = get_permalink().'?startit=true';
 
 $val = get_post_meta($post_ID);
 
 $participant = get_participent($post_ID);
 ?>
-<?php if(isset($_GET['startit']) && $userID ):?>
+<?php if(isset($_GET['startit']) && $userID):?>
 
 <?PHP include('contest-form.php'); ?>
 
