@@ -25,9 +25,10 @@ $jsonProduct = json_decode($jsonProduct,true);
 foreach ($val[0] as $key => $value) {
 	if($value=="")
 		continue;
+	$url = isset($jsonProduct[$value]['url'])?$jsonProduct[$value]['url']:"#";
 	$title = isset($jsonProduct[$value]['title'])?$jsonProduct[$value]['title']:$value;
 	$image = isset($jsonProduct[$value]['icon'])?$jsonProduct[$value]['icon']:"http://www.gloat.me/wp-content/uploads/2018/07/makeup.png";
-	$tp[] = array("title"=>$title,"image"=>$image,"key"=>md5($title));
+	$tp[] = array("title"=>$title,"image"=>$image,"key"=>md5($title),"url"=>$url);
 }
 ?>
 
@@ -70,7 +71,7 @@ foreach ($val[0] as $key => $value) {
 										?>
 									</div>
 									<div class="col-md-12">
-										<?php echo '<span class="glyphicon-class">'.$voteCount.'</span>';?>
+										<?php echo '<span class="glyphicon-class vcount"></span>';?>
 									</div>
 
 								</div>
@@ -92,7 +93,7 @@ foreach ($val[0] as $key => $value) {
 			<div class="col-md-offset-1 col-md-10 " style="text-align: center; margin-bottom:10px">
 				<h5>What made her awesome </h5>
 						<?php foreach($tp as $pro):?>
-							<div id='"+value.key+"' class='col-md-4 col-xs-12 spro'><div class='col-md-4 col-xs-4'><img src='<?=$pro['image']?>' class='img-responsive' ></div><div class='col-md-8 col-xs-8'><?=$pro['title']?></div></div>
+							<div class='col-md-4 col-xs-12'><a href="<?=$pro['url']?>" target="_blank"><div class='spro'><div class='col-md-4 col-xs-4'><img src='<?=$pro['image']?>' class='img-responsive' ></div><div class='col-md-8 col-xs-8'><?=$pro['title']?></div></div></div>
 						<?PHP endforeach;?>
 			</div>
 
@@ -104,5 +105,35 @@ foreach ($val[0] as $key => $value) {
 		</div>
 	</div><!-- .container -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=imrankhanjoya"></script>
+<script type="text/javascript">
+	var ajax_url = '<?=admin_url( 'admin-ajax.php' )?>';
+
+	function loadFav(){
+		jQuery.ajax({
+            url : ajax_url,
+            type : 'post',
+            async: false,
+            dataType: 'json',
+            data : {
+                action : 'get_contest_vodecount',
+                postID:<?=$post->ID?>
+            },
+            success : function( response ) {
+                $(".vcount").html(response);
+
+                
+            }
+        });
+	}
+	//setInterval(loadFav,1000);
+	$(document).ready(function(){
+		
+		$(".wpf-favorite-link").click(function(){
+
+			setTimeout(loadFav,3000);
+		});
+		loadFav();
+	});
+</script>
 <?php
 get_footer('contest');
