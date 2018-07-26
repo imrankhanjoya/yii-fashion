@@ -42,10 +42,6 @@ if($contest_post){
     <h1 class="seffect"><?=the_title()?></h1>
     </div>
 
-
-
-
-
     <div  class="slide" id="myCarousel" data-interval="false" data-ride="carousel" style="height: 600px">
   
 
@@ -59,14 +55,9 @@ if($contest_post){
         <input type="file" name="file" id="upfilefield" style="display: none;">
         <input type="hidden" name="imagepath" value="<?=$img?>" id="imagepath">
         
-      
         <div class="col-md-6" id="imageFrame">
-                <button type="submit" id="upfile" class="" style="top:45%; position: absolute; left:30%">Choose Photo</button>
-                <img id="userimage" 
-                            ld="<?=get_template_directory_uri();?>/images/loading.svg" 
-                            src="<?=$userimage?>" 
-                            org="<?=$userimage?>" 
-                             >
+            <button type="submit" id="upfile" class="" style="top:45%; position: absolute; left:39%">Choose Photo</button>
+            <img id="userimage" ld="<?=get_template_directory_uri();?>/images/loading.svg" src="<?=$userimage?>" org="<?=$userimage?>" >
                 
         </div>
         <div class="col-md-6" style="margin-bottom:60px">

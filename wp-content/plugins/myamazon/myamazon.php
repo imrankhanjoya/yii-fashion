@@ -15,7 +15,7 @@ License: GPL2
 add_filter( 'wp_nav_menu_items', 'your_custom_menu_item', 2, 3 );
 function your_custom_menu_item ( $items, $args ) {
     $items .= '<li><a href="/top-cosmetic-products/">Top</a></li>';
-    $items .= '<li><a href="/product/">Products</a></li>';
+    $items .= '<li><a href="/shop/">Shop</a></li>';
     $items .= '<li><a href="/discuss-beauty/">Discuss</a></li>';
     
     return $items;
@@ -70,4 +70,29 @@ function generateMeta($data){
         $out .= '<meta name="twitter:image" content="'.$data['image'].'" /><meta name="twitter:card" content="summary_large_image" />';$out .= "\n";        
     }
     return $out;
+}
+
+
+add_action('init', 'my_setcookie');
+
+// my_setcookie() set the cookie on the domain and directory WP is installed on
+function my_setcookie(){
+  $path = "/";
+  $host = parse_url(get_option('siteurl'), PHP_URL_HOST);
+  $expiry = strtotime('+1 month');
+  $url = $_SERVER['REQUEST_URI'];
+  
+  
+  if($url=="/"){
+    return false;
+  }elseif(strstr($url,"get-start") || strstr($url,"wp-login.php")){
+    return false;
+  }else{
+    setcookie('getBack',$url, $expiry, $path, $host);
+  }
+}
+
+
+function preUrl(){
+    return isset($_COOKIE['getBack'])?$_COOKIE['getBack']:false;
 }

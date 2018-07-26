@@ -25,7 +25,7 @@ get_header(); ?>
 							<?php
 							/* Start the Loop */
 							while ( have_posts() ) : the_post();
-
+								the_post_type();
 								/**
 								 * Run the loop for the search to output the results.
 								 * If you want to overload this in a child theme then include a file

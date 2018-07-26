@@ -79,7 +79,7 @@ foreach ($val[0] as $key => $value) {
 										?>
 									</div>
 									<div class="col-md-12">
-										<?php echo '<span class="glyphicon-class vcount"></span>';?>
+										<?php echo '<span class="glyphicon-class vcount">'.$voteCount.'</span>';?>
 									</div>
 
 								</div>
@@ -113,6 +113,7 @@ foreach ($val[0] as $key => $value) {
 		</div>
 	</div><!-- .container -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=imrankhanjoya"></script>
+<?php if(is_user_logged_in()): ?>
 <script type="text/javascript">
 	var ajax_url = '<?=admin_url( 'admin-ajax.php' )?>';
 
@@ -143,5 +144,6 @@ foreach ($val[0] as $key => $value) {
 		loadFav();
 	});
 </script>
+<?php endif;?>
 <?php
 get_footer('contest');
