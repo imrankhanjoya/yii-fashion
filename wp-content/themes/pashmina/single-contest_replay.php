@@ -8,9 +8,17 @@
  */
 
 get_header('nomenu'); 
-
-
 $post = get_post();  
+/********/
+$Contest = get_post($post->post_parent);
+$ContestInof = get_post_meta($post->post_parent);
+$startDate = $ContestInof['start_date'][0];
+$endDate = $ContestInof['end_date'][0];
+
+/********/
+
+
+
 $userimage = get_post_meta($post->ID);
 $img = $userimage['image'][0];
 $array = explode('.',$img);
@@ -25,7 +33,7 @@ $jsonProduct = json_decode($jsonProduct,true);
 foreach ($val[0] as $key => $value) {
 	if($value=="")
 		continue;
-	$url = isset($jsonProduct[$value]['url'])?$jsonProduct[$value]['url']:"#";
+	$url = isset($jsonProduct[$value]['url'])?$jsonProduct[$value]['url']:"http://www.gloat.me/?s=".$value;
 	$title = isset($jsonProduct[$value]['title'])?$jsonProduct[$value]['title']:$value;
 	$image = isset($jsonProduct[$value]['icon'])?$jsonProduct[$value]['icon']:"http://www.gloat.me/wp-content/uploads/2018/07/makeup.png";
 	$tp[] = array("title"=>$title,"image"=>$image,"key"=>md5($title),"url"=>$url);
@@ -35,7 +43,7 @@ foreach ($val[0] as $key => $value) {
 	<div class="container" style="min-height:650px; width: 100%; background-position: center; background-size: cover;" >
 		<div class="row">
 			<div class="col-md-12 " style="text-align: center; margin-bottom:10px">
-				<h2>Office look fashion click Started on 24 Jun 2005 </h2>
+				<h2><?=$Contest->post_title?> Started on <?=$startDate?> </h2>
 			</div>
 			<div class="col-md-offset-1 col-lg-4 col-md-4">
 				<center><img alt="<?php the_title(); ?>" src="<?=$userimage?>" ></center>

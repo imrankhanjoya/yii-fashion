@@ -8,7 +8,6 @@
  */
 
 
-$post_ID = get_the_ID();
 $post = get_post();  
 
 wp_enqueue_script( 'masonry','//cdnjs.cloudflare.com/ajax/libs/masonry/2.1.07/jquery.masonry.min.js', array( 'jquery' ), '4.0.6', '' );
