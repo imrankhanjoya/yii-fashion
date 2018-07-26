@@ -237,11 +237,10 @@ textarea:focus {
 .spro{
 	font-size:12px;
 	position: relative;
-	height:80px;
-	background-color: #f4f4f4;
-	border:#fff solid 4px;
-	border-radius:10px;
+	height:110px;
+	border:#f4f4f4 solid 1px;
 	overflow: hidden;
+	margin-right:7px;
 	
 }
 .spro span{
