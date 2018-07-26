@@ -38,20 +38,26 @@ $starPage = get_page_link($val->ID);
     
         
             <?PHP 
-            $args = array('post_type' => 'contest','posts_per_page' =>1,'orderby' => 'ASC');
-            $dt_featured_posts = new WP_Query($args);
-            while ($dt_featured_posts->have_posts()) : $dt_featured_posts->the_post(); 
-                ?>
+              $args = array('post_type' => 'contest','posts_per_page' =>1,'orderby' => 'ASC');
+              $dt_featured_posts = new WP_Query($args);
+              while ($dt_featured_posts->have_posts()) : 
+                $dt_featured_posts->the_post(); 
+
+            ?>
             <a  href="<?php esc_url( the_permalink() ); ?>">    
-            <div class="container" style="width:100%; height:400px; background-image: url(<?= get_the_post_thumbnail_url(get_the_ID())?>); background-position: center;
+            <div class="container hidden-xs" style="width:100%; height:400px; background-image: url(<?= get_the_post_thumbnail_url(get_the_ID())?>); background-position: center;
+    background-size: cover;">
+                
+            </div>
+            <div class="container hidden-md hidden-lg" style="width:100%; height:400px; background-image: url(<?= get_the_post_thumbnail_url(get_the_ID())?>); background-position: center;
     background-size: cover;">
                 
             </div>
             </a>
-            <?PHP
-            endwhile; 
-            wp_reset_postdata(); 
-            ?>
+              <?PHP
+              endwhile; 
+              wp_reset_postdata(); 
+              ?>
         
     
 
