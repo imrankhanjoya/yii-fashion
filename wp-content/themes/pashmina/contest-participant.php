@@ -21,30 +21,13 @@ wp_enqueue_script( 'infinitescroll', get_template_directory_uri() . '/js/jquery.
 
 ?>
 
+
 <h3>Who else have participated</h3>
-<div id="container" class="grid">
-	
-</div>
+<div id="container" class="grid"></div>
 <style type="text/css">
-	
-
-	
-
-.grid-sizer,
-.grid-item {
-  width:10%;
-}
-.grid-item{
-	margin:5px;
-}
-
-#container {
-
-    padding: 5px;
-    height: auto;
-}
-
-
+.grid-sizer,.grid-item {width:10%;}
+.grid-item{margin:5px;}
+#container {padding: 5px;height: auto;}
 </style>
 
 
@@ -83,14 +66,8 @@ function loadData($grid){
                        
       }
   });
-	}
+}
 $(document).ready(function() {
-   
-  
-
-	
-
-	
 	var $grid = $('.grid').masonry({
 				itemSelector: '.grid-item',
 				columnWidth:40,
