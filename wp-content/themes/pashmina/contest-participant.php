@@ -21,7 +21,7 @@ wp_enqueue_script( 'infinitescroll', get_template_directory_uri() . '/js/jquery.
 
 ?>
 
-<h2>Who else have participated</h2>
+<h3>Who else have participated</h3>
 <div id="container" class="grid">
 	
 </div>
@@ -34,10 +34,12 @@ wp_enqueue_script( 'infinitescroll', get_template_directory_uri() . '/js/jquery.
 .grid-item {
   width:10%;
 }
+.grid-item{
+	margin:5px;
+}
 
 #container {
 
-    border:1px solid;
     padding: 5px;
     height: auto;
 }
