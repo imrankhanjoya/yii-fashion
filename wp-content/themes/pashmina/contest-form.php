@@ -77,7 +77,7 @@ if($contest_post){
             <input type="text" name="title" value="<?=$title?>" placeholder="Your Display Name" class="form-control" id="title" required>
             </div>
             <div class="form-group">
-            <textarea id="description" class="form-control" name="detail" placeholder="Say some thing about your style" required><?=$desc?></textarea>
+            <textarea id="description" class="form-control" style="min-height:150px" name="detail" placeholder="Say some thing about your style" required><?=$desc?></textarea>
             </div>
             <button type="submit" id="sendmessage" >Save</button>
 
