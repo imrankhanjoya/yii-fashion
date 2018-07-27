@@ -100,7 +100,7 @@ if(!is_user_logged_in()){
                 </a>
             </div>
             <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                <a href="<?=$starPage?>" class="home-banner-img" style="background-image: url('http://gloat.me/wp-content/uploads/2018/07/reward.png');">
+                <a href="<?=$starPage?>" class="home-banner-img" style="background-image: url('http://www.gloat.me/wp-content/uploads/2018/07/Adobe_Post_20180727_170459.jpg');">
                 </a>
             </div>
 
@@ -108,9 +108,8 @@ if(!is_user_logged_in()){
                 <a href="http://gloat.me/tag/lakme/" class="home-banner-img" style="background-image: url(http://gloat.me/wp-content/uploads/2018/07/lakme.png);" >
                 </a>
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-right"><a class="home-banner-img"
-                                                                            style="background-image: url(http://gloat.me/wp-content/uploads/2018/07/stay.png);"
-                                                                            href="http://gloat.me/discuss-beauty-tips/">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-right">
+                <a class="home-banner-img" style="background-image: url(http://www.gloat.me/wp-content/uploads/2018/07/Adobe_Post_20180727_172640.jpg); background-size:cover;" href="http://gloat.me/shop/">
                 </a>
             </div>
         </div>
