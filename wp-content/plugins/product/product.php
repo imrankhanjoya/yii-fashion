@@ -8,12 +8,6 @@ Version: 1.2
 Author: Mr. Imran khan joya
 Author URI: http://mrtotallyawesome.com
 License: GPL2
-*/
-?>
-
-
-<?PHP 
-/*
 
 CREATE TABLE `wp_contest` (
  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,

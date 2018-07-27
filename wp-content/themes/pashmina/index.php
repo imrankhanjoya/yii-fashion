@@ -11,7 +11,6 @@
  *
  * @package Pashmina
  */
-
 get_header(); ?>
 
 <div class="container">

@@ -38,7 +38,11 @@ if ( !defined('ABSPATH') ) {
 require_once( ABSPATH . '/wp-admin/includes/taxonomy.php');
 $user = wp_get_current_user();
 
+$where = "1 ";
+if(isset($_REQUEST['postid'])){
 $postID = $_REQUEST['postid'];
+$where = " posts.post_parent = $postID";
+}
 $page = $_REQUEST['page'];
 $perpage = 10;
 $start = $perpage * ($page-1);
@@ -48,7 +52,7 @@ global $wpdb;
 
 $query =  "select posts.ID,posts.post_date,posts.post_content,posts.post_title,posts.guid,meta.meta_value from $wpdb->posts as posts 
 left join $wpdb->postmeta as meta on meta.post_id = posts.ID and meta_key = 'image'
-where posts.post_parent = $postID and posts.post_type= 'contest_replay' and posts.post_status = 'publish' limit $start , $end";
+where $where and posts.post_type= 'contest_replay' and posts.post_status = 'publish' limit $start , $end";
 
 // $query =  "select posts.ID,posts.post_date,posts.post_content,posts.post_title,posts.guid as meta_value from $wpdb->posts as posts 
 // where  posts.post_type= 'attachment' limit $start , $end";

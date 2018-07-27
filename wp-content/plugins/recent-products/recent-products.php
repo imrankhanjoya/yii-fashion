@@ -93,7 +93,6 @@ class WP_Widget_Recent_Postsss extends WP_Widget {
 
     function form( $instance ) {
         
-        //echo"<pre>";print_r($instance);
         $title     = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : '';
         $number    = isset( $instance['number'] ) ? absint( $instance['number'] ) : 5;
 

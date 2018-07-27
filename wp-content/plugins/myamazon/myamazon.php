@@ -81,8 +81,6 @@ function my_setcookie(){
   $host = parse_url(get_option('siteurl'), PHP_URL_HOST);
   $expiry = strtotime('+1 month');
   $url = $_SERVER['REQUEST_URI'];
-  
-  
   if($url=="/"){
     return false;
   }elseif(strstr($url,"get-start") || strstr($url,"wp-login.php")){

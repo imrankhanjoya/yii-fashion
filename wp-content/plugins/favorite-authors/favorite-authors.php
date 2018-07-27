@@ -101,7 +101,6 @@ function fav_author_remove_user(){
             $user_id = absint(fav_authors_get_user_id());
             $author_list = get_user_meta( $user_id, FAV_AUTHORS_META_KEY, true );
             $author_saved = array_search($remove_this_author, $author_list);
-            var_dump($author_saved);
             if( FALSE !== $author_saved ){
                 // Remove $author_saved
                 unset($author_list[$author_saved]);
@@ -126,10 +125,8 @@ function fav_authors_link($user_id=0){
         wp_enqueue_style('themename-style');
 
         $fav_author_list = get_user_option( 'favorite-authors', fav_authors_get_user_id() );
-        //var_dump( $fav_author_list ); 
 
         global $post;
-        //print_r($post);
         if($user_id==0)
         $user_id = absint($post->post_author);
         
