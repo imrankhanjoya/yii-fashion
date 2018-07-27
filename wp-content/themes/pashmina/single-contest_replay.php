@@ -85,12 +85,12 @@ foreach ($val[0] as $key => $value) {
 								</div>
 								<div class=" col-md-8">
 									<h6>Help to share win the contest, Share with your firends and on social media</h6>
-								<div class="addthis_sharing_toolbox" data-url="<?=$shareUrl?>" data-title="Hi Friends this is <?=$userdata->data->display_name?> Join me at Gloat.Me" data-description="Join me at Gloat.Me and lets discuss about beauty and products #Gloat.Me" data-media="<?=$img?>"></div>
+								<div class="addthis_sharing_toolbox" data-url="<?=$shareUrl?>" data-title="Hi Friends this is <?=$userdata->data->display_name?> Join me at Gloat.Me" data-description="Join me at Gloat.Me and lets discuss about beauty and products #Gloat.Me" data-media="<?=$img?>">
+								</div>
 								</div>
 							</div>
 			</div><!-- .col-lg-8 -->
-			<div class="col-lg-2 col-md-2">
-			</div>			
+					
 
 			
 			
@@ -98,10 +98,19 @@ foreach ($val[0] as $key => $value) {
 		<div class="row" style="margin-top:20px; margin-bottom:100px;">
 			
 			
-			<div class="col-md-offset-1 col-md-10 " style="text-align: center; margin-bottom:10px">
-				<h5>What made her awesome </h5>
+			<div class="col-md-offset-1 col-md-10 " style=" margin-bottom:10px">
+				<h3>What made her awesome </h3>
 						<?php foreach($tp as $pro):?>
-							<div class='col-md-4 col-xs-12'><a href="<?=$pro['url']?>" target="_blank"><div class='spro'><div class='col-md-4 col-xs-4'><img src='<?=$pro['image']?>' class='img-responsive' ></div><div class='col-md-8 col-xs-8'><?=$pro['title']?></div></div></div>
+							<div class='col-md-4 col-xs-12'>
+									<a href="<?=$pro['url']?>" target="_blank">
+											<div class='spro'>
+												<div class='col-md-4 col-xs-4'>
+													<img src='<?=$pro['image']?>' class='img-responsive' >
+												</div>
+												<div class='col-md-8 col-xs-8'><?=$pro['title']?></div>
+											</div>
+									</a>		
+							</div>
 						<?PHP endforeach;?>
 			</div>
 
