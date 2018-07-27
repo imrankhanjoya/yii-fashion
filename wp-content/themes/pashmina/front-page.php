@@ -47,7 +47,7 @@ if(!is_user_logged_in()){
                
             <div class="col-md-12" style="padding:0px; margin-bottom:10px">
               <a  href="<?php esc_url( the_permalink() ); ?>"> 
-              <img class="img-responsive hidden-xs" src="<?= get_the_post_thumbnail_url(get_the_ID())?>" />
+              <img class="hidden-xs" src="<?= get_the_post_thumbnail_url(get_the_ID())?>" />
               <img class="img-responsive hidden-md hidden-lg" src="<?=$val['image'][0]?>" />
               </a>    
             </div>
