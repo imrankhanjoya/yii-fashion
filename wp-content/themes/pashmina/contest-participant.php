@@ -1,28 +1,12 @@
 <?php
-/**
- * The template for displaying all single posts.
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
- *
- * @package Pashmina
- */
-
-
-$post = get_post();  
-
 wp_enqueue_script( 'masonry','//cdnjs.cloudflare.com/ajax/libs/masonry/2.1.07/jquery.masonry.min.js', array( 'jquery' ), '4.0.6', '' );
-
-
-wp_enqueue_script( 'infinitescroll', get_template_directory_uri() . '/js/jquery.infinitescroll.min.js', array( 'jquery' ), '4.0.6', '' );
-
-
-
-
 ?>
 
 
 <h3>Who else have participated</h3>
-<div id="container" class="grid" style="margin-bottom:25px;"></div>
+<div id="participated" class="grid" style="margin-bottom:25px;">
+
+</div>
 
 
 
@@ -58,7 +42,7 @@ function loadData($grid){
 				
           console.log(response.data);
           $grid.masonry('layout');
-          $("#container").css("height","auto");
+          $("#participated").css("height","auto");
                        
       }
   });
