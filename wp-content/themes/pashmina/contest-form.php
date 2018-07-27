@@ -14,6 +14,8 @@ $userimage = 'http://www.gloat.me/wp-content/uploads/2018/07/upload.png';
 
 $user = wp_get_current_user();
 
+//start_contest($post->ID);
+
 $contest_post = findContest($post->ID,$user->ID);
 $title = $user->display_name;
 $desc = '';
@@ -101,7 +103,7 @@ if($contest_post){
       <a   id="gobackbutton" class="a-button" >Back to Photo</a>
       </div>
       <div class="col-md-offset-6 col-md-3 col-xs-6" style="margin-bottom: 50px; margin-top: 50px">
-      <a href="<?=$reply_url?>" class="a-button" >Submit & Share</a>
+      <a href="" class="a-button submit_share" >Submit & Share</a>
       </div>
     
     </div>
@@ -208,7 +210,8 @@ $(document).ready(function(){
                 description:description,
             },
             success : function( response ) {
-                userPostId = response;
+                userPostId = response.ID;
+                $(".submit_share").attr("href",response.guid);
                 jQuery("#error").html("");
                 jQuery("#myCarousel").carousel('next');
                 jQuery('.loader').hide();
@@ -256,9 +259,9 @@ var productFile = {
     url:'<?=$proPath?>',
     list: {match:{enabled: true}, onKeyEnterEvent:function(){ 
         var value = $("#products").getSelectedItemData().title;
-        storevalue(value);}, onChooseEvent:function(){ 
+        storevalue(value); $("#products").val(''); }, onChooseEvent:function(){ 
         var value = $("#products").getSelectedItemData().title;
-        storevalue(value);}
+        storevalue(value); $("#products").val('');}
     },
     template: {
         type: "custom",

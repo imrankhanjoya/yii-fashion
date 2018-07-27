@@ -39,9 +39,13 @@ function save_contest() {
 	$postdata['post_name'] = $_POST['title'];
 	$postdata['post_parent'] = $_POST['ppost'];
 	$postdata['meta_input']['image'] =  $_POST['image'];
-	echo $val = wp_insert_post( $postdata,true);
+	$val = wp_insert_post( $postdata,true);
+	echo json_encode(get_post($val),true);
    exit;
 }
+
+
+
 
 add_action( 'wp_ajax_save_tagedproduct', 'save_tagedproduct' );
 
