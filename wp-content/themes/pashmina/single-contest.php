@@ -30,14 +30,15 @@ $participant = get_participent($post_ID);
 <?PHP include('contest-form.php'); ?>
 
 <?php else: ?>
-	<div class="container hidden-xs" style="background-image: url(<?= get_the_post_thumbnail_url(get_the_ID())?>); height:400px; width: 100%; background-position: center; background-size: cover;" >
-		
-	</div><!-- .container -->
-	<div class="container hidden-md hidden-lg" style="background-image: url(<?=$val['image'][0]?>); height:400px; width: 100%; background-position: center; background-size: cover;" >
-		
-	</div><!-- .container -->
-	<div class="container" style=" height:400px; width: 100%; background:rgba(0,0,0,0.8);" >
-	<div class="row" >
+	
+	<div class="col-md-12" style="padding:0px; margin-bottom:10px">
+     <a  href="<?php esc_url( the_permalink() ); ?>"> 
+     <img class="img-responsive hidden-xs" src="<?= get_the_post_thumbnail_url(get_the_ID())?>" />
+     <img class="img-responsive hidden-md hidden-lg" src="<?=$val['image'][0]?>" />
+     </a>    
+   </div>
+	<div class="container-fluid">
+	<div class="row">
 			<div class="col-lg-12 col-md-12" style="background-color: #fff">
 				<div id="primary" class="content-area">
 					<main id="main" class="site-main" role="main">
@@ -51,7 +52,7 @@ $participant = get_participent($post_ID);
 					</main><!-- #main -->
 				</div><!-- #primary -->
 			</div><!-- .col-lg-8 -->
-			<div class="col-lg-12 col-md-12" style=" height: 200px; color:#fff; text-align: center; margin-bottom:25px;">
+			<div class="col-lg-12 col-md-12" style="background-color: #000; color:#fff; text-align: center;  padding-bottom:50px;">
 				<h1><?PHP the_title();?></h1>
 				Starting From <?=$val['start_date'][0]?>
 				To

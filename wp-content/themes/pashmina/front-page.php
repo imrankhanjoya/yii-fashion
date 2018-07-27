@@ -35,7 +35,7 @@ if(!is_user_logged_in()){
   $starPage = "/discuss-beauty/";
 }
 ?>
-<?PHP
+            <?PHP
 
               $args = array('post_type' => 'contest','posts_per_page' =>1,'orderby' => 'ASC');
               $dt_featured_posts = new WP_Query($args);
@@ -44,16 +44,14 @@ if(!is_user_logged_in()){
                 $val = get_post_meta(get_the_ID());
                 
             ?>
-            <a  href="<?php esc_url( the_permalink() ); ?>">    
-            <div class="container hidden-xs" style="width:100%; height:400px; background-image: url(<?= get_the_post_thumbnail_url(get_the_ID())?>); background-position: center;
-    background-size: cover;">
-                
+               
+            <div class="col-md-12" style="padding:0px; margin-bottom:10px">
+              <a  href="<?php esc_url( the_permalink() ); ?>"> 
+              <img class="img-responsive hidden-xs" src="<?= get_the_post_thumbnail_url(get_the_ID())?>" />
+              <img class="img-responsive hidden-md hidden-lg" src="<?=$val['image'][0]?>" />
+              </a>    
             </div>
-            <div class="container hidden-md hidden-lg" style="width:100%; height:400px; background-image: url(<?=$val['image'][0]?>); background-position: center;
-    background-size: cover;">
-                
-            </div>
-            </a>
+            
               <?PHP
               endwhile; 
               wp_reset_postdata(); 
