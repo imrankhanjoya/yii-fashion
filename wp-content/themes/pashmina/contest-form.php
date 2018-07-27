@@ -97,10 +97,10 @@ if($contest_post){
       <div class="col-md-12" id="taggedPro"></div>  
 
 
-      <div class="col-md-3 col-xs-5" style="margin-bottom: 50px; margin-top: 50px">
+      <div class="col-md-3 col-xs-6" style="margin-bottom: 50px; margin-top: 50px">
       <a   id="gobackbutton" class="a-button" >Back to Photo</a>
       </div>
-      <div class="col-md-offset-6 col-md-3 col-xs-offset-2 col-xs-5" style="margin-bottom: 50px; margin-top: 50px">
+      <div class="col-md-offset-6 col-md-3 col-xs-6" style="margin-bottom: 50px; margin-top: 50px">
       <a href="<?=$reply_url?>" class="a-button" >Submit & Share</a>
       </div>
     

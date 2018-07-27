@@ -22,12 +22,8 @@ wp_enqueue_script( 'infinitescroll', get_template_directory_uri() . '/js/jquery.
 
 
 <h3>Who else have participated</h3>
-<div id="container" class="grid"></div>
-<style type="text/css">
-.grid-sizer,.grid-item {width:10%;}
-.grid-item{margin:5px;}
-#container {padding: 5px;height: auto;}
-</style>
+<div id="container" class="grid" style="margin-bottom:25px;"></div>
+
 
 
 
@@ -51,7 +47,8 @@ function loadData($grid){
           
           jQuery.each(response.data, function(index, value) {
           				
-                    jQuery(".grid").append("<a href='"+value.guid+"' class='grid-item'><img   src='"+value.meta_value+"' /></a>");
+                    jQuery(".grid").append("<a href='"+value.guid+"' class='grid-item hidden-xs'><img   src='"+value.meta_value+"' /></a>");
+                    jQuery(".grid").append("<a href='"+value.guid+"' class='grid-item hidden-md hidden-lg' ><img   src='"+value.meta_value+"' style='width:150px' /></a>");
                    
      
     						
@@ -69,9 +66,8 @@ function loadData($grid){
 $(document).ready(function() {
 	var $grid = $('.grid').masonry({
 				itemSelector: '.grid-item',
-				columnWidth:40,
+				columnWidth:100,
 				percentPosition: true,
-				gutter: 10
 
 				});
 	loadData($grid);			 
