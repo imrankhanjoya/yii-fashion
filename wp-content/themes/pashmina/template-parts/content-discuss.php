@@ -8,7 +8,6 @@
  */
 
 ?>
-
 <div class="col-md-12 container">
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     

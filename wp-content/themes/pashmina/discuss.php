@@ -1,5 +1,4 @@
-<?php /* Template Name: DiscussPage */ ?>
-<?php
+<?php /* Template Name: DiscussPage */ 
 if(!session_id()) {
     session_start();
 }

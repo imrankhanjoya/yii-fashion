@@ -30,14 +30,6 @@ get_header();
 $val = get_page_by_path('get-start');
 $starPage = get_page_link($val->ID);
 
-?>
-
-
-<!-- Contest -->
-
-    
-        
-            <?PHP 
               $args = array('post_type' => 'contest','posts_per_page' =>1,'orderby' => 'ASC');
               $dt_featured_posts = new WP_Query($args);
               while ($dt_featured_posts->have_posts()) : 
