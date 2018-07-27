@@ -51,7 +51,7 @@ $participant = get_participent($post_ID);
 					</main><!-- #main -->
 				</div><!-- #primary -->
 			</div><!-- .col-lg-8 -->
-			<div class="col-lg-12 col-md-12" style=" height: 200px; color:#fff; text-align: center;">
+			<div class="col-lg-12 col-md-12" style=" height: 200px; color:#fff; text-align: center; margin-bottom:25px;">
 				<h1><?PHP the_title();?></h1>
 				Starting From <?=$val['start_date'][0]?>
 				To
