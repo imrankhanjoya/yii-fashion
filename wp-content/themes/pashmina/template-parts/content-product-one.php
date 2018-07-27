@@ -9,7 +9,7 @@
 
 global $current_user;
 wp_get_current_user();
-$username = $current_user->display_name;
+$username = $current_user->display_name!=''?$current_user->display_name:'Dua Lipa';
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <div class="col-md-6">
