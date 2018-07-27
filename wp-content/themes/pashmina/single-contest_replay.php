@@ -86,8 +86,9 @@ foreach ($val[0] as $key => $value) {
 									</div>
 
 								</div>
-								<div class=" col-md-8">
-									<h6>Help to share win the contest, Share with your firends and on social media</h6>
+								<div class=" col-md-8 col-xs-12 ">
+
+									<b>Help to share win the contest, Share with your firends and on social media</b>
 								<div class="addthis_sharing_toolbox" data-url="<?=$shareUrl?>" data-title="Hi Friends this is <?=$userdata->data->display_name?> Join me at Gloat.Me" data-description="Join me at Gloat.Me and lets discuss about beauty and products #Gloat.Me" data-media="<?=$img?>">
 								</div>
 								</div>
