@@ -6,11 +6,9 @@
  *
  * @package Pashmina
  */
-
 $post_ID = get_the_ID();
 $val = get_post_meta($post_ID);
 $price = $val['LowestNewPrice'][0]!=""?$val['LowestNewPrice'][0]:$val['ListPrice'][0];      
-
 ?>
 <div class="col-lg-12 col-xs-12 col-md-12 col-sm-12">
 <hr>
