@@ -32,7 +32,7 @@ $val = get_page_by_path('get-start');
 if(!is_user_logged_in()){
   $starPage = getLoginPage();
 }else{
-  $starPage = get_page_link($val->ID);
+  $starPage = "/discuss-beauty/";
 }
 ?>
 <?PHP
