@@ -31,9 +31,9 @@
 </style>
 <div class="container bottom-footer">
 	<div class="row">
-		<div class="col-md-4 col-xs-4 text-center"> <a href="<?=$about?>">About us</a></div>
+		<div class="col-md-4 col-xs-3 text-center"> <a href="<?=$about?>">About us</a></div>
 		<div class="col-md-4 col-xs-4 text-center"> <a href="<?=$privacypolicy?>">Privacy Policy</a></div>
-		<div class="col-md-4 col-xs-4 text-center"> <a href="<?=$termsconditions?>">Terms Conditions</a></div>
+		<div class="col-md-4 col-xs-5 text-center"> <a href="<?=$termsconditions?>">Terms Conditions</a></div>
 	</div>
 </div>
 
