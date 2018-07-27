@@ -63,8 +63,8 @@ foreach ($val[0] as $key => $value) {
 										$voteCount = get_contest_vodecount($post->ID);	
 										if (is_user_logged_in()) {
 											
-											$status = get_post_favstatus($post->ID,get_current_user_id());
-											if($status){
+											$ifVoted = get_post_favstatus($post->ID,get_current_user_id());
+											if($ifVoted){
 												echo '<span class="fa fa-heart f-selct top"></span>';	
 											}else{
 												echo '<a class="wpf-favorite-link" data-label="" href="#" data-id="'.$post->ID.'"><span class="fa fa-heart f-selct top"></span></a>';
@@ -72,7 +72,7 @@ foreach ($val[0] as $key => $value) {
 											
 
 										}else{
-											echo '<span class="fa fa-heart f-selct top"></span>';	
+											echo '<a href="'.getLoginPage().'"><span class="fa fa-heart f-selct top"></span></a>';	
 										}
 
 											
