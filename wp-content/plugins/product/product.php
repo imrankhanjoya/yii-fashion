@@ -8,7 +8,6 @@ Version: 1.2
 Author: Mr. Imran khan joya
 Author URI: http://mrtotallyawesome.com
 License: GPL2
-
 CREATE TABLE `wp_contest` (
  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
  `user_id` bigint(20) unsigned NOT NULL DEFAULT '0',
@@ -19,9 +18,7 @@ CREATE TABLE `wp_contest` (
  KEY `post_id` (`post_id`),
  KEY `meta_key` (`key`(191))
 ) ENGINE=InnoDB AUTO_INCREMENT=4141 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
-
  */
-
 add_action( 'wp_ajax_save_contest', 'save_contest' );
 
 function save_contest() {
