@@ -57,9 +57,9 @@ foreach($results as $key=>$val){
 <h3>Who else have participated</h3>
 <div id="container" class="grid">
   <?PHP
-foreach ($results as $key => $value) {
-  echo "<div class='grid-item frame'><img src='".$value['meta_value']."' style='width:200px'></div>";
-}
+  foreach ($results as $key => $value) {
+  echo "<div class='grid-item frame'><a href='".$value['guid']."'><img src='".$value['meta_value']."' style='width:200px'></a></div>";
+  }
   ?>
 
 </div>

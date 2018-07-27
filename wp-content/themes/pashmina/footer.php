@@ -41,7 +41,7 @@
 
 				<div class="col-lg-4 col-md-4">
 					<div class="dt-footer-designer">
-						<?php do_action('pashmina_theme_info'); ?>
+						SimplySocial
 					</div><!-- .dt-footer-designer -->
 				</div><!-- .col-lg-4 .col-md-4 -->
 			</div><!-- .row -->

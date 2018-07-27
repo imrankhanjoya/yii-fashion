@@ -56,8 +56,9 @@ foreach ($val[0] as $key => $value) {
             		</a>
 						<?=$post->post_content?>
 						<div class="row" style="margin-top: 50px;">
-								<div class="col-md-4 voteBox">
-										<div class="col-md-12">
+								<div class="col-md-4 col-xs-12 voteBox">
+										<div class="row">
+										<div class="col-md-12 col-xs-6">
 										<?php
 										$voteCount = get_contest_vodecount($post->ID);	
 										if (is_user_logged_in()) {
@@ -78,8 +79,10 @@ foreach ($val[0] as $key => $value) {
 										
 										?>
 									</div>
-									<div class="col-md-12">
+									<div class="col-md-12 col-xs-6">
 										<?php echo '<span class="glyphicon-class vcount">'.$voteCount.'</span>';?>
+									</div>
+									
 									</div>
 
 								</div>
