@@ -20,7 +20,7 @@
 
 ?>
 
-<footer class="dt-footer">
+<footer class="dt-footer" style="border-top:1px solid #000;">
 	
 
 	<div class="dt-footer-bar">
@@ -53,8 +53,8 @@
 
 <?php wp_footer(); ?>
 <?php
-    global $wpdb;
-    print_r( $wpdb->queries );
+    //global $wpdb;
+    //print_r( $wpdb->queries );
 ?>
 </body>
 </html>

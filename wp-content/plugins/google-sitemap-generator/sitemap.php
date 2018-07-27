@@ -1,5 +1,4 @@
 <?php
-
 /*
  $Id: sitemap.php 1026247 2014-11-15 16:47:36Z arnee $
 
@@ -110,4 +109,3 @@ function sm_GetInitFile() {
 if (defined('ABSPATH') && defined('WPINC') && !class_exists("GoogleSitemapGeneratorLoader", false)) {
 	sm_Setup();
 }
-
