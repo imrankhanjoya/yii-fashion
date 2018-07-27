@@ -28,7 +28,14 @@ add_action( 'wp_head', 'gloatme_header_metadata',0);
 get_header();
 
 $val = get_page_by_path('get-start');
-$starPage = get_page_link($val->ID);
+
+if(!is_user_logged_in()){
+  $starPage = getLoginPage();
+}else{
+  $starPage = get_page_link($val->ID);
+}
+?>
+<?PHP
 
               $args = array('post_type' => 'contest','posts_per_page' =>1,'orderby' => 'ASC');
               $dt_featured_posts = new WP_Query($args);
@@ -93,7 +100,7 @@ $starPage = get_page_link($val->ID);
                 </a>
             </div>
             <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                <a href="http://gloat.me/get-start" class="home-banner-img" style="background-image: url('http://gloat.me/wp-content/uploads/2018/07/reward.png');">
+                <a href="<?=$starPage?>" class="home-banner-img" style="background-image: url('http://gloat.me/wp-content/uploads/2018/07/reward.png');">
                 </a>
             </div>
 

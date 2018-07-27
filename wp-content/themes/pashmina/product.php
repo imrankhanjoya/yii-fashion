@@ -63,7 +63,7 @@ $custom_query = new WP_Query($args);
             <?php endwhile; ?>
 
             <?php next_posts_link( '&larr; Older posts', $custom_query->max_num_pages); ?>
-<?php previous_posts_link( 'Newer posts &rarr;' ); ?>
+            <?php previous_posts_link( 'Newer posts &rarr;' ); ?>
 
             <?php wp_reset_postdata(); // reset the query ?>
 
