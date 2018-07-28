@@ -36,12 +36,10 @@ $user = wp_get_current_user();
 get_header(); 
 
 ?>
-<div class="col-lg-12" style="padding: 0px;">
-<div class="chat-banner-img"></div>
-
+<div class="col-lg-12" style="padding:0px;">
+<img src='<?= get_the_post_thumbnail_url(get_the_ID())?>' class="img-responsive">
 </div>
-<br>
-&nbsp;
+
 
     <div class="container discussion-page">
         <div class="row">
