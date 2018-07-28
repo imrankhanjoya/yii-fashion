@@ -6,25 +6,45 @@
  *
  * @package Pashmina
  */
-
-get_header('nomenu'); 
+global $post;
 $post = get_post();  
 /********/
+global $Contest;
 $Contest = get_post($post->post_parent);
 $ContestInof = get_post_meta($post->post_parent);
 $startDate = $ContestInof['start_date'][0];
 $endDate = $ContestInof['end_date'][0];
 
 /********/
-
-
-
+global $userimage;
 $userimage = get_post_meta($post->ID);
 $img = $userimage['image'][0];
 $array = explode('.',$img);
 if(!empty($array)){
   $userimage = str_replace(".".end($array),"-max.".end($array),$img);
 }
+
+function gloatme_header_metadata() {
+  global $post;
+  global $Contest;
+  global $userimage;	
+  
+  $data['title'] = $Contest->post_title." by ".get_the_title();
+  $data['url'] = "http://www.gloat.me/discuss-beauty-tips/";
+  $data['image'] = $userimage;
+  $data['description'] = $post->post_content;
+  echo generateMeta($data);  
+        
+}
+add_action( 'wp_head', 'gloatme_header_metadata',0);
+
+
+get_header('nomenu'); 
+
+
+
+
+
 
 $val = get_post_meta($post->ID,'taggedProduct');
 $tp=[];
