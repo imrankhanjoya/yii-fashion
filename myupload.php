@@ -41,8 +41,11 @@ if(isset($user->data->ID)){
     require_once( ABSPATH . 'wp-admin/includes/file.php' );
 	}
 	$file = $_FILES['file'];
+	$fileSize = getimagesize( $file['tmp_name']);
+
 	$fileType = trim($file['type']);
-	if($file['size']<= 1961538 && ( $fileType == 'image/jpeg' || $fileType == 'image/jpg' || $fileType == 'image/png')){
+
+	if(($fileSize[0]>500 && $fileSize[1] > 500) &&  $file['size']<= 1961538 && ( $fileType == 'image/jpeg' || $fileType == 'image/jpg' || $fileType == 'image/png')){
 		
 		$upload_overrides = array( 'test_form' => false );
 
@@ -62,21 +65,26 @@ if(isset($user->data->ID)){
 			$newPath = get_site_url()."/wp-content".$val[1];
 			$output = array("success" => true,"data"=>$movefile['url'],"error" => "No error");
 			header("Content-Type: application/json; charset=utf-8");
-			 echo json_encode($output);
+			echo json_encode($output);
 
 		} else {
-		    
-		    echo json_encode($movefile);
+		   $output = array("success" => false,"error"=>"Error while uploading.");
+			header("Content-Type: application/json; charset=utf-8");
+			echo json_encode($output);
+
 		}
 	}else{
 		
-		if($file['size'] > 181730){
+		if($fileSize[0]<500 || $fileSize[1] < 500){
+			$file['error'] = "File min height and width should be greater then 500x500.";
+		}elseif($file['size'] > 181730){
 			$file['error'] = "File is too large";
 		}else{
 			$file['error'] = "File type not supported ".$file['type'];
 		}
-
-		echo json_encode($file);
+		$output = array("success" => false,"error"=>$file['error']);
+		header("Content-Type: application/json; charset=utf-8");
+		echo json_encode($output);
 	}
 }
 die();
