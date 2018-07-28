@@ -108,8 +108,6 @@ if($contest_post){
     
     </div>
         <!--ITEM ENDSTART-->
-
-
       
     </div>
   </div>
@@ -294,7 +292,7 @@ function removeBox(key){
     });
 }
 function setpro(index, value){
-    return "<div id='"+value.key+"' class='col-md-3 col-xs-12 spro'><div class='col-md-4 col-xs-4'><img src='"+value.image+"' class='img-responsive' ></div><div class='col-md-8 col-xs-8'>"+value.title+"<span onClick='removeBox(\""+value.key+"\")'  class='glyphicon glyphicon-remove-circle'></span></div></div>";
+    return "<div id='"+value.key+"' class='col-md-3 col-xs-12'><div class='spro col-md-12'><div class='col-md-4 col-xs-4'><img src='"+value.image+"' class='img-responsive' ></div><div class='col-md-8 col-xs-8'>"+value.title+"<span onClick='removeBox(\""+value.key+"\")'  class='glyphicon glyphicon-remove-circle'></span></div></div></div>";
 }
 
 function storevalue(val){

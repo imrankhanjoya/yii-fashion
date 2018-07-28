@@ -225,6 +225,18 @@ function savePost($item,$brand){
 $key = $argv[1];
 $cat = $argv[2];
 $page = $argv[3];
+
+if($cat=="all"){
+    $brands = file_get_contents("brands.json");
+    $allBrands = json_decode($brands,true);
+    foreach($allBrands as $brand){
+        amazonProduct($brand,$page,"Beauty");    
+    }
+
+    exit;
+}
+
+
 amazonProduct($key,$page,$cat);
 //amazonProduct("oily skin",$page,"Beauty");
 die();
