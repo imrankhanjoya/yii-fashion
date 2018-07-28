@@ -159,15 +159,19 @@ $(document).ready(function(){
             progress: function(progress){
                 console.log("upload progress: " + Math.round(progress) + "%");
             },
-
             success: function(data){
                 
-                $("#userimage").attr("src",data.data);
-                $("#imagepath").val(data.data);
+                if(data.success){
+                    $("#userimage").attr("src",data.data);
+                    $("#imagepath").val(data.data);
+                }else{
+                    $("#error").html(data.error);
+                    $("#userimage").attr("src",$("#userimage").attr("org"));    
+                }
             },
 
             error: function(error){
-                //upload failed
+                console.log(error);
                 $("#userimage").attr("src",$("#userimage").attr("org"));
             }
 
