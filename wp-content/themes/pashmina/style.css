@@ -1264,11 +1264,20 @@ td {
 .pink{
 	color: #f26798
 }
-.fbcolor{
+.fbcolor,.fbcolor:hover{
 	background-color:#4267b2;
+	padding: 5px 10px;
+	color:#fff;
 }
-.whatsappcolor{
+.whatsappcolor,.whatsappcolor:hover{
 	background-color:#25D366;	
+	padding: 5px 10px;
+	color:#fff;
+}
+.copycolor,.copycolor:hover{
+	background-color:#ccc;	
+	padding: 5px 10px;
+	color:#fff;
 }
 /*--------------------------------------------------------------
 # Pagination
