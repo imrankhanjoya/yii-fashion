@@ -24,7 +24,6 @@ if($contest_post){
     $title = $contest_post[0]['post_title'];
     $desc = $contest_post[0]['post_content'] ;
     $userimage = get_post_meta($contest_post[0]['ID']);
-
     $img = $userimage = $userimage['image'][0];
     $array = explode('.',$img);
     if(!empty($array)){
@@ -100,12 +99,16 @@ if($contest_post){
             <p>Your entry has been submitted for <?php the_title()?></p>
             <div class="hidden-xs">
             <p><b>Share your contest entry with your friends on social media to win.</b></p>
-            <button class="fbcolor"><i class="fa fa-facebook"></i> Facebook</button><button class="whatsappcolor"><i class="fa fa-whatsapp"></i> WhatsApp</button><button><i class="fa fa-copy"></i> Copy Url</button>
+            <a class="fbcolor" href="http://www.facebook.com/sharer.php?s=100&url=<?=$reply_url?>&images=http://myurl/images/my_image.png&title=mytitle&summary=containsummary"><i class="fa fa-facebook"></i> Facebook</a>
+            <a class="whatsappcolor" href="whatsapp://send?text=<?=$title;?>–<?=$reply_url;?>" data-action="share/whatsapp/share"><i class="fa fa-whatsapp"></i> WhatsApp</a>
+            <a class="copycolor" href=""><i class="fa fa-copy"></i> Copy Url</a>
             </div>
         </div> 
         <div class="col-xs-12 hidden-md hidden-lg">
             <p><b>Share your contest entry with your friends on social media to win.</b></p>
-            <button class="fbcolor"><i class="fa fa-facebook"></i> Facebook</button><button class="whatsappcolor"><i class="fa fa-whatsapp"></i> WhatsApp</button><button><i class="fa fa-copy"></i> Copy Url</button>
+            <a class="fbcolor" href="http://www.facebook.com/sharer.php?s=100&url=<?=$reply_url?>&images=http://myurl/images/my_image.png&title=mytitle&summary=containsummary"><i class="fa fa-facebook"></i> Facebook</a>
+            <a class="whatsappcolor" href="whatsapp://send?text=<?=$title;?>–<?=$reply_url;?>" data-action="share/whatsapp/share"><i class="fa fa-whatsapp"></i> WhatsApp</a>
+            <a class="copycolor" href=""><i class="fa fa-copy"></i> Copy Url</a>
             </div>
         <div class="col-md-11 col-md-offset-1 col-xs-12">
             <h4>Select brands you have used in above photo</h4>
