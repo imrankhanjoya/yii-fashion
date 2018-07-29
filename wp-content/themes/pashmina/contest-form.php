@@ -1,6 +1,4 @@
 <?PHP
-
-
 $post = get_post();
 
 wp_enqueue_style('autocomplete',get_template_directory_uri().'/js/Autocomplete/easy-autocomplete.min.css', array(), '4.4.0', '' );
@@ -92,11 +90,18 @@ if($contest_post){
       
       
     <div class="col-md-12">
-      <div class="form-group col-md-12" style="padding:0px">
-        <input type="text" style="width: 100%; min-width:300px " id="products" placeholder="Tag the products that you used in your awesome look" >
-      </div>
-      
-      <div class="col-md-12" id="taggedPro"></div>  
+     
+      <div class="row">
+        <div class="col-md-2 col-md-offset-1 col-xs-4">
+            <img src="<?=$img?>" > 
+        </div>
+        <div class="col-md-8 col-xs-8">
+            <h2>Congratulation!</h2>
+            <p>Your entry has been submitted for <?php the_title()?></p>
+            <p>Share your contest entry with your friends on social media to win.</p>
+            <button><i class="fa fa-facebook-square"></i> Facebook</button><button><i class="fa fa-whatsapp"></i> WhatsApp</button><button><i class="fa fa-copy"></i> Copy Url</button>
+        </div>    
+      </div>  
 
 
       <div class="col-md-3 col-xs-6" style="margin-bottom: 50px; margin-top: 50px">
@@ -292,7 +297,7 @@ function removeBox(key){
     });
 }
 function setpro(index, value){
-    return "<div id='"+value.key+"' class='col-md-3 col-xs-12'><div class='spro col-md-12'><div class='col-md-4 col-xs-4'><img src='"+value.image+"' class='img-responsive' ></div><div class='col-md-8 col-xs-8'>"+value.title+"<span onClick='removeBox(\""+value.key+"\")'  class='glyphicon glyphicon-remove-circle'></span></div></div></div>";
+    return "<div id='"+value.key+"' class='col-md-3 col-xs-12 spro'><div class='col-md-4 col-xs-4'><img src='"+value.image+"' class='img-responsive' ></div><div class='col-md-8 col-xs-8'>"+value.title+"<span onClick='removeBox(\""+value.key+"\")'  class='glyphicon glyphicon-remove-circle'></span></div></div>";
 }
 
 function storevalue(val){

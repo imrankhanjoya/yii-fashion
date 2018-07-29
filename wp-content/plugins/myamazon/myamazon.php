@@ -85,6 +85,9 @@ function my_setcookie(){
     return false;
   }elseif(strstr($url,"get-start") || strstr($url,"contest-participent") || strstr($url,"wp-login.php")){
     return false;
+  }elseif(strstr($url,"contest")){
+    $url = $url.'?startit=true';
+    setcookie('getBack',$url, $expiry, $path, $host);
   }else{
     setcookie('getBack',$url, $expiry, $path, $host);
   }
