@@ -717,7 +717,6 @@ td {
 }
 
 .dt-logo {
-	padding: 40px 0;
 	text-align: center;
 	font-family: 'Dancing Script', cursive;
 }
@@ -1265,6 +1264,12 @@ td {
 .pink{
 	color: #f26798
 }
+.fbcolor{
+	background-color:#4267b2;
+}
+.whatsappcolor{
+	background-color:#25D366;	
+}
 /*--------------------------------------------------------------
 # Pagination
 --------------------------------------------------------------*/
@@ -1507,6 +1512,7 @@ td {
 .dt-social-icons .fa-dribbble {
 	background: #f26798;
 }
+
 
 /*--------------------------------------------------------------
 # Tag Cloud

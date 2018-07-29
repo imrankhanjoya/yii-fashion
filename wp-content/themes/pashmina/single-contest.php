@@ -8,9 +8,8 @@
  */
 $user = wp_get_current_user();
 $userID = $user->ID;
-if(!$userID){
-    $url = getLoginPage();
-    wp_redirect($url);
+if($userID){
+	$url = get_permalink().'?startit=true';
 }
 
 
@@ -19,7 +18,7 @@ get_header('nomenu');
 $post_ID = get_the_ID();
 $post = get_post();  
 
-$url = get_permalink().'?startit=true';
+
 
 $val = get_post_meta($post_ID);
 
@@ -63,18 +62,58 @@ $participant = get_participent($post_ID);
 				<br>
 				<br>
 				<br>
+				<?php if($userID): ?>
 				<a style="color: #fff; border:1px solid; padding: 5px;" href="<?=$url?>" > Get Start To Win</a>
+				<?php else: ?>
+				<a data-toggle="modal" data-target="#myModal" style="color: #fff; border:1px solid; padding: 5px;"> Get Start To Win</a>
+				<?php endif; ?>
+
+
+
+
+
+
+
+
+
+
 			</div>
+
+
+
+
+
+
+
+
+
+
 
 			
 		</div><!-- .row -->
-	</div>	
-<script type="text/javascript">
-	jQuery("div").click(function(){
-		window.location = '<?=$url?>';
-	})
+	</div>
 
-</script>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        
+        <h4 class="modal-title" id="myModalLabel"><?PHP the_title();?></h4>
+      </div>
+      <div class="modal-body" style="text-align: center;">
+      	
+        <a href="<?=getLoginPage()?>"  class="btn btn-primary" >Login With Facebook</a>
+        <p>
+        <small>We promise will not post on your wall.</small>
+     		</p>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
 <?php endif; ?>
 <?php
 get_footer('contest');

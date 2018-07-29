@@ -1,6 +1,4 @@
 <?PHP
-
-
 $post = get_post();
 
 wp_enqueue_style('autocomplete',get_template_directory_uri().'/js/Autocomplete/easy-autocomplete.min.css', array(), '4.4.0', '' );
@@ -92,15 +90,42 @@ if($contest_post){
       
       
     <div class="col-md-12">
-      <div class="form-group col-md-12" style="padding:0px">
-        <input type="text" style="width: 100%; min-width:300px " id="products" placeholder="Tag the products that you used in your awesome look" >
-      </div>
-      
-      <div class="col-md-12" id="taggedPro"></div>  
+     
+      <div class="row">
+        <div class="col-md-2 col-md-offset-1 col-xs-4">
+            <img src="<?=$img?>" > 
+        </div>
+        <div class="col-md-8 col-xs-8">
+            <h2>Congratulation!</h2>
+            <p>Your entry has been submitted for <?php the_title()?></p>
+            <div class="hidden-xs">
+            <p><b>Share your contest entry with your friends on social media to win.</b></p>
+            <button class="fbcolor"><i class="fa fa-facebook"></i> Facebook</button><button class="whatsappcolor"><i class="fa fa-whatsapp"></i> WhatsApp</button><button><i class="fa fa-copy"></i> Copy Url</button>
+            </div>
+        </div> 
+        <div class="col-xs-12 hidden-md hidden-lg">
+            <p><b>Share your contest entry with your friends on social media to win.</b></p>
+            <button class="fbcolor"><i class="fa fa-facebook"></i> Facebook</button><button class="whatsappcolor"><i class="fa fa-whatsapp"></i> WhatsApp</button><button><i class="fa fa-copy"></i> Copy Url</button>
+            </div>
+        <div class="col-md-11 col-md-offset-1 col-xs-12">
+            <h4>Select brands you have used in above photo</h4>
+            <?php foreach($brands as $key=>$brand):?>
+                <?php $class = in_array($key,$meta['brands'])?"check":""?>
+                <?php $checked = in_array($key,$meta['brands'])?"checked":""?>
+                <div class="col-md-2 col-xs-6">
+                    <label class="">
+                        <img src="<?="http://www.gloat.me/wp-content/uploads/".$brand['logo']?>" alt="..." class="img-thumbnail img-check  <?=$class?>">
+                        <?=$brand['title']?>
+                        <input type="checkbox" name="brands[]" id="item4" <?=$checked?> value="<?=$key?>" class="hidden" autocomplete="off">
+                    </label>
+                </div>
+            <?PHP endforeach;?>
+        </div>   
+      </div>  
 
 
       <div class="col-md-3 col-xs-6" style="margin-bottom: 50px; margin-top: 50px">
-      <a   id="gobackbutton" class="a-button" >Back to Photo</a>
+      <a  id="gobackbutton" class="a-button" >Back to Photo</a>
       </div>
       <div class="col-md-offset-6 col-md-3 col-xs-6" style="margin-bottom: 50px; margin-top: 50px">
       <a href="" class="a-button submit_share" >Submit & Share</a>
@@ -108,8 +133,6 @@ if($contest_post){
     
     </div>
         <!--ITEM ENDSTART-->
-
-
       
     </div>
   </div>
