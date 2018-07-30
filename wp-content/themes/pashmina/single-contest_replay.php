@@ -46,17 +46,19 @@ get_header('nomenu');
 
 
 
-$val = get_post_meta($post->ID,'taggedProduct');
+$taggeBrands = get_post_meta($post->ID,'taggeBrands');
 $tp=[];
-$jsonProduct = file_get_contents($proPath = get_template_directory()."/parsed.json");
-$jsonProduct = json_decode($jsonProduct,true);
-foreach ($val[0] as $key => $value) {
-	if($value=="")
-		continue;
-	$url = isset($jsonProduct[$value]['url'])?$jsonProduct[$value]['url']:"http://www.gloat.me/?s=".$value;
-	$title = isset($jsonProduct[$value]['title'])?$jsonProduct[$value]['title']:$value;
-	$image = isset($jsonProduct[$value]['icon'])?$jsonProduct[$value]['icon']:"http://www.gloat.me/wp-content/uploads/2018/07/makeup.png";
-	$tp[] = array("title"=>$title,"image"=>$image,"key"=>md5($title),"url"=>$url);
+if(!empty($taggeBrands)){
+	getProductByBrand($taggeBrands[0]);
+
+	foreach ($taggeBrands[0] as $key => $value) {
+		if($value=="")
+			continue;
+		$url = isset($jsonProduct[$value]['url'])?$jsonProduct[$value]['url']:"http://www.gloat.me/?s=".$value;
+		$title = isset($jsonProduct[$value]['title'])?$jsonProduct[$value]['title']:$value;
+		$image = isset($jsonProduct[$value]['icon'])?$jsonProduct[$value]['icon']:"http://www.gloat.me/wp-content/uploads/2018/07/makeup.png";
+		$tp[] = array("title"=>$title,"image"=>$image,"key"=>md5($title),"url"=>$url);
+	}
 }
 ?>
 
