@@ -552,7 +552,7 @@ body {
 	font-size: 14px;
 	font-weight: normal;
 	line-height:20px;
-	color: rgba(0,0,0);
+	color: rgba(0,0,0,0.87);
 }
 
 .transition5 {
@@ -578,7 +578,7 @@ h2,
 h3,
 h4 {
 	line-height: 1.6em;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Oswald', sans-serif;
 }
 
 ul,
@@ -2222,7 +2222,7 @@ width:100px;
 	text-transform: uppercase;
 	font-weight: bold;
 	font-size: 2em;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Oswald', sans-serif;
 	}	
 .top-ttl:hover .top-ttl-heddng{
 	color: red;
@@ -2510,7 +2510,7 @@ color:#ED145B !important;
 	color: #000;
 	display: inline-block;
 	letter-spacing: 2px;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Oswald', sans-serif;
 }
 .all-div-padding0{
 	padding: 0px !important;
