@@ -49,16 +49,7 @@ get_header('nomenu');
 $taggeBrands = get_post_meta($post->ID,'taggeBrands');
 $tp=[];
 if(!empty($taggeBrands)){
-	getProductByBrand($taggeBrands[0]);
-
-	foreach ($taggeBrands[0] as $key => $value) {
-		if($value=="")
-			continue;
-		$url = isset($jsonProduct[$value]['url'])?$jsonProduct[$value]['url']:"http://www.gloat.me/?s=".$value;
-		$title = isset($jsonProduct[$value]['title'])?$jsonProduct[$value]['title']:$value;
-		$image = isset($jsonProduct[$value]['icon'])?$jsonProduct[$value]['icon']:"http://www.gloat.me/wp-content/uploads/2018/07/makeup.png";
-		$tp[] = array("title"=>$title,"image"=>$image,"key"=>md5($title),"url"=>$url);
-	}
+	$tp = getProductByBrand($taggeBrands[0]);
 }
 ?>
 
@@ -114,6 +105,15 @@ if(!empty($taggeBrands)){
 								<div class="addthis_sharing_toolbox" data-url="<?=$shareUrl?>" data-title="Hi Friends this is <?=$userdata->data->display_name?> Join me at Gloat.Me" data-description="Join me at Gloat.Me and lets discuss about beauty and products #Gloat.Me" data-media="<?=$img?>">
 								</div>
 								</div>
+								<div class=" col-md-8 col-xs-12 ">
+
+								<h5>Brands that made her awesome</h5>
+								<?PHP foreach($taggeBrands[0] as $b):?>
+									<div class="col-md-3 col-xs-3">
+									<a href="/topics/<?=$b?>"><img src="//gloat.me/wp-content/uploads<?=$brands[$b]['logo']?>" class=ïmg-thumnail " ></a>
+									</div>
+								<?php endforeach;?>
+								</div>
 							</div>
 			</div><!-- .col-lg-8 -->
 					
@@ -126,14 +126,18 @@ if(!empty($taggeBrands)){
 			
 			<div class="col-md-offset-1 col-md-10 " style=" margin-bottom:10px">
 				<h3>What made her awesome </h3>
-						<?php foreach($tp as $pro):?>
-							<div class='col-md-4 col-xs-12'>
-									<a href="<?=$pro['url']?>" target="_blank">
+						<?php foreach($tp as $pro): ?>
+							<div class='col-md-4 col-xs-12 no-margin no-padding'>
+									<a href="<?=$pro->guid?>" target="_blank">
 											<div class='spro'>
 												<div class='col-md-4 col-xs-4'>
-													<img src='<?=$pro['image']?>' class='img-responsive' >
+													<img src='<?=$pro->image?>' class='img-responsive' >
 												</div>
-												<div class='col-md-8 col-xs-8'><?=$pro['title']?></div>
+												<div class='col-md-8 col-xs-8'>
+													<?=$pro->post_title?><br>
+													<?=$pro->name?> 
+													<a href='<?=$pro->detailUrl?>' >Explore on amazon</a>
+												</div>
 											</div>
 									</a>		
 							</div>

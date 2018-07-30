@@ -21,6 +21,10 @@ CREATE TABLE `wp_contest` (
  */
 add_action( 'wp_ajax_save_contest', 'save_contest' );
 
+
+
+
+
 function save_contest() {
 	$user = wp_get_current_user();
 	$results = findContest($_POST['ppost'],$user->ID);
@@ -163,20 +167,35 @@ function get_participent($contest_id =0){
 
 
 function getProductByBrand($brands,$limit=3){
-	/*
-	select * from $wpdb->terms 
-	where slug in ($brandString)
-	 */
-	$brandString = "'". implode("','",$brands)."'";
-	global $wpdb;
 
-	"select * from $wpdb->terms 
-	where slug in ($brandString)";
-	$query = "select slug,posts.post_title,posts.guid,meta.meta_value from $wpdb->terms 
-	left join $wpdb->term_relationships as term_relationships on term_relationships.term_taxonomy_id = wp_terms.term_id
-	left join $wpdb->posts as posts on posts.id = term_relationships.object_id
-	left join $wpdb->postmeta as meta on meta.post_id = posts.id and meta.meta_key = 'LargeImage'
-	where slug in ($brandString) group by slug  limit 20";
-	$results = $wpdb->get_results($query);
+	$key = md5($brands);
+
+	$result = getCache($key);
+
+	if(!$result){
+		
+
+		/*
+		select * from $wpdb->terms 
+		where slug in ($brandString)
+		 */
+		$brandString = "'". implode("','",$brands)."'";
+		global $wpdb;
+
+		"select * from $wpdb->terms 
+		where slug in ($brandString)";
+		$query = "select slug,name,posts.post_title,posts.guid,meta_p.meta_value as detailUrl,meta.meta_value as image from 
+		$wpdb->terms 
+		left join $wpdb->term_relationships as relationships on relationships.term_taxonomy_id = wp_terms.term_id
+		left join $wpdb->posts as posts on posts.id = relationships.object_id
+		left join $wpdb->postmeta as meta on meta.post_id = posts.id and meta.meta_key = 'LargeImage'
+		left join $wpdb->postmeta as meta_p on meta_p.post_id = posts.id and meta_p.meta_key = 'DetailPageURL'
+		where slug in ($brandString) group by slug  limit 20";
+		$result = $wpdb->get_results($query);
+		setCache($key,$result);
+		return $result;
+	}else{
+		return $result;
+	}
 
 }
