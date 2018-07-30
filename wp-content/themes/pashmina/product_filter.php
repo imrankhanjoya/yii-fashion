@@ -47,8 +47,8 @@
   <div class="container-fluid">
     <div id="navbar" class="product-dtl-list">
       <ul class="nav navbar-nav">
-        <?php foreach($brands as $key=>$val): $key==$findKey?$class='active':$class='';  ?>
-        <li ><a  alt="<?=$key?> <?=$cID?>" class="<?=$class?>" href="<?php echo esc_url( get_category_link($key) ); ?>"><?=esc_html($val)?></a></li>
+        <?php foreach($brands as $key=>$val): $cID = get_category_by_slug($key); $key==$findKey?$class='active':$class='';  ?>
+        <li ><a  alt="<?=$key?> <?=$cID->term_id?>" class="<?=$class?>" href="<?php echo esc_url( get_category_link($cID->term_id) ); ?>"><?=esc_html($val)?></a></li>
         <?PHP endforeach;?>
       </ul>
      
