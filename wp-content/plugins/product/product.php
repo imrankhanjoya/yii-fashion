@@ -108,6 +108,29 @@ function remove_tagedproduct(){
 	exit;
 }
 
+add_action( 'wp_ajax_add_brands', 'add_brands' );
+function add_brands(){
+	$pkey = $_POST['brand'];
+
+	$val = get_post_meta($_POST['ppost'],'taggeBrands');
+		
+	if(empty($val)){
+		$upval[$pkey] = $pkey;	
+	}else{
+		$upval = $val[0];
+		if(isset($upval[$pkey])){
+			unset($upval[$pkey]);
+		}else{
+			$upval[$pkey] = $pkey;	
+		}
+	}
+	print_r($upval);
+	$val = update_post_meta($_POST['ppost'],'taggeBrands',$upval,false);
+	//delete_post_meta($_POST['ppost'],'taggeBrands');
+	echo json_encode($val,true);
+	exit;
+}
+
 function findContest($postID,$userID){
 	global $wpdb;
    $query =  "select * from $wpdb->posts where post_parent = $postID and post_author = $userID and post_type= 'contest_replay' and post_status = 'publish' limit 1 ";
@@ -136,4 +159,24 @@ function get_participent($contest_id =0){
 	}else{
 		return 0 ;
 	}
+}
+
+
+function getProductByBrand($brands,$limit=3){
+	/*
+	select * from $wpdb->terms 
+	where slug in ($brandString)
+	 */
+	$brandString = "'". implode("','",$brands)."'";
+	global $wpdb;
+
+	"select * from $wpdb->terms 
+	where slug in ($brandString)";
+	$query = "select slug,posts.post_title,posts.guid,meta.meta_value from $wpdb->terms 
+	left join $wpdb->term_relationships as term_relationships on term_relationships.term_taxonomy_id = wp_terms.term_id
+	left join $wpdb->posts as posts on posts.id = term_relationships.object_id
+	left join $wpdb->postmeta as meta on meta.post_id = posts.id and meta.meta_key = 'LargeImage'
+	where slug in ($brandString) group by slug  limit 20";
+	$results = $wpdb->get_results($query);
+
 }

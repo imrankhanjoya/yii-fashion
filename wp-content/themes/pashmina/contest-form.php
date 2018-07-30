@@ -24,6 +24,10 @@ if($contest_post){
     $title = $contest_post[0]['post_title'];
     $desc = $contest_post[0]['post_content'] ;
     $userimage = get_post_meta($contest_post[0]['ID']);
+    $userbrands =[];
+    if(isset($userimage['taggeBrands'])){
+        $userbrands = unserialize($userimage['taggeBrands'][0]);
+    }
     $img = $userimage = $userimage['image'][0];
     $array = explode('.',$img);
     if(!empty($array)){
@@ -98,28 +102,34 @@ if($contest_post){
             <h2>Congratulation!</h2>
             <p>Your entry has been submitted for <?php the_title()?></p>
             <div class="hidden-xs">
-            <p><b>Share your contest entry with your friends on social media to win.</b></p>
+            <p>
+                <b>Share your contest entry with your friends on social media to win.</b>
+                <div id="copyUrl"><?=$reply_url?></div>
+            </p>
+            
             <a class="fbcolor" href="http://www.facebook.com/sharer.php?s=100&url=<?=$reply_url?>&images=http://myurl/images/my_image.png&title=mytitle&summary=containsummary"><i class="fa fa-facebook"></i> Facebook</a>
-            <a class="whatsappcolor" href="whatsapp://send?text=<?=$title;?>–<?=$reply_url;?>" data-action="share/whatsapp/share"><i class="fa fa-whatsapp"></i> WhatsApp</a>
-            <a class="copycolor" href=""><i class="fa fa-copy"></i> Copy Url</a>
+            <a class="whatsappcolor" href="whatsapp://send?text=<?=$title;?> at Gloat.me–<?=$reply_url;?>" data-action="share/whatsapp/share"><i class="fa fa-whatsapp"></i> WhatsApp</a>
+            <a class="copycolor" href="#" val=" <?=$reply_url?>" onClick="copyText('copyUrl')"><i class="fa fa-copy"></i> Copy Url</a>
             </div>
         </div> 
         <div class="col-xs-12 hidden-md hidden-lg">
-            <p><b>Share your contest entry with your friends on social media to win.</b></p>
-            <a class="fbcolor" href="http://www.facebook.com/sharer.php?s=100&url=<?=$reply_url?>&images=http://myurl/images/my_image.png&title=mytitle&summary=containsummary"><i class="fa fa-facebook"></i> Facebook</a>
-            <a class="whatsappcolor" href="whatsapp://send?text=<?=$title;?>–<?=$reply_url;?>" data-action="share/whatsapp/share"><i class="fa fa-whatsapp"></i> WhatsApp</a>
-            <a class="copycolor" href=""><i class="fa fa-copy"></i> Copy Url</a>
+            <p><b>Share your contest entry with your friends on social media to win.</b>
+                <div id="copyUrlm"><?=$reply_url?></div>
+            </p>
+            
+            <a class="fbcolor col-xs-4" href="http://www.facebook.com/sharer.php?s=100&url=<?=$reply_url?>&images=http://myurl/images/my_image.png&title=mytitle&summary=containsummary"><i class="fa fa-facebook"></i> Facebook</a>
+            <a class="whatsappcolor col-xs-4" href="whatsapp://send?text=<?=$title;?> at Gloat.me–<?=$reply_url;?>" data-action="share/whatsapp/share"><i class="fa fa-whatsapp"></i> WhatsApp</a>
+            <a class="copycolor col-xs-4" href="#" val=" <?=$reply_url?>" onClick="copyText('copyUrlm')"><i class="fa fa-copy"></i> Copy Url</a>
             </div>
         <div class="col-md-11 col-md-offset-1 col-xs-12">
             <h4>Select brands you have used in above photo</h4>
             <?php foreach($brands as $key=>$brand):?>
-                <?php $class = in_array($key,$meta['brands'])?"check":""?>
-                <?php $checked = in_array($key,$meta['brands'])?"checked":""?>
+                <?php $class = in_array($key,$userbrands)?"check":""?>
+                <?php $checked = in_array($key,$userbrands)?"checked":""?>
                 <div class="col-md-2 col-xs-6">
                     <label class="">
-                        <img src="<?="http://www.gloat.me/wp-content/uploads/".$brand['logo']?>" alt="..." class="img-thumbnail img-check  <?=$class?>">
+                        <img src="<?="http://www.gloat.me/wp-content/uploads/".$brand['logo']?>" val="<?=$key?>" class="img-thumbnail brandcheck img-check  <?=$class?>">
                         <?=$brand['title']?>
-                        <input type="checkbox" name="brands[]" id="item4" <?=$checked?> value="<?=$key?>" class="hidden" autocomplete="off">
                     </label>
                 </div>
             <?PHP endforeach;?>
@@ -173,7 +183,6 @@ $(document).ready(function(){
         $( "#upfilefield" ).trigger( "click" );
     });
     
-
     $('input[type=file]').change(function(){
 
         $(this).simpleUpload("/myupload.php", {
@@ -257,27 +266,28 @@ $(document).ready(function(){
     
     
 
-    jQuery.ajax({
+    $(".brandcheck").click(function(){
+        var val = $(this).attr("val");
+        jQuery.ajax({
             url : ajax_url,
             type : 'post',
             async: false,
             dataType: 'json',
             data : {
-                action : 'save_tagedproduct',
+                action : 'add_brands',
                 ppost:userPostId,
+                brand:val
             },
             success : function( response ) {
-                jQuery("#taggedPro").html('');
-                jQuery.each(response, function(index, value) {
-                    jQuery("#taggedPro").append(setpro(index,value));
-                });
+                console.log(response);
 
                              
             }
         });
+    });
+    
     
 
-    jQuery("#products").easyAutocomplete(productFile);
     
    
 
@@ -285,74 +295,20 @@ $(document).ready(function(){
 
 
 
-var productFile = {
-    url:'<?=$proPath?>',
-    list: {match:{enabled: true}, onKeyEnterEvent:function(){ 
-        var value = $("#products").getSelectedItemData().title;
-        storevalue(value); $("#products").val(''); }, onChooseEvent:function(){ 
-        var value = $("#products").getSelectedItemData().title;
-        storevalue(value); $("#products").val('');}
-    },
-    template: {
-        type: "custom",
-        method: function(value, item) {
-            return "<div style='width:60px; height:60px; float:left; margin-right:5px; overflow:hidden'><img src='" + item.icon + "'  style=' min-height:100%; min-width:100%; width:auto; height:auto;' /> </div><div>"+ value+"</div> <div class='clearfix'></div>";
-        }
-    },
-    getValue:"title"
-};
-function removeBox(key){
-    jQuery('.loader').show();
-    jQuery.ajax({
-        url : ajax_url,
-        type : 'post',
-        async: false,
-        dataType: 'json',
-        data : {
-        action : 'remove_tagedproduct',
-        ppost:userPostId,
-        key:key
-    },
-    success : function( response ) {
-        jQuery("#"+key).hide(500);
-        jQuery('.loader').hide();
-    }
-    });
-}
-function setpro(index, value){
-    return "<div id='"+value.key+"' class='col-md-3 col-xs-12 spro'><div class='col-md-4 col-xs-4'><img src='"+value.image+"' class='img-responsive' ></div><div class='col-md-8 col-xs-8'>"+value.title+"<span onClick='removeBox(\""+value.key+"\")'  class='glyphicon glyphicon-remove-circle'></span></div></div>";
-}
+function copyText(cdiv) {
+  /* Get the text field */
+  var copyText = $("#"+cdiv).html();
+  $("#"+cdiv).fadeOut(1000).fadeIn();
 
-function storevalue(val){
-        var p = val;
-          var ppost = userPostId;
-          jQuery("#products").attr('val','');
-          jQuery('.loader').show();
-        jQuery.ajax({
-            url : ajax_url,
-            type : 'post',
-            async: false,
-            dataType: 'json',
-            data : {
-                action : 'save_tagedproduct',
-                product_title:p,
-                ppost:ppost,
-            },
-            success : function( response ) {
-                jQuery("#taggedPro").html('');
-                jQuery("#products").attr('val','');
-                jQuery.each(response, function(index, value) {
-                    jQuery("#taggedPro").append(setpro(index,value));
-                    jQuery("#taggedPro").find("div span").unbind("click").bind("click",function(){ removeBox(); });
-                }); 
-                jQuery('.loader').hide();
-                jQuery("#error").html("");                
-            }
-        });     
-    } 
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val(copyText).select();
+  document.execCommand("copy");
+  $temp.remove();
+}
 
 
 </script>
 <div class="loader">
-    <img src="<?=get_template_directory_uri();?>/images/loading.svg" width=100%>
+    <img src="<?=get_template_directory_uri();?>/images/loading.svg">
 </div>
