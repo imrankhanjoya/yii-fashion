@@ -51,7 +51,7 @@ $tag_name = $tags[0]->name;
          <div class="top-item">
             <div class="row">
                <div class="col-lg-3 col-sm-3 col-xs-12 text-center ">
-                  <h1 class=""><b>TOP #<?=$i?></b></h1>
+                  <h1 class="topclass"><b>TOP #<?=$i?></b></h1>
                   <img class="img-responsive prodct-crd-img visible-xs-inline visible-md-inline visible-lg-inline visible-sm-inline" src="<?=$val['LargeImage'][0]?>">
                </div>
                <div class="col-lg-9 col-sm-9 col-md-9">

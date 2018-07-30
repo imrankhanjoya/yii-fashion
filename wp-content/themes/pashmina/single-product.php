@@ -51,10 +51,8 @@ get_header();
 					<br>
 					<?PHP //print_r($val);?>
 					<div class="price_box">
-						<span class="glyphicon glyphicon-heart pink"></span>
 						<div class="clearfix"></div>
-					<span class="lab">Lowest price Now</span><br>
-					<span class="list"><?=$val['ListPrice'][0]?></span>
+					<span class="lab">Best Price: <?=$val['ListPrice'][0]?></span>
 					<?PHP if(isset($val['LowestNewPrice'][0])):?>
 					<span class="offer"><?=$val['LowestNewPrice'][0]?></span>
 					<?PHP endif;?>

@@ -1343,7 +1343,6 @@ td {
     background: #000 !important;
     color: #fff !important;
     border-radius: 0px !important;
-    font-family: 'Raleway Dots', cursive;
     font-size:1.6em !important;
 }
 .btn-active{
@@ -2079,7 +2078,8 @@ width:100px;
 	height: 40px;
 }
 .productlist .entry-title{
-	font-size:14px;
+	font-size:12px;
+	font-family: 'Roboto', sans-serif;
 }
 .productlist .nav>li>a{
 	padding: 5px 10px;
@@ -2118,16 +2118,15 @@ width:100px;
 	font-size:18px;
 }
 .price_box{
-	border: 1px solid #424242;
+	border: 1px solid #fee;
 	width:100%;
 	padding: 10px;
 	text-align: center;
 }
 .price_box .lab{
-	background-color: #000;
-	color: #fff;
+	color: #000;
 	padding: 5px;
-	font-family: 'Raleway Dots', cursive;
+	font-size: 15px;		
 }
 .price_box .list{	
     padding: 10px;
@@ -2270,6 +2269,10 @@ width:100px;
 	padding: 34px 10px;
 	text-align: justify;
 }
+.topclass{
+	opacity: 0.3;
+	color: #dcaf6c;
+}
 .top-item {
     position: relative;
     padding: 20px;
@@ -2346,12 +2349,13 @@ width:100px;
 	margin-bottom: 10px;
 }
 	.social-ttl-list h6{
-	line-height: 20px;
+	line-height: 10px;
 	display: block;
 	font-size: 12px;
 	padding: 11px 0;
-	color: #868686;
+	color: #a29292;
 	border-top: 1px solid #E0E0E0;
+	font-weight: normal;
 	}
 	.buy-bttn-prodct{
 	color: #FFFFFF;
@@ -2511,6 +2515,10 @@ color:#ED145B !important;
 	display: inline-block;
 	letter-spacing: 2px;
 	font-family: 'Oswald', sans-serif;
+}
+.product-up-list{
+	font-family: 'oswald',sans-serif;
+	font-weight: 600;
 }
 .all-div-padding0{
 	padding: 0px !important;
