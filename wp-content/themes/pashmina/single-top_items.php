@@ -103,16 +103,9 @@ $tag_name = $tags[0]->name;
          <div class="social-icon-top">
             <h5>SHARE THIS LIST</h5>
             
-            <a href="https://www.facebook.com/sharer/sharer.php?u=<?=urlencode($url)?>&t=<?=urlencode($title)?>"
-   onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
-   target="_blank" title="Share on Facebook" class="fb-share fa fa-facebook" href=""></a>
-            <a href="https://twitter.com/share?url=<?=urlencode($url)?>&via=gloatme&text=<?=urlencode($title)?>"
-   onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
-   target="_blank" title="Share on Twitter" class="fa fa-twitter" href=""></a>
-            <a href="https://plus.google.com/share?url=<?=urlencode($url)?>"
-   onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=350,width=480');return false;"
-   target="_blank" title="Share on Google+" class="fa fa-google-plus" href=""></a>
-            <a class="fa fa-envelope-o" href=""></a>
+            <div class="addthis_sharing_toolbox" data-url="<?=$url?>" data-title="<?=$title?>" data-media="<?= get_the_post_thumbnail_url(get_the_ID())?>">
+            </div>
+            <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=imrankhanjoya"></script>
          </div>
          <div class="social-ttl-list">
           <h5>RECENT TOP COLLECTION</h5>
