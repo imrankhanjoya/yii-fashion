@@ -25,7 +25,7 @@ $title = substr($title,0,120);
 	</center>
 
 	<div class="entry-content">
-		<a href="<?php esc_url( the_permalink() ); ?>" title="<?=$val['Publisher'][0]?>"><h2 class="entry-by"><?=$val['Brand'][0]?></h2></a>
+		
 		<a href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title_attribute(); ?>"><h2 class="entry-title"><?=$title ?></h2></a>
 		
 	</div><!-- .entry-content -->
