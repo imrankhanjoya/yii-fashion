@@ -73,7 +73,7 @@ if($contest_post){
             <div class="form-group">
             <textarea id="description" class="form-control" style="min-height:150px" name="detail" placeholder="Say some thing about your style" required><?=$desc?></textarea>
             </div>
-            <button type="submit" id="sendmessage" >Save</button>
+            <button type="submit" id="sendmessage" class="col-xs-12 col-md-6" >Save</button>
 
         </div>
 
@@ -137,10 +137,10 @@ if($contest_post){
       </div>  
 
 
-      <div class="col-md-3 col-xs-6" style="margin-bottom: 50px; margin-top: 50px">
+      <div class="col-md-3 col-xs-12" style="margin-bottom: 50px; margin-top: 50px">
       <a  id="gobackbutton" class="a-button" >Back to Photo</a>
       </div>
-      <div class="col-md-offset-6 col-md-3 col-xs-6" style="margin-bottom: 50px; margin-top: 50px">
+      <div class="col-md-offset-6 col-md-3 col-xs-12" style="margin-bottom: 50px; margin-top: 50px">
       <a href="" class="a-button submit_share" >Submit & Share</a>
       </div>
     
