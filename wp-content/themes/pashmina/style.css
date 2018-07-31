@@ -268,7 +268,8 @@ textarea:focus {
 #imageFrame{
 	position: relative;
 	overflow: hidden;
-	height:400px;
+	max-height:500px;
+	min-height:200px;
 }
 #userimage{
 	 max-width: 100%;
