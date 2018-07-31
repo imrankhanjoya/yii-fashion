@@ -20,6 +20,7 @@ jQuery(function($) {
 
             if (res.success) {
                 $self.html(res.data);
+                //console.log(res.data);
 
             } else {
                 alert(wfp.errorMessage);
