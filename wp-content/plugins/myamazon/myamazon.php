@@ -14,7 +14,7 @@ License: GPL2
 
 add_filter( 'wp_nav_menu_items', 'your_custom_menu_item', 2, 3 );
 function your_custom_menu_item ( $items, $args ) {
-    $items .= '<li><a href="/top-cosmetic-products/">Top</a></li>';
+    $items .= '<li><a href="/trending/">Trending</a></li>';
     $items .= '<li><a href="/shop/">Shop</a></li>';
     $items .= '<li><a href="/discuss-beauty/">Discuss</a></li>';
     
