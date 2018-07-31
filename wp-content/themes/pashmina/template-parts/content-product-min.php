@@ -10,8 +10,8 @@ $post_ID = get_the_ID();
 $val = get_post_meta($post_ID);
 $price = $val['LowestNewPrice'][0]!=""?$val['LowestNewPrice'][0]:$val['ListPrice'][0];      
 ?>
-<div class="col-lg-12 col-xs-12 col-md-12 col-sm-12">
-<hr>
+<div class="col-lg-12 col-xs-12 col-md-12 col-sm-12 no-padding productsidebar" >
+<div class="col-sm-12 col-xs-12 col-md-12 col-lg-12 no-padding">
 <a href="<?php the_permalink(); ?>">
 <div class="col-lg-3 col-sm-3 col-xs-3 col-md-3 card-brder-hovr text-center">
 <img class="img-responsive" src="<?=$val['LargeImage'][0]?>">
@@ -19,7 +19,9 @@ $price = $val['LowestNewPrice'][0]!=""?$val['LowestNewPrice'][0]:$val['ListPrice
 <div class="col-lg-9 col-lg-9 col-sm-9 col-xs-9 col-md-9 prodt-like-cnt">
 <span><?php the_title(); ?></span>
 <h6 class="text-danger"><?=$val['Brand'][0]?></h6>
-<span class="product-price"><span class="discounted-price"><?=$price?></span> 
+<span class="product-price"><span class="discounted-price"><?=$price?></span> </span>
 </div>
 </a>
+</div>
+</hr>
 </div>

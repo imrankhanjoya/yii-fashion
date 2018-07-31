@@ -62,32 +62,30 @@ $username = $current_user->display_name!=''?$current_user->display_name:'Dua Lip
             
             <p>
             <strong>Oops.. No review for this product yet.</strong>
-            <br>
-            Have you purchased or sampled it? Be the first one to Share your thoughts with the girls! And get <b style="color:#8a6d3b">Rewards</b> :)
+            <br></p>
+            <p>
+            Have you purchased or sampled it? Be the first one to Share your thoughts with the girls! And get <b style="color:#8a6d3b;">Rewards</b> :)
             <br>
             Here are some examples:
             </p>
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 author-tab-div">
-          <div class="col-lg-4 col-md-4 col-sm-6 ">
-            <div class="panel panel-body ">
-               <strong class="text-muted">Unique and it works!</strong>
-               <p class="text-muted small">It really worked for me. And would like to recommended to friends </p>
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 author-tab-div no-padding">
+          <div class="col-lg-4 col-md-4 col-sm-6 bdr-div no-padding">
+            <div class="">
+               <p class="text-muted  small">It really worked for me. And would like to recommended to friends </p>
             </div>
-           <h5 class="text-muted">By <?=$username ?></h5>
+           <h6 class="text-muted">By <?=$username ?></h6>
          </div>
-            <div class="col-lg-4 col-md-4 col-sm-6 ">
-            <div class="panel panel-body">
-               <strong class="text-muted">It works!</strong>
+            <div class="col-lg-4 col-md-4 col-sm-6 bdr-div ">
+            <div class="">
                <p class="text-muted small">Yaah its worked for me, But was expecting more result. Still satisfied :)</p>
             </div>
-           <h5 class="text-muted">By <?=$username ?></h5>
+           <h6 class="text-muted">By <?=$username ?></h6>
          </div>
-           <div class="col-lg-4 col-md-4 col-sm-6 ">
-            <div class="panel panel-body">
-               <strong class="text-muted">Would like to try!</strong>
+           <div class="col-lg-4 col-md-4 col-sm-6 " style="margin-top: 20px;">
+            <div class="">
                <p class="text-muted small">Looks good need to try once....</p>
             </div>
-           <h5 class="text-muted">By <?=$username ?></h5>
+           <h6 class="text-muted">By <?=$username ?></h6>
          </div>
           </div>
    </div>
