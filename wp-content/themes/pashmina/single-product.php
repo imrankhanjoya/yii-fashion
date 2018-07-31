@@ -52,12 +52,13 @@ get_header();
 					<?PHP //print_r($val);?>
 					<div class="price_box">
 						<div class="clearfix"></div>
-					<span class="lab">Best Price: <?=$val['ListPrice'][0]?></span>
+						<?php $rsaaray = explode(' ', $val['ListPrice'][0]);?>
+					<span class="lab">Best Price: <?=$rsaaray[0].' '.intval($rsaaray[1])?></span>
 					<?PHP if(isset($val['LowestNewPrice'][0])):?>
 					<span class="offer"><?=$val['LowestNewPrice'][0]?></span>
 					<?PHP endif;?>
 					<div class="clearfix"></div>
-					<a href="<?=$val['DetailPageURL'][0]?>" class="btn btn-success">Buy <span class="ambadge">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></a>
+					<a href="<?=$val['DetailPageURL'][0]?>" class="btn btn-amz-sucs btn-success">Buy <span class="ambadge">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></a>
 
 					</div>
 					<?php get_sidebar(); ?>
