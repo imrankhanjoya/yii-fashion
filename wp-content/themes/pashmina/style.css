@@ -2081,6 +2081,10 @@ width:100px;
 	font-size:12px;
 	font-family: 'Roboto', sans-serif;
 }
+.p-type{
+	font-size: 14px;
+	font-weight: normal;
+}
 .productlist .nav>li>a{
 	padding: 5px 10px;
 	font-size:12px;
@@ -2104,8 +2108,9 @@ width:100px;
 	font-size:20px;
 }
 .product_one .excerpt{
-	font-size:12px;
-	color:#aaa;
+	font-size: 14px;
+    color: #485057;
+    font-weight: normal;
 }
 .product_one .pro_featurs{
 	font-size:14px;
@@ -2126,7 +2131,10 @@ width:100px;
 .price_box .lab{
 	color: #000;
 	padding: 5px;
-	font-size: 15px;		
+	font-size: 20px;		
+}
+.btn-amz-sucs{
+	margin-top: 10px;
 }
 .price_box .list{	
     padding: 10px;
