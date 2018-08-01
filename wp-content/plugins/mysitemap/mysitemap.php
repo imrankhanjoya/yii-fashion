@@ -186,7 +186,7 @@ function create_sitemap(){
 
 
 }
-add_action("init", "create_sitemap");
+//add_action("init", "create_sitemap");
 
 /*
 <?xml version="1.0" encoding="UTF-8"?>
