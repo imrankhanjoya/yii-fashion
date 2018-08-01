@@ -121,7 +121,7 @@ function tag_sitemap(){
 			
 		}
 		$sitemap .= '</urlset>';
-		echo $file = "pro/sitemap-tag-".$page.".xml";
+		$file = "pro/sitemap-tag-".$page.".xml";
 		$filePath = ABSPATH .$file;
 		$fp = fopen($filePath, "w");
 		fwrite($fp, $sitemap);
@@ -147,7 +147,7 @@ function cat_sitemap(){
 			
 		}
 		$sitemap .= '</urlset>';
-		echo $file = "pro/sitemap-cat-".$page.".xml";
+		$file = "pro/sitemap-cat-".$page.".xml";
 		$filePath = ABSPATH .$file;
 		$fp = fopen($filePath, "w");
 		fwrite($fp, $sitemap);
