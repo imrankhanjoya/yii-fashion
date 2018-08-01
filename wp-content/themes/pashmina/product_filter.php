@@ -1,4 +1,5 @@
 <div class="col-md-12">
+<?php //print_r($_REQUEST); ?>
 <div class="row product_cat">
     <div class="col-lg-2 col-xs-6 text-center top-ttl panel-body" style="background-color:#92FFD8">
         <a href="/products-for/lip/" class="top-ttl-heddng">
@@ -14,14 +15,14 @@
     </div>
     <div class="col-lg-2 col-xs-6 text-center top-ttl panel-body" style="background-color:#92FFD8">
         <a href="/products-for/nail/" class="top-ttl-heddng">
-        <span>Nail-Polish</span>
+        <span class="text-red">Nail-Polish</span>
         <img class="picon" src="<?= get_template_directory_uri();?>/images/nail-polish.svg">
         
         </a>
     </div>
     <div class="col-lg-2 col-xs-6 text-center top-ttl panel-body" style="background-color:#FFDFCA">
         <a href="/products-for/hair/" class="top-ttl-heddng">
-        <span>hair</span>
+        <span  class="text-red">hair</span>
         <img class="picon" src="<?= get_template_directory_uri();?>/images/woman-with-long-hair.svg">
         </a>
     </div>

@@ -435,7 +435,9 @@ textarea.form-control{
 .comment-form label {
 	min-width: 90px;
 }
-
+#recentcomments{
+	list-style: none;
+}
 
 
 @media screen and (max-width: 480px) {
@@ -2237,10 +2239,14 @@ width:100px;
 	font-weight: bold;
 	font-size: 2em;
 	font-family: 'Oswald', sans-serif;
-	}	
-.top-ttl:hover .top-ttl-heddng{
-	color: red;
+	}
+	.top-ttl-heddng:hover{
+		color: red;
+	}
+.top-ttl-heddng:active{
+	color: red !important;
 }
+
 /**should prodect**/
 .should-banner{
     background: transparent;
@@ -2782,6 +2788,5 @@ height: 126px;
 	}
 
 	.productsidebar{ border-bottom:  1px solid rgba(39,48,57,.08); padding: 15px; }
-
 
 

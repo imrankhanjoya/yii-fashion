@@ -20,7 +20,7 @@ $title = substr($title,0,120);
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <center>
     <figure>
-        <?= "<img src='".$val['LargeImage'][0]."' class='img-responsive small-img'>"?>
+        <a href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title_attribute(); ?>"><?= "<img src='".$val['LargeImage'][0]."' class='img-responsive small-img'>"?></a>
     </figure>
 	</center>
 
