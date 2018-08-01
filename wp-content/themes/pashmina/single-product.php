@@ -11,7 +11,7 @@ $post_ID = get_the_ID();
 $val = get_post_meta($post_ID);
 $img = $val['LargeImage'][0];
 function gloatme_header_metadata() {
-
+  global $img;	
   $data['title'] = get_the_title();
   $data['image'] = $img;
   $data['description'] = get_the_title()." related reviews and comments with where to buy option. at gloat.me";  
