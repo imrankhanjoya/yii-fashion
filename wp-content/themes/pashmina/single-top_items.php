@@ -10,6 +10,7 @@
 function gloatme_header_metadata() {
   $data['title'] = get_the_title();
   $data['description'] = get_the_excerpt();  
+  $data['image'] = get_the_post_thumbnail_url(get_the_ID());  
   echo generateMeta($data);          
 }
 add_action( 'wp_head', 'gloatme_header_metadata',0);
