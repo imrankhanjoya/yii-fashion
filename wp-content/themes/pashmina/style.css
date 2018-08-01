@@ -2346,38 +2346,7 @@ width:100px;
 	margin-top: 0px;
 	color: #000;
 }
-.social-icon-top a{
-	display: inline-block;
-	color: #999;
-	border: 2px solid #999;
-	border-radius: 50%;
-	text-align: center;
-	width: 30px;
-	height: 30px;
-	margin-right: 4px;
-	padding: 5px 0 !important;
-	margin-bottom: 10px;
-}
-.social-icon-top a:hover{
-	background-color: red;
-	color: #fff;
-	border: 2px solid red;
-}
-.social-ttl-list{
-	font-weight: 500;
-	color: #868686;
-	font-size: 14px;
-	margin-bottom: 10px;
-}
-	.social-ttl-list h6{
-	line-height: 10px;
-	display: block;
-	font-size: 12px;
-	padding: 11px 0;
-	color: #a29292;
-	border-top: 1px solid #E0E0E0;
-	font-weight: normal;
-	}
+
 	.buy-bttn-prodct{
 	color: #FFFFFF;
 	border-radius: 4px;

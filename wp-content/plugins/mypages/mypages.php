@@ -50,8 +50,7 @@ function custom_rewrite_basic() {
   $page = get_page_by_path('contest-play');  
   add_rewrite_rule('^contest-play/?([^/]*)', 'index.php?page_id='.$page->ID.'&contest=$matches[1]', 'top');
   
-  $page = get_page_by_path('top');	
-  add_rewrite_rule('^top-cosmetic-products/?', 'index.php?page_id='.$page->ID.'&cat=$matches[1]', 'top');
+  
 	 
   $page = get_page_by_path('archive');
   add_rewrite_rule('^gloat-me-pick/?', 'index.php?page_id='.$page->ID.'&tag=gloatme', 'top');
