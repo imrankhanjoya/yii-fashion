@@ -112,7 +112,7 @@ function tag_sitemap(){
 		$sitemap = '<?xml version="1.0" encoding="UTF-8"?>';
 			$sitemap .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
 		foreach($cterms as $term){
-			$date = date("Y-m-d\TH:i:s.000\Z"); 
+			$date = date("Y-m-d"); 
 			$sitemap .= '<url>'.
 			   '<loc>'. get_term_link($term->term_taxonomy_id).'</loc>'.
 			   '<lastmod>'.$date.'</lastmod>'.
@@ -139,7 +139,7 @@ function cat_sitemap(){
 		$sitemap = '<?xml version="1.0" encoding="UTF-8"?>';
 			$sitemap .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
 		foreach($cterms as $term){
-			$date = date("Y-m-d\TH:i:s.000\Z"); 
+			$date = date("Y-m-d"); 
 			$sitemap .= '<url>'.
 			   '<loc>'. get_term_link($term->term_taxonomy_id).'</loc>'.
 			   '<lastmod>'.$date.'</lastmod>'.
