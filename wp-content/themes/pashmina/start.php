@@ -27,7 +27,7 @@ $pageID =  get_page_by_path('get-start');
 
 $user = wp_get_current_user();
 $meta = get_user_meta($user->ID);
-
+$error = '';
 
 require_once __DIR__ . '/Facebook/autoload.php';
 
@@ -54,10 +54,21 @@ require_once __DIR__ . '/Facebook/autoload.php';
         saveUser($response,$aToken);
 
     }elseif($user->ID){
-
             $show = 'skin';
             if(isset($_POST['profile'])) {
                 
+                if(isset($_POST['username']) && $_POST['username'] != $user->user_login){
+                    if(!username_exists($_POST['username'])){
+                        $user->user_login = $_POST['username'];
+                        $user->user_nicename = $_POST['username'];
+                        wp_update_user($user);
+                        
+
+                    }else{
+                        $error = $_POST['username']." User Name taken";
+                    }
+                    
+                }
                 if(isset($_POST['nickname'])){
                     $show = sotreUserMeta("nickname",$_POST['nickname']);
                     $user->display_name = $_POST['nickname'];
@@ -76,7 +87,10 @@ require_once __DIR__ . '/Facebook/autoload.php';
                 }
 
                 $url = add_query_arg(array('show' =>'profile'),get_page_link($pageID->ID));
-                wp_redirect($url);
+                if($error==''){
+                    wp_redirect($url);    
+                }
+                
             }elseif(isset($_POST['brands'])) {
                 delete_user_meta($user->ID,'brands');
                 foreach($_POST['brands'] as $val){
@@ -360,26 +374,28 @@ get_header('nomenu');
                         </div>
 
                         <div class="col-lg-6">
+                            <div id="error"><?=$error?></div>
                             <form class="form-horizontal"  name="myForm" method="POST" action="" >
                                 
                                 <div class="form-group">
+
                                 <label for="inputEmail3" class="col-sm-2 control-label">Slug</label>
                                 <div class="col-sm-10">
-                                <input type="text" class="form-control" value="<?=$user->user_login?>" name="username" id="username" placeholder="Username">
+                                <input type="text" class="form-control" value="<?=$user->user_nicename?>" name="username" id="username" placeholder="Username" required>
                                 </div>
                                 </div>
 
                                 <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-2 control-label">Name</label>
                                 <div class="col-sm-10">
-                                <input type="text" class="form-control" value="<?=$meta['nickname'][0]?>" name="nickname" id="nickname" placeholder="Display Name">
+                                <input type="text" class="form-control" value="<?=$meta['nickname'][0]?>" name="nickname" id="nickname" placeholder="Display Name" required>
                                 </div>
                                 </div>
 
                                 <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
                                 <div class="col-sm-10">
-                                <input type="email" class="form-control" value="<?=$user->user_email?>" name="email" id="email" placeholder="Email">
+                                <input type="email" class="form-control" value="<?=$user->user_email?>" name="email" id="email" placeholder="Email" required>
                                 </div>
                                 </div>
 
@@ -398,7 +414,14 @@ get_header('nomenu');
                                 <textarea class="form-control" placeholder="Your style statement"  name="description" id="description"><?=$meta['description'][0]?></textarea>
                                 </div>
                                 </div>
-                                <input type="submit" name="profile" class="col-md-offset-5 col-md-3 btn btn-success" value="Update"/>
+                                <div class="form-group">
+                                <div class="col-sm-6 col-md-4 col-md-offset-2">    
+                                <input type="submit" name="profile" class="btn btn-success" value="Update"/>
+                                </div>
+                                <div class="col-sm-6 col-md-4 col-md-offset-2">
+                                <a  name="profile" class="pink" href="<?=get_author_posts_url($user->ID);?>" >View Profile</a>
+                                </div>
+                                </div>
                              </form>
                         </div>
                     
