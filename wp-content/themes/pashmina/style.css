@@ -304,6 +304,10 @@ textarea.form-control{
 	margin-right:25px;
 	margin-bottom:10px;
 	color: #fff;
+	font-size:1px;
+}
+.voteBox a.wpf-favorite-link span{
+	font-size:40px;
 }
 .voteBox .glyphicon-class{
 	font-size: 22px;
