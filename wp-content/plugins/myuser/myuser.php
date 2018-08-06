@@ -53,8 +53,11 @@ function saveUser($response,$token){
     $query =  "select user_id, meta_key from $wpdb->usermeta where meta_key ='fbid' and meta_value = '".$userData['fbid']."' order by user_id desc limit 1 ";
     $results = $wpdb->get_results($query, ARRAY_A );
 
-    $query =  "select ID from $wpdb->users where user_email ='".$userData['email']."' limit 1 ";
-    $emailresults = $wpdb->get_results($query, ARRAY_A );
+    $emailresults = '';
+    if(isset($userData['email']) && $userData['email']!=''){
+        $query =  "select ID from $wpdb->users where user_email ='".$userData['email']."' limit 1 ";
+        $emailresults = $wpdb->get_results($query, ARRAY_A );
+    }
 
 
     if(!empty($results)){

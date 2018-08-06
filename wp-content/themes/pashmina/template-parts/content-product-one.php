@@ -26,7 +26,7 @@ $username = $current_user->display_name!=''?$current_user->display_name:'Dua Lip
     
     <div class="price_box">
     <?php $rsaaray = explode(' ', $val['ListPrice'][0]);?>
-    	<span class="lab">Lowest price Now:  <?=$rsaaray[0].' '.intval($rsaaray[1])?></span><br>
+    	<span class="lab">Lowest price Now:  <?=$rsaaray[0].' '.$rsaaray[1]?></span><br>
     	<?PHP if(isset($val['LowestNewPrice'][0])):?>
     	<span class="offer"><?=$val['LowestNewPrice'][0]?></span>
     	<?PHP endif;?>
