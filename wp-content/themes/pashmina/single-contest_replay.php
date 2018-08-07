@@ -105,7 +105,7 @@ if(!empty($taggeBrands)){
 								<div class="addthis_sharing_toolbox" data-url="<?=$shareUrl?>" data-title="Hi Friends this is <?=$userdata->data->display_name?> Join me at Gloat.Me" data-description="Join me at Gloat.Me and lets discuss about beauty and products #Gloat.Me" data-media="<?=$img?>">
 								</div>
 								</div>
-								<div class=" col-md-8 col-xs-12 ">
+								<div class=" col-md-12 col-xs-12 ">
 
 								<h5>Brands that made her awesome</h5>
 								<?PHP foreach($taggeBrands[0] as $b):?>

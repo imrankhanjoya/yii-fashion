@@ -53,13 +53,7 @@
 	
 </article><!-- #post-## -->
 
-<!-- 	<textarea placeholder="Add a comment..." rows="4" required="" name="comment[content]" class="comment-field" style="width: 100%;"></textarea>
-	<form>
-	<div class="form-group">
-	<input type="file" class="form-control-file" id="exampleFormControlFile1">
-	</div>
-	</form>
-<input class="btn btn-getfree" type="button" value="Get it free"> -->
+
 <?php comments_template('', true); ?>
 
 	<footer class="entry-footer">

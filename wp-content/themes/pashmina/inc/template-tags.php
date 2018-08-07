@@ -61,7 +61,7 @@ function pashmina_entry_footer() {
 
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		echo '<span class="comments-link">';
-		comments_popup_link( esc_html__( 'Leave a comment', 'pashmina' ), esc_html__( '1 Comment', 'pashmina' ), esc_html__( '% Comments', 'pashmina' ) );
+		comments_popup_link( esc_html__( 'Leave a comment', 'pashmina' ), esc_html__( '1 Comments', 'pashmina' ), esc_html__( '% Comments', 'pashmina' ) );
 		echo '</span>';
 	}
 

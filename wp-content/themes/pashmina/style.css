@@ -304,10 +304,16 @@ textarea.form-control{
 	margin-right:25px;
 	margin-bottom:10px;
 	color: #fff;
+	font-size:1px;
+}
+.voteBox a.wpf-favorite-link span{
+	font-size:40px;
 }
 .voteBox .glyphicon-class{
 	font-size: 22px;
 	display: block;
+	height: 48px;
+	padding: 14px;
 }
 /*--------------------------------------------------------------
 # contest form
@@ -374,7 +380,6 @@ textarea.form-control{
 	margin-top: 10px;
 }
 .discuss{
-	border: 1px solid #ccc;
 	padding: 10px;
 }
 .comments-link{
@@ -436,7 +441,9 @@ textarea.form-control{
 .comment-form label {
 	min-width: 90px;
 }
-
+#recentcomments{
+	list-style: none;
+}
 
 
 @media screen and (max-width: 480px) {
@@ -2238,10 +2245,14 @@ width:100px;
 	font-weight: bold;
 	font-size: 2em;
 	font-family: 'Oswald', sans-serif;
-	}	
-.top-ttl:hover .top-ttl-heddng{
-	color: red;
+	}
+	.top-ttl-heddng:hover{
+		color: red;
+	}
+.top-ttl-heddng:active{
+	color: red !important;
 }
+
 /**should prodect**/
 .should-banner{
     background: transparent;
@@ -2748,10 +2759,223 @@ margin-bottom: 0;
 	}
 }
 	.carsl-run img{
-height: 126px;
+	height: 126px;
 	}
 
 	.productsidebar{ border-bottom:  1px solid rgba(39,48,57,.08); padding: 15px; }
+	.div-bg{
+		background-size: 40px;
+		height: 37px;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	.h1-styl{
+		    font-size: 103px;
+		    line-height: 13px;
+		    margin-left: 40px;
+		    opacity: .7;
+		    font-family: Arial, Helvetica, sans-serif;
+	}
+	
+	.pd-0{
+		padding: 0px !important;
+	}
+	.p-style{
+		margin-top: 10px;
+		color: #6c757d;
+		font-size: 13px;
+	}
+	.icon-type{
+		margin-right: 5px;
+		margin-left: 5px;
+		padding-bottom: 20px;
+	}
+	.h6-type{
+		font-size: 14px;
+	}
+	.btn-type{
+		color: #a7a7a7;
+		padding-right: 10px;
+	}
+	.btn-type-1{
+		color: #000;
+		float:right;
+	}
+	.spn-444{
+		color: #000;
+	}
+	.user-img{
+		border-radius: 50%;
+		width: 75%;
+	}
+	.entry-footer {
+	    float: right;
+	}
+	/*new css gloat mee*/
 
-
-
+ h1{
+     font-size: 36px;
+}
+ h2 {
+     font-size: 30px;
+}
+ h3 {
+     font-size: 24px;
+}
+ h4 {
+     font-size: 18px;
+     line-height: 20px;
+}
+ h5 {
+     font-size: 14px;
+     line-height: 18px;
+}
+ h6 {
+     font-size: 12px;
+     line-height: 18px;
+}
+ h1, h2, h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+ul>li, span, p{
+     font-size: 14px;
+}
+ @media all and (max-width: 600px) {
+     h1 {
+         font-size: 24px;
+    }
+     h2 {
+         font-size: 20px;
+    }
+     h3 {
+         font-size: 18px;
+    }
+     h4 {
+         font-size: 16px;
+    }
+}
+ a{
+     color: rgba(39,48,57,.85);
+}
+ a:hover, a:focus, a:active{
+     color: #e83f6f;
+     text-decoration: unset;
+     outline: unset;
+}
+ button{
+     background: #000 !important;
+     color: #fff !important;
+     border-radius: 0px !important;
+}
+ a.btn{
+     background: #000 !important;
+     color: #fff !important;
+     border-radius: 0px !important;
+      padding: 10px 15px;
+      border:none;
+}
+ img{
+     max-width: 100%;
+}
+ form-group{
+     border: 1px solid #ccc;
+     border-radius: 0px;
+}
+ form-control {
+     border-color: #ccc;
+}
+ input{
+     border: 1px solid #ccc !important;
+     border-radius: 0px !important;
+}
+ .fa:hover{
+     color: #e83f6f;
+}
+ input[type="text"], input[type="email"], input[type="url"], input[type="number"], input[type="password"], input[type="search"], textarea, select{
+   border-color: #ccc;
+}
+ .form-control{
+    border-color: #ccc;
+}
+ textarea.form-control{
+     border-radius: 0px;
+     box-shadow: none;
+}
+ .form-control:focus{
+     box-shadow:none;
+    border-color: rgba(0,0,0);
+}
+ hr {
+     background-color: #ccc;
+     border: 0;
+     height: 1px;
+    
+}
+ li > ul, li > ol {
+     margin-bottom: 0;
+     margin-left: 1.5em;
+}
+ table {
+     width: 100%;
+}
+ ul, ol {
+     margin: 0;
+     padding-left: 16px;
+}
+ ul ul, ol ol, ul ol, ol ul {
+     padding-left: 0;
+}
+ a:hover {
+     color: #e83f6f;
+}
+ table {
+     border-collapse: separate;
+     border-spacing: 0;
+     border-width: 1px 0 0 1px;
+     margin: 0 0 1.75em;
+     table-layout: fixed;
+     width: 100%;
+}
+ table, th, td {
+     border: 1px solid #ccc;
+}
+ table {
+     border-right: 0;
+     border-bottom: 0;
+}
+ th {
+     border-width: 0 1px 1px 0;
+     font-weight: 600;
+}
+ th, td {
+     padding: 6px 0;
+     text-align: center;
+}
+ .no-padding{
+     padding: 0px;
+}
+ .no-margin{
+     margin:0px;
+}
+/*-------------------------------------------------------------- # Forms --------------------------------------------------------------*/
+ button, input[type="button"], input[type="reset"], input[type="submit"] {
+     border: 1px solid #ccc;
+     border-radius: 0px;
+     background:#000;
+     color:#fff;
+     padding: 6px 12px;
+}
+ input[type="text"], input[type="email"], input[type="url"], input[type="number"], input[type="password"], input[type="search"], textarea, select {
+     color: rgba(39,48,57,.85);
+     border-radius:0px;
+     border: 1px solid #ccc;
+     min-width: 60%;
+     max-width: 100%;
+     padding: 6px 12px;
+}
+ input[type="text"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="password"]:focus, input[type="search"]:focus, textarea:focus {
+     color: #111;
+     outline: none;
+     border-color: #ccc;
+}

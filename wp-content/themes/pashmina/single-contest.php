@@ -12,22 +12,17 @@ if($userID){
 	$url = get_permalink().'?startit=true';
 }
 
-
 get_header('nomenu'); 
-
 $post_ID = get_the_ID();
 $post = get_post();  
-
-
-
 $val = get_post_meta($post_ID);
-
 $participant = get_participent($post_ID);
+$complete= true;
 ?>
-<?php if(isset($_GET['startit']) && $userID):?>
-
-<?PHP include('contest-form.php'); ?>
-
+<?php if(isset($_GET['startit']) && $userID && $complete===false)://START PARTICIPATION ?>
+	<?PHP include('contest-form.php'); ?>
+<?php elseif($complete===true): ?>
+	<?PHP include('contest-complete.php'); ?>
 <?php else: ?>
 	
 	<div class="col-md-12" style="padding:0px; margin-bottom:10px">
