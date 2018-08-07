@@ -6,22 +6,26 @@
  *
  * @package Pashmina
  */
-
+$post = get_post();
+$title = $post->post_title;
 ?>
 <div class="col-md-12 container">
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     
 	
 
-	<div class="entry-content">
+	<div class="entry-content" >
 	<div class="row mt-4">
-		<div class="col-lg-1 pd-0 col-2 ">
-		<div class=" div-bg" style="background-image: url(https://www.biokplus.com/assets/img/greenbox-girl.png);">
-		<h1 class="h1-styl text-muted text-center">v</h1>
+		<div class="col-lg-1 col-xs-1">
+		<?php echo get_avatar($post->post_author);?>
 		</div>
-		</div>
-		<div class="col-lg-10 pd-0 col-12" style="margin-left: 37px;">
+		<div class="col-lg-10  col-12" style="position: relative;">
+			<span class="text-muted text-center" style="position:absolute; color: #cccccc; font-size:200px; opacity: 0.4; z-index: -1; top:40px; left:0px"><?=$title[0]?></span>
+			<div style="">
+			<a href="<?php esc_url( the_permalink() ); ?>"><h2><?=$title?>	</h2></a>
 			<p><?PHP the_content();?>	</p>
+			</div>
+			<div class="clear"></div>
 		</div>
 	</div>
     <hr>
@@ -31,8 +35,8 @@
 
 	<div class="row com-btn">
 	<div class="col-lg-12 col-md-12">
-		<a class="btn-type" href="#" ><span class="icon-type">3</span>hours ago</a>
-		<a class="btn-type" href="#" ><i class=" icon-type fa fa-eye"></i> 444 View  </a>
+		<a class="btn-type" href="<?php esc_url( the_permalink() ); ?>" ><?php pashmina_posted_on(); ?></a>
+		<a class="btn-type" href="<?php esc_url( the_permalink() ); ?>" ><i class=" icon-type fa fa-eye"></i> 444 View  </a>
 	
 		<div class="entry-footer">
 			<?php pashmina_entry_footer(); ?>
