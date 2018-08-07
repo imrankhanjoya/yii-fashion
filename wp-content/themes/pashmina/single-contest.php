@@ -17,7 +17,7 @@ $post_ID = get_the_ID();
 $post = get_post();  
 $val = get_post_meta($post_ID);
 $participant = get_participent($post_ID);
-$complete= true;
+$complete= false;
 ?>
 <?php if(isset($_GET['startit']) && $userID && $complete===false)://START PARTICIPATION ?>
 	<?PHP include('contest-form.php'); ?>
