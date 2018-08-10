@@ -54,7 +54,7 @@ require_once __DIR__ . '/Facebook/autoload.php';
         saveUser($response,$aToken);
 
     }elseif($user->ID){
-            $show = 'skin';
+            
             if(isset($_POST['profile'])) {
                 
                 if(isset($_POST['username']) && $_POST['username'] != $user->user_login){
@@ -74,18 +74,19 @@ require_once __DIR__ . '/Facebook/autoload.php';
                     $user->display_name = $_POST['nickname'];
                     wp_update_user($user);
                 }
-                if(isset($_POST['email'])){
+                if(isset($_POST['email']) && is_email($_POST['email'])){
                     $user->user_email = $_POST['email'];
                     wp_update_user($user);
+                }else{
+                    $show = 'getemail';
+                    $error = "enter valid email";
                 }
                 if(isset($_POST['birthday'])){
                     sotreUserMeta('birthday',$_POST['birthday']);
                 }
-                if(isset($_POST['description'])){
-                    
+                if(isset($_POST['description'])){ 
                     $show = sotreUserMeta("description",$_POST['description']);
                 }
-
                 $url = add_query_arg(array('show' =>'profile'),get_page_link($pageID->ID));
                 if($error==''){
                     wp_redirect($url);    
@@ -100,7 +101,6 @@ require_once __DIR__ . '/Facebook/autoload.php';
                 wp_redirect($url);
             }elseif(isset($_GET['key']) && isset($_GET['val'])){
                 $show = sotreUserMeta($_GET['key'],$_GET['val']);
-                
                 $url = add_query_arg(array('show' => $show),get_page_link($pageID->ID));
                 wp_redirect($url);
             }elseif(isset($_GET['show'])){
@@ -132,7 +132,7 @@ get_header('nomenu');
             <?php if($user->ID==0):?>
             <div class="col-lg-12 col-md-12" >
 
-            <div class="form-group col-md-12 jointhemove text-center">
+            <div class="form-group col-md-offset-3 col-md-6 jointhemove text-center">
             <h1>Hi, Join the movement!</h1>
 
             <a class="btn a-btn-knowmore" href="<?=getLoginPage()?>">Join In</a>
@@ -140,62 +140,34 @@ get_header('nomenu');
             </div>
             <div class="clear"></div>
             <style type="text/css">
-                .dt-header{
-                    background-color: transparent;
-                }
-                .page-template-start{
-                background-position: 50% 50%;
-                background-repeat: no-repeat;
-                background-size:inherit;
-                -webkit-animation-name: cycle; /* Safari 4.0 - 8.0 */
-                -webkit-animation-duration: 15s; /* Safari 4.0 - 8.0 */
-                -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
-                animation-name: cycle;
-                animation-duration: 25s;
-                animation-iteration-count: infinite;
-                width: 100%;
-                height: 100%;
-                position:relative;
-
-                }
-
-                @keyframes cycle {
-                0% { background-image: url("http://gloat.me/wp-content/uploads/2018/07/woman-girl-shooting-photography.jpg"); }
-                25% { background-image: url("http://gloat.me/wp-content/uploads/2018/07/pexels-photo-1185617.jpeg"); }
-                50% { background-image: url("http://gloat.me/wp-content/uploads/2018/07/pexels-photo-1038041.jpeg");}
-                75% { background-image: url("http://gloat.me/wp-content/uploads/2018/07/pexels-photo-1035685.jpeg"); }
-                100% { background-image: url("http://gloat.me/wp-content/uploads/2018/07/pexels-photo-458684.jpeg"); }
-                }
-                body{
-                    color:#fff;
-                    text-shadow: 0px 0px 5px #ccc;
-                    min-height:100%;
-                   position:relative;
-
-                }
-                .jointhemove{
-                    color:#fff;
-                    text-shadow: 0px 0px 5px #ccc;
-                }
-                .dt-logo img {
-                    width: auto;
-                    max-height: 120px;
-                    margin: 20px 0;
-                    /* box-shadow: 2px 2px 5px #fff; */
-                    background-color: #f1ee69;
-                    padding: 5px;
-                }
-                footer {
-                clear: both;
-                position: relative;
-                z-index: 10;
-                height: 3em;
-                margin-top: -3em;
-                }
+            .page-template-start{background-position:center;background-repeat:no-repeat;background-size:inherit;-webkit-animation-name: cycle;-webkit-animation-duration: 15s;-webkit-animation-iteration-count: infinite;animation-name: cycle;animation-duration: 25s;animation-iteration-count: infinite;width: 100%;height: 100%;position:relative;
+            }
+            @keyframes cycle {
+            0%{background-image: url("http://gloat.me/wp-content/uploads/2018/07/woman-girl-shooting-photography.jpg");}
+            25%{background-image: url("http://gloat.me/wp-content/uploads/2018/07/pexels-photo-1185617.jpeg"); }
+            50%{background-image: url("http://gloat.me/wp-content/uploads/2018/07/pexels-photo-1038041.jpeg");}
+            75%{background-image: url("http://gloat.me/wp-content/uploads/2018/07/pexels-photo-1035685.jpeg"); }
+            100%{background-image: url("http://gloat.me/wp-content/uploads/2018/07/pexels-photo-458684.jpeg"); }
+            }
+            body{color:#fff;text-shadow: 0px 0px 5px #ccc;min-height:100vh;height:100vh;position:relative;}
+            .jointhemove{background-color: rgb(0,0,0,0.6); color:#fff;text-shadow: 0px 0px 5px #ccc; margin-top:20%; padding:10px; border-radius: 5px;}
+                
 
                   </style>
             <?PHP endif;?>
+            <?PHP if($show=='getemail'):?>
+            
+            <div class="col-lg-6 col-md-6 col-md-offset-3 col-lg-offset-3" style="margin-top:15%" >
+            <h1>What's your email</h1>
+            <div id="error"><?=$error?></div>
+            <form action="" method="post"> 
+            <input type="text" name="email" class="col-md-12" placeholder="Email address">
+            <p>Where do you want to notify you about the contest and rewards.</p>
+            <input type="submit" name="profile" value="Save Email">
+            </form>
+            </div>
 
+            <?PHP endif;?>
             <?PHP if($show=='personal'):?>
             
             <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
@@ -523,6 +495,6 @@ jQuery(document).ready(function(){
     <img src="<?=get_template_directory_uri();?>/images/loading.svg" width=100%>
 </div>
 <?php
-get_footer();
+get_footer('contest');
 ?>
 

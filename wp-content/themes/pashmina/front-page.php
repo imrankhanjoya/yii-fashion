@@ -61,9 +61,17 @@ if(!is_user_logged_in()){
 
 <!-- Contest -->
 
+<!-- Notification Subscription -->
+<div class="container ">
+    <div class="row">
+      <div class='onesignal-customlink-container'></div>
+    </div>
+</div>
+<!-- Notification Subscription -->
 
 <!-- TOP ITEM LIST -->
 <div class="container ">
+  <div class='onesignal-customlink-container'></div>
     <div class="row">
             <br>
             <?PHP

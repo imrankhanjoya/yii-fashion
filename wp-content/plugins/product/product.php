@@ -199,3 +199,60 @@ function getProductByBrand($brands,$limit=3){
 	}
 
 }
+
+function get_contest(){
+	global $wpdb;
+
+	$query =  "select posts.ID,posts.post_date,posts.post_content,posts.post_title,posts.guid,meta.meta_value,contest.post_title as contest,contest.ID as contest_id,wmeta.meta_value as winner from $wpdb->posts as posts 
+	left join $wpdb->postmeta as meta on meta.post_id = posts.ID and meta_key = 'image'
+	left join $wpdb->postmeta as wmeta on wmeta.post_id = posts.ID and wmeta.meta_key = 'winner'
+	left join $wpdb->posts as contest on contest.ID = posts.post_parent
+	where posts.post_type= 'contest_replay' and posts.post_author= 4 and posts.post_status = 'publish'";
+	$results = $wpdb->get_results($query, ARRAY_A );
+
+
+    $out = '';
+    if(!empty($results)){
+    	  $out .= "<h3 style='text-decoration:underline'>Contest your have participated.</h3>";	
+        foreach ($results as $key => $val) {
+            $out .= "<div class='col-md-12 col-lg-12 col-xs-12' style='border-bottom: 1px solid; margin-bottom: 20px;'>";
+            $array = explode('.',$val['meta_value']);
+            if(!empty($array)){
+              $newimage = str_replace(".".end($array),"-small.".end($array),$val['meta_value']);
+            }
+            $out .= "<div class='col-md-2 col-xs-4'>";
+            $out .= "<img src='".$newimage."' />";
+            $out .= "</div>";
+            $out .= "<div class='col-md-8'>";
+            $out .= "<a href='".$val['guid']."'><h3 style='margin-top:-10px'>".$val['post_title']."</h3></a>";
+            $out .= "<p>".$val['post_content']."</p>";
+            $out .= "</div>";
+            $out .= "<div class='col-md-2'>";
+            if($val['winner']!='') {
+                if($val['winner']==1){
+                    $wlabel = "Winner";
+                }elseif($val['winner']==2){
+                    $wlabel = "2<sub>nd</sub> Winner";
+                }elseif($val['winner']==3){
+                    $wlabel = "3<sub>rd</sub> Winner";
+                }
+
+                $out .= "<b>".$wlabel."</b><br>";
+                $out .= "<a href='#tab_default_6' data-toggle='tab'>Claim your reward</a>";
+            }else{
+
+                $out .= '<div class="col-md-12 text-center "  ><span class="glyphicon glyphicon-heart" aria-hidden="true" style="font-size:40px"></span></div>';
+                $voteCount = get_contest_vodecount($val['ID']);
+                $out .= '<div class="col-md-12 text-center" style="font-size:30px">'.$voteCount.'</div>';
+            }
+            $out .= "</div>";
+            $out .= "</div>";
+        }
+    }else{
+        $out .= "<div class='col-md-12 col-lg-12 col-xs-12'>";
+        $out .= "<h3>You have not participated in any contest yet!.</h3>";
+        $out .= "</div>";
+    }
+
+	return $out;
+}
