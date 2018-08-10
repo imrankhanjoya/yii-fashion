@@ -147,6 +147,13 @@ add_action( 'wp_head', 'gloatme_header_metadata',0);
                   </li>
                   <?php if($user_id == $current_user->data->ID):?>
                   <li>
+                     <a href="#tab_default_7" data-toggle="tab">
+                     <span class=""><i class="fa fa-bullhorn"></i></span>
+                     <span class="">0</span>
+                     <span class="">Contest</span>
+                     </a>
+                  </li>
+                  <li>
                      <a href="#tab_default_5" data-toggle="tab">
                      <span class=""><i class="fa fa-bullhorn"></i></span>
                      <span class="">0</span>
@@ -281,6 +288,13 @@ add_action( 'wp_head', 'gloatme_header_metadata',0);
                      </div>
                   </div>
                   <?php if($user_id == $current_user->data->ID):?>
+                  <!--THIS IS FOR CONTEST-->
+                  <div class="tab-pane author-tab-div" id="tab_default_7">
+                     <div class="panel-body">
+                        <?=get_contest();?>
+                        
+                     </div>
+                  </div>
                   <!--THIS IS FOR INFLUNSER-->
                   <div class="tab-pane author-tab-div" id="tab_default_5">
                      <div class="panel-body">
