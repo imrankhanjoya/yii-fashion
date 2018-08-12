@@ -113,8 +113,10 @@ if($contest_post){
             <a class="whatsappcolor" href="whatsapp://send?text=<?=$title;?> at Gloat.me–<?=$reply_url;?>" data-action="share/whatsapp/share"><i class="fa fa-whatsapp"></i> WhatsApp</a>
             <a class="copycolor" href="#" val=" <?=$reply_url?>" onClick="copyText('copyUrl')"><i class="fa fa-copy"></i> Copy Url</a>
             </div>
-        </div> 
-        <div class="col-xs-12 hidden-md hidden-lg">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 hidden-md hidden-lg" style="padding:25px 20px">
             <p><b>Share your contest entry with your friends on social media to win.</b>
                 <div id="copyUrlm"><?=$reply_url?></div>
             </p>
@@ -122,7 +124,7 @@ if($contest_post){
             <a class="fbcolor col-xs-4" href="http://www.facebook.com/sharer.php?s=100&url=<?=$reply_url?>&images=http://myurl/images/my_image.png&title=mytitle&summary=containsummary"><i class="fa fa-facebook"></i> Facebook</a>
             <a class="whatsappcolor col-xs-4" href="whatsapp://send?text=<?=$title;?> at Gloat.me–<?=$reply_url;?>" data-action="share/whatsapp/share"><i class="fa fa-whatsapp"></i> WhatsApp</a>
             <a class="copycolor col-xs-4" href="#" val=" <?=$reply_url?>" onClick="copyText('copyUrlm')"><i class="fa fa-copy"></i> Copy Url</a>
-            </div>
+        </div>
         <div class="col-md-11 col-md-offset-1 col-xs-12">
             <h4>Select brands you have used in above photo</h4>
             <?php foreach($brands as $key=>$brand):?>
