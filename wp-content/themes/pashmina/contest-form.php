@@ -73,7 +73,9 @@ if($contest_post){
             <div class="form-group">
             <textarea id="description" class="form-control" style="min-height:150px" name="detail" placeholder="Say some thing about your style" required><?=$desc?></textarea>
             </div>
+            <div class="form-group">
             <button type="submit" id="sendmessage" class="col-xs-12 col-md-6" >Save</button>
+            </div>
 
         </div>
 
