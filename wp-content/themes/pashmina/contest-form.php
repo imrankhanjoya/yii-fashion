@@ -116,7 +116,7 @@ if($contest_post){
         </div>
       </div>
       <div class="row">
-        <div class="col-xs-12 hidden-md hidden-lg" style="padding:25px 20px">
+        <div class="col-xs-12 hidden-md hidden-lg" style="padding:25px 15px">
             <p><b>Share your contest entry with your friends on social media to win.</b>
                 <div id="copyUrlm"><?=$reply_url?></div>
             </p>
