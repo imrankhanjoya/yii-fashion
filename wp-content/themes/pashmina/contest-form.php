@@ -137,15 +137,17 @@ if($contest_post){
                     </label>
                 </div>
             <?PHP endforeach;?>
-        </div>   
+        </div>
+          <div class="btn-group btn-group-justified" style="margin-bottom:90px;">
+              <a  id="gobackbutton" href="#" class="btn btn-primary">Back to Photo</a>
+              <a href="" class="btn btn-primary submit_share">Submit & Share</a>
+          </div>
       </div>  
 
 
-      <div class="col-md-3 col-xs-12" style="margin-bottom: 50px; margin-top: 50px">
-      <a  id="gobackbutton" class="a-button" >Back to Photo</a>
-      </div>
-      <div class="col-md-offset-6 col-md-3 col-xs-12" style="margin-bottom: 50px; margin-top: 50px">
-      <a href="" class="a-button submit_share" >Submit & Share</a>
+
+
+
       </div>
     
     </div>
