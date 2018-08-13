@@ -63,7 +63,7 @@ if($contest_post){
             <img id="userimage" ld="<?=get_template_directory_uri();?>/images/loading.svg" src="<?=$userimage?>" org="<?=$userimage?>" >
                 
         </div>
-        <div class="col-md-6" style="margin-bottom:60px">
+        <div class="col-md-6" style="margin-bottom:90px">
             
             <h2>Awesome lets start to win!</h2>
             <div id="error"></div>
@@ -138,7 +138,7 @@ if($contest_post){
                 </div>
             <?PHP endforeach;?>
         </div>
-          <div class="btn-group btn-group-justified" style="margin-bottom:90px;">
+          <div class="btn-group btn-group-justified" style="margin-bottom:35px;">
               <a  id="gobackbutton" href="#" class="btn btn-primary">Back to Photo</a>
               <a href="" class="btn btn-primary submit_share">Submit & Share</a>
           </div>
