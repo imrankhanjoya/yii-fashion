@@ -65,7 +65,7 @@ $newData = [];
 foreach($results as $key=>$val){
 		$array = explode('.',$val['meta_value']);
 		if(!empty($array)){
-		  $newimage = str_replace(".".end($array),"-mid.".end($array),$val['meta_value']);
+		  $newimage = str_replace(".".end($array),"-small.".end($array),$val['meta_value']);
 		}
 
 		$results[$key]['meta_value'] =$newimage;
