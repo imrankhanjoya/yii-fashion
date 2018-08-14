@@ -97,10 +97,10 @@ if($contest_post){
     <div class="col-md-12">
      
       <div class="row">
-        <div class="col-md-2 col-md-offset-1 col-xs-4">
+        <div class="col-md-3 col-md-offset-2 col-xs-4">
             <img src="<?=$img?>" > 
         </div>
-        <div class="col-md-8 col-xs-8">
+        <div class="col-md-7 col-xs-8">
             <h2>Congratulation!</h2>
             <p>Your entry has been submitted for <?php the_title()?></p>
             <div class="hidden-xs">
@@ -120,20 +120,20 @@ if($contest_post){
             <p><b>Share your contest entry with your friends on social media to win.</b>
                 <div id="copyUrlm"><?=$reply_url?></div>
             </p>
-            
+
             <a class="fbcolor col-xs-4" href="http://www.facebook.com/sharer.php?s=100&url=<?=$reply_url?>&images=http://myurl/images/my_image.png&title=mytitle&summary=containsummary"><i class="fa fa-facebook"></i> Facebook</a>
             <a class="whatsappcolor col-xs-4" href="whatsapp://send?text=<?=$title;?> at Gloat.me–<?=$reply_url;?>" data-action="share/whatsapp/share"><i class="fa fa-whatsapp"></i> WhatsApp</a>
             <a class="copycolor col-xs-4" href="#" val=" <?=$reply_url?>" onClick="copyText('copyUrlm')"><i class="fa fa-copy"></i> Copy Url</a>
         </div>
-        <div class="col-md-11 col-md-offset-1 col-xs-12">
+        <div class="col-md-11 col-md-offset-1 col-xs-12" style="margin-top: 70px; margin-bottom: 70px">
             <h4>Select brands you have used in above photo</h4>
             <?php foreach($brands as $key=>$brand):?>
                 <?php $class = in_array($key,$userbrands)?"check":""?>
                 <?php $checked = in_array($key,$userbrands)?"checked":""?>
-                <div class="col-md-2 col-xs-6">
+                <div class="col-md-2 col-xs-3" style="padding:20px;">
                     <label class="">
                         <img src="<?="http://www.gloat.me/wp-content/uploads/".$brand['logo']?>" val="<?=$key?>" class="img-thumbnail brandcheck img-check  <?=$class?>">
-                        <?=$brand['title']?>
+                        <?php //$brand['title']?>
                     </label>
                 </div>
             <?PHP endforeach;?>

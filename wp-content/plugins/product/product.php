@@ -223,11 +223,11 @@ function get_contest(){
             $out .= "<div class='col-md-2 col-xs-4'>";
             $out .= "<img src='".$newimage."' />";
             $out .= "</div>";
-            $out .= "<div class='col-md-8'>";
+            $out .= "<div class='col-md-8 col-xs-6'>";
             $out .= "<a href='".$val['guid']."'><h3 style='margin-top:-10px'>".$val['post_title']."</h3></a>";
             $out .= "<p>".$val['post_content']."</p>";
             $out .= "</div>";
-            $out .= "<div class='col-md-2'>";
+            $out .= "<div class='col-md-2 col-xs-2'>";
             if($val['winner']!='') {
                 if($val['winner']==1){
                     $wlabel = "Winner";

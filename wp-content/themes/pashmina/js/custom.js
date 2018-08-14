@@ -32,5 +32,10 @@ jQuery(document).ready(function() {
     jQuery(".img-check").click(function(){
         jQuery(this).toggleClass("check");
     });
+    jQuery(".showloading").click(function(){
+        jQuery('#loading').modal({
+        show: 'true'
+        });
+    });
 
 });
