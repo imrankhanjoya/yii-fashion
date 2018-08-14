@@ -126,7 +126,7 @@ if($contest_post){
             <a class="copycolor col-xs-4" href="#" val=" <?=$reply_url?>" onClick="copyText('copyUrlm')"><i class="fa fa-copy"></i> Copy Url</a>
         </div>
         <div class="col-md-11 col-md-offset-1 col-xs-12" style="margin-top: 70px; margin-bottom: 70px">
-            <h4>Select brands you have used in above photo</h4>
+            <h3>Select brands you have used in above photo</h3>
             <?php foreach($brands as $key=>$brand):?>
                 <?php $class = in_array($key,$userbrands)?"check":""?>
                 <?php $checked = in_array($key,$userbrands)?"checked":""?>
