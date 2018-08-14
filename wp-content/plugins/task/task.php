@@ -14,7 +14,7 @@ function loginModal(){
     <div class="modal-dialog" role="document">
     <div class="modal-content site-modal">
       <div class="modal-body" style="text-align: center; font-size:20px;">
-        <a href="' .getLoginPage().'"  class="btnline" ><span class="fa fa-facebook-square fa-facebook "></span> Get start with Facebook</a>
+        <a href="' .getLoginPage().'"  class="btnline showloading" ><span class="fa fa-facebook-square fa-facebook "></span> Get start with Facebook</a>
         <p style="margin-top:10px; color:#fff"><small>We promise will not post on your wall.</small></p>
       </div>
     </div>
@@ -22,6 +22,20 @@ function loginModal(){
     </div>';
     return $out;
 }
+
+function loading(){
+    $out = '<div class="modal fade" id="loading" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+    <div class="modal-content site-modal">
+      <div class="modal-body" style="text-align: center; font-size:20px;">
+        <img src="'.get_template_directory_uri().'/images/loading.svg" width=100%>
+      </div>
+    </div>
+    </div>
+    </div>';
+    echo  $out;
+}
+add_action('wp_footer', 'loading'); 
 function askComment(){
     $out = '<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                 <div class="modal-dialog" role="document">
