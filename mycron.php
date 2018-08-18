@@ -56,7 +56,7 @@ require_once( ABSPATH . '/wp-admin/includes/taxonomy.php');
 
 
 function amazonProduct($brand,$i,$cats){
-        echo "Porcessing Page $i";
+        echo "Porcessing Page $i for brand $brand and $cats";
         echo "\n";
         $region = "in";
         $private_key = "Hvipqt6B5syvI1YitiP61cTX6f0WasKcxnCepa1W";
