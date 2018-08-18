@@ -107,7 +107,26 @@ table {
     }
 }
 
-
+.row-eq-height {
+display: -webkit-box;
+display: -webkit-flex;
+display: -ms-flexbox;
+display:         flex;
+ }
+ .bottom-column
+{
+    float: none;
+    display: table-cell;
+    vertical-align: bottom;
+}
+.pullbottom {
+    display: inline-block;
+    vertical-align: bottom;
+    float: none;
+    position: absolute;
+    bottom: 0px;
+    padding: 0px 15px;
+}
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/

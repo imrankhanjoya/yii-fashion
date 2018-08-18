@@ -95,28 +95,34 @@ if($contest_post){
       
     <div class="col-md-12">
      <h2 class="seffect text-center">Congratulations!</h2>
-      <div class="row">
-        <div class="col-md-3 col-md-offset-2 col-xs-4">
-            <img src="<?=$img?>" > 
+     <p class="text-center">Your entry has been submitted for the contest. Here is how you could raise your chances to be the winner.</p>
+      <div class="row row-eq-height">
+        <div class="col-md-3 col-md-offset-1 col-xs-4">
+            <img src="<?=$img?>" class="img-responsive pullbottom" > 
         </div>
-        <div class="col-md-7 col-xs-8">
-            <h3>Your entry has been submitted for the contest. Here is how you could raise your chances to be the winner.</h3>
-            <p></p>
+        <div class="col-md-6 col-xs-8 bottom-column">
+            <h3 id="pre_title"><?=$title?></h3>
+            <p><?=$desc?></p>
             <div class="hidden-xs" style="background-color:#ecc66a; padding:20px">
             <p>
-                <b>Share your contest entry with your friends on social media to win.</b>
+                <b>Here’s how you can win!!!</b>
+                Share with your friends and family members and get as many likes as you can. Exposure is all it takes to get to the next level
                 <div id="copyUrl"><?=$reply_url?></div>
             </p>
             
-            <a class="fbcolor" href="http://www.facebook.com/sharer.php?s=100&url=<?=$reply_url?>&images=http://myurl/images/my_image.png&title=mytitle&summary=containsummary"><i class="fa fa-facebook"></i> Facebook</a>
-            <a class="whatsappcolor" href="whatsapp://send?text=<?=$title;?> at Gloat.me–<?=$reply_url;?>" data-action="share/whatsapp/share"><i class="fa fa-whatsapp"></i> WhatsApp</a>
-            <a class="copycolor" href="#" val=" <?=$reply_url?>" onClick="copyText('copyUrl')"><i class="fa fa-copy"></i> Copy Url</a>
+
+            <a class="fbcolor" style="border-radius: 50%; font-size: 24px; width:200px; height: 200px; padding:5px 15px; " href="http://www.facebook.com/sharer.php?s=100&url=<?=$reply_url?>&images=http://myurl/images/my_image.png&title=mytitle&summary=containsummary"><i class="fa fa-facebook"></i></a>
+            <a class="whatsappcolor" style="border-radius:50%; padding:6px 12px; font-size: 23px" href="whatsapp://send?text=<?=$title;?> at Gloat.me–<?=$reply_url;?>" data-action="share/whatsapp/share"><i class="fa fa-whatsapp"></i></a>
+            <a class="copycolor" style="border-radius: 50%; font-size: 26px" href="#" val=" <?=$reply_url?>" onClick="copyText('copyUrl')"><i class="fa fa-copy"></i></a>
+
+
             </div>
         </div>
       </div>
       <div class="row">
         <div class="col-xs-12 hidden-md hidden-lg" style="padding:25px 15px">
-            <p><b>Share your contest entry with your friends on social media to win.</b>
+            <p>
+                <b>Here’s how you can win!!!</b>
                 <div id="copyUrlm"><?=$reply_url?></div>
             </p>
 
