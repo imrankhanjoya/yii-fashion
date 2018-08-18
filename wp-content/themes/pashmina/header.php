@@ -71,7 +71,7 @@ $showHeader = true;
                         <?php
 
                         if ( function_exists( 'get_custom_logo' ) && has_custom_logo() ) {
-                            the_custom_logo();
+                            echo '<img src="http://www.gloat.me/wp-content/uploads/2018/08/Gloatme-full-white.png" style="height:30px">';
                         } else {
                            echo  '<h1 class="transition35 site-title"><a href="' . esc_url( home_url( '/' ) ) . '" rel="home">' . esc_attr( get_bloginfo( 'name' ) ) . '</a></h1>';
                         }
@@ -98,7 +98,7 @@ $showHeader = true;
                 <div class="row">
                     <div class="col-lg-12 col-md-12">
                         <div class="dt-menu-md">
-                            <img src="http://gloat.me/wp-content/uploads/2018/07/white-30.png" style="height:20px">
+                            <img src="http://www.gloat.me/wp-content/uploads/2018/08/Gloatme-Full-Inverse.png" style="height:20px">
                             <span><i class="fa fa-bars"></i> </span>
                         </div>
 
