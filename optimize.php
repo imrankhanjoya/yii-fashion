@@ -36,8 +36,8 @@ if ( !defined('ABSPATH') ) {
 require_once( ABSPATH . '/wp-admin/includes/taxonomy.php');
 
 
-
-$query =  "select posts.ID,posts.post_date,posts.post_content,posts.post_title,posts.guid as meta_value from $wpdb->posts as posts where  posts.post_type= 'attachment' limit 0,10 ";
+$start = $argv[1];
+$query =  "select posts.ID,posts.post_date,posts.post_content,posts.post_title,posts.guid as meta_value from $wpdb->posts as posts where  posts.post_type= 'attachment' limit $start,10 ";
 global $wpdb;
 $results = $wpdb->get_results($query, ARRAY_A );
 echo "Total images ".count($results)."\n";
