@@ -46,7 +46,7 @@ foreach($results as $val){
 	echo "\n";
 	$file = explode("/wp-content/",$val['meta_value']);
 	$file = __DIR__.'/wp-content/'.$file[1];
-	echo $file = __DIR__.'/wp-content/uploads/pexels-photo-164262.jpeg';
+	//echo $file = __DIR__.'/wp-content/uploads/pexels-photo-164262.jpeg';
 	echo $val = image_resize($file,300,300,false,'mid');
 	echo "\n";
 	echo $val = image_resize($file,300,300,true,'fixmid');
@@ -57,7 +57,6 @@ foreach($results as $val){
 	echo "\n";
 	echo $val = image_resize($file,600,600,false,'max');
 	echo "\n";
-	exit;
 	
 }
 	
