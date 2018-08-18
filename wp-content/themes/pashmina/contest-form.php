@@ -95,13 +95,13 @@ if($contest_post){
       
     <div class="col-md-12">
      <h2 class="seffect text-center">Congratulations!</h2>
-     <p class="text-center">Your entry has been submitted for the contest. Here is how you could raise your chances to be the winner.</p>
-      <div class="row row-eq-height hidden-xs">
+     <h4 class="text-center" style="margin-bottom:30px;">Your entry has been submitted for the contest. Here is how you could raise your chances to be the winner.</h4>
+      <div class="row  hidden-xs">
         <div class="col-md-3 col-md-offset-1 col-xs-4">
-            <img src="<?=$img?>" class="img-responsive pullbottom" > 
+            <img src="<?=$img?>" class="img-responsive" > 
         </div>
         <div class="col-md-6 col-xs-8 bottom-column">
-            <h3 class="pre_title"><?=$title?></h3>
+            <h3 class="pre_title" style="margin-top:-10px;"><?=$title?></h3>
             <p class="pre_desc"><?=$desc?></p>
             <div class="" style="background-color:#ecc66a; padding:20px">
             <p>
