@@ -62,7 +62,7 @@ if($user->ID){
             <div class="col-lg-3">
                       <div class="row">
                           <div class="col-md-12 text-center" >
-                            <img src="http://www.gloat.me/wp-content/uploads/2018/08/My-Post.jpg" class="img-responsive" />
+                            <img data-toggle="modal" data-target="#startDiscuss"  src="http://www.gloat.me/wp-content/uploads/2018/08/My-Post.jpg" class="img-responsive" />
                           </div>
                       </div>
                       <!--RECENT TOP DISCUSSION-->

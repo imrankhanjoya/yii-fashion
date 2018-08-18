@@ -136,7 +136,7 @@ if(!empty($taggeBrands)){
 												<div class='col-md-8 col-xs-8'>
 													<?=$pro->post_title?><br>
 													<?=$pro->name?> 
-													<a href='<?=$pro->detailUrl?>' >Explore on amazon</a>
+													<br><a  href='<?=$pro->detailUrl?>' target="_blank" >Explore on amazon</a>
 												</div>
 											</div>
 									</a>		

@@ -49,6 +49,7 @@ $complete= false;
                 <a style="color: #fff; border:1px solid;  padding: 5px;" href="<?=$url?>" > Get Start To Win</a>
             <?php else: ?>
                 <a data-toggle="modal" data-target="#myModal" style="color: #fff; border:1px solid; padding: 5px;"> Get Start To Win</a>
+
             <?php endif; ?>
         </div>
 

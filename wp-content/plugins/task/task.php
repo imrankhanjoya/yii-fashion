@@ -24,11 +24,11 @@ function loginModal(){
 }
 
 function loading(){
-    $out = '<div class="modal fade" id="loading" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    $out = '<div class="modal fade" id="loading" tabindex="-1" data-keyboard="false" data-backdrop="static" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
-    <div class="modal-content site-modal">
-      <div class="modal-body" style="text-align: center; font-size:20px;">
-        <img src="'.get_template_directory_uri().'/images/loading.svg" width=100%>
+    <div class="modal-content">
+      <div class="modal-body" style="text-align:center; font-size:20px; background-color:rgb(255,255,255,0.2)">
+        <img src="'.get_template_directory_uri().'/images/loading.svg" >
       </div>
     </div>
     </div>
@@ -36,19 +36,31 @@ function loading(){
     echo  $out;
 }
 add_action('wp_footer', 'loading'); 
-function askComment(){
-    $out = '<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+function startDiscuss(){
+    $out = '<div class="modal fade" id="startDiscuss" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                 <div class="modal-dialog" role="document">
-                    <div class="modal-content site-modal">
+                    <div class="modal-content">
                       <div class="modal-header">
-                        <h4 class="modal-title" id="myModalLabel"><?PHP the_title();?></h4>
+                        <h3>Start Discussion</h3>
                       </div>
-                      <div class="modal-body" style="text-align: center;">
-                        <a href="'.getLoginPage().'"  class="btn btn-primary" >Login With Facebook</a>
-                        <p><small>We promise will not post on your wall.</small></p>
+                      <div class="modal-body" >
+                          <form>
+                          <div class="form-group">
+                          <label for="exampleFormControlInput1">Email address</label>
+                          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                          </div>
+                          <div class="form-group">
+                          <label for="exampleFormControlTextarea1">Example textarea</label>
+                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                          </div>
+                          <div class="form-group item-right">
+                          <button type="button" class="btn btn-primary">Primary</button>
+                          </div>
+                          </form>
                       </div>
                     </div>
                 </div>
             </div>';
-    return $out;
+    echo $out;
 }
+add_action('wp_footer', 'startDiscuss');
