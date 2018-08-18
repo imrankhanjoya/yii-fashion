@@ -96,14 +96,14 @@ if($contest_post){
     <div class="col-md-12">
      <h2 class="seffect text-center">Congratulations!</h2>
      <p class="text-center">Your entry has been submitted for the contest. Here is how you could raise your chances to be the winner.</p>
-      <div class="row row-eq-height">
+      <div class="row row-eq-height hidden-xs">
         <div class="col-md-3 col-md-offset-1 col-xs-4">
             <img src="<?=$img?>" class="img-responsive pullbottom" > 
         </div>
         <div class="col-md-6 col-xs-8 bottom-column">
-            <h3 id="pre_title"><?=$title?></h3>
+            <h3 class="pre_title"><?=$title?></h3>
             <p><?=$desc?></p>
-            <div class="hidden-xs" style="background-color:#ecc66a; padding:20px">
+            <div class="" style="background-color:#ecc66a; padding:20px">
             <p>
                 <b>Here’s how you can win!!!</b>
                 Share with your friends and family members and get as many likes as you can. Exposure is all it takes to get to the next level
@@ -121,6 +121,8 @@ if($contest_post){
       </div>
       <div class="row">
         <div class="col-xs-12 hidden-md hidden-lg" style="padding:25px 15px">
+            <img src="<?=$img?>" class="img-responsive" >
+            <h3 class="pre_title"><?=$title?></h3>
             <p>
                 <b>Here’s how you can win!!!</b>
                 <div id="copyUrlm"><?=$reply_url?></div>
@@ -130,18 +132,21 @@ if($contest_post){
             <a class="whatsappcolor col-xs-4" href="whatsapp://send?text=<?=$title;?> at Gloat.me–<?=$reply_url;?>" data-action="share/whatsapp/share"><i class="fa fa-whatsapp"></i> WhatsApp</a>
             <a class="copycolor col-xs-4" href="#" val=" <?=$reply_url?>" onClick="copyText('copyUrlm')"><i class="fa fa-copy"></i> Copy Url</a>
         </div>
-        <div class="col-md-11 col-md-offset-1 col-xs-12" style="margin-top: 70px; margin-bottom: 70px">
+        <div class="col-md-11 col-md-offset-1 col-xs-12">
             <h3>Select brands you have used in above photo</h3>
+            <div class="row">
             <?php foreach($brands as $key=>$brand):?>
                 <?php $class = in_array($key,$userbrands)?"check":""?>
                 <?php $checked = in_array($key,$userbrands)?"checked":""?>
-                <div class="col-md-2 col-xs-3" style="padding:20px;">
+                <div class="col-lg-2 col-xs-4">
                     <label class="">
                         <img src="<?="http://www.gloat.me/wp-content/uploads/".$brand['logo']?>" val="<?=$key?>" class="img-thumbnail brandcheck img-check  <?=$class?>">
                         <?php //$brand['title']?>
                     </label>
                 </div>
+               
             <?PHP endforeach;?>
+            </div>
         </div>
           <div class="btn-group btn-group-justified" style="margin-bottom:35px;">
               <a  id="gobackbutton" href="#" class="btn btn-primary">Back to Photo</a>
