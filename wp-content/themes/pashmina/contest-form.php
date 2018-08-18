@@ -102,7 +102,7 @@ if($contest_post){
         </div>
         <div class="col-md-6 col-xs-8 bottom-column">
             <h3 class="pre_title"><?=$title?></h3>
-            <p><?=$desc?></p>
+            <p class="pre_desc"><?=$desc?></p>
             <div class="" style="background-color:#ecc66a; padding:20px">
             <p>
                 <b>Here’s how you can win!!!</b>
@@ -267,6 +267,8 @@ $(document).ready(function(){
             success : function( response ) {
                 userPostId = response.ID;
                 $(".submit_share").attr("href",response.guid);
+                $(".pre_title").html(response.post_title);
+                $(".pre_desc").html(response.post_content);
                 jQuery("#error").html("");
                 jQuery("#myCarousel").carousel('next');
                 jQuery('.loader').hide();
