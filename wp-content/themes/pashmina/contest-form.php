@@ -103,7 +103,7 @@ if($contest_post){
         <div class="col-md-6 col-xs-8 bottom-column">
             <h3 class="pre_title" style="margin-top:-10px;"><?=$title?></h3>
             <p class="pre_desc"><?=$desc?></p>
-            <div class="" style="background-color:#ecc66a; padding:20px">
+            <div style="background-color:#ecc66a; padding:20px">
             <p>
                 <b>Here’s how you can win!!!</b>
                 Share with your friends and family members and get as many likes as you can. Exposure is all it takes to get to the next level
@@ -119,7 +119,7 @@ if($contest_post){
             </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row" style="margin-bottom:90px">
         <div class="col-xs-12 hidden-md hidden-lg" style="padding:25px 15px">
             <img src="<?=$img?>" class="img-responsive" >
             <h3 class="pre_title"><?=$title?></h3>
@@ -132,8 +132,8 @@ if($contest_post){
             <a class="whatsappcolor col-xs-4" href="whatsapp://send?text=<?=$title;?> at Gloat.me–<?=$reply_url;?>" data-action="share/whatsapp/share"><i class="fa fa-whatsapp"></i> WhatsApp</a>
             <a class="copycolor col-xs-4" href="#" val=" <?=$reply_url?>" onClick="copyText('copyUrlm')"><i class="fa fa-copy"></i> Copy Url</a>
         </div>
-        <div class="col-md-11 col-md-offset-1 col-xs-12">
-            <h3>Select brands you have used in above photo</h3>
+        <div class="col-md-11 col-md-offset-1 col-xs-12" style="margin-bottom:30px">
+            <h3 style="margin-top:50px; margin-bottom:30px">Become a beauty expert. Share your favorite brands</h3>
             <div class="row">
             <?php foreach($brands as $key=>$brand):?>
                 <?php $class = in_array($key,$userbrands)?"check":""?>
@@ -147,11 +147,15 @@ if($contest_post){
                
             <?PHP endforeach;?>
             </div>
+            
         </div>
-          <div class="btn-group btn-group-justified" style="margin-bottom:35px;">
-              <a  id="gobackbutton" href="#" class="btn btn-primary">Back to Photo</a>
-              <a href="" class="btn btn-primary submit_share">Submit & Share</a>
-          </div>
+            <div class="col-md-6">
+                <a  id="gobackbutton" href="#" class="btn col-md-12 btn-primary">Back to Photo</a>
+            </div>
+            <div class="col-md-6">
+                <a href="" class="btn col-md-12 submit_share" >Submit & Share</a>
+            </div>
+          
       </div>  
 
 

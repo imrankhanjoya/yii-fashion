@@ -358,6 +358,11 @@ textarea.form-control{
 .brandcheck{
     padding: 15px;
     border-radius: 0px;
+    opacity: 0.5;
+    cursor:pointer;
+}
+.brandcheck:hover{
+opacity: 0.8;
 }
 /*--------------------------------------------------------------
 # Widgets
@@ -2115,7 +2120,7 @@ button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type=
 	border:1px solid #f4f4f4;
 }
 img.check{
-    opacity: 0.5;
+    opacity: 0.9;
     border:2px solid #8a6d3b
 }
 /*--------------------------------------------------------------
