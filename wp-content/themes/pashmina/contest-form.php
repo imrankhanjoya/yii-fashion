@@ -41,9 +41,7 @@ if($contest_post){
 
 <div class="row">
     
-    <div class="col-md-12" style="text-align: center; margin-top:2%; margin-bottom:2%">
-    <h1 class="seffect"><?=the_title()?></h1>
-    </div>
+    
 
     <div  class="slide" id="myCarousel" data-interval="false" data-ride="carousel" style="height: 600px">
   
@@ -55,6 +53,7 @@ if($contest_post){
 
       <!--ITEM START-->
       <div style="col-md-8 col-md-offset-2">
+        <h1 class="seffect text-center"><?=the_title()?></h1>
         <input type="file" name="file" id="upfilefield" style="display: none;">
         <input type="hidden" name="imagepath" value="<?=$img?>" id="imagepath">
         
@@ -95,15 +94,15 @@ if($contest_post){
       
       
     <div class="col-md-12">
-     
+     <h2 class="seffect text-center">Congratulations!</h2>
       <div class="row">
         <div class="col-md-3 col-md-offset-2 col-xs-4">
             <img src="<?=$img?>" > 
         </div>
         <div class="col-md-7 col-xs-8">
-            <h2>Congratulation!</h2>
-            <p>Your entry has been submitted for <?php the_title()?></p>
-            <div class="hidden-xs">
+            <h3>Your entry has been submitted for the contest. Here is how you could raise your chances to be the winner.</h3>
+            <p></p>
+            <div class="hidden-xs" style="background-color:#ecc66a; padding:20px">
             <p>
                 <b>Share your contest entry with your friends on social media to win.</b>
                 <div id="copyUrl"><?=$reply_url?></div>

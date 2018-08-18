@@ -98,7 +98,7 @@ $showHeader = true;
                 <div class="row">
                     <div class="col-lg-12 col-md-12">
                         <div class="dt-menu-md">
-                            <img src="http://gloat.me/wp-content/uploads/2018/07/white-30.png" height="20px">
+                            <img src="http://gloat.me/wp-content/uploads/2018/07/white-30.png" style="height:20px">
                             <span><i class="fa fa-bars"></i> </span>
                         </div>
 
