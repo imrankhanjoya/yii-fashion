@@ -60,7 +60,7 @@ $showHeader = true;
                         <?php
 
                         if ( function_exists( 'get_custom_logo' ) && has_custom_logo() ) {
-                            the_custom_logo();
+                            echo '<a href="' . esc_url( home_url( '/' ) ) . '"><img src="http://www.gloat.me/wp-content/uploads/2018/08/Gloatme-full-white.png" style="height:25px"></a>';
                         } else {
                            echo  '<h1 class="transition35 site-title"><a href="' . esc_url( home_url( '/' ) ) . '" rel="home">' . esc_attr( get_bloginfo( 'name' ) ) . '</a></h1>';
                         }
