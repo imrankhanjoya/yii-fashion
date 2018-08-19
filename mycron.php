@@ -157,6 +157,11 @@ function savePost($item,$brand,$skip=false){
 	if($item->ItemAttributes->Title==""){
 		return false;
 	}
+
+    echo $item->OfferSummary->LowestNewPrice->FormattedPrice;
+    echo "Price";
+    echo $item->ItemAttributes->ListPrice->FormattedPrice;
+    echo "\n";
     if($item->OfferSummary->LowestNewPrice->FormattedPrice=='' && $item->ItemAttributes->ListPrice->FormattedPrice==""){
         return false;   
     }
@@ -172,7 +177,7 @@ function savePost($item,$brand,$skip=false){
     }else{
         echo "Updating Product";
         if($skip==true){
-            return true;
+            return false;
         }
         
     }
