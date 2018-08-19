@@ -226,7 +226,7 @@ function savePost($item,$brand,$skip=false){
 
 }
 
-$key = $argv[1];
+$f = $key = $argv[1];
 $cat = $argv[2];
 $page = $argv[3];
 
@@ -234,12 +234,14 @@ if($cat=="all"){
     $brands = file_get_contents("brands.json");
     $allBrands = json_decode($brands,true);
     foreach($allBrands as $brand){
-        if($key!=0){
-            if($key == $brand[0]){
+        if($f !== 0){
+            echo "\n Checking when  $f $cat $page $brand[0] \n";
+            if($f == $brand[0]){
                 amazonProduct($brand,$page,"Beauty",true);    
             }
             continue;
         }else{
+            echo "\n Checking 0 when $f $cat $page  \n";
             amazonProduct($brand,$page,"Beauty",true);    
         }
     }
