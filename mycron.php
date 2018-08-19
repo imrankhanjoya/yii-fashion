@@ -157,6 +157,9 @@ function savePost($item,$brand,$skip=false){
 	if($item->ItemAttributes->Title==""){
 		return false;
 	}
+    if($item->OfferSummary->LowestNewPrice->FormattedPrice=='' && $item->ItemAttributes->ListPrice->FormattedPrice==""){
+        return false;   
+    }
 
     
 	$ASIN = $item->ASIN;
