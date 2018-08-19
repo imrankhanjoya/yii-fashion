@@ -55,7 +55,7 @@ if ( !defined('ABSPATH') ) {
 require_once( ABSPATH . '/wp-admin/includes/taxonomy.php');
 
 
-function amazonProduct($brand,$i,$cats){
+function amazonProduct($brand,$i,$cats,$skip=false){
         echo "Porcessing Page $i for brand $brand and $cats";
         echo "\n";
         $region = "in";
@@ -90,7 +90,7 @@ function amazonProduct($brand,$i,$cats){
                foreach($products as $product){
                 if(isset($product->ItemAttributes->Brand)){
                     
-                    savePost($product,$brand);
+                    savePost($product,$brand,$skip);
                 }
                }
                
@@ -152,7 +152,7 @@ function amazonProduct($brand,$i,$cats){
 
 
 
-function savePost($item,$brand){
+function savePost($item,$brand,$skip=false){
 
 	if($item->ItemAttributes->Title==""){
 		return false;
@@ -168,6 +168,10 @@ function savePost($item,$brand){
         echo "Storing Product";
     }else{
         echo "Updating Product";
+        if($skip==true){
+            return true;
+        }
+        
     }
 	$tiemAttr = $item->ItemAttributes;
 	$postarr = array();
@@ -230,7 +234,7 @@ if($cat=="all"){
     $brands = file_get_contents("brands.json");
     $allBrands = json_decode($brands,true);
     foreach($allBrands as $brand){
-        amazonProduct($brand,$page,"Beauty");    
+        amazonProduct($brand,$page,"Beauty",true);    
     }
 
     exit;
