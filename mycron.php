@@ -158,6 +158,14 @@ function savePost($item,$brand,$skip=false){
 		return false;
 	}
 
+    echo $item->OfferSummary->LowestNewPrice->FormattedPrice;
+    echo "Price";
+    echo $item->ItemAttributes->ListPrice->FormattedPrice;
+    echo "\n";
+    if($item->OfferSummary->LowestNewPrice->FormattedPrice=='' && $item->ItemAttributes->ListPrice->FormattedPrice==""){
+        return false;   
+    }
+
     
 	$ASIN = $item->ASIN;
 	global $wpdb;
@@ -169,7 +177,7 @@ function savePost($item,$brand,$skip=false){
     }else{
         echo "Updating Product";
         if($skip==true){
-            return true;
+            return false;
         }
         
     }
