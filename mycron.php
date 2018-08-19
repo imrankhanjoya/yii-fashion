@@ -234,7 +234,14 @@ if($cat=="all"){
     $brands = file_get_contents("brands.json");
     $allBrands = json_decode($brands,true);
     foreach($allBrands as $brand){
-        amazonProduct($brand,$page,"Beauty",true);    
+        if($key!=0){
+            if($key == $brand[0]){
+                amazonProduct($brand,$page,"Beauty",true);    
+            }
+            continue;
+        }else{
+            amazonProduct($brand,$page,"Beauty",true);    
+        }
     }
 
     exit;
