@@ -69,11 +69,18 @@ if(!empty($taggeBrands)){
             		</a>
 						<?=$post->post_content?>
 						<div class="row" style="margin-top: 50px;">
-								<div class="col-md-4 col-xs-12 voteBox">
+								<div class="col-md-12 col-xs-12 ">
 										<div class="row">
 										<div class="col-md-12 col-xs-6">
 										<?php
-										$voteCount = get_contest_vodecount($post->ID);	
+										$voteCount = get_contest_vodecount($post->ID);
+										if($voteCount==1){
+											echo 	"<span class='vcount'>".$voteCount."</span> person voted for ".get_the_title();
+										}elseif($voteCount>1){
+											echo 	"<span class='vcount'>".$voteCount."</span> People voted for ".get_the_title();
+										}else{
+											echo 	"Be the first one to vote for ".get_the_title();
+										}
 										if (is_user_logged_in()) {
 											
 											$ifVoted = get_post_favstatus($post->ID,get_current_user_id());
@@ -99,7 +106,7 @@ if(!empty($taggeBrands)){
 									</div>
 
 								</div>
-								<div class=" col-md-8 col-xs-12 ">
+								<div class=" col-md-12 col-xs-12 ">
 
 									<b>Help to share win the contest, Share with your firends and on social media</b>
 								<div class="addthis_sharing_toolbox" data-url="<?=$shareUrl?>" data-title="Hi Friends this is <?=$userdata->data->display_name?> Join me at Gloat.Me" data-description="Join me at Gloat.Me and lets discuss about beauty and products #Gloat.Me" data-media="<?=$img?>">

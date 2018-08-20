@@ -47,7 +47,7 @@ if(!is_user_logged_in()){
                
             <div class="col-md-12" style="padding:0px; margin-bottom:10px">
               <a  href="<?php esc_url( the_permalink() ); ?>"> 
-              <img class="hidden-xs" src="<?= get_the_post_thumbnail_url(get_the_ID())?>" />
+              <img class="hidden-xs" src="<?= get_the_post_thumbnail_url(get_the_ID())?>" style="width: 100%" />
               <img class="img-responsive hidden-md hidden-lg" src="<?=$val['image'][0]?>" />
               </a>    
             </div>
@@ -121,7 +121,7 @@ if(!is_user_logged_in()){
             </div>
         </div>
 
-        <div class="row media">
+        <!-- <div class="row media">
             <div class="col-lg-12 text-center ">
                 <img class="" style="height: 30px" src="http://gloat.me/wp-content/uploads/2018/07/front-border.png">
 
@@ -139,7 +139,7 @@ if(!is_user_logged_in()){
                   $commentcount = count($comments); 
 
 
-            foreach ($comments as $key => $comment) {
+                  foreach ($comments as $key => $comment) {
                            $ago = human_time_diff(strtotime($comment->comment_date));
                            //$useravatar = get_avatar($comment->user_id); 
                            ?>
@@ -163,7 +163,7 @@ if(!is_user_logged_in()){
                      <?php  } ?>
 
 
-        </div>
+        </div> -->
 
     </div>
     <!-- end home pages -->

@@ -44,7 +44,7 @@ if($user->ID){
 }
 ?>
 <div class="col-lg-12" style="padding:0px;">
-<img src='<?= get_the_post_thumbnail_url(get_the_ID())?>' class="img-responsive">
+<img src='<?= get_the_post_thumbnail_url(get_the_ID())?>' class="img-responsive" style="width: 100%">
 </div>
 
 
