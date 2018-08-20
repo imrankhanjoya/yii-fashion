@@ -241,17 +241,11 @@ $page = $argv[3];
 if($cat=="all"){
     $brands = file_get_contents("brands.json");
     $allBrands = json_decode($brands,true);
+    $allBrands = array_unique($allBrands);
     foreach($allBrands as $brand){
-        if($f !== 0){
-            echo "\n Checking when  $f $cat $page $brand[0] \n";
-            if($f == $brand[0]){
-                amazonProduct($brand,$page,"Beauty",true);    
-            }
-            continue;
-        }else{
-            echo "\n Checking 0 when $f $cat $page  \n";
-            amazonProduct($brand,$page,"Beauty",true);    
-        }
+        echo "\n Checking 0 when $f $cat $page  \n";
+        amazonProduct($brand,$page,"Beauty",true);    
+        
     }
 
     exit;
