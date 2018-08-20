@@ -242,7 +242,9 @@ if($cat=="all"){
     $brands = file_get_contents("brands.json");
     $allBrands = json_decode($brands,true);
     $allBrands = array_unique($allBrands);
-    foreach($allBrands as $brand){
+    $allBrands = array_chunk($allBrands,50);
+
+    foreach($allBrands[$f] as $brand){
         echo "\n Checking 0 when $f $cat $page  \n";
         amazonProduct($brand,$page,"Beauty",true);    
         
