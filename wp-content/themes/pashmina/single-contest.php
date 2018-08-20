@@ -27,7 +27,7 @@ $complete= false;
 	
 	<div class="col-md-12" style="padding:0px; margin-bottom:0px">
      <a  href="<?php esc_url( the_permalink() ); ?>"> 
-     <img class="img-responsive hidden-xs" src="<?= get_the_post_thumbnail_url(get_the_ID())?>" />
+     <img class="img-responsive hidden-xs" src="<?= get_the_post_thumbnail_url(get_the_ID())?>" style="width: 100%" />
      <img class="img-responsive hidden-md hidden-lg" src="<?=$val['image'][0]?>" />
      </a>    
    </div>
