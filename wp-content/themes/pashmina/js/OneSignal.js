@@ -40,6 +40,7 @@ var OneSignal = window.OneSignal || [];
                 jQuery(".push-my-div").hide();
             }else{
                 jQuery("#pushNotificaton").modal('show');
+                jQuery(".push-my-div").show();
             }
         });
     });
