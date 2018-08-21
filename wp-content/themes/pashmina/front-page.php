@@ -62,16 +62,18 @@ if(!is_user_logged_in()){
 <!-- Contest -->
 
 <!-- Notification Subscription -->
-<div class="container ">
+<div class="container push-my-div ">
     <div class="row">
-      <div class='onesignal-customlink-container'></div>
+      <div  class="col-md-12" style="padding-top:10px; padding-bottom:10px;background-image:url('https://cdnmediablog.files.wordpress.com/2018/08/adobe_post_20180821_130036.jpg');">
+        <button onClick="mypush() class="btn">Stay in Touch for Beauty Tips</button>
+      </div>
     </div>
 </div>
 <!-- Notification Subscription -->
 
+
 <!-- TOP ITEM LIST -->
 <div class="container ">
-  <div class='onesignal-customlink-container'></div>
     <div class="row">
             <br>
             <?PHP

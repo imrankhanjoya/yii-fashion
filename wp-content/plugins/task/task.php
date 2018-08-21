@@ -36,6 +36,21 @@ function loading(){
     echo  $out;
 }
 add_action('wp_footer', 'loading'); 
+
+function pushNotificaton(){
+    $out = '<div style="margin-top:90px" class="modal fade" id="pushNotificaton" data-backdrop="static">
+    <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body"  style="text-align:center; font-size:20px; background-color:rgb(255,255,255,0.2)">
+        <img onClick="mypush()" src="https://cdnmediablog.files.wordpress.com/2018/08/adobe_post_20180821_142312.jpg" >
+        <span onClick="mypushclose()" style="text-decoration:underline; cursor:pointer; font-size:12px;">No, Let me be ignorant</span>
+      </div>
+    </div>
+    </div>
+    </div>';
+    echo  $out;
+}
+add_action('wp_footer', 'pushNotificaton'); 
 function startDiscuss(){
     $out = '<div class="modal fade" id="startDiscuss" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                 <div class="modal-dialog" role="document">
