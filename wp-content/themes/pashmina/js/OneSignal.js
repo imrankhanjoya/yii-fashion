@@ -2,14 +2,14 @@ var OneSignal = window.OneSignal || [];
     var userDeviceToken = '';
 
     OneSignal.push(["init", {
-    //appId: "9f21cd44-b6e7-4a3f-b49e-d52c2fd781c0",
-    appId: "5863de63-7d93-4b6a-a10a-6ce8e2e15c3a",
+    appId: "9f21cd44-b6e7-4a3f-b49e-d52c2fd781c0",
+    //appId: "5863de63-7d93-4b6a-a10a-6ce8e2e15c3a",
     autoRegister: true,
     welcomeNotification: {disable: true},
     notifyButton: {enable: false}
     }]);
     OneSignal.push(function () {
-        console.log("check for user");
+        console.log("check for user"+getCookie('closepush'));
         // Occurs when the user's subscription changes to a new value.
         OneSignal.on('subscriptionChange', function (isSubscribed) {
             console.log("The user's subscription state is now:", isSubscribed);
@@ -36,10 +36,12 @@ var OneSignal = window.OneSignal || [];
                         
                     });
                 });
-                //jQuery("#pushNotificaton").modal('show');
+                jQuery("#pushNotificaton").modal('show');
                 jQuery(".push-my-div").hide();
             }else{
-                jQuery("#pushNotificaton").modal('show');
+                if(getCookie('closepush')==null){
+                    jQuery("#pushNotificaton").modal('show');
+                }
                 jQuery(".push-my-div").show();
             }
         });
@@ -50,4 +52,16 @@ var OneSignal = window.OneSignal || [];
     }
     function mypushclose(){
         jQuery("#pushNotificaton").modal('hide');
+        setCookie("closepush",true,50000);
+    }
+
+    function setCookie(key, value,ctime) {
+            var expires = new Date();
+            expires.setTime(expires.getTime() + ctime);
+            document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
+        }
+
+    function getCookie(key) {
+        var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
+        return keyValue ? keyValue[2] : null;
     }
