@@ -2,8 +2,8 @@ var OneSignal = window.OneSignal || [];
     var userDeviceToken = '';
 
     OneSignal.push(["init", {
-    appId: "9f21cd44-b6e7-4a3f-b49e-d52c2fd781c0",
-    //appId: "5863de63-7d93-4b6a-a10a-6ce8e2e15c3a",
+    //appId: "9f21cd44-b6e7-4a3f-b49e-d52c2fd781c0",
+    appId: "5863de63-7d93-4b6a-a10a-6ce8e2e15c3a",
     autoRegister: true,
     welcomeNotification: {disable: true},
     notifyButton: {enable: false}
@@ -36,7 +36,7 @@ var OneSignal = window.OneSignal || [];
                         
                     });
                 });
-                jQuery("#pushNotificaton").modal('show');
+                //jQuery("#pushNotificaton").modal('show');
                 jQuery(".push-my-div").hide();
             }else{
                 if(getCookie('closepush')==null){
