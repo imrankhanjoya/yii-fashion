@@ -62,7 +62,7 @@ if(!is_user_logged_in()){
 <!-- Contest -->
 
 <!-- Notification Subscription -->
-<div class="container push-my-div ">
+<div class="container push-my-div" style="display:none;">
     <div class="row">
       <div  class="col-md-12" style="padding-top:10px; padding-bottom:10px;background-image:url('https://cdnmediablog.files.wordpress.com/2018/08/adobe_post_20180821_130036.jpg');">
         <button onClick="mypush() class="btn">Stay in Touch for Beauty Tips</button>
