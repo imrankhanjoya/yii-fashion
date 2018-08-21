@@ -36,7 +36,7 @@ var OneSignal = window.OneSignal || [];
                         
                     });
                 });
-                jQuery("#pushNotificaton").modal('show');
+                //jQuery("#pushNotificaton").modal('show');
                 jQuery(".push-my-div").hide();
             }else{
                 if(getCookie('closepush')==null){
