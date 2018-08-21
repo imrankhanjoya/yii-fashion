@@ -2448,8 +2448,8 @@ function get_avatar( $id_or_email, $size = 96, $default = '', $alt = '', $args =
 	$defaults = array(
 		// get_avatar_data() args.
 		'size'          => 96,
-		'height'        => null,
-		'width'         => null,
+		'height'        => 96,
+		'width'         => 96,
 		'default'       => get_option( 'avatar_default', 'mystery' ),
 		'force_default' => false,
 		'rating'        => get_option( 'avatar_rating' ),
