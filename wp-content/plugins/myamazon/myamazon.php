@@ -83,7 +83,7 @@ function my_setcookie(){
   $url = $_SERVER['REQUEST_URI'];
   if($url=="/"){
     return false;
-  }elseif(strstr($url,"get-start") || strstr($url,"contest-participent") || strstr($url,"wp-login.php")){
+  }elseif(strstr($url,"wp-content") ||strstr($url,"get-start") || strstr($url,"contest-participent") || strstr($url,"wp-login.php")){
     return false;
   }elseif(strstr($url,"contest")){
     $url = $url.'?startit=true';

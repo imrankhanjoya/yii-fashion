@@ -29,11 +29,9 @@ get_header();
 
 $val = get_page_by_path('get-start');
 
-if(!is_user_logged_in()){
-  $starPage = getLoginPage();
-}else{
+  $loginPage = getLoginPage();
   $starPage = "/discuss-beauty/";
-}
+
 ?>
             <?PHP
 
@@ -94,15 +92,16 @@ if(!is_user_logged_in()){
     <!-- home pages -->
     <div class="container">
         <div class="row">
-
+            <?php if(!is_user_logged_in()):?>
             <div class="col-lg-12 col-xs-12 col-md-12 col-sm-12">
                 <div style=" padding:2%; text-align: center; background-color: #E8D7AB;    margin-bottom: 30px;">
                     <h1>Gloat Me Join the Movement Of Beauty Tips</h1>
 
                     <p>Welcome to the beauty tips and collection of best cosmetics. Get solutions to all your Beauty queries and stay up-to on the latest Beauty Trends. It's platform where we make opinion collectively on the bases of your reviews and favorite products </p>
-                    <a href="<?=$starPage?>" class="btn btn-getfree">Lets Start</a>
+                    <a href="<?=$loginPage?>" class="btn btn-getfree">Lets Start</a>
                 </div>
             </div>
+          <?php endif;?>
 
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                 <a href="http://gloat.me/tag/loreal/" class="home-banner-two" style="background-image: url('http://gloat.me/wp-content/uploads/2018/07/LorealParisDK0213136586v2Logo.jpg');">
