@@ -77,7 +77,7 @@ $showHeader = true;
                     <div class="col-lg-12 col-md-12">
                         <div class="dt-menu-md">
                             <a href="<?=esc_url( home_url( '/' ) )?>"><img src="http://www.gloat.me/wp-content/uploads/2018/08/Gloatme-Full-Inverse.png" style="height:20px"></a>
-                            <span><i class="fa fa-bars"></i> </span>
+                            <span class="dt-menu-md-js"><i class="fa fa-bars"></i> </span>
                         </div>
 
                         <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>

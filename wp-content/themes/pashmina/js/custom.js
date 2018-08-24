@@ -22,7 +22,7 @@ jQuery(document).ready(function() {
     }
 
     // Toggle Menu
-    jQuery( '.dt-menu-md' ).on( 'click', function(){
+    jQuery( '.dt-menu-md-js' ).on( 'click', function(){
         jQuery( '.dt-menu-wrap .menu' ).toggleClass( 'menu-show' );
         jQuery(this).find( '.fa' ).toggleClass( 'fa-bars fa-close' );
     });

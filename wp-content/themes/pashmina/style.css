@@ -1863,6 +1863,7 @@ td {
 		font-weight: 500;
 		cursor: pointer;
 		color: #fff;
+		z-index: 9999;
 	}
 
 	.dt-menu-md span {
