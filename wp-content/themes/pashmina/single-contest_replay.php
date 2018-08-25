@@ -92,7 +92,7 @@ if(!empty($taggeBrands)){
 											
 
 										}else{
-											echo '<a href="'.getLoginPage().'"><span class="fa fa-heart f-selct top"></span></a>';	
+										echo '<a href="'.getLoginPage().'"><span class="fa fa-heart f-selct top"></span></a>';	
 										}
 
 											

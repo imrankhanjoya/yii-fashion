@@ -107,9 +107,11 @@ function pashmina_scripts() {
 	//wp_enqueue_style( 'bootstrap_lo',get_template_directory_uri() .'/css/bootstrap.css','1.1.1');
 
 	// Enqueue Google fonts
-    
+   
+   //font-family: 'Tangerine', cursive; 
+
 	//wp_enqueue_style( 'pashmina-roboto', '//fonts.googleapis.com/css?family=Pathway+Gothic+One|Open+Sans+Condensed:300,700|Dawning+of+a+New+Day|Pinyon+Script|Raleway+Dots|Roboto+Condensed:300,300i,400,700|Roboto:400,300,500,700,900|Dancing+Script' );
-	wp_enqueue_style( 'pashmina-roboto', '//fonts.googleapis.com/css?family=Tangerine:700|Pathway+Gothic+One|Open+Sans+Condensed:300,700|Dawning+of+a+New+Day|Pinyon+Script|Raleway+Dots|Oswald:300,300i,400,700|Roboto:200,300,400,500,600,700|Dancing+Script' );
+	wp_enqueue_style( 'pashmina-roboto', '//fonts.googleapis.com/css?family=Tangerine:700|Pathway+Gothic+One|Open+Sans+Condensed:300,700|Dawning+of+a+New+Day|Pinyon+Script|Raleway+Dots|Oswald:300,300i,400,700|Roboto:200,300,400,500,600,700|Dancing+Script|Tangerine' );
 
 	// Enqueue Swiper.css
 	//IKJ wp_enqueue_style( 'swiper', get_template_directory_uri() . '/css/swiper.min.css', array(), '4.0.6', '' );

@@ -149,10 +149,10 @@ if($contest_post){
             </div>
             
         </div>
-            <div class="col-md-6">
+            <div class="col-md-6 col-xs-6 ">
                 <a  id="gobackbutton" href="#" class="btn col-md-12 btn-primary">Back to Photo</a>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 col-xs-6">
                 <a href="" class="btn col-md-12 submit_share" >Submit & Share</a>
             </div>
           
