@@ -69,38 +69,42 @@ if(!empty($taggeBrands)){
             		</a>
 						<?=$post->post_content?>
 						<div class="row" style="margin-top: 50px;">
+								<?php
+										$voteCount = get_contest_vodecount($post->ID);
+										if($voteCount==1){
+											$vstring = 	"<span class='vcount'>".$voteCount."</span> person voted for ".get_the_title();
+										}elseif($voteCount>1){
+											$vstring = 	"<span class='vcount'>".$voteCount."</span> People voted for ".get_the_title();
+										}else{
+											$vstring = 	"Be the first one to vote for ".get_the_title();
+										}
+										if (is_user_logged_in()) {
+											
+											$ifVoted = get_post_favstatus($post->ID,get_current_user_id());
+											if($ifVoted){
+												$voteButton = '<a class="btn heart-vote-btn"><span class="glyphicon glyphicon-heart-empty heart-icon-btn"></span>Thanks For Vote</a>';	
+											}else{
+												$voteButton = '<a class="btn wpf-favorite-link heart-vote-btn" data-label="" data-id="'.$post->ID.'"><span class="glyphicon glyphicon-heart-empty heart-icon-btn"></span> Help '.get_the_title().' to win</a>';
+											}
+											
+
+										}else{
+											echo '<a href="'.getLoginPage().'"><span class="fa fa-heart f-selct top"></span></a>';	
+										}
+								?>
 								<div class="col-lg-12 col-md-12 col-sm-12 col-sx-12">
 									<div class="col-lg-12 col-md-12 col-sm-12 col-sx-12 main-div-vote">
-										<h5>Be the first one vote for vahid_solanki</h5>
-										<button class="heart-vote-btn"><span class="glyphicon glyphicon-heart-empty heart-icon-btn"></span>votes</button>
+										<h5><?=$vstring?></h5>
+										<?=$voteButton?>
+										<!-- <button class="heart-vote-btn"><span class="glyphicon glyphicon-heart-empty heart-icon-btn"></span>votes</button> -->
 									</div>
 								</div>
 								<!-- <div class="col-md-12 col-xs-12 ">
 										<div class="row">
 										<div class="col-md-12  col-xs-12" style="border: 1px solid black;">
 										<?php
-										$voteCount = get_contest_vodecount($post->ID);
-										if($voteCount==1){
-											echo 	"<span class='vcount'>".$voteCount."</span> person voted for ".get_the_title();
-										}elseif($voteCount>1){
-											echo 	"<span class='vcount'>".$voteCount."</span> People voted for ".get_the_title();
-										}else{
-											echo 	"Be the first one to vote for ".get_the_title();
-										}
-										echo "<br>";
-										if (is_user_logged_in()) {
-											
-											$ifVoted = get_post_favstatus($post->ID,get_current_user_id());
-											if($ifVoted){
-												echo '<span class="fa fa-heart f-selct top"></span>';	
-											}else{
-												echo '<a class="wpf-favorite-link" data-label="" href="#" data-id="'.$post->ID.'"><span class="fa fa-heart f-selct top"></span></a>';
-											}
-											
-
-										}else{
-										echo '<a href="'.getLoginPage().'"><span class="fa fa-heart f-selct top"></span></a>';	
-										}
+										
+										
 
 											
 										

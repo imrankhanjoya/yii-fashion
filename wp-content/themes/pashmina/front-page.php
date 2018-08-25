@@ -107,7 +107,7 @@ $val = get_page_by_path('get-start');
           <?php endif;?>
 
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                <a href="http://gloat.me/tag/loreal/" class="home-banner-two" style="background-image: url('http://gloat.me/wp-content/uploads/2018/07/LorealParisDK0213136586v2Logo.jpg');">
+                <a href="http://gloat.me/products-for/loreal/" class="home-banner-two" style="background-image: url('http://gloat.me/wp-content/uploads/2018/07/LorealParisDK0213136586v2Logo.jpg');">
                 </a>
             </div>
             <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
@@ -116,7 +116,7 @@ $val = get_page_by_path('get-start');
             </div>
 
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-right">
-                <a href="http://gloat.me/tag/lakme/" class="home-banner-img" style="background-image: url(http://gloat.me/wp-content/uploads/2018/07/lakme.png);" >
+                <a href="http://gloat.me/products-for/lakme/" class="home-banner-img" style="background-image: url(http://gloat.me/wp-content/uploads/2018/07/lakme.png);" >
                 </a>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-right">
