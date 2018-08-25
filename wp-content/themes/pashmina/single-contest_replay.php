@@ -69,7 +69,10 @@ if(!empty($taggeBrands)){
             		</a>
 						<?=$post->post_content?>
 						<div class="row" style="margin-top: 50px;">
-								<?php
+
+								
+								
+										<?php
 										$voteCount = get_contest_vodecount($post->ID);
 										if($voteCount==1){
 											$vstring = 	"<span class='vcount'>".$voteCount."</span> person voted for ".get_the_title();
@@ -82,9 +85,9 @@ if(!empty($taggeBrands)){
 											
 											$ifVoted = get_post_favstatus($post->ID,get_current_user_id());
 											if($ifVoted){
-												$voteButton = '<a class="btn heart-vote-btn"><span class="glyphicon glyphicon-heart-empty heart-icon-btn"></span>Thanks For Vote</a>';	
+												$voteButton = '<a class=" heart-vote-btn"><span class="glyphicon glyphicon-heart-empty heart-icon-btn"></span>Thanks For Vote</a>';	
 											}else{
-												$voteButton = '<a class="btn wpf-favorite-link heart-vote-btn" data-label="" data-id="'.$post->ID.'"><span class="glyphicon glyphicon-heart-empty heart-icon-btn"></span> Help '.get_the_title().' to win</a>';
+												$voteButton = '<a class=" wpf-favorite-link heart-vote-btn" data-label="" data-id="'.$post->ID.'"><span class="glyphicon glyphicon-heart-empty heart-icon-btn"></span> Help '.get_the_title().' to win</a>';
 											}
 											
 

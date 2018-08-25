@@ -353,18 +353,24 @@ textarea.form-control{
 	padding: 14px;
 }
 .main-div-vote{
-	padding-bottom: 10px; 
+	padding-bottom: 20px;
 	border: 1px solid black; 
 	text-align: center;
 }
 .heart-vote-btn{
 	color: #fff; 
-	background-color: pink !important;
-	outline: none;
-	width: 75%; 
+	padding: 10px;  
+	padding-right: 50px; 
+	padding-left: 50px; 
+	background-color: pink; 
 	text-align: center; 
 	border-radius: 0px;
-    box-shadow: none !important;
+}
+.heart-vote-btn:hover{
+	color: black;
+}
+.user-name-text{
+	margin-bottom: 20px;
 }
 .heart-icon-btn{
 	margin-right: 10px;
