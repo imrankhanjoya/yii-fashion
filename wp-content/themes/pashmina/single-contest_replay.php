@@ -69,9 +69,15 @@ if(!empty($taggeBrands)){
             		</a>
 						<?=$post->post_content?>
 						<div class="row" style="margin-top: 50px;">
-								<div class="col-md-12 col-xs-12 ">
+								<div class="col-lg-12 col-md-12 col-sm-12 col-sx-12">
+									<div class="col-lg-12 col-md-12 col-sm-12 col-sx-12 main-div-vote">
+										<h5>Be the first one vote for vahid_solanki</h5>
+										<button class="heart-vote-btn"><span class="glyphicon glyphicon-heart-empty heart-icon-btn"></span>votes</button>
+									</div>
+								</div>
+								<!-- <div class="col-md-12 col-xs-12 ">
 										<div class="row">
-										<div class="col-md-12 col-xs-6">
+										<div class="col-md-12  col-xs-12" style="border: 1px solid black;">
 										<?php
 										$voteCount = get_contest_vodecount($post->ID);
 										if($voteCount==1){
@@ -81,6 +87,7 @@ if(!empty($taggeBrands)){
 										}else{
 											echo 	"Be the first one to vote for ".get_the_title();
 										}
+										echo "<br>";
 										if (is_user_logged_in()) {
 											
 											$ifVoted = get_post_favstatus($post->ID,get_current_user_id());
@@ -105,7 +112,7 @@ if(!empty($taggeBrands)){
 									
 									</div>
 
-								</div>
+								</div> -->
 								<div class=" col-md-12 col-xs-12 ">
 
 									<b>Help to share win the contest, Share with your firends and on social media</b>
