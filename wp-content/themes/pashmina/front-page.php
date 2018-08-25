@@ -60,10 +60,10 @@ $val = get_page_by_path('get-start');
 <!-- Contest -->
 
 <!-- Notification Subscription -->
-<div class="container push-my-div" style="display:block;">
+<div class="container push-my-div" style="display:none;">
     <div class="row">
-      <div  class="col-md-12 notification" style="background-image:url('/wp-content/uploads/banner.svg')">
-        <p style="color:#fff">
+      <div  class="col-md-12 notification" style="background-image:url('<?=$theme_path?>/images/banner_2.svg')">
+        <p>
           <span class="glyphicon glyphicon-leaf"></span><span class="glyphicon glyphicon-grain"></span>Wash your face with ice water or simply rub and ice cube with a tsp of honey on the face for instant face lift
         </p>
         <center><button onClick="mypush() class="btn">Stay in Touch for Beauty Tips</button></center>
