@@ -71,8 +71,8 @@ if(!empty($taggeBrands)){
 						<div class="row" style="margin-top: 50px;">
 								<div class="col-lg-12 col-md-12 col-sm-12 col-sx-12">
 									<div class="col-lg-12 col-md-12 col-sm-12 col-sx-12 main-div-vote">
-										<h5>Be the first one vote for vahid_solanki</h5>
-										<button class="heart-vote-btn"><span class="glyphicon glyphicon-heart-empty heart-icon-btn"></span>votes</button>
+										<h5 class="user-name-text">Be the first one vote for vahid_solanki</h5>
+										<a href="" class="heart-vote-btn"><span class="glyphicon glyphicon-heart-empty heart-icon-btn"></span>votes</a>
 									</div>
 								</div>
 								<!-- <div class="col-md-12 col-xs-12 ">
