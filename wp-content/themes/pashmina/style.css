@@ -361,7 +361,7 @@ textarea.form-control{
     opacity: 0.5;
     cursor:pointer;
 }
-.brandcheck:hover{
+.brandcheck:hover, .brandcheck:focus{
 opacity: 0.8;
 }
 /*--------------------------------------------------------------
@@ -2672,6 +2672,15 @@ margin-bottom: 0;
     display: block;
     overflow: hidden;
     position: relative;
+}
+.notification p{
+	font-size:25px;
+	font-weight: 400;
+	text-align:center;
+	font-family: "Tangerine";
+}
+.notification{
+	padding-top:10px; padding-bottom:10px;background-color:#eba700;
 }
 /*images uploat css*/
 .picture-container{
