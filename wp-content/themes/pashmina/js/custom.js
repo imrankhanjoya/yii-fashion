@@ -38,4 +38,29 @@ jQuery(document).ready(function() {
         });
     });
 
+
+   
+
 });
+
+ function saveFav(pid){
+        jQuery('#loading').modal({
+        show: 'true'
+        });
+        jQuery.ajax({
+            url : ajax_url,
+            type : 'post',
+            async: false,
+            dataType: 'json',
+            data : {
+                action : 'post_vote',
+                post_id:pid
+            },
+            success : function( response ) {
+                $(".vcount").html(response);
+                $(".voteLable").html("Thanks for Vote");
+                jQuery('#loading').modal('hide');
+
+            }
+        });
+    }

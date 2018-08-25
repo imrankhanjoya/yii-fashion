@@ -134,6 +134,41 @@ function add_brands(){
 	echo json_encode($val,true);
 	exit;
 }
+add_action('wp_ajax_post_vote', 'post_vote' );
+function post_vote(){
+	//check_ajax_referer( 'wfp_nonce', 'nonce' );
+	// bail out if not logged in
+	if ( !is_user_logged_in() ) {
+	   wp_send_json_error();
+	}
+
+	$post_id = isset( $_POST['post_id'] ) ? intval( $_POST['post_id'] ) : 0;
+   $user_id = get_current_user_id();
+   global $wpdb;
+   $sql = "SELECT post_id FROM wp_favorite_post WHERE post_id = $post_id AND user_id = $user_id";
+   $val = $wpdb->get_results($sql, ARRAY_A );
+   if(empty($val[0])){
+   	$wpdb->insert(
+            'wp_favorite_post',
+            array(
+                'post_id' => $post_id,
+                'post_type' =>'contest_replay',
+                'user_id' => $user_id,
+            ),
+            array(
+                '%d',
+                '%s',
+                '%d'
+            )
+        );
+   }
+   $sql = "SELECT count(*) as count FROM wp_favorite_post WHERE post_id = $post_id";
+   $return = $wpdb->get_results($sql, ARRAY_A);  
+   echo isset($return[0]['count'])?$return[0]['count']:0; 
+   
+   exit;
+	
+}
 
 function findContest($postID,$userID){
 	global $wpdb;

@@ -85,11 +85,11 @@ if(!empty($taggeBrands)){
 											
 											$ifVoted = get_post_favstatus($post->ID,get_current_user_id());
 											if($ifVoted){
-												$voteButton = '<a class=" heart-vote-btn"><span class="glyphicon glyphicon-heart-empty heart-icon-btn"></span>Thanks For Vote</a>';	
+												$voteLable = 'Thanks For Vote';	
 											}else{
-												$voteButton = '<a class=" wpf-favorite-link heart-vote-btn" data-label="" data-id="'.$post->ID.'"><span class="glyphicon glyphicon-heart-empty heart-icon-btn"></span> Help '.get_the_title().' to win</a>';
+												$voteLable = 'Help '.get_the_title().' to win';
 											}
-											
+											$voteButton = '<a onClick="saveFav('.$post->ID.')"  class="heart-vote-btn"><span class="glyphicon glyphicon-heart-empty heart-icon-btn"></span><span class="voteLable">'.$voteLable.'</span></a>';
 
 										}else{
 											echo '<a href="'.getLoginPage().'"><span class="fa fa-heart f-selct top"></span></a>';	
@@ -99,27 +99,9 @@ if(!empty($taggeBrands)){
 									<div class="col-lg-12 col-md-12 col-sm-12 col-sx-12 main-div-vote">
 										<h5><?=$vstring?></h5>
 										<?=$voteButton?>
-										<!-- <button class="heart-vote-btn"><span class="glyphicon glyphicon-heart-empty heart-icon-btn"></span>votes</button> -->
 									</div>
 								</div>
-								<!-- <div class="col-md-12 col-xs-12 ">
-										<div class="row">
-										<div class="col-md-12  col-xs-12" style="border: 1px solid black;">
-										<?php
-										
-										
-
-											
-										
-										?>
-									</div>
-									<div class="col-md-12 col-xs-6">
-										<?php echo '<span class="glyphicon-class vcount">'.$voteCount.'</span>';?>
-									</div>
-									
-									</div>
-
-								</div> -->
+								
 								<div class=" col-md-12 col-xs-12 ">
 
 									<b>Help to share win the contest, Share with your firends and on social media</b>
@@ -178,6 +160,7 @@ if(!empty($taggeBrands)){
 	var ajax_url = '<?=admin_url( 'admin-ajax.php' )?>';
 
 	function loadFav(){
+		
 		jQuery.ajax({
             url : ajax_url,
             type : 'post',
@@ -189,8 +172,6 @@ if(!empty($taggeBrands)){
             },
             success : function( response ) {
                 $(".vcount").html(response);
-
-                
             }
         });
 	}
@@ -198,8 +179,8 @@ if(!empty($taggeBrands)){
 	$(document).ready(function(){
 		
 		$(".wpf-favorite-link").click(function(){
-
 			setTimeout(loadFav,3000);
+			
 		});
 		loadFav();
 	});
