@@ -365,6 +365,7 @@ textarea.form-control{
 	background-color: pink; 
 	text-align: center; 
 	border-radius: 0px;
+	cursor:pointer;
 }
 .heart-vote-btn:hover{
 	color: black;
@@ -2681,7 +2682,7 @@ margin-bottom: 0;
     height: 235px;
     text-align: center;
     background-size: cover;
-    background-position: center center;
+    background-position:center center;
     display: block;
     overflow: hidden;
     position: relative;

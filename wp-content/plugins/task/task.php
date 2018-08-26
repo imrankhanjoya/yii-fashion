@@ -24,13 +24,11 @@ function loginModal(){
 }
 
 function loading(){
-    $out = '<div class="modal fade" id="loading" tabindex="-1" data-keyboard="false" data-backdrop="static" role="dialog" aria-labelledby="myModalLabel">
+    $out = '<div class="modal fade" id="loading" tabindex="-1" data-keyboard="false" data-backdrop="static" role="dialog" aria-labelledby="myModalLabel" style="background-color:#fff">
     <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-body" style="text-align:center; font-size:20px; background-color:rgb(255,255,255,0.2)">
+      <div class="modal-body" style="text-align:center; margin-top:30%; font-size:20px; background-color:rgb(255,255,255,0.2)">
         <img src="'.get_template_directory_uri().'/images/loading.svg" >
       </div>
-    </div>
     </div>
     </div>';
     echo  $out;

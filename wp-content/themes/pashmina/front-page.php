@@ -111,7 +111,7 @@ $val = get_page_by_path('get-start');
                 </a>
             </div>
             <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                <a href="<?=$starPage?>" class="home-banner-img" style="background-image: url('http://www.gloat.me/wp-content/uploads/2018/07/Adobe_Post_20180727_170459.jpg');">
+                <a href="<?=$starPage?>" class="home-banner-img" style="background-image: url('<?=$theme_path?>/images/discuss.png');">
                 </a>
             </div>
 
@@ -120,7 +120,7 @@ $val = get_page_by_path('get-start');
                 </a>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-right">
-                <a class="home-banner-img" style="background-image: url(http://www.gloat.me/wp-content/uploads/2018/07/Adobe_Post_20180727_172640.jpg); background-size:cover;" href="http://gloat.me/shop/">
+                <a class="home-banner-img" style="background-image: url('<?=$theme_path?>/images/Product.png'); background-size:cover;" href="http://gloat.me/shop/">
                 </a>
             </div>
         </div>

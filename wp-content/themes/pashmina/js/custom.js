@@ -39,7 +39,9 @@ jQuery(document).ready(function() {
     });
 
 
-   
+   // jQuery('#loading').modal({
+   //      show: 'true'
+   //      });
 
 });
 
