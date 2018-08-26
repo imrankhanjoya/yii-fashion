@@ -60,22 +60,24 @@ function sg_create_sitemap() {
 
 
 function create_sitemap_product() {
+	echo "\nStarting for products\n";
 	$allFiles = [];
 	for($i=0;$i<100;$i++) {
 	
-			$page = $i;
-			$per_page =20000;
+			echo $page = $i;
+			$per_page =10000;
 			$offset = $page *$per_page;		
 			$postsForSitemap = get_posts(array(
 			 'posts_per_page' => $per_page,
 			 'offset'=>$offset,
 			 'orderby' => 'ID',
-			 'post_type'  => array('product'),
+			 'post_type'  => array('products'),
 			 'order'    => 'ASC'
 			));
 			if(empty($postsForSitemap))
 				continue;
 
+			print_r($postsForSitemap);
 			$sitemap = '<?xml version="1.0" encoding="UTF-8"?>';
 			$sitemap .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
 
@@ -92,7 +94,7 @@ function create_sitemap_product() {
 			 '</url>';
 			}
 
-			$sitemap .= '</urlset>';
+			echo $sitemap .= '</urlset>';
 			$file = "pro/sitemap-pro-".$page.".xml";
 			$filePath = ABSPATH .$file;
 			$fp = fopen($filePath, "w");
