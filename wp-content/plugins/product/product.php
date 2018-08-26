@@ -201,9 +201,9 @@ function get_participent($contest_id =0){
 }
 
 
-function getProductByBrand($brands,$limit=3){
+function getProductByBrand($brands,$limit=3,$group = true){
 
-	$key = md5($brands);
+	$key = md5($brands.$limit.$group);
 
 	$result = getCache($key);
 
@@ -216,16 +216,55 @@ function getProductByBrand($brands,$limit=3){
 		 */
 		$brandString = "'". implode("','",$brands)."'";
 		global $wpdb;
-
-		"select * from $wpdb->terms 
-		where slug in ($brandString)";
+		if($group){
+			$group = "group by slug";
+		}else{
+			$group = "order by rand()";
+		}
+		
 		$query = "select slug,name,posts.post_title,posts.guid,meta_p.meta_value as detailUrl,meta.meta_value as image from 
 		$wpdb->terms 
 		left join $wpdb->term_relationships as relationships on relationships.term_taxonomy_id = wp_terms.term_id
 		left join $wpdb->posts as posts on posts.id = relationships.object_id
-		left join $wpdb->postmeta as meta on meta.post_id = posts.id and meta.meta_key = 'LargeImage'
+		inner join $wpdb->postmeta as meta on meta.post_id = posts.id and meta.meta_key = 'LargeImage'
 		left join $wpdb->postmeta as meta_p on meta_p.post_id = posts.id and meta_p.meta_key = 'DetailPageURL'
-		where slug in ($brandString) group by slug  limit 20";
+		where slug in ($brandString)  $group  limit $limit";
+		$result = $wpdb->get_results($query);
+		setCache($key,$result);
+		return $result;
+	}else{
+		return $result;
+	}
+
+}
+function getProductByTag($tag,$limit=3,$group = true){
+
+	$key = md5($tag.$limit.$group);
+
+	$result = getCache($key);
+
+	if(!$result){
+		
+
+		/*
+		select * from $wpdb->terms 
+		where slug in ($brandString)
+		 */
+		$tagString = "'". implode("','",$tag)."'";
+		global $wpdb;
+		if($group){
+			$group = "group by slug";
+		}else{
+			$group = "order by rand()";
+		}
+		
+		$query = "select slug,name,posts.post_title,posts.guid,meta_p.meta_value as detailUrl,meta.meta_value as image from 
+		$wpdb->terms 
+		left join $wpdb->term_relationships as relationships on relationships.term_taxonomy_id = wp_terms.term_id
+		left join $wpdb->posts as posts on posts.id = relationships.object_id
+		inner join $wpdb->postmeta as meta on meta.post_id = posts.id and meta.meta_key = 'LargeImage'
+		left join $wpdb->postmeta as meta_p on meta_p.post_id = posts.id and meta_p.meta_key = 'DetailPageURL'
+		where slug in ($tagString)  $group  limit $limit";
 		$result = $wpdb->get_results($query);
 		setCache($key,$result);
 		return $result;

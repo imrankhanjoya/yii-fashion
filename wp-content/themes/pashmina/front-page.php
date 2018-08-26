@@ -105,6 +105,7 @@ $val = get_page_by_path('get-start');
                 </div>
             </div>
           <?php endif;?>
+          <?PHP include('product_slider.php'); ?>
 
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                 <a href="http://gloat.me/products-for/loreal/" class="home-banner-two" style="background-image: url('http://gloat.me/wp-content/uploads/2018/07/LorealParisDK0213136586v2Logo.jpg');">
@@ -124,7 +125,7 @@ $val = get_page_by_path('get-start');
                 </a>
             </div>
         </div>
-
+        <?PHP include('product_foundation_slider.php'); ?>
         <!-- <div class="row media">
             <div class="col-lg-12 text-center ">
                 <img class="" style="height: 30px" src="http://gloat.me/wp-content/uploads/2018/07/front-border.png">

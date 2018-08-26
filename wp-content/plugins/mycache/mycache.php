@@ -11,7 +11,7 @@ License: GPL2
 */
 
 function getCache($key,$cachetime = 120){
-    $file = "/key/".$key;
+    $file = "/tmp/".$key;
     if( !file_exists($file) OR (filemtime($file) < (time() - $cachetime))) {
     	return false;
     }
@@ -19,7 +19,7 @@ function getCache($key,$cachetime = 120){
     return unserialize($val);
 }
 
-function setCache($key,$val,$cachetime = 120){
+function setCache($key,$val,$cachetime = 1920){
 	$val = serialize($val);
    file_put_contents("/tmp/".$key,$val,LOCK_EX);
    return $val;

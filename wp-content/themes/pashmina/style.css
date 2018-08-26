@@ -299,9 +299,7 @@ textarea:focus {
 .carousel-inner{
 	overflow: display !important;
 }
-.carousel-inner>.active{
-	min-height: 500px;
-}
+
 #imageFrame{
 	position: relative;
 	overflow: hidden;
@@ -2788,7 +2786,7 @@ margin-bottom: 0;
     border-left: 2px solid #ccc;
 }
 /*silder*/
-.carousel-control.left,.carousel-control.right {margin-left:15px;background-image:none;}
+.carousel-control.left,.carousel-control.right {background-image:none;}
 @media (max-width: 767px) {
 	.carsl-run.carousel-inner .active.left { left: -100%; }
 	.carsl-run.carousel-inner .next        { left:  100%; }
