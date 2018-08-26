@@ -64,20 +64,19 @@ function create_sitemap_product() {
 	$allFiles = [];
 	for($i=0;$i<100;$i++) {
 	
-			echo $page = $i;
+			$page = $i;
 			$per_page =10000;
 			$offset = $page *$per_page;		
 			$postsForSitemap = get_posts(array(
 			 'posts_per_page' => $per_page,
 			 'offset'=>$offset,
 			 'orderby' => 'ID',
-			 'post_type'  => array('products'),
+			 'post_type'  => array('product'),
 			 'order'    => 'ASC'
 			));
 			if(empty($postsForSitemap))
 				continue;
 
-			print_r($postsForSitemap);
 			$sitemap = '<?xml version="1.0" encoding="UTF-8"?>';
 			$sitemap .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
 
@@ -94,8 +93,8 @@ function create_sitemap_product() {
 			 '</url>';
 			}
 
-			echo $sitemap .= '</urlset>';
-			$file = "pro/sitemap-pro-".$page.".xml";
+			$sitemap .= '</urlset>';
+			echo $file = "pro/sitemap-pro-".$page.".xml";
 			$filePath = ABSPATH .$file;
 			$fp = fopen($filePath, "w");
 			fwrite($fp, $sitemap);
@@ -171,7 +170,6 @@ function create_sitemap(){
 
 	$alltotal = array_merge($all1,$all2,$all3,$all4);
 
-	print_r($alltotal);
 
 	$sitemap = '<?xml version="1.0" encoding="UTF-8"?>';
 	$sitemap .= '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
@@ -191,7 +189,7 @@ function create_sitemap(){
 
 
 }
-add_action("init", "create_sitemap");
+//add_action("init", "create_sitemap");
 
 /*
 <?xml version="1.0" encoding="UTF-8"?>
