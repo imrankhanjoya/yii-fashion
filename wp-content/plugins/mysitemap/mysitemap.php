@@ -168,6 +168,9 @@ function create_sitemap(){
 	$all4 = cat_sitemap();
 
 	$alltotal = array_merge($all1,$all2,$all3,$all4);
+
+	print_r($alltotal);
+
 	$sitemap = '<?xml version="1.0" encoding="UTF-8"?>';
 	$sitemap .= '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
 	foreach($alltotal as $val){
@@ -186,7 +189,7 @@ function create_sitemap(){
 
 
 }
-//add_action("init", "create_sitemap");
+add_action("init", "create_sitemap");
 
 /*
 <?xml version="1.0" encoding="UTF-8"?>
