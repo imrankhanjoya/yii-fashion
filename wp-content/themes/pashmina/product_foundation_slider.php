@@ -4,14 +4,14 @@
 	 ?>
 <div class="col-lg-12 col-xs-12 col-md-12 col-sm-12">
 	<h2 class="align-self-center" style="text-align: center;">Top Foundation</h2>
-<div  class="slide hidden-xs" id="proCarousel"  data-ride="carousel" style="height:200px">
+<div  class="slide hidden-xs" id="proCarousel"  data-ride="carousel" style="height:250px">
   <div class="carousel-inner" role="listbox">
     
     <?php foreach($cprods as $key=>$prods): $class=$key==0?"active":""; ?>
     	<div class='item <?=$class?>'>
     		<div class="row">
     <?php foreach($prods as $pro): shuffle($pro);?>
-    	<div class="col-md-3" style="height:150px;">
+    	<div class="col-md-3">
 		
 			<center>
 			<a href="<?=$pro->guid?>" target="_blank">	
@@ -22,7 +22,7 @@
 			<?=substr($pro->post_title,0,30)?>...
 			</a>
 			
-			<a  href='<?=$pro->detailUrl?>' target="_blank" >Explore on amazon</a>	
+			<a class="btn-amz-sucs btn-success" href='<?=$pro->detailUrl?>' target="_blank" ><span class="ambadge">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> Explore on amazon</a>	
 			</center>	
 		
 		</div>
@@ -40,7 +40,7 @@
   </a>	
  </div>
 </div>
-<div  class="slide hidden-md hidden-lg" id="mproCarousel"  data-ride="carousel" style="height:200px">
+<div  class="slide hidden-md hidden-lg" id="mproCarousel"  data-ride="carousel" style="height:250px">
   <div class="carousel-inner" role="listbox">
     
     <?php foreach($mprods as $key=>$pro): $class=$key==0?"active":""; ?>
@@ -56,7 +56,7 @@
 			<?=substr($pro->post_title,0,30)?>...
 			</a>
 			
-			<a  href='<?=$pro->detailUrl?>' target="_blank" >Explore on amazon</a>	
+			<a class="btn btn-amz-sucs btn-success" href='<?=$pro->detailUrl?>' target="_blank" ><span class="ambadge">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> Explore on amazon</a>	
 			</center>	
 		
 			

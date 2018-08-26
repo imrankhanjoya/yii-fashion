@@ -1,5 +1,5 @@
 /*
-Theme Name: Pashmina
+Theme Nz-e: Pashmina
 Version: 1.0.9
 Author: FameThemes
 Author URI: https://www.famethemes.com/
@@ -2219,6 +2219,14 @@ width:100px;
 }
 .btn-amz-sucs{
 	margin-top: 10px;
+	color: #fff !important;
+   border: none;
+   border-radius: 0px !important;
+   padding:5px 0px;
+   display: block;
+   width:150px; 
+   font-size:12px;
+    
 }
 .price_box .list{	
     padding: 10px;
