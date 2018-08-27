@@ -87,7 +87,7 @@ function create_sitemap_product() {
 				'<lastmod>'.$date.'</lastmod>'.
 				'<changefreq>daily</changefreq>'.
 				'<priority>0.8</priority>'.
-				'<id>'.$val['ID'].'</id>'.
+				//'<id>'.$val['ID'].'</id>'.
 				'</url>';
 			}
 		
