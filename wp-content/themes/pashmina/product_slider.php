@@ -56,7 +56,7 @@
 			<?=substr($pro->post_title,0,30)?>...
 			</a>
 			
-			<a  href='<?=$pro->detailUrl?>' target="_blank" ><span class="ambadge">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> Explore on amazon</a>	
+			<a class="btn-amz-sucs btn-success" href='<?=$pro->detailUrl?>' target="_blank" ><span class="ambadge">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> Explore on amazon</a>	
 			</center>	
 		
 			

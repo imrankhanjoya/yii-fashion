@@ -60,7 +60,7 @@ $val = get_page_by_path('get-start');
 <!-- Contest -->
 
 <!-- Notification Subscription -->
-<div class="container push-my-div" style="display:none;">
+<div class="container push-my-div" style="display:block;">
     <div class="row">
       <div  class="col-md-12 notification" style="background-image:url('<?=$theme_path?>/images/banner_2.svg')">
         <p>
