@@ -63,19 +63,19 @@ function create_sitemap_product() {
 	$allFiles = [];
 	for($i=0;$i<100;$i++) {
 	
-			ini_set("display_error",1);
-			echo $page = $i;
-			$per_page =10000;
-			$offset = $page *$per_page;	
-			wp_reset_postdata();
 			
-			$per_page = 10000;
+			
+			$per_page =5000;
 			$star = $per_page * $i;
 
 			global $wpdb;
-			$sql = "select * from $wpdb->posts as posts where post_type = 'product' and post_status ='publish' limit $star,$per_page";
+			echo $sql = "select * from $wpdb->posts as posts where post_type = 'product' and post_status ='publish' limit $star,$per_page";
+			echo "\n";
 			$results = $wpdb->get_results( $sql, ARRAY_A );
 
+			if(empty($results)){
+				continue;
+			}
 			$sitemap = '<?xml version="1.0" encoding="UTF-8"?>';
 		   $sitemap .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
 			foreach($results as $val){
@@ -92,7 +92,7 @@ function create_sitemap_product() {
 		
 
 			$sitemap .= '</urlset>';
-			$file = "pro/sitemap-pro-".$page.".xml";
+			$file = "pro/sitemap-pro-".$i.".xml";
 			$filePath = ABSPATH .$file;
 			$fp = fopen($filePath, "w");
 			fwrite($fp, $sitemap);
