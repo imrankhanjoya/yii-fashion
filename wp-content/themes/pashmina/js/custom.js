@@ -39,12 +39,20 @@ jQuery(document).ready(function() {
     });
 
 
-   // jQuery('#loading').modal({
-   //      show: 'true'
-   //      });
+   
 
 });
 
+ setTimeout(function(){ 
+    
+    var footprint = getCookie("footprint");
+    if(footprint!='true'){
+        jQuery('#yourFootPrints').modal({show: 'true'}); 
+    }
+    setCookie("footprint",true,50000);
+},10000);
+   
+    
  function saveFav(pid){
         jQuery('#loading').modal({
         show: 'true'

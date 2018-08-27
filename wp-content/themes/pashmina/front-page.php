@@ -28,10 +28,8 @@ add_action( 'wp_head', 'gloatme_header_metadata',0);
 get_header();
 
 $val = get_page_by_path('get-start');
-
-  $loginPage = getLoginPage();
-  $starPage = "/discuss-beauty/";
-
+$loginPage = getLoginPage();
+$starPage = "/discuss-beauty/";
 ?>
             <?PHP
 
@@ -44,10 +42,11 @@ $val = get_page_by_path('get-start');
             ?>
                
             <div class="col-md-12" style="padding:0px; margin-bottom:10px">
-              <a  href="<?php esc_url( the_permalink() ); ?>"> 
-              <img class="hidden-xs" src="<?= get_the_post_thumbnail_url(get_the_ID())?>" style="width: 100%" />
-              <img class="img-responsive hidden-md hidden-lg" src="<?=$val['image'][0]?>" />
-              </a>    
+            <a  href="<?php esc_url(the_permalink() ); ?>" style=" position: relative;  display: inline-block;"> 
+            <object class="hidden-xs" id="svg1" data="<?=$theme_path?>/images/homebanner.svg" type="image/svg+xml">
+            </object>
+            <img class="img-responsive hidden-md hidden-lg" src="<?=$val['image'][0]?>" />
+            </a>    
             </div>
             
               <?PHP
@@ -64,7 +63,7 @@ $val = get_page_by_path('get-start');
     <div class="row">
       <div  class="col-md-12 notification" style="background-image:url('<?=$theme_path?>/images/banner_2.svg')">
         <p>
-          <span class="glyphicon glyphicon-leaf"></span><span class="glyphicon glyphicon-grain"></span>Wash your face with ice water or simply rub and ice cube with a tsp of honey on the face for instant face lift
+          <img src="<?=$theme_path?>/images/woman-with-long-hair.svg" style="height: 50px">Wash your face with ice water or simply rub and ice cube with a tsp of honey on the face for instant face lift
         </p>
         <center><button onClick="mypush() class="btn">Stay in Touch for Beauty Tips</button></center>
       </div>

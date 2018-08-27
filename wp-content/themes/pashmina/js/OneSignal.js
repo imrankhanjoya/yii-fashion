@@ -29,6 +29,7 @@ var OneSignal = window.OneSignal || [];
 
         OneSignal.isPushNotificationsEnabled(function (isEnabled) {
             if (isEnabled) {
+                setCookie("closepush",true,50000);
                 OneSignal.push(function () {
                     OneSignal.getUserId(function (userId) {
                         console.log("User ID:", userId);
@@ -45,7 +46,6 @@ var OneSignal = window.OneSignal || [];
             }
         });
     });
-
     function mypush(){
         OneSignal.push(["registerForPushNotifications"]);
     }
@@ -57,7 +57,7 @@ var OneSignal = window.OneSignal || [];
     function setCookie(key, value,ctime) {
             var expires = new Date();
             expires.setTime(expires.getTime() + ctime);
-            document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
+            document.cookie = key + '=' + value + ';path=/;expires=' + expires.toUTCString();
         }
 
     function getCookie(key) {
