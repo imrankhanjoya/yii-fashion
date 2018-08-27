@@ -60,49 +60,39 @@ function sg_create_sitemap() {
 
 
 function create_sitemap_product() {
-	echo "\nStarting for products\n";
 	$allFiles = [];
 	for($i=0;$i<100;$i++) {
 	
-			ini_set("display_errors",1);
+			ini_set("display_error",1);
 			echo $page = $i;
 			$per_page =10000;
 			$offset = $page *$per_page;	
 			wp_reset_postdata();
-	
 			
+			$per_page = 10000;
+			$star = $per_page * $i;
 
-			$paged = $i;
-						wp_reset_postdata();
-
-			$args = array(
-			    'post_type'=>'product', // Your post type name
-			    'posts_per_page' =>$per_page,
-			    'paged' => $paged,
-			);
-			$loop = new WP_Query( $args );
-
+			global $wpdb;
+			$sql = "select * from $wpdb->posts as posts where post_type = 'product' and post_status ='publish' limit $star,$per_page";
+			$results = $wpdb->get_results( $sql, ARRAY_A );
 
 			$sitemap = '<?xml version="1.0" encoding="UTF-8"?>';
-			$sitemap .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
-			while ( $loop->have_posts() ) : $loop->the_post();
-				
-				$postdate =  get_post_time();
-            $date = date("Y-m-d\TH:i:s.000\Z",$postdate);
+		   $sitemap .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
+			foreach($results as $val){
 
-			   $sitemap .= '<url>'.
-			   '<loc>'. get_permalink() .'</loc>'.
-			   '<lastmod>'.$date.'</lastmod>'.
-			   '<changefreq>daily</changefreq>'.
-			   '<priority>0.8</priority>'.
-			 '</url>';
-
-    		endwhile;
-
+				$postdate = explode(" ",$val['post_date']);
+				$date = date("Y-m-d\TH:i:s.000\Z",strtotime($postdate[0]));
+				$sitemap .= '<url>'.
+				'<loc>'. get_permalink($val['ID']) .'</loc>'.
+				'<lastmod>'.$date.'</lastmod>'.
+				'<changefreq>daily</changefreq>'.
+				'<priority>0.8</priority>'.
+				'</url>';
+			}
 		
 
 			$sitemap .= '</urlset>';
-			echo $file = "pro/sitemap-pro-".$page.".xml";
+			$file = "pro/sitemap-pro-".$page.".xml";
 			$filePath = ABSPATH .$file;
 			$fp = fopen($filePath, "w");
 			fwrite($fp, $sitemap);
