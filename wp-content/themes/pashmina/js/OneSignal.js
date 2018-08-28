@@ -25,7 +25,7 @@ var OneSignal = window.OneSignal || [];
 
         OneSignal.isPushNotificationsEnabled(function (isEnabled) {
             if (isEnabled) {
-                setCookie("closepush",'true',50000);
+                setCookie("closepush",12,50000);
                 OneSignal.push(function () {
                     OneSignal.getUserId(function (userId) {
                         userDeviceToken = userId;
@@ -34,7 +34,7 @@ var OneSignal = window.OneSignal || [];
                 });
                 jQuery(".push-my-div").hide();
             }else{
-                if(getCookie('closepush')!==true){
+                if(getCookie('closepush')!=12){
                     jQuery("#pushNotificaton").modal('show');
                 }
                 jQuery(".push-my-div").show();
@@ -46,7 +46,7 @@ var OneSignal = window.OneSignal || [];
     }
     function mypushclose(){
         jQuery("#pushNotificaton").modal('hide');
-        setCookie("closepush",'true',50000);
+        setCookie("closepush",12,50000);
     }
 
     function setCookie(key, value,ctime) {

@@ -3,9 +3,9 @@
  setTimeout(function(){ 
     
     var footprint = getCookie("footprint");
-    if(footprint !== 'true'){
+    if(footprint != 12){
         jQuery('#yourFootPrints').modal({show: 'true'}); 
     }
-    setCookie("footprint",'true',500000);
-},30000);
+    setCookie("footprint",12,500000);
+},10000);
    
