@@ -31,7 +31,7 @@ $username = $current_user->display_name!=''?$current_user->display_name:'Dua Lip
     	<span class="offer"><?=$val['LowestNewPrice'][0]?></span>
     	<?PHP endif;?>
         <div class="clearfix"></div>
-                    <a href="<?=$val['DetailPageURL'][0]?>" class="btn btn-amz-sucs btn-success">Buy <span class="ambadge">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></a>
+                    <a href="<?=$val['DetailPageURL'][0]?>" class="btn-amz-sucs btn-success"><span class="ambadge">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> Explore at amazon</a>
     </div>
     <?php the_category(); ?>
 	 <div class="clearfix"></div>
