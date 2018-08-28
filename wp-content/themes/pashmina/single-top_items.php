@@ -84,7 +84,7 @@ $tag_name = $tags[0]->name;
                         <button type="button" class="btn btn-link">READ REVIEWS</button>
                         </a>
                         <a  target="_blank" href="<?=$val['DetailPageURL'][0]?>">
-                        <button type="button" class="btn btn-danger buy-bttn-prodct">BUY</button>
+                        <button type="button" class="btn btn-danger buy-bttn-prodct" style="background-color: #5cb85c">BUY</button>
                         </a>
                      </div>
                   </div>

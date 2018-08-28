@@ -13,14 +13,16 @@ $username = $current_user->display_name!=''?$current_user->display_name:'Dua Lip
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <div class="col-md-6">
+
     <figure>
+        <center>
         <?php
         $post_ID = get_the_ID();
         $val = get_post_meta($post_ID);
         //print_r($val);
         echo "<img src='".$val['LargeImage'][0]."'>";
         ?>
-
+        </center>
     </figure>
     <h4>Ranking <span class="label label-default"><span class="glyphicon glyphicon-star hicon"></span><?=$val['SalesRank'][0]?></span></h4>
     
