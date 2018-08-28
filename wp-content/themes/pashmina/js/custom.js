@@ -46,7 +46,6 @@ jQuery(document).ready(function() {
  setTimeout(function(){ 
     
     var footprint = getCookie("footprint");
-    console.log(footprint);
     if(footprint !== 'true'){
         jQuery('#yourFootPrints').modal({show: 'true'}); 
     }

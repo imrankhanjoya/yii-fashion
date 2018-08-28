@@ -9,18 +9,14 @@ var OneSignal = window.OneSignal || [];
     notifyButton: {enable: false}
     }]);
     OneSignal.push(function () {
-        console.log("check for user"+getCookie('closepush'));
         // Occurs when the user's subscription changes to a new value.
         OneSignal.on('subscriptionChange', function (isSubscribed) {
-            console.log("The user's subscription state is now:", isSubscribed);
             OneSignal.getUserId(function (userId) {
-                console.log("User ID:", userId);
                 
                 if(userDeviceToken=='') {
                    userDeviceToken = userId;
                    
                 }
-                // (Output) OneSignal User ID: 270a35cd-4dda-4b3f-b04e-41d7463a2316
             });
             jQuery("#pushNotificaton").modal('hide');
             jQuery(".push-my-div").hide();
@@ -32,7 +28,6 @@ var OneSignal = window.OneSignal || [];
                 setCookie("closepush",'true',50000);
                 OneSignal.push(function () {
                     OneSignal.getUserId(function (userId) {
-                        console.log("User ID:", userId);
                         userDeviceToken = userId;
                         
                     });
