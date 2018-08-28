@@ -46,10 +46,11 @@ jQuery(document).ready(function() {
  setTimeout(function(){ 
     
     var footprint = getCookie("footprint");
-    if(footprint!='true'){
+    console.log(footprint);
+    if(footprint !== 'true'){
         jQuery('#yourFootPrints').modal({show: 'true'}); 
     }
-    setCookie("footprint",true,50000);
+    setCookie("footprint",'true',50000);
 },10000);
    
     
