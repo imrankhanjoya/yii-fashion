@@ -6,6 +6,6 @@
     if(footprint !== 'true'){
         jQuery('#yourFootPrints').modal({show: 'true'}); 
     }
-    setCookie("footprint",'true',50000);
-},10000);
+    setCookie("footprint",'true',500000);
+},30000);
    

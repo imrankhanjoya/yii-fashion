@@ -3,7 +3,7 @@
 	 	$cprods = array_chunk($prods,4);
 	 ?>
 <div class="col-lg-12 col-xs-12 col-md-12 col-sm-12">
-	<h2 class="align-self-center" style="text-align: center;">Top Foundation</h2>
+	<h2 class="align-self-center" style="text-align: center;">Top #Foundation</h2>
 <div  class="slide hidden-xs" id="proCarousel"  data-ride="carousel" style="height:250px">
   <div class="carousel-inner" role="listbox">
     
