@@ -9,7 +9,6 @@ Author: Mr. Imran khan joya
 License: GPL2
  */
 
-
 function loginModal(){
     $out = '<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
@@ -81,6 +80,8 @@ add_action('wp_footer', 'startDiscuss');
 
 function footPrints(){
     $theme_path = get_template_directory_uri();
+    $val = get_page_by_path( 'get-start');
+    $loginUrl = add_query_arg(array('fbgo' =>'true'),get_page_link($val->ID));
     $out = '<div  class="modal fade" id="yourFootPrints">
     <div class="modal-dialog" role="document" style="width:100%; position:fixed;bottom:0px;right:0px;margin:0px;">
     <div class="modal-content" style="border-radius:0px">
@@ -105,7 +106,9 @@ function footPrints(){
         <div class="row hidden-lg hidden-md">
         <div class="col-xs-12">
           <center>
+          <a href="'.$loginUrl.'">
           <img src="'.$theme_path.'/images/footprints.svg" style="height:60px; margin-top:-60px;" />
+          </a>
           </center>
         </div>
         <div class="col-xs-12 align-items-right" style="text-align:center">

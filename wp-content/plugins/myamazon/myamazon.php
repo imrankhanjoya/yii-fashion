@@ -12,6 +12,7 @@ License: GPL2
 ?>
 <?PHP 
 $theme_path = get_template_directory_uri();
+
 add_filter( 'wp_nav_menu_items', 'your_custom_menu_item', 2, 3 );
 function your_custom_menu_item ( $items, $args ) {
     $items .= '<li><a href="/top-cosmetic-products/">Trending</a></li>';
