@@ -39,6 +39,8 @@ jQuery(document).ready(function() {
     });
 
 
+    jQuery(".elimore").elimore({maxLength:300});
+    jQuery(".promore").elimore({maxLength:300});
    
 
 });

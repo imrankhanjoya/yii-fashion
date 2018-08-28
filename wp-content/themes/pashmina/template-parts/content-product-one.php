@@ -31,7 +31,7 @@ $username = $current_user->display_name!=''?$current_user->display_name:'Dua Lip
     	<span class="offer"><?=$val['LowestNewPrice'][0]?></span>
     	<?PHP endif;?>
         <div class="clearfix"></div>
-                    <a href="<?=$val['DetailPageURL'][0]?>" class="btn-amz-sucs btn-success"><span class="ambadge">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> Explore at amazon</a>
+        <a href="<?=$val['DetailPageURL'][0]?>" class="btn-amz-sucs btn-success"><span class="ambadge">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> Explore at amazon</a>
     </div>
     <?php the_category(); ?>
 	 <div class="clearfix"></div>
@@ -45,7 +45,7 @@ $username = $current_user->display_name!=''?$current_user->display_name:'Dua Lip
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 		<span class="excerpt">By <?=$val['Brand'][0]?></span>
         <?php if ( function_exists( 'wfp_button' ) ) wfp_button(); ?>
-		<?php the_content(); ?>
+		<div class="promore"><?php the_content(); ?></div>
 	</div><!-- .entry-content -->
 	
 

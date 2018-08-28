@@ -127,7 +127,9 @@ function pashmina_scripts() {
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css', array(), '4.4.0', '' );
 
 	// Custom JS
+	wp_enqueue_script( 'pashmina-elimore', get_template_directory_uri() . '/js/jquery.elimore.min.js', array( 'jquery' ), '', true );
 	wp_enqueue_script( 'pashmina-custom', get_template_directory_uri() . '/js/custom.js', array( 'jquery' ), '', true );
+	
 	if(is_user_logged_in()==false){
 		wp_enqueue_script( 'nologin-custom', get_template_directory_uri() . '/js/nologin-custom.js', array( 'jquery' ), '', true );
 	}

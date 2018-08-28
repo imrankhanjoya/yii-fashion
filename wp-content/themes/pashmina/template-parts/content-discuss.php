@@ -8,6 +8,7 @@
  */
 $post = get_post();
 $title = $post->post_title;
+$desc = get_the_content();
 ?>
 <div class="col-md-12 container">
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -23,7 +24,11 @@ $title = $post->post_title;
 			<span class="text-muted text-center" style="position:absolute; color: #cccccc; font-size:200px; opacity: 0.4; z-index: -1; top:40px; left:0px"><?=$title[0]?></span>
 			<div style="">
 			<a href="<?php esc_url( the_permalink() ); ?>"><h2><?=$title?>	</h2></a>
-			<p><?PHP the_content();?>	</p>
+			<div class="elimore"> 
+			<p>
+				<?=$desc;?>
+			</p>
+			</div>
 			</div>
 			<div class="clear"></div>
 		</div>

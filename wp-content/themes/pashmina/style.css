@@ -456,6 +456,10 @@ opacity: 0.8;
 .comments-link{
 	margin-right:10px;
 }
+.elimore_show, .elimore_hide{
+	margin-left: 10px;
+	font-weight:bold;
+}
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
