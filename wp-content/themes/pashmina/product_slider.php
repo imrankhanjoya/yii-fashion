@@ -40,7 +40,7 @@
   </a>	
  </div>
 </div>
-<div  class="slide hidden-md hidden-lg" id="mproCarousel"  data-ride="carousel" style="height:200px">
+<div  class="slide hidden-md hidden-lg" id="mproCarousel"  data-ride="carousel" style="height:250px">
   <div class="carousel-inner" role="listbox">
     
     <?php foreach($mprods as $key=>$pro): $class=$key==0?"active":""; ?>
