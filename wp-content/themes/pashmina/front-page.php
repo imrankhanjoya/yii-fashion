@@ -43,7 +43,7 @@ $starPage = "/discuss-beauty/";
                
             <div class="col-md-12" style="padding:0px; margin-bottom:10px">
             <a  href="<?php esc_url(the_permalink() ); ?>" style=" position: relative;  display: inline-block;"> 
-            <object class="hidden-xs" id="svg1" data="<?=$theme_path?>/images/homebanner.svg" type="image/svg+xml">
+            <object  class="hidden-xs" id="svg1" data="<?=$theme_path?>/images/homebanner.svg" type="image/svg+xml">
             </object>
             <img class="img-responsive hidden-md hidden-lg" src="<?=$val['image'][0]?>" />
             </a>    

@@ -57,18 +57,28 @@ function startDiscuss(){
                         <h3>Start Discussion</h3>
                       </div>
                       <div class="modal-body" >
-                          <form>
-                          <div class="form-group">
-                          <label for="exampleFormControlInput1">Title</label>
-                          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Hair skin eyes">
-                          </div>
-                          <div class="form-group">
-                          <label for="exampleFormControlTextarea1">Your question</label>
-                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                          </div>
-                          <div class="form-group item-right">
-                          <button type="button" class="btn btn-primary">Primary</button>
-                          </div>
+                          <form method="post" id="myComment" action="">
+                            <div class="form-group">
+                            <label for="exampleFormControlInput1">Title</label>
+                            <input name="title" type="text"  class="form-control" id="exampleFormControlInput1" placeholder="Hair skin eyes" minlength="10" maxlength="200" required>
+                            </div>
+                            <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Your question</label>
+                            <textarea name="desc" class="form-control" id="exampleFormControlTextarea1" minlength="30" rows="3" required></textarea>
+                            </div>
+                            <div class="form-group">
+                            <label for="exampleFormControlInput1">Category</label>
+                            <select name="category" type="select" class="form-control" id="category" placeholder="Select topic" required>
+                              <option value="">Select Topic</option>
+                              <option value="skin-care">Skin Care</option>
+                              <option value="hair-care">Hair Care</option>
+                              <option value="Eye-care">Eye Makeup</option>
+                              <option value="nail-care">Nails Makeup</option>
+                            </select>
+                            </div>
+                            <div class="form-group item-right">
+                            <button type="submit" class="btn btn-primary">Save</button>
+                            </div>
                           </form>
                       </div>
                     </div>

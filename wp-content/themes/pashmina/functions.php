@@ -132,6 +132,8 @@ function pashmina_scripts() {
 	
 	if(is_user_logged_in()==false){
 		wp_enqueue_script( 'nologin-custom', get_template_directory_uri() . '/js/nologin-custom.js', array( 'jquery' ), '', true );
+	}else{
+		wp_enqueue_script( 'login-custom', get_template_directory_uri() . '/js/login-custom.js', array( 'jquery' ), '', true );
 	}
 	wp_enqueue_script( 'OneSignalSDK-loc', get_template_directory_uri() . '/js/OneSignal.js', array( 'OneSignalSDK','bootstrapjs' ), '', true );
 
