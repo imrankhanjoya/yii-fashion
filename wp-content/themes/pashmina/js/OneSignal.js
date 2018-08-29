@@ -1,3 +1,4 @@
+var cl = getCookie('closepush');
 var OneSignal = window.OneSignal || [];
     var userDeviceToken = '';
 
@@ -34,13 +35,11 @@ var OneSignal = window.OneSignal || [];
                 });
                 jQuery(".push-my-div").hide();
             }else{
-                setTimeout(function(){
-                    var cl = getCookie('closepush');
-                    console.log("push"+cl);
-                    if(cl!=12){
-                        jQuery("#pushNotificaton").modal('show');
-                    }
-                },5000);
+                    
+                console.log("push"+cl);
+                if(cl!=12){
+                    jQuery("#pushNotificaton").modal('show');
+                }
                 jQuery(".push-my-div").show();
             }
         });
