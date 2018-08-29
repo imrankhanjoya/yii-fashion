@@ -34,7 +34,9 @@ var OneSignal = window.OneSignal || [];
                 });
                 jQuery(".push-my-div").hide();
             }else{
-                if(getCookie('closepush')!=12){
+                var cl = getCookie('closepush');
+                console.log("push"+cl);
+                if(cl!=12){
                     jQuery("#pushNotificaton").modal('show');
                 }
                 jQuery(".push-my-div").show();
