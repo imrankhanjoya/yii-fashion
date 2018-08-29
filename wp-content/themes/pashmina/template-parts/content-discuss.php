@@ -21,7 +21,7 @@ $desc = get_the_content();
 		<?php echo get_avatar($post->post_author);?>
 		</div>
 		<div class="col-lg-10  col-12" style="position: relative;">
-			<span class="text-muted text-center" style="position:absolute; color: #cccccc; font-size:200px; opacity: 0.4; z-index: -1; top:40px; left:0px"><?=$title[0]?></span>
+			<span class="text-muted text-center" style="position:absolute; color: #cccccc; font-size:150px; opacity: 0.4; z-index: -1; top:40px; left:0px"><?=$title[0]?></span>
 			<div style="">
 			<a href="<?php esc_url( the_permalink() ); ?>"><h2><?=$title?>	</h2></a>
 			<div class="elimore"> 
