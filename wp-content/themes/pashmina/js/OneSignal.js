@@ -25,7 +25,7 @@ var OneSignal = window.OneSignal || [];
 
         OneSignal.isPushNotificationsEnabled(function (isEnabled) {
             if (isEnabled) {
-                setCookie("closepush",12,50000);
+                
                 OneSignal.push(function () {
                     OneSignal.getUserId(function (userId) {
                         userDeviceToken = userId;
@@ -34,11 +34,13 @@ var OneSignal = window.OneSignal || [];
                 });
                 jQuery(".push-my-div").hide();
             }else{
-                var cl = getCookie('closepush');
-                console.log("push"+cl);
-                if(cl!=12){
-                    jQuery("#pushNotificaton").modal('show');
-                }
+                setTimeout(function(){
+                    var cl = getCookie('closepush');
+                    console.log("push"+cl);
+                    if(cl!=12){
+                        jQuery("#pushNotificaton").modal('show');
+                    }
+                },5000);
                 jQuery(".push-my-div").show();
             }
         });
