@@ -41,11 +41,14 @@ $starPage = "/discuss-beauty/";
                 
             ?>
                
-            <div class="col-md-12" style="padding:0px; margin-bottom:10px;">
-            <a  href="<?php esc_url(the_permalink() ); ?>" style=" position: relative;  display: inline-block;"> 
-            <object  class="hidden-xs" id="svg1" data="<?=$theme_path?>/images/homebanner.svg" type="image/svg+xml">
-            </object>
-            <img class="img-responsive hidden-md hidden-lg" src="<?=$val['image'][0]?>" />
+            <div class="col-md-12" style="padding:0px; margin-bottom:10px; background-color: #ccc">
+              <a  href="/shop/"> 
+              <img class="hidden-xs" style="width:64%; float: left" src="https://cdnmediablog.files.wordpress.com/2018/08/legend_20180830_244516.gif" />
+              </a>
+              <a  href="<?=$starPage?>"> 
+              <img class="hidden-xs" style="width:36%;" class="img-responsive" src="https://cdnmediablog.files.wordpress.com/2018/08/legend_20180830_014301.gif" />
+              </a>
+              <img class="img-responsive hidden-md hidden-lg" src="<?=$val['image'][0]?>" />
             </a>    
             </div>
             
