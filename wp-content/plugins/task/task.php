@@ -106,7 +106,9 @@ function footPrints(){
         </div>
         <div class="col-md-2">
           <center>
+          <a href="'.$loginUrl.'">
           <img src="'.$theme_path.'/images/footprints.svg" style="height:100px; margin-top:-60px;" />
+          </a>
           </center>
         </div>
         <div class="col-md-5  align-items-left">
