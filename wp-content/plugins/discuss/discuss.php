@@ -20,6 +20,8 @@ function post_disscuss(){
     if(strlen($pkey[1]['value'])<50){
         $error['description'] = "Description is too short.";
     }
+
+
     $postarr = array();
     $postarr['ID'] = 0;
     $postarr['post_author'] = 1;

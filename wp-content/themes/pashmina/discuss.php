@@ -20,7 +20,7 @@ function gloatme_header_metadata() {
   
   $data['title'] = "Discussion related to beauty";
   $data['url'] = "http://www.gloat.me/discuss-beauty-tips/";
-  $data['image'] = "http://www.gloat.me/wp-content/uploads/2018/07/discuss.jpg";
+  $data['image'] = "https://cdnmediablog.files.wordpress.com/2018/09/discuss.png";
   $data['width'] = 964;
   $data['height'] = 720;
   $data['description'] = "Discussion related to products and beauty tips.";
@@ -43,8 +43,10 @@ if($user->ID){
   $askQuestion = getLoginPage();
 }
 ?>
-<div class="col-lg-12" style="padding:0px;">
-<img src='<?= get_the_post_thumbnail_url(get_the_ID())?>' class="img-responsive" style="width:100%">
+<div class="col-lg-12" style="padding:0px; background-image: url('http://www.gloat.me/wp-content/themes/pashmina/images/banner.svg'); border-bottom:10px solid #000; height:300px; margin-bottom:50px; background-color:#F9E77F">
+  <center>
+  <img src='https://cdnmediablog.files.wordpress.com/2018/09/discuss1.png' >
+  </center>
 </div>
 
 
