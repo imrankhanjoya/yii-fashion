@@ -12,23 +12,24 @@ $user_id = $author->ID;
 $userdata = get_userdata( $user_id );
 $usermeta = get_user_meta($user_id);
 global $img;
+
 global $desc;
 $desc = $usermeta['description'][0];
 $img = $usermeta['cupp_upload_meta'][0];
 
 
 
-function gloatme_header_metadata() {
-   global $img;
-   global $desc;
-  $data['title'] = 'Its me '.get_query_var( 'author_name' )." at Gloat.Me";
-  $data['url'] = "http://www.gloat.me/its/".get_query_var( 'author_name' );
-  $data['image'] = $img;
-  $data['description'] = "Gloat.Me fan for its beauty tips. ".$desc;  
-  echo generateMeta($data);  
+// function gloatme_header_metadata() {
+//    global $img;
+//    global $desc;
+//   $data['title'] = 'Its me '.get_query_var( 'author_name' )." at Gloat.Me";
+//   $data['url'] = "http://www.gloat.me/its/".get_query_var( 'author_name' );
+//   $data['image'] = $img;
+//   $data['description'] = "Gloat.Me fan for its beauty tips. ".$desc;  
+//   echo generateMeta($data);  
         
-}
-add_action( 'wp_head', 'gloatme_header_metadata',0);
+// }
+// add_action( 'wp_head', 'gloatme_header_metadata',0);
 
 
 
@@ -58,7 +59,8 @@ add_action( 'wp_head', 'gloatme_header_metadata',0);
       <div class="col-lg-3 col-xs-12 col-md-3 col-sm-12 panel-body">
          <div class="row">
             <div class="col-lg-12 col-sm-4 col-md-12 text-center author-img-heiht">
-               <img class="img-responsive" alt="<?=$userdata->data->display_name?>" title="<?=$userdata->data->display_name?>" src="<?=$img?>" >
+               <img class="img-responsive profile-img-v" alt="<?=$userdata->data->display_name?>" title="<?=$userdata->data->display_name?>" src="<?=$img?>" >
+
 
             </div>
             <div class="col-lg-12 col-sm-8 col-md-12">
@@ -82,6 +84,46 @@ add_action( 'wp_head', 'gloatme_header_metadata',0);
          </div>
       </div>
       <div class="col-lg-9 col-xs-12 col-md-9 col-sm-12 media">
+      <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 all-div-padding0">
+         <div class="row mr-ml-0-v">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 padd-0-v text-center">
+                        <h4><b>11</b></h4>
+                        <h4>Posts</h4>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 padd-0-v text-center">
+                        <h4><b>326</b></h4>
+                        <h4>Followars</h4>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 padd-0-v text-center">
+                        <h4><b>30</b></h4>
+                  <h4>Following</h4>
+                    </div>
+                </div>
+                <div class="row mr-ml-0-v text-center">
+                    <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 padd-0-v">
+                        <button type="button" class="btn btn-1-v btn-light">Promation</button>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 padd-0-v">
+                        <button type="button" class="btn btn-1-v btn-light">Edit Profile</button>
+                    </div>
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 padd-0-v">
+                        <div class="dropdown">
+                            <button class="btn btn-2-v btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                                <span class="caret"></span></button>
+                            <ul style="margin-left:-125px;" class="dropdown-menu dropdown-menu-auto">
+                                <li><a href="#">Privacy Account</a></li>
+                                <li><a href="#">Settings</a></li>
+                                <li><a href="#">Log Out</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+      </div>
          <div class="tabbable-panel">
             <div class="author-its-tab">
                <ul class="nav nav-tabs ">
@@ -226,9 +268,7 @@ add_action( 'wp_head', 'gloatme_header_metadata',0);
                               </div>
                            </div>
                         </div>
-                     </div>
-                     
-                        
+                     </div>0
                   </div>
                   <div class="tab-pane author-tab-div" id="tab_default_2">
                      

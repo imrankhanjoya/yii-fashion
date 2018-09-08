@@ -2555,13 +2555,64 @@ a.wpf-favorite-link span{
 	border:none;
 	padding:8px 0px !important;
 }
+/*vahid-profile-css*/
+    .profile-container-v{
+        width: 75%;
+        margin-top: 20px;
+    }
+    
+    .profile-img-v {
+        border-radius: 50%;
+        height: 200px !important;
+        width: 200px !important;
+        margin-top: 15px;
+    }
+    
+    .mr-ml-0-v {
+        margin-right: 0px !important;
+        margin-left: 0px !important;
+    }
+    
+    .btn-1-v {
+        padding: 8px !important;
+        width: 100%;
+        outline: none !important;
+    }
+    
+    .btn-2-v {
+        padding-right: 20px;
+        width: 100%;
+        border: 0px !important;
+    }
+    
+    @media only screen and (max-width: 980px) {
+        .profile-img-v {
+            height: 120px !important;
+            width: 120px !important;
+        }
+        .profile-container-v {
+            width: 100%;
+            margin-top: 20px;
+        }
+        .padd-0-v {
+            padding: 3px !important;
+        }
+        
+    }
+       @media only screen and (min-width: 980px){
+       	.padd-2-v{
+    	padding-left: 30px !important;
+    	padding-right: 30px !important;
+    }
+       }
+/*end-vahid-profile-css*/
 /*cards*/
 .author-crd-heiht{
 	height: 350px;
 }
 .author-img-heiht{
-	height: 155px;
 	overflow: hidden;
+	text-align: center;
 }
 .bdr-div{
 	border-right: 1px solid #eee;
