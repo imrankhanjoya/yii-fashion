@@ -63,37 +63,37 @@ function create_sitemap_product() {
 	$allFiles = [];
 	for($i=0;$i<100;$i++) {
 	
-			$page = $i;
-			$per_page =20000;
-			$offset = $page *$per_page;		
-			$postsForSitemap = get_posts(array(
-			 'posts_per_page' => $per_page,
-			 'offset'=>$offset,
-			 'orderby' => 'ID',
-			 'post_type'  => array('product'),
-			 'order'    => 'ASC'
-			));
-			if(empty($postsForSitemap))
+			
+			
+			$per_page =5000;
+			$star = $per_page * $i;
+
+			global $wpdb;
+			echo $sql = "select * from $wpdb->posts as posts where post_type = 'product' and post_status ='publish' limit $star,$per_page";
+			echo "\n";
+			$results = $wpdb->get_results( $sql, ARRAY_A );
+
+			if(empty($results)){
 				continue;
-
-			$sitemap = '<?xml version="1.0" encoding="UTF-8"?>';
-			$sitemap .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
-
-			foreach($postsForSitemap as $post) {
-			 setup_postdata($post);
-
-			 $postdate = explode(" ", $post->post_modified);
-			 $date = date("Y-m-d\TH:i:s.000\Z",strtotime($postdate)); 
-			 $sitemap .= '<url>'.
-			   '<loc>'. get_permalink($post->ID) .'</loc>'.
-			   '<lastmod>'.$date.'</lastmod>'.
-			   '<changefreq>daily</changefreq>'.
-			   '<priority>0.8</priority>'.
-			 '</url>';
 			}
+			$sitemap = '<?xml version="1.0" encoding="UTF-8"?>';
+		   $sitemap .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
+			foreach($results as $val){
+
+				$postdate = explode(" ",$val['post_date']);
+				$date = date("Y-m-d\TH:i:s.000\Z",strtotime($postdate[0]));
+				$sitemap .= '<url>'.
+				'<loc>'. get_permalink($val['ID']) .'</loc>'.
+				'<lastmod>'.$date.'</lastmod>'.
+				'<changefreq>daily</changefreq>'.
+				'<priority>0.8</priority>'.
+				//'<id>'.$val['ID'].'</id>'.
+				'</url>';
+			}
+		
 
 			$sitemap .= '</urlset>';
-			$file = "pro/sitemap-pro-".$page.".xml";
+			$file = "pro/sitemap-pro-".$i.".xml";
 			$filePath = ABSPATH .$file;
 			$fp = fopen($filePath, "w");
 			fwrite($fp, $sitemap);
@@ -163,11 +163,14 @@ function create_sitemap(){
 	
 	//create_sitemap_static();
 	$all1 = create_sitemap_product();
+	print_r($all1);
 	$all2 = sg_create_sitemap();
 	$all3 = tag_sitemap();
 	$all4 = cat_sitemap();
 
 	$alltotal = array_merge($all1,$all2,$all3,$all4);
+
+
 	$sitemap = '<?xml version="1.0" encoding="UTF-8"?>';
 	$sitemap .= '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
 	foreach($alltotal as $val){

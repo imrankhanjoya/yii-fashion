@@ -294,8 +294,9 @@ class WeDevs_Favorite_Posts {
      * @return void
      */
     function link_button( $post_id ) {
-
+        
         if ( !is_user_logged_in() ) {
+            echo '<a href="#"><span class="fa fa-heart f-selct">&nbsp;</span>Login to add</a>';
             return;
         }
 
@@ -403,6 +404,5 @@ function wfp_button( $post_id = null ) {
     if ( !$post_id ) {
         $post_id = $post->ID;
     }
-
     WeDevs_Favorite_Posts::init()->link_button( $post_id );
 }

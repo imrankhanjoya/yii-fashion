@@ -127,7 +127,14 @@ function pashmina_scripts() {
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css', array(), '4.4.0', '' );
 
 	// Custom JS
+	wp_enqueue_script( 'pashmina-elimore', get_template_directory_uri() . '/js/jquery.elimore.min.js', array( 'jquery' ), '', true );
 	wp_enqueue_script( 'pashmina-custom', get_template_directory_uri() . '/js/custom.js', array( 'jquery' ), '', true );
+	
+	if(is_user_logged_in()==false){
+		wp_enqueue_script( 'nologin-custom', get_template_directory_uri() . '/js/nologin-custom.js', array( 'jquery' ), '', true );
+	}else{
+		wp_enqueue_script( 'login-custom', get_template_directory_uri() . '/js/login-custom.js', array( 'jquery' ), '', true );
+	}
 	wp_enqueue_script( 'OneSignalSDK-loc', get_template_directory_uri() . '/js/OneSignal.js', array( 'OneSignalSDK','bootstrapjs' ), '', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -372,4 +379,18 @@ function my_custom_avatar( $avatar, $id_or_email, $size, $default, $alt ) {
     }
 
     return $avatar;
+}
+
+add_action( 'admin_init', 'redirect_non_admin_users' );
+/**
+ * Redirect non-admin users to home page
+ *
+ * This function is attached to the 'admin_init' action hook.
+ */
+function redirect_non_admin_users() {
+		if ( ! current_user_can( 'manage_options' ) && '/wp-admin/admin-ajax.php' != $_SERVER['PHP_SELF'] ) {
+			wp_redirect( home_url() );
+			exit;
+		}
+	
 }

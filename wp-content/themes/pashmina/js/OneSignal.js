@@ -1,3 +1,4 @@
+var cl = getCookie('closepush');
 var OneSignal = window.OneSignal || [];
     var userDeviceToken = '';
 
@@ -9,18 +10,14 @@ var OneSignal = window.OneSignal || [];
     notifyButton: {enable: false}
     }]);
     OneSignal.push(function () {
-        console.log("check for user"+getCookie('closepush'));
         // Occurs when the user's subscription changes to a new value.
         OneSignal.on('subscriptionChange', function (isSubscribed) {
-            console.log("The user's subscription state is now:", isSubscribed);
             OneSignal.getUserId(function (userId) {
-                console.log("User ID:", userId);
                 
                 if(userDeviceToken=='') {
                    userDeviceToken = userId;
                    
                 }
-                // (Output) OneSignal User ID: 270a35cd-4dda-4b3f-b04e-41d7463a2316
             });
             jQuery("#pushNotificaton").modal('hide');
             jQuery(".push-my-div").hide();
@@ -29,36 +26,36 @@ var OneSignal = window.OneSignal || [];
 
         OneSignal.isPushNotificationsEnabled(function (isEnabled) {
             if (isEnabled) {
+                
                 OneSignal.push(function () {
                     OneSignal.getUserId(function (userId) {
-                        console.log("User ID:", userId);
                         userDeviceToken = userId;
                         
                     });
                 });
-                //jQuery("#pushNotificaton").modal('show');
                 jQuery(".push-my-div").hide();
             }else{
-                if(getCookie('closepush')==null){
+                    
+                console.log("push"+cl);
+                if(cl!=12){
                     jQuery("#pushNotificaton").modal('show');
                 }
                 jQuery(".push-my-div").show();
             }
         });
     });
-
     function mypush(){
         OneSignal.push(["registerForPushNotifications"]);
     }
     function mypushclose(){
         jQuery("#pushNotificaton").modal('hide');
-        setCookie("closepush",true,50000);
+        setCookie("closepush",12,50000);
     }
 
     function setCookie(key, value,ctime) {
             var expires = new Date();
             expires.setTime(expires.getTime() + ctime);
-            document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
+            document.cookie = key + '=' + value + ';path=/;expires=' + expires.toUTCString();
         }
 
     function getCookie(key) {

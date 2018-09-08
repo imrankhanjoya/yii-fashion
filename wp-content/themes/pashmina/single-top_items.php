@@ -72,7 +72,7 @@ $tag_name = $tags[0]->name;
                         <div class="icon-product"></div>
                         <h6><b>Seller Rank</b> (<?=$val['SalesRank'][0]?>)</h6>
                      </div>
-                     <div class="col-lg-12 col-sm-12 col-xs-12 col-md-12 product-ttl-p">
+                     <div class="col-lg-12 col-sm-12 col-xs-12 col-md-12 product-ttl-p promore">
                         <?php the_content()?>
                      </div>
                      <div class="col-lg-6 col-xs-6 col-sm-6 col-md-6 btn-should-card">
@@ -84,7 +84,7 @@ $tag_name = $tags[0]->name;
                         <button type="button" class="btn btn-link">READ REVIEWS</button>
                         </a>
                         <a  target="_blank" href="<?=$val['DetailPageURL'][0]?>">
-                        <button type="button" class="btn btn-danger buy-bttn-prodct">BUY</button>
+                        <button type="button" class="btn btn-danger buy-bttn-prodct" style="background-color: #5cb85c">BUY</button>
                         </a>
                      </div>
                   </div>

@@ -28,10 +28,8 @@ add_action( 'wp_head', 'gloatme_header_metadata',0);
 get_header();
 
 $val = get_page_by_path('get-start');
-
-  $loginPage = getLoginPage();
-  $starPage = "/discuss-beauty/";
-
+$loginPage = getLoginPage();
+$starPage = "/discuss-beauty/";
 ?>
             <?PHP
 
@@ -43,11 +41,15 @@ $val = get_page_by_path('get-start');
                 
             ?>
                
-            <div class="col-md-12" style="padding:0px; margin-bottom:10px">
-              <a  href="<?php esc_url( the_permalink() ); ?>"> 
-              <img class="hidden-xs" src="<?= get_the_post_thumbnail_url(get_the_ID())?>" style="width: 100%" />
+            <div class="col-md-12" style="padding:0px; margin-bottom:10px; background-color: #ccc">
+              <a  href="/shop/"> 
+              <img class="hidden-xs" style="width:64%; float: left" src="https://cdnmediablog.files.wordpress.com/2018/08/legend_20180830_244516.gif" />
+              </a>
+              <a  href="<?=$starPage?>"> 
+              <img class="hidden-xs" style="width:36%;" class="img-responsive" src="https://cdnmediablog.files.wordpress.com/2018/08/legend_20180830_014301.gif" />
+              </a>
               <img class="img-responsive hidden-md hidden-lg" src="<?=$val['image'][0]?>" />
-              </a>    
+            </a>    
             </div>
             
               <?PHP
@@ -64,7 +66,7 @@ $val = get_page_by_path('get-start');
     <div class="row">
       <div  class="col-md-12 notification" style="background-image:url('<?=$theme_path?>/images/banner_2.svg')">
         <p>
-          <span class="glyphicon glyphicon-leaf"></span><span class="glyphicon glyphicon-grain"></span>Wash your face with ice water or simply rub and ice cube with a tsp of honey on the face for instant face lift
+          <img src="<?=$theme_path?>/images/woman-with-long-hair.svg" style="height: 50px">Wash your face with ice water or simply rub and ice cube with a tsp of honey on the face for instant face lift
         </p>
         <center><button onClick="mypush() class="btn">Stay in Touch for Beauty Tips</button></center>
       </div>
@@ -105,26 +107,27 @@ $val = get_page_by_path('get-start');
                 </div>
             </div>
           <?php endif;?>
+          <?PHP include('product_slider.php'); ?>
 
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                <a href="http://gloat.me/tag/loreal/" class="home-banner-two" style="background-image: url('http://gloat.me/wp-content/uploads/2018/07/LorealParisDK0213136586v2Logo.jpg');">
+                <a href="http://gloat.me/products-for/loreal/" class="home-banner-two" style="background-image: url('http://gloat.me/wp-content/uploads/2018/07/LorealParisDK0213136586v2Logo.jpg');">
                 </a>
             </div>
             <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                <a href="<?=$starPage?>" class="home-banner-img" style="background-image: url('http://www.gloat.me/wp-content/uploads/2018/07/Adobe_Post_20180727_170459.jpg');">
+                <a href="<?=$starPage?>" class="home-banner-img" style="background-image: url('<?=$theme_path?>/images/discuss.png');">
                 </a>
             </div>
 
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-right">
-                <a href="http://gloat.me/tag/lakme/" class="home-banner-img" style="background-image: url(http://gloat.me/wp-content/uploads/2018/07/lakme.png);" >
+                <a href="http://gloat.me/products-for/lakme/" class="home-banner-img" style="background-image: url(http://gloat.me/wp-content/uploads/2018/07/lakme.png);" >
                 </a>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-right">
-                <a class="home-banner-img" style="background-image: url(http://www.gloat.me/wp-content/uploads/2018/07/Adobe_Post_20180727_172640.jpg); background-size:cover;" href="http://gloat.me/shop/">
+                <a class="home-banner-img" style="background-image: url('<?=$theme_path?>/images/Product.png'); background-size:cover;" href="http://gloat.me/shop/">
                 </a>
             </div>
         </div>
-
+        <?PHP include('product_foundation_slider.php'); ?>
         <!-- <div class="row media">
             <div class="col-lg-12 text-center ">
                 <img class="" style="height: 30px" src="http://gloat.me/wp-content/uploads/2018/07/front-border.png">

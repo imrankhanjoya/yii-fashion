@@ -38,4 +38,34 @@ jQuery(document).ready(function() {
         });
     });
 
+
+    jQuery(".elimore").elimore({maxLength:300});
+    jQuery(".promore").elimore({maxLength:300});
+   
+
 });
+
+ 
+   
+    
+ function saveFav(pid){
+        jQuery('#loading').modal({
+        show: 'true'
+        });
+        jQuery.ajax({
+            url : ajax_url,
+            type : 'post',
+            async: false,
+            dataType: 'json',
+            data : {
+                action : 'post_vote',
+                post_id:pid
+            },
+            success : function( response ) {
+                $(".vcount").html(response);
+                $(".voteLable").html("Thanks for Vote");
+                jQuery('#loading').modal('hide');
+
+            }
+        });
+    }

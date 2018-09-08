@@ -1,5 +1,5 @@
 /*
-Theme Name: Pashmina
+Theme Nz-e: Pashmina
 Version: 1.0.9
 Author: FameThemes
 Author URI: https://www.famethemes.com/
@@ -104,6 +104,9 @@ table {
         vertical-align: middle;
         content: " ";
         height:20vh;
+    }
+    .productlist .entry-title{
+    	font-size: 16px;
     }
 }
 
@@ -299,9 +302,7 @@ textarea:focus {
 .carousel-inner{
 	overflow: display !important;
 }
-.carousel-inner>.active{
-	min-height: 500px;
-}
+
 #imageFrame{
 	position: relative;
 	overflow: hidden;
@@ -365,6 +366,7 @@ textarea.form-control{
 	background-color: pink; 
 	text-align: center; 
 	border-radius: 0px;
+	cursor:pointer;
 }
 .heart-vote-btn:hover{
 	color: black;
@@ -454,6 +456,10 @@ opacity: 0.8;
 .comments-link{
 	margin-right:10px;
 }
+.elimore_show, .elimore_hide{
+	margin-left: 10px;
+	font-weight:bold;
+}
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
@@ -520,6 +526,25 @@ opacity: 0.8;
 		margin-left: 0;
 		text-align: center;
 	}
+	.productlist .entry-title{
+    	font-size: 16px !important;
+    	line-height: 22px;
+    }
+    .productlist .entry-content{
+    	height: auto;
+    	text-align: center;
+    }
+    .productlist .small-img{
+    	margin-top: 0px;
+    }
+    .btn-group-xs li{
+    	width:45%;
+    	font-size: 16px;
+    	text-align: center;
+    }
+    .btn-group-xs a{
+    	font-size:16px !important;
+    }
 }
 
 .comment-author img {
@@ -2073,13 +2098,12 @@ td {
 	}
 }
 
-@media all and (max-width: 480px) {
+
+
+@media all and (max-width: 400px) {
 	.dt-featured-post .entry-footer h3 {
 		font-size: 16px;
 	}
-}
-
-@media all and (max-width: 400px) {
 	.dt-logo h1 {
 		font-size: 36px;
 	}
@@ -2218,8 +2242,21 @@ width:100px;
 	padding: 5px;
 	font-size: 20px;		
 }
+
 .btn-amz-sucs{
 	margin-top: 10px;
+	color: #fff !important;
+   border: none;
+   border-radius: 0px !important;
+   padding:5px 0px;
+   display: block;
+   width:150px; 
+   font-size:12px;
+    
+}
+.price_box .btn-amz-sucs{
+	font-size:18px;
+	width: 100%;
 }
 .price_box .list{	
     padding: 10px;
@@ -2350,7 +2387,8 @@ width:100px;
 	font-size: 33px;
     line-height: 37px;
     letter-spacing: 1px;
-} }
+} 
+}
 .should-ttl h3 {
     font-size: 21px;
     letter-spacing: 2px;
@@ -2732,7 +2770,7 @@ margin-bottom: 0;
     height: 235px;
     text-align: center;
     background-size: cover;
-    background-position: center center;
+    background-position:center center;
     display: block;
     overflow: hidden;
     position: relative;
@@ -2838,7 +2876,7 @@ margin-bottom: 0;
     border-left: 2px solid #ccc;
 }
 /*silder*/
-.carousel-control.left,.carousel-control.right {margin-left:15px;background-image:none;}
+.carousel-control.left,.carousel-control.right {background-image:none;}
 @media (max-width: 767px) {
 	.carsl-run.carousel-inner .active.left { left: -100%; }
 	.carsl-run.carousel-inner .next        { left:  100%; }
