@@ -29,6 +29,7 @@ define('DB_USER', 'root');
 /** MySQL database password */
 define('DB_PASSWORD', 'h0ppVhi!8');
 
+
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
 
@@ -90,4 +91,8 @@ if ( !defined('ABSPATH') )
 	define('ABSPATH', dirname(__FILE__) . '/');
 
 /** Sets up WordPress vars and included files. */
+<<<<<<< Updated upstream
 require_once(ABSPATH . 'wp-settings.php');
+=======
+require_once(ABSPATH . 'wp-settings.php');
+>>>>>>> Stashed changes
