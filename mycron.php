@@ -43,6 +43,7 @@ ignore_user_abort(true);
  * php mycron.php "Hair" "LuxuryBeauty" 1
  * php mycron.php "all" "Beauty" 1
  * php mycron.php "SKIN CARE FOR THE FACE" "Beauty" 1
+ * php mycron.php "dark spots face" "Beauty" 1
  * @var bool
  */
 define('DOING_CRON', true);

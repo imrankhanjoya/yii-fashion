@@ -87,9 +87,7 @@ if($contest_post){
     </div>
     <div class="item" style="min-width:300px">
       
-
-
-        <!--ITEM START-->
+    <!--ITEM START-->
 
       
       

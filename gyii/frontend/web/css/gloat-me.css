@@ -1,0 +1,402 @@
+ body {
+     font-family: 'Oswald', sans-serif;
+     font-size: 14px;
+     font-weight: normal;
+     line-height: 20px;
+}
+ @font-face {
+     font-family: Oswald-Medium;
+     src: url('../fonts/Oswald-Regular.ttf');
+}
+ @font-face {
+     font-family: Roboto-Regular;
+     src: url('../fonts/Roboto-Regular.ttf');
+}
+ h4,h5,h6,a,span,li,p{
+     font-family: Roboto-Regular;
+}
+ h1,h2,h3{
+     font-family: Oswald-Medium;
+}
+ h1,.h1{
+     font-size: 36px;
+}
+ h2,.h2 {
+     font-size: 30px;
+}
+ h3,.h3 {
+     font-size: 24px;
+}
+ h4,.h4{
+     font-size: 18px;
+}
+ h5,.h5 {
+     font-size: 14px;
+     line-height: 19px 
+}
+ h6,.h6 {
+     font-size: 12px;
+     line-height: 19px 
+}
+ ul>li, span, p{
+     font-size: 14px;
+}
+ a{
+     color: rgba(39,48,57,.85);
+}
+ a:hover, a:focus, a:active{
+     color: #e83f6f;
+     text-decoration: unset;
+     outline: unset;
+}
+ .btn.focus, .btn:focus{
+     box-shadow: unset;
+     outline: unset;
+}
+ button{
+     background: #000;
+     color: #fff;
+     border-radius: 0px ;
+}
+ .btn-green{
+     background-color: #689f38 !important;
+     font-size: 16px !important;
+}
+ a.btn{
+     background: #000;
+     color: #fff;
+     border-radius: 0px;
+     padding: 10px 15px;
+     border:none;
+}
+ img{
+     max-width: 100%;
+}
+ form-group{
+     border: 1px solid #ccc;
+     border-radius: 0px;
+}
+ form-control {
+     border-color: #ccc;
+}
+ input{
+     border: 1px solid #ccc;
+     border-radius: 0px;
+}
+ input[type="text"], input[type="email"], input[type="url"], input[type="number"], input[type="password"], input[type="search"], textarea, select{
+     border-color: #ccc;
+     outline: 0;
+}
+ button, input[type="button"], input[type="reset"], input[type="submit"]{
+     background: #000;
+     color: #fff;
+     border-radius: 0px;
+     padding: 10px 15px;
+     border: none;
+}
+ .form-control{
+     border-color: #ccc;
+     font-size: 14px;
+}
+ textarea.form-control{
+     border-radius: 0px;
+     box-shadow: none;
+}
+ .form-control:focus, textarea:focus{
+     box-shadow:none;
+     border-color: rgba(0,0,0);
+     outline: 0;
+}
+ hr {
+     background-color: #ccc;
+     border: 0;
+     height: 1px;
+}
+ .navbar-header{
+     background-color: #323132;
+}
+ .navbar-header .navbar-nav li>a:hover{
+     color: #ffb4b4 !important;
+}
+ .btn-icon{
+     width: 17px;
+}
+ .cards-shadow{
+     min-height: 120px;
+     box-shadow: 0px 0px 1px 0px #c7c7c7;
+}
+ .text-bottom{
+     bottom: 0px;
+}
+ .swiper-slide {
+     overflow: hidden;
+     height: auto;
+}
+ .silder-zm-m.swiper-zoom-container,.silder-mobile.swiper-wrapper,.silder-contd.swiper-container{
+     height: auto;
+     width: 100%;
+}
+ .swiper-pagination-bullet, .swiper-pagination-bullet-active{
+     opacity: 0 !important;
+}
+ @media all and (max-width: 992px) {
+     .navbar-header .navbar-nav li>a{
+         border-bottom: 1px solid rgba(255,255,255,.15);
+    }
+     .cards-box{
+         webkit-box-shadow: 0 1px 4px rgba(0,0,0,.2);
+         -moz-box-shadow: 0 1px 4px rgba(0,0,0,.2);
+         -ms-box-shadow: 0 1px 4px rgba(0,0,0,.2);
+         box-shadow: 0 1px 4px rgba(0,0,0,.2);
+         padding: 10px;
+         background: #fff;
+    }
+     .card-brder-hovr img {
+         max-height: 150px;
+    }
+     .card-brder-hovr {
+         height: 160px;
+    }
+     body{
+         background-color: #e5e5e5;
+    }
+     .card-top{
+         margin-top: -19px;
+    }
+     .product-mobile-bg{
+         background-color: #323132;
+         height: 40px;
+    }
+     .card-next-btn.swiper-button-next,.card-next-btn.swiper-button-prev{
+         height: 15px;
+         margin-top: -9px;
+    }
+     .fixed-btn_bottm{
+         position: fixed;
+         bottom: 0;
+         z-index: 99;
+         right: 0;
+         left: 0;
+    }
+     .silder-text{
+         font-size: 17px;
+    }
+}
+ @media all and (min-width: 992px) {
+     .light-gary{
+         background: #f8f8f8 
+    }
+     .bg-light-dark{
+         background: #fef1e0;
+    }
+     .carousel-item.large-silder{
+         display: block;
+    }
+     .silder-mobile.swiper-wrapper{
+         display: contents;
+    }
+     .card-next-btn.swiper-button-next,.card-next-btn.swiper-button-prev{
+         opacity: 0;
+    }
+     .card-brder-hovr:hover {
+         border: 1px solid red;
+    }
+     .card-brder-hovr {
+         padding: 5px;
+         height: 80px;
+         border:1px solid #ccc;
+    }
+     .card-brder-hovr img {
+         max-height:70px;
+    }
+}
+/*secnd-pages*/
+ .bg-clr-one{
+     background-color:#92FFD8;
+}
+ .bg-clr-two{
+     background-color: #FFDFCA;
+}
+ .color-pink{
+     color: pink;
+}
+ .image-middl-card{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+ .product-card-img{
+     height: 230px;
+}
+ .product-card-img img{
+     max-height: 210px;
+}
+ .product-ttl-heig{
+     height: 50px;
+}
+ .modal-content{
+     height: 100vh;
+}
+/*ends */
+ .modal.fade .modal-dialog.bottom-open{
+     -webkit-transform: translate(0,0);
+     -ms-transform: translate(0,0);
+     -o-transform: translate(0,0);
+     transform: translate(0,0);
+}
+/*product-banner css*/
+ .banner-bg-img{
+     background-size: cover;
+     background-position: center center;
+     height: 255px;
+     display: flex !important;
+     align-items: center;
+}
+ .banner-middl-ttl{
+     letter-spacing:10px;
+     text-shadow: 1px 1px 3px black;
+     font-size: 50px 
+}
+ .lettr-spec{
+     letter-spacing:2px;
+}
+ .top-txt{
+     opacity:0.3;
+     color:#dcaf6c;
+}
+/*product-banner css*/
+ @media all and (max-width: 600px) {
+     .banner-middl-ttl{
+         font-size: 33px;
+         letter-spacing: 1px;
+    }
+     h1,.h1 {
+         font-size: 24px;
+    }
+     h2,.h2 {
+         font-size: 20px;
+         line-height: 24px;
+    }
+     h3,.h3 {
+         font-size: 18px;
+         line-height: 23px;
+    }
+     h4,.h4 {
+         font-size: 16px;
+    }
+}
+/*myCarousel*/
+ .top-banners {
+     height: 235px;
+     background-size: cover;
+     background-position: center center;
+     overflow: hidden;
+}
+ .top-blck-bacgrnd {
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background: #000;
+     opacity: 0.3;
+}
+ .top-banners-hovr:hover {
+     text-decoration: none;
+     box-shadow: inset 0 0 250px 0 rgba(0,0,0,0.5);
+}
+ .top-banners h3{
+     -webkit-transform: translateY(0%);
+}
+ .silder_card{
+     height: 110px;
+}
+ .silder_card img{
+     height: 100px;
+}
+ .top_banner-t{
+     height: 494px;
+}
+/*myCarousel*/
+/*disucss-comment pages*/
+ .user-big-ttl{
+     position: absolute;
+     color: #a7a7a7 !important;
+     font-size: 150px;
+     opacity: 0.4;
+     z-index: 1;
+     top: 40px;
+     left: 0px;
+}
+ .light-text{
+     color: #a7a7a7;
+}
+ .user-profile{
+     width: 40px;
+     height: 40px;
+}
+ .comment-btn{
+     border-bottom-left-radius: 50px;
+     border-top-left-radius: 50px;
+     border-top-right-radius: 50px;
+     border-bottom-right-radius: 50px;
+     background-color: #e3e3e3;
+}
+ .border-banner{
+     border-bottom:10px solid #000;
+}
+/*disucss -ends*/
+/*profile*/
+ .bg-img-fst{
+     background-image: url(https://sephora.i.lithium.com/t5/image/serverpage/image-id/594345iF3DD9A74DE004FFD?v=1.0);
+     background-size: cover;
+     background-repeat: no-repeat;
+     height:250px;
+     background-position: center;
+}
+ .dv-white{
+     display: block;
+     position: relative;
+     box-shadow: rgba(150, 150, 150, 0.25) 0px 0px 12px 0px;
+     height: 152px;
+     background-color: rgba(255, 255, 255, 0.95);
+}
+ .whit-dv-img{
+     margin-top: -43px;
+     height: 80px !important;
+     border: 4px solid white;
+}
+ .line-height-tl{
+     line-height: 13px;
+}
+ .profile-btn-bg{
+     background-color: rgb(244, 244, 244);
+}
+ .card-btn-sdow:hover{
+     box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 20px;
+}
+/*face-silder cards*/
+ .face-girls {
+     height: 153px;
+     background-size: cover;
+     background-position: center center;
+}
+ .face-girls:hover,.black-card:hover{
+     border:1px solid black;
+     box-sizing: border-box;
+     cursor: pointer;
+}
+ .black-card{
+     background-color: black;
+     height: 130px;
+}
+ .black-card button{
+     background-color: unset;
+}
+ .btn-face-girls.active{
+     background-color: #8a6d3b;
+}
+ .brands-logo{
+     height: 130px;
+}
+/*face-silder cards ends*/

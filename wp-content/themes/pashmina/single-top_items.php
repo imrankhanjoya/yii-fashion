@@ -38,6 +38,8 @@ $tag_name = $tags[0]->name;
 <div class="container">
    <div class="row">
       <?php 
+      echo $tag_name;
+      exit;
       $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
       $args = array( 'post_type' => 'product','tag'=>$tag_name, 'posts_per_page' =>10, 'paged' => $paged );
       $custom_query = new WP_Query($args);

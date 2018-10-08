@@ -1,4 +1,10 @@
 <?php
+global $post;
+
+if ($post && $post->ID = 1641) {
+    include TEMPLATEPATH . '/contest-page.php';
+    exit();
+}
 /**
  * The template for displaying all single posts.
  *
