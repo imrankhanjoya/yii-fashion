@@ -1,31 +1,39 @@
 <?php
-
-/* @var $this yii\web\View */
-/* @var $form yii\bootstrap\ActiveForm */
-/* @var $model \frontend\models\ResetPasswordForm */
-
+use yii\helpers\Url;
+use frontend\assets\LoginAsset;
+use common\widgets\Alert;
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 
-$this->title = 'Reset password';
-$this->params['breadcrumbs'][] = $this->title;
+if (!Yii::$app->user->isGuest){
+   LoginAsset::register($this);
+}
+
+
+$this->title = 'Edit Profile';
 ?>
-<div class="site-reset-password">
-    <h1><?= Html::encode($this->title) ?></h1>
 
-    <p>Please choose your new password:</p>
+<div class="container mt-4">
 
+
+
+    
+    <?=$msg?>
     <div class="row">
-        <div class="col-lg-5">
-            <?php $form = ActiveForm::begin(['id' => 'reset-password-form']); ?>
+        <div class="col-lg-6 offset-lg-2">
+            <?php $form = ActiveForm::begin(['id' => 'form-signup']); ?>
+            <?PHP $errorDiv = '<div class="help-block help-block-error col-lg-12"></div>'; ?>
+                
+                <?= $form->field($model, 'password',['options' => ["required"=>true,'class' => 'input-group input-group-sm mb-3'],'template' => '<div class="input-group-prepend">{label}</div>{input}'.$errorDiv])->textInput(["type"=>"password"])->label("New password",["class"=>"input-group-text"]); ?>
 
-                <?= $form->field($model, 'password')->passwordInput(['autofocus' => true]) ?>
-
+                <?= $form->field($model, 'confirm_password',['options' => ["required"=>true,'class' => 'input-group input-group-sm mb-3'],'template' => '<div class="input-group-prepend">{label}</div>{input}'.$errorDiv])->textInput(["type"=>"password"])->label("Confirm password",["class"=>"input-group-text"]); ?>
+                
                 <div class="form-group">
-                    <?= Html::submitButton('Save', ['class' => 'btn btn-primary']) ?>
+                    <?= Html::submitButton('Change Password', ['class' => 'btn btn-primary', 'name' => 'signup-button']) ?>
                 </div>
 
             <?php ActiveForm::end(); ?>
         </div>
+        
     </div>
 </div>

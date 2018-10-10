@@ -1,15 +1,15 @@
 <?php
 use yii\helpers\Url;
-use frontend\assets\LoginAsset;
 use common\widgets\Alert;
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
-if (!Yii::$app->user->isGuest){
-LoginAsset::register($this);
-}
+
+
+$this->registerJsVar('addmeta',Url::to(['ajax/addmeta']));
+
 $this->title = 'Edit Profile';
 
-$skinType = array(
+$skinColor = array(
   "extremely_fair"=>array("name"=>"Extremely Fair"),
   "fair"=>array("name"=>"Fair"),
   "medium_brown"=>array("name"=>"Medium Brown"),
@@ -17,7 +17,7 @@ $skinType = array(
   "deep_dark"=>array("name"=>"Deep Dark"),
   "light"=>array("name"=>"Light"),
 );
-$skinColor = array(
+$skinType = array(
   "normal"=>array("name"=>"Normal"),
   "dry"=>array("name"=>"Dry"),
   "oily"=>array("name"=>"Oily"),
@@ -82,8 +82,11 @@ $brands = array(
   <div class="row">
     <div class="col-lg-12">
       
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <div id="carouselFilter" class="carousel slide"  data-ride="carousel" data-interval="false">
         <div class="carousel-inner">
+
+
+          <!-- Whats your skin color! -->
           <div class="carousel-item active">
             <div class="col-lg-12 text-center mt-2">
               <h1>Whats your skin color!</h1>
@@ -91,171 +94,158 @@ $brands = array(
               </h6>
             </div>
             <div class="row">
-              <?PHP foreach($skinType as $key=>$val):?>
+              <?PHP foreach($skinColor as $key=>$val):?>
               <div class="col-lg-3 col-6 mb-2 face-cards">
                 <div class="cards-box">
-                  <div metaval="<?=$key?>" class="addmeta face-girls d-flex align-items-center" style="background-image:url(http://gloat.me/wp-content/uploads/2018/07/face-phd0.png);">
-                    <button class="btn rounded-0 ml-3"><?=$val['name']?></button>
+                  <div class="face-girls d-flex align-items-center" style="background-image:url(http://gloat.me/wp-content/uploads/2018/07/face-phd0.png);">
+                    <button metaval="<?=$key?>" metakey="skin_color" class="addmeta btn rounded-0 ml-3"><?=$val['name']?></button>
                   </div>
                 </div>
               </div>
               <?PHP endforeach;?>
-              
-              
             </div>
           </div>
+
+          <!-- Whats your skin Type! -->
           <div class="carousel-item">
             <div class="col-lg-12 text-center mt-2">
               <h1>Whats your skin Type!</h1>
               <h6>you can change this anytime in your profile.
               </h6>
             </div>
-            
             <div class="row">
-              <?PHP foreach($skinColor as $key=>$val):?>
+              <?PHP foreach($skinType as $key=>$val):?>
               <div class="col-lg-3 col-6 mb-2">
                 <div class="cards-box">
                   <div class="active btn-face-girls black-card justify-content-center d-flex align-items-center">
-                    <button class="btn rounded-0"><?=$val['name']?></button>
+                    <button  metaval="<?=$key?>" metakey="skin_type" class="addmeta btn rounded-0"><?=$val['name']?></button>
                   </div>
                 </div>
               </div>
-              <?PHP endforeach;?>
-              
-              
+              <?PHP endforeach;?>     
             </div>
           </div>
 
          
-
+          <!-- Whats your eye color! -->
           <div class="carousel-item">
             <div class="col-lg-12 text-center mt-2">
               <h1>Whats your eye color!</h1>
               <h6>you can change this anytime in your profile.
               </h6>
             </div>
-            
             <div class="row">
               <?PHP foreach($eyeColor as $key=>$val):?>
               <div class="col-lg-3 col-6 mb-2">
                 <div class="cards-box">
-                  <div class="active btn-face-girls black-card justify-content-center d-flex align-items-center">
-                    <button class="btn rounded-0"><?=$val['name']?></button>
+                  <div class="active  black-card justify-content-center d-flex align-items-center">
+                    <button metaval="<?=$key?>" metakey="eye_color" class="addmeta btn rounded-0"><?=$val['name']?></button>
                   </div>
                 </div>
               </div>
               <?PHP endforeach;?>
-              
-              
             </div>
           </div>
 
 
          
-
+          <!-- Whats your Dress size! -->
           <div class="carousel-item">
             <div class="col-lg-12 text-center mt-2">
               <h1>Whats your Dress size!</h1>
               <h6>you can change this anytime in your profile.
               </h6>
             </div>
-            
             <div class="row">
               <?PHP foreach($dressSize as $key=>$val):?>
               <div class="col-lg-3 col-6 mb-2">
                 <div class="cards-box">
                   <div class="active btn-face-girls black-card justify-content-center d-flex align-items-center">
-                    <button class="btn rounded-0"><?=$val['name']?></button>
+                    <button metaval="<?=$key?>" metakey="dress_size" class="addmeta btn rounded-0"><?=$val['name']?></button>
                   </div>
                 </div>
               </div>
-              <?PHP endforeach;?>
-              
-              
+              <?PHP endforeach;?>  
             </div>
           </div>
 
+
+          
+
+          <!-- Whats your Top size! -->
           <div class="carousel-item">
             <div class="col-lg-12 text-center mt-2">
               <h1>Whats your Top size!</h1>
               <h6>you can change this anytime in your profile.
               </h6>
             </div>
-            
             <div class="row">
               <?PHP foreach($topSize as $key=>$val):?>
               <div class="col-lg-3 col-6 mb-2">
                 <div class="cards-box">
                   <div class="active btn-face-girls black-card justify-content-center d-flex align-items-center">
-                    <button class="btn rounded-0"><?=$val['name']?></button>
+                    <button metaval="<?=$key?>" metakey="top_size" class="addmeta btn rounded-0"><?=$val['name']?></button>
                   </div>
                 </div>
               </div>
-              <?PHP endforeach;?>
-              
-              
+              <?PHP endforeach;?> 
             </div>
           </div>
 
-
-          <div class="carousel-item">
-            <div class="col-lg-12 text-center mt-2">
-              <h1>Whats your Top size!</h1>
-              <h6>you can change this anytime in your profile.
-              </h6>
-            </div>
-            
-            <div class="row">
-              <?PHP foreach($topSize as $key=>$val):?>
-              <div class="col-lg-3 col-6 mb-2">
-                <div class="cards-box">
-                  <div class="active btn-face-girls black-card justify-content-center d-flex align-items-center">
-                    <button class="btn rounded-0"><?=$val['name']?></button>
-                  </div>
-                </div>
-              </div>
-              <?PHP endforeach;?>
-              
-              
-            </div>
-          </div>
-
-
+          <!-- Whats your Fav Brands! -->
           <div class="carousel-item">
             <div class="col-lg-12 text-center mt-2">
               <h1>Whats your Fav Brands!</h1>
               <h6>you can change this anytime in your profile.
               </h6>
             </div>
-            
             <div class="row">
               <?PHP foreach($brands as $key=>$val):?>
-              <div class="col-lg-3 col-6 mb-2">
+              <div class="col-lg-2 col-6 mb-2">
                 <div class="cards-box">
                   <div class="active btn-face-girls black-card justify-content-center d-flex align-items-center">
-                    <button class="btn rounded-0"><?=$val['title']?></button>
+                    <button metaval="<?=$key?>" metakey="brand" class="addmeta btn rounded-0"><?=$val['title']?></button>
                   </div>
                 </div>
               </div>
               <?PHP endforeach;?>
-              
-              
             </div>
           </div>
 
 
           
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <!--  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span> -->
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <!--  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span> -->
-        </a>
+       
       </div>
       
     </div>
   </div>
 </div>
+
+<?php
+$script = <<< JS
+
+    $(".addmeta").click(function(e){
+
+    
+    var metaObj = $(this);
+    var metakey = $(this).attr("metakey");
+    var metaval = $(this).attr("metaval");
+    
+    
+    $.ajax({
+    method: "POST",
+    url: addmeta,
+    dataType:'JSON',
+    data: {metaval:metaval,metakey:metakey}
+    }).done(function( msg ) {
+      if(metakey!='brand'){
+        $("#carouselFilter").carousel("next");
+      }
+    });
+    e.preventDefault();
+
+  });
+JS;
+$this->registerJs($script);
+?>

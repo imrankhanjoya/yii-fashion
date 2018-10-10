@@ -11,6 +11,8 @@ use common\models\LoginForm;
 use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 //use frontend\models\SignupForm;
+use frontend\models\ProfileForm;
+
 use frontend\models\GloatForm;
 use frontend\models\ContactForm;
 use frontend\components\apiCall;
@@ -213,19 +215,26 @@ class SiteController extends Controller
      */
     public function actionRequestPasswordReset()
     {
+
+        $res['status']=false;
+        $res['msg']='';
+
         $model = new PasswordResetRequestForm();
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
-            if ($model->sendEmail()) {
-                Yii::$app->session->setFlash('success', 'Check your email for further instructions.');
-
-                return $this->goHome();
+            $response = $model->sendEmail();
+            print_r($response);
+            exit;
+            $res['msg']=$response['msg'];
+            if ($response['status']==true) {
+                $res['status']=true;
+                
             } else {
-                Yii::$app->session->setFlash('error', 'Sorry, we are unable to reset password for the provided email address.');
+                $res['status']=false;
             }
         }
 
         return $this->render('requestPasswordResetToken', [
-            'model' => $model,
+            'model' => $model,'res'=>$res
         ]);
     }
 
@@ -239,18 +248,42 @@ class SiteController extends Controller
     public function actionResetPassword($token)
     {
         try {
-            $model = new ResetPasswordForm($token);
+            
+            $apiCall = new apiCall();
+            $data['token'] = $token;
+            $discussDetail = $apiCall->curlpost('v1/app-users/check-token',$data);   
+            $discussDetail = json_decode($discussDetail,true);    
+
         } catch (InvalidParamException $e) {
             throw new BadRequestHttpException($e->getMessage());
         }
 
-        if ($model->load(Yii::$app->request->post()) && $model->validate() && $model->resetPassword()) {
-            Yii::$app->session->setFlash('success', 'New password saved.');
-            return $this->goHome();
+        
+        $model = new ProfileForm();
+        $ID = $discussDetail['data']['ID'];
+        $msg = "";
+        if ($model->load(Yii::$app->request->post())) {
+            
+            $params = Yii::$app->request->post();
+            $params['ProfileForm']['ID'] = $ID*1;
+
+            $apiCall = new apiCall();
+            $userPorfile = $apiCall->curlpost('v1/app-users/update-pass',$params['ProfileForm']);
+            $userPorfile = json_decode($userPorfile,true);
+
+            if($userPorfile['status']==false){
+                $msg = "Error while updating password";
+            }else{
+                $msg = "Your password has been updated.";
+            }
+
         }
 
-        return $this->render('resetPassword', [
-            'model' => $model,
-        ]);
+
+        
+        return $this->render('resetPassword',[
+                'model' => $model,
+                'msg' => $msg,
+            ]);
     }
 }

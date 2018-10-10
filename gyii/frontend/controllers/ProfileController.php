@@ -80,7 +80,11 @@ class ProfileController extends Controller
             $data['ID'] = 0;
             $data['slug'] = $slug;
         }else{
-            $data['ID'] = Yii::$app->user->getId();
+            if (Yii::$app->user->isGuest) {
+                return $this->goHome();
+            }else{
+                $data['ID'] = Yii::$app->user->getId();
+            }
         }
         $userPorfile = $apiCall->curlget('v1/app-users/profile',$data);
         //$vData['topList'] =$topList['data'];

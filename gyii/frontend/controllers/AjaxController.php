@@ -90,12 +90,42 @@ class AjaxController extends Controller
      */
     public function actionFav()
     {
+
+        $rawJson = file_get_contents("php://input");
+        $postData  = json_decode($rawJson,true); 
+        
         //GET TOP ITEM DATA
         $apiCall = new apiCall();
         $data['user_id'] = 1;
         $data['post_id'] = 455;
         $data['post_type'] = 'product' ;
         return $result = $apiCall->curlpost('v1/follow/addit',$data);
+        //$vData['topList'] =$topList['data'];
+
+    }
+
+    /**
+     * Displays homepage.
+     *
+     * @return mixed
+     */
+    public function actionAddmeta()
+    {
+
+        $rawJson = file_get_contents("php://input");
+        $postData  = json_decode($rawJson,true); 
+        if(isset($_POST)){
+            $postData  = $_POST;
+        }
+        $user = Yii::$app->user;
+        $user_id = Yii::$app->user->ID; 
+            
+        //GET TOP ITEM DATA
+        $apiCall = new apiCall();
+        $data['user_id'] = $user_id;
+        $data['metakey'] = $postData['metakey'];
+        $data['metavalue'] = $postData['metaval'];
+        return $result = $apiCall->curlpost('v1/app-users/update-meta',$data);
         //$vData['topList'] =$topList['data'];
 
     }

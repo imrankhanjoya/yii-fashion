@@ -169,6 +169,37 @@ class AppUsersController extends Controller
 
 
     }
+
+
+    /**
+     * @return array
+     * http://localhost/m/yii2/api/web/index.php?r=v1/app-users/update
+     */
+    public function actionUpdateMeta(){
+
+        $rawJson = file_get_contents("php://input");
+        $postData  = json_decode($rawJson,true);
+        
+        
+        $wpUser = new WpUsers();
+        $wpUser = $wpUser->findOne($postData['user_id']);
+        
+        
+        if (!empty($wpUser)) {
+            if($postData['metakey']=='skin_type' || $postData['metakey']=='skin_color' || $postData['metakey']=='eye_color' || $postData['metakey']=='eye_color' || $postData['metakey']=='dress_size' || $postData['metakey']=='top_size'){
+                $userMeta = new WpUsermetaQuery();
+                $metaval  =  $postData['metavalue'];
+                $userMeta->saveupdate($postData['user_id'],$postData['metakey'],$metaval);
+            }
+            return ["status"=>true,"msg"=>"User updated","data"=>$postData,"errors"=>""]; 
+        }
+        return ["status"=>false,"msg"=>"Error while processing","data"=>$postData,"errors"=>$wpUser->geterrors()];  
+        exit;
+
+    }
+
+
+
     public function actionLogin(){
         $rawJson = file_get_contents("php://input");
         $postData  = json_decode($rawJson,true);    
@@ -243,6 +274,51 @@ class AppUsersController extends Controller
         Yii::app()->end();
 
     }
+
+    public function actionResetpass(){
+        $rawJson = file_get_contents("php://input");
+        $postData  = json_decode($rawJson,true);
+
+        //$postData['email'] = 'imran.khan.joya@gmail.com';
+        $wpuser = new WpUsers();
+        $userModel = $wpuser->find();
+        $userData = $userModel->where(['user_email'=>$postData['user_email']])->one();
+
+        if(!empty($userData)){
+            $userData->user_activation_key = "thisisforreset".time();
+            if($userData->save(true)){
+                $user = $userData;
+                Yii::$app->mailer->compose(['html' => 'passwordResetToken-html', 'text' => 'passwordResetToken-text'],['user'=>$user])->setFrom([Yii::$app->params['supportEmail'] => Yii::$app->name . 'robot'])->setTo($postData['user_email'])->setSubject('Password reset for '.Yii::$app->name)->send();
+
+                return ["status"=>true,"msg"=>"User password reset email has been sent.","data"=>[]];
+            }else{
+                return ["status"=>false,"msg"=>"Error while processing data","data"=>[]];
+            }
+        }else{
+            return ["status"=>false,"msg"=>"User not found","data"=>[]];
+        }
+        Yii::app()->end();
+        
+    } 
+
+    public function actionCheckToken(){
+        $rawJson = file_get_contents("php://input");
+        $postData  = json_decode($rawJson,true);
+
+        //$postData['email'] = 'imran.khan.joya@gmail.com';
+        $wpuser = new WpUsers();
+        $userModel = $wpuser->find();
+        $userData = $userModel->where(['user_activation_key'=>$postData['token']])->one();
+
+        if(!empty($userData)){
+            return ["status"=>true,"msg"=>"Error while processing data","data"=>$userData];
+        }else{
+            return ["status"=>false,"msg"=>"User not found","data"=>[]];
+        }
+        Yii::app()->end();
+    }
+
+
 }
 
 
