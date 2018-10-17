@@ -104,7 +104,11 @@ class DiscussController extends Controller
 
 
         /*VALIDATE THE POST*/
-        if(strlen($postData['post_title'])>100 || strlen($postData['post_title'])<4){
+        if(strlen($postData['post_title'])>200){
+            $isPostValid = false;
+            return ["status"=>false,"msg"=>"Title is too large","data"=>$postData];
+            Yii::app()->end();
+        }if(strlen($postData['post_title'])<4){
             $isPostValid = false;
             return ["status"=>false,"msg"=>"Title is too short","data"=>$postData];
             Yii::app()->end();
@@ -118,7 +122,10 @@ class DiscussController extends Controller
             Yii::app()->end();
         }
 
-        if(!isset($postData['ID'])){
+        
+
+        if(isset($postData['ID']) && $postData['ID']!=""){
+            
             $postModel = new WpPostsQuery();
             $postModel = $postModel->find();
             $postModel = $postModel->where(["ID"=>$postData['ID'],"post_type"=>$postData['post_type'],"post_author"=>$postData['post_author']]);
