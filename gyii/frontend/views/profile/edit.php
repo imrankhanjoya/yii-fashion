@@ -9,7 +9,6 @@ if (!Yii::$app->user->isGuest){
    LoginAsset::register($this);
 }
 
-
 $this->title = 'Edit Profile';
 ?>
 <?PHP echo $this->render('//partials/profile-menu.php'); ?>

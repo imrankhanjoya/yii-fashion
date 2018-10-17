@@ -13,7 +13,7 @@ use frontend\models\SignupForm;
 use frontend\models\ContactForm;
 use frontend\components\apiCall;
 use Intervention\Image\ImageManager;
-
+use frontend\components\TextUtility;
 /**
  * Site controller
  */
@@ -194,17 +194,126 @@ class AjaxController extends Controller
         
     }
 
+    //Upload disucss  image 
+    public function actionMedia()
+    {
+        if (Yii::$app->user->isGuest) {
+            return $this->goHome();
+        }
+
+
+        $return = array("status"=>false,"msg"=>"","data"=>"");
+
+        $file = $_FILES['file'];
+
+        $fileType = trim($file['type']);
+        if($file['size']<= 1961538 && ( $fileType == 'image/jpeg' || $fileType == 'image/jpg' || $fileType == 'image/png')){
+            
+
+            $user = Yii::$app->user;
+            $user_id = Yii::$app->user->ID;  
+            $siteFolder = "upload/media/".$user_id;   
+            $move = "".$siteFolder;
+            $ifDir = false;
+            if(!file_exists($move)){
+                $val = mkdir($move);
+                if($val){
+                    $ifDir = true;
+                }
+            }else{
+                $ifDir = true;
+            }
+            if($ifDir){
+                $pathfromweb = $siteFolder."/gloatme_".$file['name'];
+                $movefilepath = $move."/gloatme_".$file['name'];
+                $val = move_uploaded_file($file['tmp_name'], $movefilepath);
+                if($val){
+
+                    $pathfromweb = $this->userimg($pathfromweb);
+                    
+                    $return['uploaded'] = true;
+                    $return['msg'] = "File has been uploade";
+                    $return['location'] = Yii::getAlias('@web').'/'.$pathfromweb;       
+
+                    return json_encode($return);
+                    exit;
+                }
+            }
+            $return['status'] = false;
+            $return['msg'] = "Error while uploading file";
+            $return['location'] = ""; 
+            echo json_encode($return);
+            exit;
+
+        }
+        $return['status'] = false;
+        $return['msg'] = "Check file type and size";
+        $return['path'] = ""; 
+        echo json_encode($return);
+        exit;
+        
+    }
+
 
 
     public function actionPostComment(){
+
+        $user = Yii::$app->user;
+        $user_id = Yii::$app->user->ID;
         //GET TOP ITEM DATA
         $apiCall = new apiCall();
-        $data['user_id'] = 1;
+        $data['user_id'] = $user_id;
         $data['post_id'] = 455;
         $data['post_type'] = 'product' ;
-        return $result = $apiCall->curlpost('v1/comment/porduct-comment',$data);
+
+        return $result = $apiCall->curlpost('v1/comment/product-comment',$data);
         //$vData['topList'] =$topList['data'];
     }
+
+    public function actionCreatePost(){
+
+        if (Yii::$app->user->isGuest) {
+            return $this->goHome();
+        }
+        $rawJson = file_get_contents("php://input");
+        $postData  = json_decode($rawJson,true);
+        
+
+
+        $user = Yii::$app->user;
+        $user_id = Yii::$app->user->ID;
+        $TextUtility = new TextUtility();
+        //GET TOP ITEM DATA
+        $apiCall = new apiCall();
+        $data['user_id'] = $user_id;
+        $data['post_type'] = 'discuss';
+        $data['post_title'] = $_POST['PostForm']['title'];
+        $data['post_author'] = $user_id;
+        $data['post_date'] = date("Y-m-d h:m:i"); 
+        $data['post_date_gmt'] = date("Y-m-d h:m:i"); 
+        $data['post_content'] = $_POST['PostForm']['content'];
+        $data['post_excerpt'] = strip_tags($_POST['PostForm']['content']);
+        $data['post_status'] = 'publish';
+        $data['comment_status'] = 'open';
+        $data['ping_status'] = 'closed';
+        //$data['post_password'] = ;
+        $data['post_name'] = $_POST['PostForm']['title'];
+        $data['to_ping'] = '';
+        $data['pinged'] = '';
+        $data['post_modified'] = date("Y-m-d h:m:i"); 
+        $data['post_modified_gmt'] = date("Y-m-d h:m:i"); 
+        $data['post_content_filtered'] = 'html';
+        $data['post_parent'] = 0;
+        $data['guid'] = $TextUtility->gen_slug('This is for hair');
+        $data['menu_order'] = 0;
+        $data['post_mime_type'] = 'html';
+        $data['comment_count'] = 0;
+
+        return $result = $apiCall->curlpost('v1/discuss/create-post',$data);
+        //$vData['topList'] =$topList['data'];
+    }
+
+
 
     
 }

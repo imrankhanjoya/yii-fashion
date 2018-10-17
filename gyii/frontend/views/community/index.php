@@ -8,7 +8,22 @@ use yii\helpers\Html;
          </center>
       </div>
 
-
+<div class="p-lg-3 container-fluid px-1 profile-btn-bg mt-2 mt-lg-0">
+         <div class="cards-box">
+         <div class="row ml-0 mr-0">
+            <div class="col-lg-8 col-8 text-center">
+                <div class="card p-2 card-btn-sdow">
+                  <input type="text" name="search">
+               </div>
+            </div>
+            <div class="col-lg-4 col-4 text-center">
+               <a href="<?=Url::to(['community/post'])?>"><div class="card p-2 card-btn-sdow">
+                   <b class="">Start Topic</b>
+               </div></a>
+            </div>
+         </div>
+      </div>
+  </div>
 <div class="container">
          <div class="row ">
             <div class="col-lg-9 px-2 px-lg-3">
@@ -22,7 +37,9 @@ use yii\helpers\Html;
             </div>
             <div class="col-lg-3 col-12 mt-2 mt-lg-5 px-2 px-lg-3 mb-5 mb-lg-0">
                <div class="p-2 p-lg-0 cards-box mb-2 mb-lg-0">
+                  <a href="<?=Url::to(['community/post'])?>">
                	<img src="http://www.gloat.me/wp-content/uploads/2018/08/My-Post.jpg">
+                  </a>
                </div>
 
                <div class="p-2 p-lg-0 cards-box mb-2 mb-lg-0">

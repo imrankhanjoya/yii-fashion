@@ -304,8 +304,6 @@ class AppUsersController extends Controller
     public function actionCheckToken(){
         $rawJson = file_get_contents("php://input");
         $postData  = json_decode($rawJson,true);
-
-        //$postData['email'] = 'imran.khan.joya@gmail.com';
         $wpuser = new WpUsers();
         $userModel = $wpuser->find();
         $userData = $userModel->where(['user_activation_key'=>$postData['token']])->one();

@@ -1,6 +1,8 @@
 <?PHP
 use yii\helpers\Url;
 use yii\helpers\Html;
+$post_content = strip_tags($post_content);
+$post_content = substr($post_content,0,300);
 ?>
 <div class="p-2 p-lg-0 cards-box mb-2 mb-lg-0 mt-2 mt-lg-5">
    <div class="row mt-2">
@@ -18,7 +20,7 @@ use yii\helpers\Html;
    <hr>
    <div class="row mb-2">
       <div class="col-lg-6 col-7">
-         <a class="p-0" href=""><i class="fa fa-calendar"></i><?=$post_date?></a>
+         <a class="p-0" href=""><i class="fa fa-calendar"></i> <?=$post_date?></a>
          <a class="p-0 light-text" href=""><i class="mr-1 fa fa-eye ml-1"></i>444</a>
       </div>
       <div class="col-lg-6 col-5 text-right">

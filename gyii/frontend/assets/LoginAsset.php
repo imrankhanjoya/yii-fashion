@@ -16,7 +16,7 @@ class LoginAsset extends AssetBundle
     public $depends = [
         
         'frontend\assets\BootAsset',
-        'yii\web\YiiAsset',
+        //'yii\web\YiiAsset',
         
     ];	
 }

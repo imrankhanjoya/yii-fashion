@@ -53,13 +53,13 @@ class WpTermTaxonomy extends \yii\db\ActiveRecord
         ];
     }
 
-    public function saveGet($term_id,$type){
+    public function saveGet($term_id,$type,$parent=0){
         $ttidfind = $this->findOne(["term_id"=>$term_id,"taxonomy"=>$type]);
         if(empty($ttidfind)){
             $this->term_id = $term_id; 
             $this->taxonomy = $type; 
             $this->description = 'Brand post category brand'; 
-            $this->parent = 0; 
+            $this->parent = $parent; 
             $this->count = 0;
             if(!$this->save(true)){
                 print_r($term_id);

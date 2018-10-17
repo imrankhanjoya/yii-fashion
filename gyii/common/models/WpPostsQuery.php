@@ -106,7 +106,7 @@ class WpPostsQuery extends WpPosts
         
         $postModel = $postModel->where(["wp_posts.post_status"=>"publish"]);
         $postModel = $postModel->andWhere(["wp_posts.post_type"=>$type]);
-        $postModel = $postModel->offset($offset)->limit($limit)->orderBy(['wp_posts.post_modified'=>'desc']);
+        $postModel = $postModel->offset($offset)->limit($limit)->orderBy(['wp_posts.post_modified'=>SORT_DESC]);
 
         //echo $postModel->createCommand()->getRawSql();exit;
 

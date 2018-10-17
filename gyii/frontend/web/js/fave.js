@@ -1,6 +1,11 @@
 
 $(document).ready(function(){
 	
+
+		
+
+
+
 	$(".addtofav").click(function(e){
 		var favObj = $(this);
 		var type = $(this).attr("data-type");
@@ -56,7 +61,5 @@ $(document).ready(function(){
 
 		});
 	});
-
-
 
 });

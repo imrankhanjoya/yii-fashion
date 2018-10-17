@@ -169,6 +169,10 @@ class apiCall extends Component
         $apiurl = $this->apiurl . $action;
         $data = json_encode($data);
 
+        if(isset($_GET['d']) && $_GET['d']=='show' ){
+            echo $apiurl;
+            print_r($data);
+        }
 
 
         $headers[] = "Accept: */*";
