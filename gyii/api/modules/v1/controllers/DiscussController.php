@@ -118,7 +118,7 @@ class DiscussController extends Controller
             Yii::app()->end();
         }
 
-        if(!isset($postModel['ID'])){
+        if(!isset($postData['ID'])){
             $postModel = new WpPostsQuery();
             $postModel = $postModel->find();
             $postModel = $postModel->where(["ID"=>$postData['ID'],"post_type"=>$postData['post_type'],"post_author"=>$postData['post_author']]);
