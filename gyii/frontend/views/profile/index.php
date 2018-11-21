@@ -11,6 +11,8 @@ LoginAsset::register($this);
 }
 ?>
 
+<!-- *************************TOP HEADER ************************ -->
+
 <div class="col-12 col-sm-12 col-md-12 col-lg-12 bg-img-fst pt-5 px-1 px-lg-2">
         
             <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center dv-white">
@@ -64,21 +66,137 @@ LoginAsset::register($this);
 
 
 
-      <div class="p-lg-3 container-fluid px-1 profile-btn-bg mt-2 mt-lg-0">
-      	<div class="cards-box">
-         <div class="row ml-0 mr-0">
-            <div class="col-lg-6 col-6 text-center">
-                <div class="card p-2 card-btn-sdow">
-                  <a data-type="user" data-id="<?=$userProfile['ID']?>" href="#" class="addtofav">
-                     Follow
-                  </a>
-               </div>
-            </div>
-            <div class="col-lg-6 col-6 text-center">
-               <a href="<?=Url::to(['profile/edit']);?>"><div class="card p-2 card-btn-sdow">
-               	 <b class="">Send Massage</b>
-               </div></a>
-            </div>
+<div class="p-lg-3 container-fluid px-1 profile-btn-bg mt-2 mt-lg-0">
+   <div class="cards-box">
+   <div class="row ml-0 mr-0">
+      <div class="col-lg-6 col-6 text-center">
+          <div class="card p-2 card-btn-sdow">
+            <a data-type="user" data-id="<?=$userProfile['ID']?>" href="#" class="addtofav">
+               Follow
+            </a>
          </div>
       </div>
-  </div>
+      <div class="col-lg-6 col-6 text-center">
+         <a href="<?=Url::to(['profile/edit']);?>"><div class="card p-2 card-btn-sdow">
+             <b class="">Send Massage</b>
+         </div></a>
+      </div>
+   </div>
+</div>
+</div>
+
+<!-- *************************TOP HEADER ************************ -->
+
+
+
+
+
+
+
+
+
+
+<!-- POST CREATED -->
+<?php if(!empty($userProfile['postList'])):?>
+<div class="p-lg-3 container-fluid px-1  mt-2 mt-lg-0">
+   <h2 class="px-3">My Top Posts</h2>
+   <div class="cards-box ">
+   <div class="row ml-0 mr-0">
+      <?PHP foreach($userProfile['postList'] as $val):?>
+      <div class="col-lg-4 col-12 py-0 px-2" >
+         <div class="col-12  mt-3 py-3" style="box-shadow: 1px 1px 5px 1px #dddddd">
+            <a href="<?=Url::to(['/community/detail','slug'=>$val['post_name']])?>" >
+               <?=$val['post_title']?>
+            </a>
+         </div>
+      </div>
+      <?PHP endforeach; ?>
+   </div>
+</div>
+</div>
+<?php endif; ?>
+
+
+
+<!-- ***********USER COMMENTS************ -->
+
+<?php if(!empty($userProfile['commentList'])):?>
+<div class="p-lg-3 container-fluid px-1  mt-2 mt-lg-0">
+   <h2 class="px-3">Recent Comments</h2>
+   <div class="cards-box ">
+   <div class="row ml-0 mr-0">
+      <?PHP foreach($userProfile['commentList'] as $val):?>
+      <div class="col-lg-4 col-12 py-0 px-2" >
+         <div class="col-12  mt-3 py-3" style="box-shadow: 1px 1px 5px 1px #dddddd; border-radius:10px">
+            <a href="<?=Url::to(['/community/detail','slug'=>$val['comment_content']])?>" >
+               <?=$val['comment_content']?>
+            </a>
+         </div>
+      </div>
+      <?PHP endforeach; ?>
+   </div>
+</div>
+</div>
+<?php endif; ?>
+
+
+
+<?php if(!empty($userProfile['following'])):?>
+<div class="p-lg-3 container-fluid px-1  mt-2 mt-lg-0">
+   <h2 class="px-3">Follwing</h2>
+   <div class="cards-box">
+   <div class="row ml-0 mr-0">
+      <?PHP foreach($userProfile['following'] as $val):?>
+      <div class="col-12 col-lg-3 px-4">
+      <div class="row mt-3 py-3" style="box-shadow: 1px 1px 5px 1px #dddddd; min-height:100px;">
+          <div class="col-4">
+            <img src='<?=$val['meta_value']?>' class="rounded-circle" style="height: 80px; width: 80px"  >
+         </div>
+         <div class="col-8">
+            
+            <a href="<?=Url::to(['/profile','slug'=>$val['user_login']])?>" >
+               <?=$val['display_name']?>
+            </a><br>
+            <a data-type="user" data-id="<?=$val['ID']?>" href="#" class="addtofav btn py-1 px-1 mt-2 small">
+               Follow
+            </a>
+         </div>
+         
+      </div>
+      </div>
+      <?PHP endforeach; ?>
+   </div>
+</div>
+</div>
+<?php endif; ?>
+
+
+<!-- TOPUSERS -->
+<div class="p-lg-3 container-fluid px-1  mt-2 mt-lg-0">
+   <h2 class="px-3">Top users</h2>
+	<div class="cards-box">
+   <div class="row ml-0 mr-0">
+      <?PHP foreach($userProfile['topusers'] as $val):?>
+      <div class="col-12 col-lg-3 px-4">
+      <div class="row mt-3 py-3" style="box-shadow: 1px 1px 3px 1px #dddddd; min-height:100px;">
+          <div class="col-4">
+            <img src='<?=$val['meta_value']?>' class="rounded-circle" style="height: 80px; width: 80px"  >
+         </div>
+         <div class="col-8">
+            
+            <a href="<?=Url::to(['/profile','slug'=>$val['user_login']])?>" >
+               <?=$val['display_name']?>
+            </a><br>
+            <a data-type="user" data-id="<?=$val['ID']?>" href="#" class="addtofav btn py-1 px-1 mt-2 small">
+               Follow
+            </a>
+         </div>
+         
+      </div>
+      </div>
+      <?PHP endforeach; ?>
+   </div>
+</div>
+</div>
+
+

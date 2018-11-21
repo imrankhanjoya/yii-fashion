@@ -19,7 +19,7 @@ class WpCommentsQuery extends WpComments
     {
         return [
             [['comment_ID', 'comment_post_ID', 'comment_karma', 'comment_parent', 'user_id'], 'integer'],
-            [['comment_author', 'comment_author_email', 'comment_author_url', 'comment_author_IP', 'comment_date', 'comment_date_gmt', 'comment_content', 'comment_approved', 'comment_agent', 'comment_type'], 'safe'],
+            [['comment_author', 'comment_author_email', 'comment_author_url', 'comment_author_IP', 'comment_date', 'comment_date_gmt', 'comment_content', 'comment_approved', 'comment_agent', 'comment_type','url'], 'safe'],
         ];
     }
 
@@ -80,13 +80,18 @@ class WpCommentsQuery extends WpComments
         return $dataProvider;
     }
 
-    public function getCommentByPost($pid){
+    public function getCommentByPost($pid,$cType=false){
 
         $mquery = $this->find();
         $mquery = $mquery->select(["wp_comments.*","wp_usermeta.meta_value as userimage","wp_commentmeta.meta_value"]);
         $mquery = $mquery->join("left join","wp_usermeta","wp_usermeta.user_id = wp_comments.user_id and wp_usermeta.meta_key='cupp_upload_meta' ");
         $mquery = $mquery->join("left join","wp_commentmeta","wp_commentmeta.comment_id = wp_comments.comment_ID and wp_commentmeta.meta_key='attachmentId' ");
         $mquery = $mquery->where(["comment_post_ID"=>$pid]);
+        if($cType){
+            $mquery = $mquery->andWhere(["comment_type"=>$cType]);
+        }else{
+            $mquery = $mquery->andWhere(["!=","comment_type","product_review"]);
+        }
         //echo $mquery->createCommand()->getRawSql();exit;
         return $mquery->asArray()->all();
 

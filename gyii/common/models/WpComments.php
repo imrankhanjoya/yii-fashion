@@ -47,6 +47,7 @@ class WpComments extends \yii\db\ActiveRecord
             [['comment_author_url'], 'string', 'max' => 200],
             [['comment_approved', 'comment_type'], 'string', 'max' => 20],
             [['comment_agent'], 'string', 'max' => 255],
+            [['url'], 'string', 'max' => 600],
         ];
     }
 

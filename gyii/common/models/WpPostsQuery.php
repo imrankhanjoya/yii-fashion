@@ -6,6 +6,7 @@ use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use common\models\WpPosts;
+use common\models\WpTermsQuery;
 
 /**
  * WpPostsQuery represents the model behind the search form of `common\models\WpPosts`.
@@ -108,6 +109,23 @@ class WpPostsQuery extends WpPosts
         $postModel = $postModel->andWhere(["wp_posts.post_type"=>$type]);
         $postModel = $postModel->offset($offset)->limit($limit)->orderBy(['wp_posts.post_modified'=>SORT_DESC]);
 
+        //echo $postModel->createCommand()->getRawSql();exit;
+
+        $allPosts = $postModel->asArray()->all();
+        return $allPosts;
+    }
+
+    public function getListByTag($key,$page,$type,$limit=10,$getUser=false){
+        $postModel = new WpTermsQuery();
+        $offset = $page * $limit;
+        $postModel = $postModel->find();
+        $postModel = $postModel->select(["wp_posts.*","usermeta.meta_value as userimage","user.user_nicename","user.display_name"]);
+        $postModel = $postModel->join("inner join","wp_term_taxonomy","wp_term_taxonomy.term_id = wp_terms.term_id");
+        $postModel = $postModel->join("inner join","wp_term_relationships","wp_term_relationships.term_taxonomy_id = wp_term_taxonomy.term_taxonomy_id");
+        $postModel = $postModel->join("inner join","wp_posts","wp_posts.ID = wp_term_relationships.object_id ");
+        $postModel = $postModel->join("inner join","wp_users as user","user.ID = wp_posts.post_author");
+            $postModel = $postModel->join("left join","wp_usermeta as usermeta","usermeta.user_id = wp_posts.post_author and usermeta.meta_key = 'cupp_upload_meta'");
+        $postModel = $postModel->where(["wp_terms.slug"=>$key]);
         //echo $postModel->createCommand()->getRawSql();exit;
 
         $allPosts = $postModel->asArray()->all();

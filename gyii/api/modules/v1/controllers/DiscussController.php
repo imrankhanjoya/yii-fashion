@@ -52,6 +52,18 @@ class DiscussController extends Controller
         Yii::app()->end();
     }
 
+    public function actionByTag($key,$page=0,$limit=10){
+        $postModel = new WpPostsQuery();
+        $allPosts = $postModel->getListByTag($key,$page,"discuss",$limit,true);
+
+        if(!empty($allPosts)){
+            return ["status"=>true,"msg"=>"Discussion topic list","data"=>$allPosts];
+        }else{
+            return ["status"=>false,"msg"=>"Discussion topic list","data"=>$allPosts];
+        }
+        Yii::app()->end();
+    }
+
     public function actionNocomment($page=0,$limit=10,$nocomment=true){
         $postModel = new WpPostsQuery();
         $allPosts = $postModel->getNocomments($page,"discuss",$limit,false,$nocomment);
@@ -77,7 +89,7 @@ class DiscussController extends Controller
         $onePosts['tags'] =$term_names_ids;
 
         $WpCommentsQuery = new WpCommentsQuery();
-        $onePosts['postComments'] = $WpCommentsQuery->getCommentByPost($onePosts['ID']);
+        $onePosts['postComments'] = $WpCommentsQuery->getCommentByPost($onePosts['ID'],false);
 
 
 
@@ -167,15 +179,14 @@ class DiscussController extends Controller
             }else{
                 $postModel->load($postData);
                 $postModel->attributes = $postData;
-                $postModel->post_name = $TextUtility->gen_slug($postData['post_title']);
+                $slug = $postModel->post_name = $TextUtility->gen_slug($postData['post_title']);
 
                 if($postModel->save(true)){
                     $ifsaved = true;
                     $pID = $postModel->ID;
-                    $slug = $indbPost->post_name;
                 }else{
                     return ["status"=>false,"msg"=>"Error while createing post please try again","data"=>['slug'=>$slug]];
-                Yii::app()->end();
+                    Yii::app()->end();
                 }
 
             }
@@ -195,11 +206,7 @@ class DiscussController extends Controller
             }else{
                 return ["status"=>false,"error_add"=>$postModel->errors,"data"=>$indbPost->errors];
                 Yii::app()->end();
-            }
-
-        
-
-        
+            }        
 
     }
 
@@ -207,27 +214,7 @@ class DiscussController extends Controller
 
     function addTags($postId,$alltags,$posttype){
 
-        // echo "<pre>";
-        // //Remove all postypes from DB
-        // $WpTermsQueryModel = new WpTermRelationships();
-        // $WpTermsQuery = $WpTermsQueryModel->find();
-        // $WpTermsQuery->select(["wp_term_relationships.term_taxonomy_id"]);
-        // $WpTermsQuery->JOIN("INNER JOIN","wp_term_taxonomy as wtt","wtt.term_taxonomy_id = wp_term_relationships.term_taxonomy_id and wtt.taxonomy = '".$posttype."'");
-        // $WpTermsQuery->where(["object_id"=>$postId]);
-        // //echo $WpTermsQuery->createCommand()->getRawSql();exit;
-        // $termIDs = $WpTermsQuery->asArray()->all();
-        // $tids = [];
-        // foreach($termIDs as $key => $val){
-        //     $tids[] = $val['term_taxonomy_id'];
-        // }
-
-
         
-        // print_r($tids);
-        // echo "<pre>";
-        // return ;
-
-        /**PRODUCT TAGS**/
         $tags = explode(",",$alltags);
         if(is_array($tags)){
             foreach($tags as $tag){
@@ -247,7 +234,6 @@ class DiscussController extends Controller
                 }else{
                     $WpTermsQueryModel = new WpTermRelationships();
                     $WpTermsQueryModel->term_taxonomy_id = $term_texonomy_id;
-
                     $WpTermsQueryModel->object_id = $postId;
                     $WpTermsQueryModel->save();    
                 }

@@ -1,5 +1,7 @@
 <?PHP
 use yii\helpers\Url;
+//print_r($discussList['tags']);
+
 ?>
 
 <div class="container px-2 px-lg-3 mb-5 mb-lg-0">
@@ -11,6 +13,15 @@ use yii\helpers\Url;
     	<div class="mb-2 cards-box mb-lg-0 mt-lg-3">
 			<div class="col-12 col-sm-12 col-md-12 col-lg-12">
 				<h2><?=$discussList['post_title']?></h2>
+        <?PHP
+        if(!empty($discussList['tags'])){
+          echo "<ul>";
+          foreach ($discussList['tags'] as $key => $value) {
+            echo "<li><a href='".Url::to(["/community","key"=>$value['slug']])."'>".$value['name']."</a></li>";
+          }
+          echo "</ul>";
+        }
+        ?>
 				<p><?=$discussList['post_content']?></p>
 				<h6>Posted on <?=$discussList['post_date']?> By <a href="#">bySu Shatu</a></h6>
 			</div>
@@ -26,7 +37,7 @@ use yii\helpers\Url;
 			</div>
 		</div>
 
-		<?=$this->render('//partials/comment-form.php');?>
+		<?=$this->render('//partials/comment-form.php',['model'=>$model]);?>
     	<!-- MAIN CONTAINER -->
 
 

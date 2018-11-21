@@ -6,6 +6,7 @@ use frontend\assets\LoginAsset;
 if (!Yii::$app->user->isGuest){
    LoginAsset::register($this);
 }
+
 ?>
 <?php
 
@@ -100,9 +101,15 @@ use yii\helpers\Url;
    <div class="container">
       <div class="row">
          <div class="col-lg-8 px-2 px-lg-3 pr-lg-0">
-            
-            <?=$this->render('//partials/no-comments.php');?>
-            <?=$this->render('//partials/comment-form.php');?>
+            <?PHP
+               if(!empty($pDetail['pcommnets'])){
+                  echo $this->render('//partials/comment-view.php',array("allcomments"=>$pDetail['pcommnets'],"parent"=>0));
+               }else{
+                  echo $this->render('//partials/no-comments.php');
+               }
+            ?>
+            <br>
+            <?=$this->render('//partials/comment-form.php',['model'=>$model]);?>
             
 
          </div>

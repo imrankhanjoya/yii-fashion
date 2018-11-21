@@ -74,6 +74,7 @@ class ProfileController extends Controller
      */
     public function actionIndex($slug=false)
     {
+        
         //GET TOP ITEM DATA
         $apiCall = new apiCall();
         if($slug!=false){
@@ -87,7 +88,56 @@ class ProfileController extends Controller
             }
         }
         $userPorfile = $apiCall->curlget('v1/app-users/profile',$data);
-        //$vData['topList'] =$topList['data'];
+
+        /**USERtopusers**/
+        $apiCall = new apiCall();
+        $uData['page'] = 0;
+        $userList = $apiCall->curlget('v1/feed/users',$uData);
+        
+        if($userList['status']==true){
+            $userPorfile['data']['topusers'] = $userList['data'];
+        }
+        /**USERtopusers**/
+
+        /**USERFOLLOW**/
+        $apiCall = new apiCall();
+        $uData['userid'] = $userPorfile['data']['ID'];
+        $uData['page'] = 0;
+        $userList = $apiCall->curlget('v1/feed/following',$uData);
+        
+        if($userList['status']==true){
+            $userPorfile['data']['following'] = $userList['data'];
+        }
+        /**USERFOLLOW**/
+
+        /**USERPOSTS**/
+        $apiCall = new apiCall();
+        $uData['userid'] = $userPorfile['data']['ID'];
+        $uData['page'] = 0;
+        $postList = $apiCall->curlget('v1/feed/posts',$uData);
+        
+        if($postList['status']==true){
+            $userPorfile['data']['postList'] = $postList['data'];
+        }
+        /**USERPOSTS**/
+
+        /**USERCOMMENTS**/
+        $apiCall = new apiCall();
+        $uData['user_id'] = $userPorfile['data']['ID'];
+        $uData['page'] = 0;
+        $uData['limit'] = 0;
+        $commentList = $apiCall->curlget('v1/comment/user-comments',$uData);
+        
+        if($commentList['status']==true){
+            $userPorfile['data']['commentList'] = $commentList['data'];
+        }
+        /**USERCOMMENTS**/
+
+
+        
+
+
+
 
         return $this->render('index',array("userProfile"=>$userPorfile['data']));
     }

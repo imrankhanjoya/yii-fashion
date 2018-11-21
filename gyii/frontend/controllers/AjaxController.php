@@ -93,12 +93,19 @@ class AjaxController extends Controller
 
         $rawJson = file_get_contents("php://input");
         $postData  = json_decode($rawJson,true); 
+        if(isset($_POST)){
+            $post_id = $_POST['post_id'];
+            $post_type = $_POST['post_type'];
+        }
         
+        $user = Yii::$app->user;
+        $user_id = Yii::$app->user->ID; 
+
         //GET TOP ITEM DATA
         $apiCall = new apiCall();
-        $data['user_id'] = 1;
-        $data['post_id'] = 455;
-        $data['post_type'] = 'product' ;
+        $data['user_id'] = $user_id;
+        $data['post_id'] = $post_id;
+        $data['post_type'] = $post_type;
         return $result = $apiCall->curlpost('v1/follow/addit',$data);
         //$vData['topList'] =$topList['data'];
 
@@ -142,7 +149,7 @@ class AjaxController extends Controller
             return $this->goHome();
         }
 
-        $return = array("status"=>false,"msg"=>"","data"=>"");
+        $return = array("msg"=>"","data"=>"");
 
         $file = $_FILES['profilepic'];
         
@@ -231,8 +238,10 @@ class AjaxController extends Controller
 
                     $pathfromweb = $this->userimg($pathfromweb);
                     
+                    $return['status'] = true;
                     $return['uploaded'] = true;
                     $return['msg'] = "File has been uploade";
+                    $return['path'] = Yii::getAlias('@web').'/'.$pathfromweb;       
                     $return['location'] = Yii::getAlias('@web').'/'.$pathfromweb;       
 
                     return json_encode($return);

@@ -62,4 +62,28 @@ $(document).ready(function(){
 		});
 	});
 
+	$('#media').change(function(){
+
+		$(this).simpleUpload(mediaupload, {
+
+			start: function(file){
+				//upload started
+			},
+			progress: function(progress){
+				//received progress
+			},
+			success: function(data){
+				//upload successful
+				var data = JSON.parse(data);
+				$("#mediapic").attr("src",data.path);
+				$("#mediapath").val(data.path);
+
+			},
+			error: function(error){
+				//upload failed
+			}
+
+		});
+	});
+
 });

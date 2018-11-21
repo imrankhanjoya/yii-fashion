@@ -1,0 +1,177 @@
+ .bg-clr-ylw{
+     border: 18px solid #f6eabc;
+}
+ .bg-in-row{
+     background-color: #f6eabc;
+}
+ body, button, input, select, textarea {
+     font-family: futura-bt;
+    color: #272625;
+    letter-spacing: .05em;
+    line-height: 2em;
+}
+ @font-face {
+     font-family: futura-bt;
+     src: url('fonts/futura light bt.ttf');
+}
+h5,h6{
+    font-family: futura-bold !important;
+}
+ @font-face {
+     font-family: futura-bold;
+     src: url('fonts/Futura URW Extra Bold.ttf');
+}
+a{
+    color: #272625;
+}
+a:hover{
+    color: rgba(39,38,37,.5);
+}
+img{
+  max-width: 100%;
+}
+h1{
+  font-size: 50px;
+  font-weight: 400;
+}
+.button-card{
+    position: absolute;
+    bottom: 0;
+    background-color: #abcded;
+   
+
+}
+
+ .idaani-logo{
+  height: 70px;
+}
+ .search-icon{
+  position: absolute;
+  top: 30px;
+  right: 24px;
+}
+/*navbar*/
+ .mobile-cnt-open,.idaani-nav-menu{
+  position:fixed;
+  bottom:0
+}
+ .mobile-cnt-open{
+    top:0;
+    left:-100%;
+    right:100%;
+    margin:auto;
+    background-color:rgba(0,0,0,.5);
+    z-index:998;
+}
+ .mobile-cnt-open.open{
+    left:0;
+    right:0
+}
+ .mobile-idaani-nav.sidebarNavigation{
+    margin-bottom:0;
+    z-index:999;
+    justify-content:flex-start
+}
+ .mobile-idaani-nav.sidebarNavigation .leftNavbarToggler{
+    margin-right:10px;
+    order:-1
+}
+ .idaani-nav-menu{
+    left:-100%;
+    top:0px;
+    transition:all ease 0.5s;
+    overflow:hidden;
+    width:100%;
+    z-index:999;
+    max-width:100%;
+    margin-bottom:0;
+    padding:1rem
+}
+ .idaani-nav-menu.open{
+     left:0;
+     display:block;
+     overflow-y:auto;
+     background-color:#fff;
+}
+.div-height{
+     min-height: 300px;
+}
+/*navbar-ends*/
+.tabs-pages{
+
+    align-items: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+    right: 0px;
+    justify-content: center;
+    
+}
+.nav_indicator{
+  border-bottom: 2px solid black;
+   width: 16px;
+
+}
+.nav_indicator:active, .nav_indicator:hover{
+  border-color: #007bff !important;
+}
+.tooltip-inner{
+  font-family: futura-bt;
+  background-color: unset;
+  color: #000;
+  padding-top: 19px !important;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+.tooltip .arrow{
+  opacity: 0;
+}
+
+
+ @media all and (min-width: 768px) {
+     .idaani-logo{
+        position: absolute;
+        top: 0px;
+    }
+     .idaani-nav li a{
+        font-size: 20px;
+
+    }
+}
+ @media all and (min-width: 1200px) {
+     .contenr-all{
+     max-width: 1700px;
+     margin-left: auto;
+     margin-right: auto;
+    }
+  
+}
+ @media all and (max-width: 767px) {
+     .idaani-nav li a{
+        font-size: 30px;
+        text-transform: capitalize;
+    }
+    .nav-fixid{
+    position: fixed;
+    width: 100%;
+    right: 0;
+    left: 0;
+    top: 0;
+    background: #f7f7f7;
+    }
+    .idaani-logo {
+    height: 41px;
+  }
+  .nav-close-icon{
+    position: absolute;
+    right: 18px;
+    top: 21px;
+  }
+  .top-mobile{
+    margin-top: 57px;
+  }
+  h1{
+    font-size: 30px;
+  }
+}

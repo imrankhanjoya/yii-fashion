@@ -324,7 +324,7 @@
      color: #dee2e6 !important;
      font-size: 150px;
      opacity: 0.4;
-     z-index: 1;
+     z-index: -1;
      top: 40px;
      left: 0px;
 }
