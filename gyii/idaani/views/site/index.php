@@ -2,7 +2,7 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'My Yii Application';
+$this->title = "Idaani.com beauty of Rajasthan";
 ?>
 <div class="row">
             <div class="col-lg-12 col-md-12 col-12 mt-4 mt-lg-5 mb-5 active" id="top-images">
