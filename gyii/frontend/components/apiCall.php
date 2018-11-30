@@ -8,7 +8,7 @@ use yii\base\InvalidConfigException;
 class apiCall extends Component
 {
 
-    public $apiurl = 'http://dis.deideo.com/gyii/api/web/index.php?r=';
+    public $apiurl = 'http://localhost/p/deideo/gyii/api/web/index.php?r=';
     public $apikey = 'D433KeY';
     public $country_code = "in";
     public $lang_code = "en";
