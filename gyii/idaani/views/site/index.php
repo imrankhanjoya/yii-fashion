@@ -144,7 +144,6 @@ $this->title = "Idaani.com beauty of Rajasthan";
                   <a href="" class="">Pinterest</a>
                </div>
                <div class="col-lg-12 col-md-12 col-12 mt-4">
-                  <p class="text-align-center">© Sycamore Street Press 2018&nbsp; &nbsp; &nbsp; info@sycamoreco.com&nbsp;</p>
                </div>
             </div>
          </div>

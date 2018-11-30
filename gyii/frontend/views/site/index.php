@@ -1,8 +1,38 @@
 <?php
+use yii\helpers\Html;
+use yii\helpers\Url;
+
 
 /* @var $this yii\web\View */
+ 
+$m_title = "Gloat.me, Join the movement";
+$m_url   = "http://www.gloat.me";
+$m_image   = Yii::$app->request->baseUrl.'/img/gloatmeproducts.png';
+$m_desc  = "Welcome to the beauty tips and collection of best cosmetics. Get solutions to all your Beauty queries and stay up-to on the latest Beauty Trends. It\'s platform where we make opinion collectively on the bases of your reviews and favorite products";
 
-$this->title = 'My Yii Application';
+$this->title = $m_title;
+\Yii::$app->view->registerMetaTag([ 'name' => 'description', 'content' => $m_desc ]);
+
+\Yii::$app->view->registerMetaTag(['itemprop' => 'name', 'content' => $m_title ]);
+\Yii::$app->view->registerMetaTag(['itemprop' => 'image', 'content' => $m_image ]);
+
+
+\Yii::$app->view->registerMetaTag([ 'name' => 'twitter:title', 'content' => $m_title ]);
+\Yii::$app->view->registerMetaTag([ 'name' => 'twitter:description', 'content' => $m_desc ]);
+\Yii::$app->view->registerMetaTag([ 'name' => 'twitter:url', 'content' => $m_url ]);
+\Yii::$app->view->registerMetaTag([ 'name' => 'twitter:image', 'content' => $m_image ]);
+
+\Yii::$app->view->registerMetaTag([ 'name' => 'og:title', 'content' => $m_title ]);
+\Yii::$app->view->registerMetaTag([ 'property' => 'og:site_name', 'content' => $m_title ]);
+\Yii::$app->view->registerMetaTag([ 'property' => 'fb:app_id', 'content' =>'135773309784309' ]);
+\Yii::$app->view->registerMetaTag([ 'property' => 'og:locale', 'content' =>'en_US' ]);
+\Yii::$app->view->registerMetaTag([ 'property' => 'og:name', 'content' => $m_desc ]);
+\Yii::$app->view->registerMetaTag([ 'property' => 'og:url', 'content' => $m_url ]);
+\Yii::$app->view->registerMetaTag([ 'property' => 'og:description', 'content' => $m_desc]);
+\Yii::$app->view->registerMetaTag([ 'property' => 'og:image', 'content' => $m_image]);
+\Yii::$app->view->registerMetaTag([ 'property' => 'og:image:width', 'content' =>750]);
+\Yii::$app->view->registerMetaTag([ 'property' => 'og:image:height', 'content' =>752]);
+
 ?>
 <div class="row mr-0 ml-0">
          <div class="col-12 col-lg-12 p-0">

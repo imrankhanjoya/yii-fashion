@@ -41,22 +41,22 @@ AppAsset::register($this);
                   <ul class="navbar-nav idaani-nav">
                      <i class="fa fa-close nav-close-icon d-md-none"></i>
                      <li class="nav-item active">
-                        <a class="nav-link px-3" href="#">about <span class="sr-only">(current)</span></a>
+                        <a class="nav-link px-3" href="#mini-about">about <span class="sr-only">(current)</span></a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link px-3" href="#">work</a>
+                        <a class="nav-link px-3" href="#new-pages">Inspirations</a>
                      </li>
                      <li class="nav-item text-muted">
-                        <a class="nav-link px-3" href="#">learn</a>
+                        <a class="nav-link px-3" href="#new-work-ttl">New work</a>
                      </li>
-                     <li class="nav-item dropdown">
+                     <!-- <li class="nav-item dropdown">
                         <a class="nav-link px-3" href="https://example.com" id="dropdown08" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">blog</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown08">
-                           <a class="dropdown-item" href="#">Action</a>
+                           <a class="dropdown-item" href="#mini-about">Action</a>
                            <a class="dropdown-item" href="#">Another action</a>
-                           <a class="dropdown-item" href="#">Something else here</a>
+                           <a class="dropdown-item" href="#new-work-ttl">New work</a>
                         </div>
-                     </li>
+                     </li> -->
                   </ul>
                   <a class="d-none d-md-block" href="#"><i class="fa fa-search text-muted search-icon" aria-hidden="true" style=""></i></a>
                </div>
