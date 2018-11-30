@@ -38,6 +38,7 @@ $config = [
                 'discuss/<slug:[a-z0-9-]+>' => 'community/detail',
                 'top_items/<slug:[a-z0-9-]+>' => 'top/index',
                 'top/<slug:[a-z0-9-]+>' => 'top/index',
+                
             ],
         ],
     ],
