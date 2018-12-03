@@ -105,7 +105,7 @@ $this->title = $m_title;
                         <a class="top-banners mt-2 mt-lg-4 p-3 text-center position-relative align-items-center d-flex" style="background-image: url(img/banner/Product.png);" href="#"></a>
                      </div>
                      <div class="col-lg-6 col-12">
-                        <a class="top-banners mt-2 mt-lg-4 p-3 text-center position-relative align-items-center d-flex" style="background-image: url(img/banner/lakme.png);" href="#"></a>
+                        <a class="top-banners mt-2 mt-lg-4 p-3 text-center position-relative align-items-center d-flex" style="background-image: url(img/banner/Lakme-Banner.png);" href="#"></a>
                      </div>
                   </div>
                </div>
