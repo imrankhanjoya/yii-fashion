@@ -102,7 +102,7 @@ $this->title = $m_title;
                   <a class="top-banners mt-2 mt-lg-4 p-3 text-center position-relative align-items-center d-flex" style="background-image: url(img/banner/discuss.png);" href="<?=Url::to(['/discuss-beauty-tips']);?>"></a>
                   <div class="row">
                      <div class="col-lg-6 col-12">
-                        <a class="top-banners mt-2 mt-lg-4 p-3 text-center position-relative align-items-center d-flex" style="background-image: url(img/banner/Product.png);" href="#"></a>
+                        <a class="top-banners mt-2 mt-lg-4 p-3 text-center position-relative align-items-center d-flex" style="background-image: url(img/banner/Product.png);" href="/top-cosmetic-products"></a>
                      </div>
                      <div class="col-lg-6 col-12">
                         <a class="top-banners mt-2 mt-lg-4 p-3 text-center position-relative align-items-center d-flex" style="background-image: url(img/banner/Lakme-Banner.png);" href="<?=Url::to(['products/brand','brand'=>'lakme']);?>"></a>
