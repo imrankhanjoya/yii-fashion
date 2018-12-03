@@ -10,7 +10,7 @@ $this->registerJsVar('fileupload',Url::to(['ajax/upload']));
          <a href=""><img class="w-25 py-4 d-none d-lg-inline-block " src="/img/Gloatme_f_white.png"></a>
       </div>
       <nav class="navbar navbar-expand-lg py-2 py-lg-2 navbar-header">
-         <a class="navbar-brand w-50 d-lg-none" href=""><img class="w-75 float-left" src="/img/Gloatme_Inverse.png"></a>
+         <a class="navbar-brand w-50 d-lg-none" href="/"><img class="w-75 float-left" src="/img/Gloatme_f_Inverse.png"></a>
          <button class="navbar-toggler text-white border-0 pr-0" type="button" data-toggle="collapse" data-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
          <i class="fa fa-bars"></i>
          </button>
