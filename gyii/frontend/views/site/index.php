@@ -96,16 +96,16 @@ $this->title = $m_title;
          <div class="p-2 p-lg-0 cards-box mb-2 mb-lg-0">
             <div class="row">
                <div class="col-lg-4">
-                  <a class="top-banners top_banner-t mt-0 mt-lg-4 p-3 text-center position-relative align-items-center d-flex" style="background-image: url(img/banner/lorealparisdk0213136586v2logo.jpg);" href="#"></a>
+                  <a class="top-banners top_banner-t mt-0 mt-lg-4 p-3 text-center position-relative align-items-center d-flex" style="background-image: url(img/banner/lorealparisdk0213136586v2logo.jpg);" href="<?=Url::to(['products/brand','brand'=>'loreal']);?>"></a>
                </div>
                <div class="col-lg-8">
-                  <a class="top-banners mt-2 mt-lg-4 p-3 text-center position-relative align-items-center d-flex" style="background-image: url(img/banner/discuss.png);" href="#"></a>
+                  <a class="top-banners mt-2 mt-lg-4 p-3 text-center position-relative align-items-center d-flex" style="background-image: url(img/banner/discuss.png);" href="<?=Url::to(['/discuss-beauty-tips']);?>"></a>
                   <div class="row">
                      <div class="col-lg-6 col-12">
                         <a class="top-banners mt-2 mt-lg-4 p-3 text-center position-relative align-items-center d-flex" style="background-image: url(img/banner/Product.png);" href="#"></a>
                      </div>
                      <div class="col-lg-6 col-12">
-                        <a class="top-banners mt-2 mt-lg-4 p-3 text-center position-relative align-items-center d-flex" style="background-image: url(img/banner/Lakme-Banner.png);" href="#"></a>
+                        <a class="top-banners mt-2 mt-lg-4 p-3 text-center position-relative align-items-center d-flex" style="background-image: url(img/banner/Lakme-Banner.png);" href="<?=Url::to(['products/brand','brand'=>'lakme']);?>"></a>
                      </div>
                   </div>
                </div>
