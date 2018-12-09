@@ -8,8 +8,8 @@ use yii\helpers\Url;
                   <div class="product-card-img image-middl-card">
                      <img class="img-fluid" src="<?=$image?>">
                   </div>
-                  <h6 class="product-ttl-heig"><a href="<?=Url::to(['/products',"slug"=>$guid]);?>"><b><?=$Brand?></b></a></h6>
-                  <h6 class="product-ttl-heig"><a href="<?=Url::to(['/products',"slug"=>$guid]);?>"><b><?=$post_title?></b></a></h6>
+                  <h6 class="product-ttl-heig"><a href="<?=Url::to(['products/index',"slug"=>$guid]);?>"><b><?=$Brand?></b></a></h6>
+                  <h6 class="product-ttl-heig"><a href="<?=Url::to(['products/index',"slug"=>$guid]);?>"><b><?=$post_title?></b></a></h6>
                   <button type="button" class="btn btn-light"><a class="small" href="#"><?=$ListPrice?></a></button>
                   <?php if (Yii::$app->user->isGuest):?>
                   <button type="button" class="btn btn-light float-right"><a class="small" href="#" ><i class="mr-1 fa fa-heart" aria-hidden="true"></i>login to add</a></button>

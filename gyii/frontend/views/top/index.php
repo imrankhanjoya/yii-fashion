@@ -6,6 +6,36 @@ if (!Yii::$app->user->isGuest){
    LoginAsset::register($this);
 }
 
+
+$m_title = "Gloat.me, Shop beauty products at one place for top brands.";
+$m_url   = "http://www.gloat.me";
+$m_image   = Yii::$app->request->baseUrl.'/img/gloatmeproducts.png';
+$m_desc  = "Collection of beauty products from BobbiBrown, O3, Kazima, Lotus, Nivea, Olay, MCaffeine, Lakme, Paris, Brezzycloud, PONDS, LOreal, NYX etc. Filter and find all at one place.";
+
+$this->title = $m_title;
+\Yii::$app->view->registerMetaTag([ 'name' => 'description', 'content' => $m_desc ]);
+
+\Yii::$app->view->registerMetaTag(['itemprop' => 'name', 'content' => $m_title ]);
+\Yii::$app->view->registerMetaTag(['itemprop' => 'image', 'content' => $m_image ]);
+
+
+\Yii::$app->view->registerMetaTag([ 'name' => 'twitter:title', 'content' => $m_title ]);
+\Yii::$app->view->registerMetaTag([ 'name' => 'twitter:description', 'content' => $m_desc ]);
+\Yii::$app->view->registerMetaTag([ 'name' => 'twitter:url', 'content' => $m_url ]);
+\Yii::$app->view->registerMetaTag([ 'name' => 'twitter:image', 'content' => $m_image ]);
+
+\Yii::$app->view->registerMetaTag([ 'name' => 'og:title', 'content' => $m_title ]);
+\Yii::$app->view->registerMetaTag([ 'property' => 'og:site_name', 'content' => $m_title ]);
+\Yii::$app->view->registerMetaTag([ 'property' => 'fb:app_id', 'content' =>'135773309784309' ]);
+\Yii::$app->view->registerMetaTag([ 'property' => 'og:locale', 'content' =>'en_US' ]);
+\Yii::$app->view->registerMetaTag([ 'property' => 'og:name', 'content' => $m_desc ]);
+\Yii::$app->view->registerMetaTag([ 'property' => 'og:url', 'content' => $m_url ]);
+\Yii::$app->view->registerMetaTag([ 'property' => 'og:description', 'content' => $m_desc]);
+\Yii::$app->view->registerMetaTag([ 'property' => 'og:image', 'content' => $m_image]);
+\Yii::$app->view->registerMetaTag([ 'property' => 'og:image:width', 'content' =>750]);
+\Yii::$app->view->registerMetaTag([ 'property' => 'og:image:height', 'content' =>752]);
+
+
 ?>
          <div class="col-lg-12 col-sm-12 col-md-12 col-12 p-0">
             <div class="banner-bg-img" style="background-image: url(<?=$topDetail['image']?>);">

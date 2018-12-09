@@ -153,6 +153,8 @@ class ProductsController extends Controller
         $data['brand'] = $brand;
         $pList = $apiCall->curlget('v1/products/bybrand',$data);
         $vData['pList'] =$pList['data'];
+        $vData['ifor'] = $brand;
+        $vData['itype'] = 'brand';
 
         return $this->render('brand',$vData);
     }
@@ -163,6 +165,8 @@ class ProductsController extends Controller
         $data['tag'] = $tag;
         $pList = $apiCall->curlget('v1/products/bytag',$data);
         $vData['pList'] =$pList['data'];
+        $vData['ifor'] = $tag;
+        $vData['itype'] = 'tag';
 
         return $this->render('brand',$vData);
     }

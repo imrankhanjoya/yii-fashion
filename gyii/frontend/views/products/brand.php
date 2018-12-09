@@ -5,6 +5,41 @@
 if (!Yii::$app->user->isGuest){
    LoginAsset::register($this);
 }
+
+
+
+$m_title = "Gloat.me, Shop and Browse beauty products ".$ifor;
+$m_url   = "http://www.gloat.me/products-for/".$ifor;
+$m_image   = Yii::$app->request->baseUrl.'/img/gloatmeproducts.png';
+if($itype=='tag'){
+$m_desc  = "Collection of beauty products for {$ifor} from BobbiBrown, O3, Kazima, Lotus, Nivea, Olay, MCaffeine, Lakme, Paris, Brezzycloud, PONDS, LOreal, NYX etc. Filter and find all at one place.";
+}else{
+$m_desc  = "Collection of beauty products from {$ifor} for all your beauty needs.";  
+}
+
+$this->title = $m_title;
+\Yii::$app->view->registerMetaTag([ 'name' => 'description', 'content' => $m_desc ]);
+
+\Yii::$app->view->registerMetaTag(['itemprop' => 'name', 'content' => $m_title ]);
+\Yii::$app->view->registerMetaTag(['itemprop' => 'image', 'content' => $m_image ]);
+
+
+\Yii::$app->view->registerMetaTag([ 'name' => 'twitter:title', 'content' => $m_title ]);
+\Yii::$app->view->registerMetaTag([ 'name' => 'twitter:description', 'content' => $m_desc ]);
+\Yii::$app->view->registerMetaTag([ 'name' => 'twitter:url', 'content' => $m_url ]);
+\Yii::$app->view->registerMetaTag([ 'name' => 'twitter:image', 'content' => $m_image ]);
+
+\Yii::$app->view->registerMetaTag([ 'name' => 'og:title', 'content' => $m_title ]);
+\Yii::$app->view->registerMetaTag([ 'property' => 'og:site_name', 'content' => $m_title ]);
+\Yii::$app->view->registerMetaTag([ 'property' => 'fb:app_id', 'content' =>'135773309784309' ]);
+\Yii::$app->view->registerMetaTag([ 'property' => 'og:locale', 'content' =>'en_US' ]);
+\Yii::$app->view->registerMetaTag([ 'property' => 'og:name', 'content' => $m_desc ]);
+\Yii::$app->view->registerMetaTag([ 'property' => 'og:url', 'content' => $m_url ]);
+\Yii::$app->view->registerMetaTag([ 'property' => 'og:description', 'content' => $m_desc]);
+\Yii::$app->view->registerMetaTag([ 'property' => 'og:image', 'content' => $m_image]);
+\Yii::$app->view->registerMetaTag([ 'property' => 'og:image:width', 'content' =>750]);
+\Yii::$app->view->registerMetaTag([ 'property' => 'og:image:height', 'content' =>752]);
+
 ?>
 <?=$this->render('//partials/product-cats.php');?>
 <?=$this->render('//partials/product-brands.php');?>

@@ -17,7 +17,7 @@ use yii\helpers\Url;
                                           </div>
                                        </div>
                                        <div class="col-lg-8 col-12 text-left pl-lg-0">
-                                          <a href="<?=Url::to(['/products','slug' =>$val['guid']]);?>
+                                          <a href="<?=Url::to(['products/index','slug' =>$val['guid']]);?>
 "><h6 class="mb-0 silder-text"><?=$val['post_title']?></h6>
                                           <h6 class=" mb-0 mt-2">
                                              <b><i class="fa fa-inr mr-1 silder-text" aria-hidden="true"></i><span class="silder-text"><?=$val['ListPrice']?></span></b> 

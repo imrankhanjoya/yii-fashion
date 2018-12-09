@@ -5,6 +5,36 @@
 if (!Yii::$app->user->isGuest){
    LoginAsset::register($this);
 }
+
+$m_title = "Gloat.me, Best products that will make you look & feel good!";
+$m_url   = "http://www.gloat.me/top-cosmetic-products";
+$m_image   = Yii::$app->request->baseUrl.'/img/gloatme_tranding.png';
+$m_desc  = "Collection of products in the group of top hair, face cream and anti aging products. We are showing most relevant products for you skin and hair care";
+
+$this->title = $m_title;
+\Yii::$app->view->registerMetaTag([ 'name' => 'description', 'content' => $m_desc ]);
+
+\Yii::$app->view->registerMetaTag(['itemprop' => 'name', 'content' => $m_title ]);
+\Yii::$app->view->registerMetaTag(['itemprop' => 'image', 'content' => $m_image ]);
+
+
+\Yii::$app->view->registerMetaTag([ 'name' => 'twitter:title', 'content' => $m_title ]);
+\Yii::$app->view->registerMetaTag([ 'name' => 'twitter:description', 'content' => $m_desc ]);
+\Yii::$app->view->registerMetaTag([ 'name' => 'twitter:url', 'content' => $m_url ]);
+\Yii::$app->view->registerMetaTag([ 'name' => 'twitter:image', 'content' => $m_image ]);
+
+\Yii::$app->view->registerMetaTag([ 'name' => 'og:title', 'content' => $m_title ]);
+\Yii::$app->view->registerMetaTag([ 'property' => 'og:site_name', 'content' => $m_title ]);
+\Yii::$app->view->registerMetaTag([ 'property' => 'fb:app_id', 'content' =>'135773309784309' ]);
+\Yii::$app->view->registerMetaTag([ 'property' => 'og:locale', 'content' =>'en_US' ]);
+\Yii::$app->view->registerMetaTag([ 'property' => 'og:name', 'content' => $m_desc ]);
+\Yii::$app->view->registerMetaTag([ 'property' => 'og:url', 'content' => $m_url ]);
+\Yii::$app->view->registerMetaTag([ 'property' => 'og:description', 'content' => $m_desc]);
+\Yii::$app->view->registerMetaTag([ 'property' => 'og:image', 'content' => $m_image]);
+\Yii::$app->view->registerMetaTag([ 'property' => 'og:image:width', 'content' =>750]);
+\Yii::$app->view->registerMetaTag([ 'property' => 'og:image:height', 'content' =>752]);
+
+
 ?>
 <?=$this->render('//partials/product-cats.php');?>
 <?=$this->render('//partials/product-brands.php');?>
