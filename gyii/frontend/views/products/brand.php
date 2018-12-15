@@ -1,6 +1,6 @@
 <?PHP
-   use frontend\assets\LoginAsset;
-   use common\widgets\Alert;
+use frontend\assets\LoginAsset;
+use common\widgets\Alert;
 
 if (!Yii::$app->user->isGuest){
    LoginAsset::register($this);
@@ -19,16 +19,12 @@ $m_desc  = "Collection of beauty products from {$ifor} for all your beauty needs
 
 $this->title = $m_title;
 \Yii::$app->view->registerMetaTag([ 'name' => 'description', 'content' => $m_desc ]);
-
 \Yii::$app->view->registerMetaTag(['itemprop' => 'name', 'content' => $m_title ]);
 \Yii::$app->view->registerMetaTag(['itemprop' => 'image', 'content' => $m_image ]);
-
-
 \Yii::$app->view->registerMetaTag([ 'name' => 'twitter:title', 'content' => $m_title ]);
 \Yii::$app->view->registerMetaTag([ 'name' => 'twitter:description', 'content' => $m_desc ]);
 \Yii::$app->view->registerMetaTag([ 'name' => 'twitter:url', 'content' => $m_url ]);
 \Yii::$app->view->registerMetaTag([ 'name' => 'twitter:image', 'content' => $m_image ]);
-
 \Yii::$app->view->registerMetaTag([ 'name' => 'og:title', 'content' => $m_title ]);
 \Yii::$app->view->registerMetaTag([ 'property' => 'og:site_name', 'content' => $m_title ]);
 \Yii::$app->view->registerMetaTag([ 'property' => 'fb:app_id', 'content' =>'135773309784309' ]);
@@ -39,6 +35,7 @@ $this->title = $m_title;
 \Yii::$app->view->registerMetaTag([ 'property' => 'og:image', 'content' => $m_image]);
 \Yii::$app->view->registerMetaTag([ 'property' => 'og:image:width', 'content' =>750]);
 \Yii::$app->view->registerMetaTag([ 'property' => 'og:image:height', 'content' =>752]);
+
 
 ?>
 <?=$this->render('//partials/product-cats.php');?>
