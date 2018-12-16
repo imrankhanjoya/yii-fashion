@@ -33,7 +33,7 @@ use yii\helpers\Url;
                         <a href="" class="btn btn-green w-100 d-lg-none mt-3"><img class="btn-icon mr-2" src="https://cdn1.iconfinder.com/data/icons/smallicons-logotypes/32/amazon-512.png">Explore at Amazon</a>
                      </div>
                      <div class="col-lg-6 col-12 col-md-6 col-sm-6 d-lg-none">
-                        <a href="" class="btn btn-green w-100 fixed-btn_bottm"><img class="btn-icon mr-2" src="https://cdn1.iconfinder.com/data/icons/smallicons-logotypes/32/amazon-512.png">Explore at amazon</a>
+                        <a href="<?=$pDetail['DetailPageURL']?>" class="btn btn-green w-100 fixed-btn_bottm"><img class="btn-icon mr-2" src="https://cdn1.iconfinder.com/data/icons/smallicons-logotypes/32/amazon-512.png">Explore at amazon</a>
                      </div>
                   </div>
                </div>

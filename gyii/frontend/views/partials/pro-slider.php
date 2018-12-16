@@ -23,7 +23,7 @@ $TextUtility = new TextUtility();
                                  </div>
                                  <h5><?=$item['Brand']?></h5>
                                  <p><a href="<?=Url::to(['products/',"slug"=>$item['guid']]);?>" class="h6"><?=$TextUtility->showTitle($item['post_title'],100)?></a></p>
-                                 <a href="" class="btn btn-green py-1 px-2"><img class="btn-icon mr-2" src="https://cdn1.iconfinder.com/data/icons/smallicons-logotypes/32/amazon-512.png"><span class="h5 mb-0">Explore at amazon</span></a>
+                                 <a href="<?=$item['DetailPageURL']?>" target="_blank" class="btn btn-green py-1 px-2"><img class="btn-icon mr-2" src="https://cdn1.iconfinder.com/data/icons/smallicons-logotypes/32/amazon-512.png"><span class="h5 mb-0">Explore at amazon</span></a>
                               </div>
                               <?PHP endforeach; ?>
                               

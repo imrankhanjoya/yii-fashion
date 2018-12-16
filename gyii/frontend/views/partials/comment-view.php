@@ -17,7 +17,9 @@ foreach($allcomments as $comment){
 			echo '<a href="" class="ml-auto mr-3">'.$comment['comment_author'].'</a>';
 			echo  '<span class="float-right ml-auto">';
 			echo 	$comment['comment_date'];
+			if (!Yii::$app->user->isGuest):
 			echo "<br><a class='rmcommnet' d-href='".Url::to(['ajax/delete-comment','cid' =>$comment['comment_ID']])."'>delete</a>";
+			endif;
 			echo '</span>';
 		echo '</div>';
 		if($comment['url']!=''){

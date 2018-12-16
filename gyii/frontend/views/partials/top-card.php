@@ -45,7 +45,7 @@ use yii\helpers\Html;
                            <?php endif; ?>
                         </div>
                         <div class="col-12 col-sm-6 col-md-6 col-lg-6 text-md-right text-left my-3 pl-lg-0">
-                           <a href="" class="btn btn-green w-100 fixed-btn_bottm"><img class="btn-icon mr-2" src="https://cdn1.iconfinder.com/data/icons/smallicons-logotypes/32/amazon-512.png">Explore at amazon</a>
+                           <a href="<?=$DetailPageURL?>" target="_blank" class="btn btn-green w-100 fixed-btn_bottm"><img class="btn-icon mr-2" src="https://cdn1.iconfinder.com/data/icons/smallicons-logotypes/32/amazon-512.png">Explore at amazon</a>
                         </div>
                      </div>
                   </div>
