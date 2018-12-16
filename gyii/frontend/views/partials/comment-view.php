@@ -1,6 +1,8 @@
 <?PHP
 foreach($allcomments as $comment){
 
+
+
 	if($parent==$comment['comment_parent']){
 		echo '<div class="col-12 col-sm-12 col-md-12 col-lg-12">';
 		
@@ -13,7 +15,9 @@ foreach($allcomments as $comment){
 			echo 	$comment['comment_date'];
 			echo '</span>';
 		echo '</div>';
-		
+		if($comment['url']!=''){
+			echo "<img src='".$comment['url']."' /><br>";
+		}
 		print_r($comment['comment_content']);
 		echo "<hr>";
 			echo "<div style='margin-left:50px;'>";

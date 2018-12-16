@@ -118,7 +118,6 @@ class CommunityController extends Controller
     {
         
 
-
         $apiCall = new apiCall();
         $data['slug'] = $slug;
         $discussDetail = $apiCall->curlget('v1/discuss/detail',$data);
@@ -153,15 +152,17 @@ class CommunityController extends Controller
             $postData['comment_agent'] = $_SERVER['HTTP_USER_AGENT'] ; 
             $postData['comment_parent'] = $postData['parentID']; 
             //$postData['url'] = $postData['url']; 
-            $postData['comment_author'] = $user->ID; 
+            $postData['comment_author'] = $user->display_name;
             $postData['comment_date'] = date("Y-m-d h:m:i"); 
             $postData['comment_date_gmt'] = date("Y-m-d h:m:i");
+            $postData['url'] = $postData['url'];
 
             $apiCall = new apiCall();
             $result = $apiCall->curlpost('v1/comment/post',$postData);
             $result = json_decode($result,true);
             if($result['status']==true){
-                $this->redirect(["community/detail","slug"=>$result['data']['slug']]);
+                
+                $this->redirect(["community/detail","slug"=>$slug]);
             }
 
         }
