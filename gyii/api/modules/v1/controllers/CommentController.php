@@ -97,8 +97,10 @@ class CommentController extends Controller
 
         $WpCommentsQuery = new WpCommentsQuery();
         $model = $WpCommentsQuery->find()->where(["comment_ID"=>$postData['cid'],"user_id"=>$postData['user_id']])->one();
-        $model->comment_karma =1;
-        $model->save();
+        if(!empty($model)){
+            $model->comment_karma =1;
+            $model->save();
+        }
 
         return ["status"=>true,"msg"=>"Comment has been removed","data"=>$postData];    
         Yii::app()->end();
