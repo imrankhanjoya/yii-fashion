@@ -323,6 +323,15 @@ class AjaxController extends Controller
     }
 
 
+    function actionDeleteComment($cid){
+        $apiCall = new apiCall();
+        $user_id = Yii::$app->user->ID;
+        $data['cid'] = $cid; 
+        $data['user_id'] = $user_id; 
+        return $result = $apiCall->curlpost('v1/comment/comment-delete',$data);
+        
+    }
+
 
     
 }

@@ -190,12 +190,6 @@ class CommunityController extends Controller
         $vData['topUsers'] =$topUsers['data'];
 
 
-
-
-        
-
-
-
         return $this->render('detail',$vData);
     }
 

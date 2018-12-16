@@ -89,6 +89,22 @@ class CommentController extends Controller
 
     }
 
+    public function actionCommentDelete(){
+        
+        $rawJson = file_get_contents("php://input");
+        $postData  = json_decode($rawJson,true);
+        
+
+        $WpCommentsQuery = new WpCommentsQuery();
+        $model = $WpCommentsQuery->find()->where(["comment_ID"=>$postData['cid'],"user_id"=>$postData['user_id']])->one();
+        $model->comment_karma =1;
+        $model->save();
+
+        return ["status"=>true,"msg"=>"Comment has been removed","data"=>$postData];    
+        Yii::app()->end();
+
+    }
+
 }
 
 

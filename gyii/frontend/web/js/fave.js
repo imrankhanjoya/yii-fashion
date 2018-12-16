@@ -86,4 +86,21 @@ $(document).ready(function(){
 		});
 	});
 
+
+	$(".rmcommnet").click(function(e){
+		var favObj = $(this);
+		var url = $(this).attr("d-href");
+		$.ajax({
+		method: "GET",
+		url: url,
+		dataType:'JSON',
+		}).done(function( msg ) {
+			console.log(msg.data.cid);
+			$("#idi_"+msg.data.cid).hide();
+		});
+		e.preventDefault();
+
+	});
+
+
 });

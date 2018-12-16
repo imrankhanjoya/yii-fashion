@@ -27,9 +27,9 @@ LoginAsset::register($this);
                <img src="" id="mediapic" />
                <input type="file" id="media" title="Upload file"  name="file">
                 <?= $form->field($model, 'ID',['options' => ["required"=>true]])->hiddenInput()->label(false); ?>
-                <?= $form->field($model, 'parentID',['options' => ["required"=>true]])->textInput(["value"=>0])->label(false); ?>
+                <?= $form->field($model, 'parentID',['options' => ["required"=>true]])->hiddenInput(["value"=>0])->label(false); ?>
                 <?= $form->field($model, 'content')->textarea() ?>
-                <?= $form->field($model, 'url')->textInput(['autofocus' => true,"placeholder"=>"Use commas between tags","id"=>"mediapath"])->label(false)?>
+                <?= $form->field($model, 'url')->hiddenInput(["id"=>"mediapath"])->label(false)?>
                 
                 <div class="form-group">
                     <?= Html::submitButton('Save', ['class' => 'btn btn-primary', 'name' => 'post-button']) ?>

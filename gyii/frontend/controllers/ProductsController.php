@@ -112,10 +112,14 @@ class ProductsController extends Controller
             $postData['comment_parent'] = $postData['parentID']; 
             $postData['comment_date'] = date("Y-m-d h:m:i"); 
             $postData['comment_date_gmt'] = date("Y-m-d h:m:i");
-            $postData['url'] = "thisisurl";
+            $postData['url'] = $postData['url'] ; 
             $apiCall = new apiCall();
             $result = $apiCall->curlpost('v1/comment/post',$postData);
             $result = json_decode($result,true);
+            if($result['status']==true){
+                
+                $this->redirect(["products/index","slug"=>$slug]);
+            }
             
             
 

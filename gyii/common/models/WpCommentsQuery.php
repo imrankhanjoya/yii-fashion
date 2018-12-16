@@ -92,6 +92,7 @@ class WpCommentsQuery extends WpComments
         }else{
             $mquery = $mquery->andWhere(["!=","comment_type","product_review"]);
         }
+        $mquery = $mquery->andWhere(["comment_karma"=>0]);
         //echo $mquery->createCommand()->getRawSql();exit;
         return $mquery->asArray()->all();
 
