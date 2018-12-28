@@ -10,7 +10,7 @@ $TextUtility = new TextUtility();
             <div class="col-lg-12 col-12 px-2 px-lg-3">
                <div class="cards-box p-lg-2 mb-2 rounded-0">
                   <h2 class="text-center mt-2 mt-lg-5 mb-2"><?=$TextUtility->showTitle($title,100)?></h2>
-                  <div id="carouselExampleControls" class="carousel slide  hidden-xs" data-ride="carousel">
+                  <div id="carouselExampleControls" class="carousel slide d-none d-sm-block" data-ride="carousel">
                      <div class="carousel-inner">
                         
                         <?php foreach($products as $key=>$val):?>
@@ -41,7 +41,7 @@ $TextUtility = new TextUtility();
                      <span class="sr-only">Next</span>
                      </a>
                   </div>
-                  <div class="swiper-container silder-contd swiper-container-horizontal d-lg-none">
+                  <div class="swiper-container silder-contd swiper-container-horizontal  d-lg-none">
                      <div class="swiper-wrapper silder-mobile">
                          <?php foreach($oneproducts as $key=>$item):?>
                         <div class="swiper-slide swiper-slide-active">

@@ -6,6 +6,7 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use common\models\LoginForm;
+use common\models\user;
 
 /**
  * Site controller
@@ -22,7 +23,7 @@ class SiteController extends Controller
                 'class' => AccessControl::className(),
                 'rules' => [
                     [
-                        'actions' => ['login', 'error'],
+                        'actions' => ['login','register' ,'error'],
                         'allow' => true,
                     ],
                     [
@@ -75,6 +76,39 @@ class SiteController extends Controller
         }
 
         $model = new LoginForm();
+        if ($model->load(Yii::$app->request->post()) && $model->login()) {
+            return $this->goBack();
+        } else {
+            $model->password = '';
+            return $this->render('login', [
+                'model' => $model,
+            ]);
+        }
+    }
+
+    /**
+     * Login action.
+     *
+     * @return string
+     */
+    public function actionRegister()
+    {
+        if (!Yii::$app->user->isGuest) {
+            return $this->goHome();
+        }
+
+        
+        $model = new LoginForm();
+        if (Yii::$app->request->post()) {
+            $user = new user();
+            $fval = Yii::$app->request->post();
+            $user->username = $fval['LoginForm']['username'];
+            $user->email = "admin@gloa.me";
+            $user->password_hash = Yii::$app->security->generatePasswordHash('1234');
+            $user->auth_key = Yii::$app->security->generateRandomString();
+            $user->save();
+        }
+
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
             return $this->goBack();
         } else {

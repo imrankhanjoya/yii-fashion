@@ -86,7 +86,7 @@ $this->title = $m_title;
 
 
 <!-- silder start one -->
-<?=$this->render('//partials/pro-slider.php',array("products"=>$proTag,"title"=>$proOneTitle));?>
+<?php echo $this->render('//partials/pro-slider.php',array("products"=>$proTag,"title"=>$proOneTitle));?>
 <!-- silder ends  -->
 
 
@@ -115,5 +115,6 @@ $this->title = $m_title;
 
 
 <!-- silder start one -->
-<?=$this->render('//partials/pro-slider.php',array("products"=>$proTagTag,"title"=>$proTwoTitle));?>
+<?php echo $this->render('//partials/pro-slider.php',array("products"=>$proTagTag,"title"=>$proTwoTitle));?>
 <!-- silder ends  -->
+

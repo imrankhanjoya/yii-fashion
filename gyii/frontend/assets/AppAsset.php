@@ -18,8 +18,8 @@ class AppAsset extends AssetBundle
     ];
     public $js = [];
     public $depends = [
-        'yii\web\YiiAsset',
-        'frontend\assets\BootAsset',
         
+        'frontend\assets\BootAsset',
+        'yii\web\YiiAsset',
     ];
 }
